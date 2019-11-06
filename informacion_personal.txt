@@ -6,3 +6,5 @@ Profesión: Estudiante programador
 
 edad: 26 años
 
+fecha de nacimiento: 10/03/1993
+
