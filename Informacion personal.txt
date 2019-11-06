@@ -2,3 +2,4 @@ Nombre Vicente Herrera
 Correo Vicenteh@lagash.com
 Edad 19
 Profesion Estudiante
+Fecha de nacimiento 24-01-2000
