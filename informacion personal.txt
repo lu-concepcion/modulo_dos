@@ -1,2 +1,3 @@
-alab benavente
-alanb@lagash.com
+nombre:alab benavente
+correo:alanb@lagash.com
+edad:21
