@@ -2,3 +2,4 @@ Nombre: Fabián Beltrán
 Correo: fabianb@lagash.com
 Edad: 27
 Profesion: Estudiante
+Fecha de nacimiento: 17 enero 1992
