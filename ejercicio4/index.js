@@ -1,0 +1,1 @@
+var texto1 = prompt("ingrese lenguaje");
