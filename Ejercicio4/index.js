@@ -1,12 +1,24 @@
+var lenguaje = "";
+contador=0;
+f=1;
 do{
-    var nota = prompt("Ingrese su calificacion");
-    }while(parseInt(nota)<1||parseInt(nota)>7);
-    if(parseInt(nota)<=3&&parseInt(nota)>=1){
-        alert("Muy bajo")
+var programa = prompt("Ingrese un lenguaje");
+
+if(programa =="Python"){
+    if(parseInt(contador)<4){
+        alert("No se puede ingresar ese lenguaje aun")}
+}else{ 
+    if(lenguaje == ""){
+        lenguaje = programa;
+        contador= contador + 1;
     }else{
-    if(parseInt(nota)>=4&&parseInt(nota)<=5){
-        alert("Regular")
-    }else{
-    if(parseInt(nota)>=6&&parseInt(nota)<=7){
-        alert("Muy bueno")
-    }}}
+    lenguaje = lenguaje +" - "+ programa;}
+    contador= contador + 1;
+    }
+if(programa == "Python"){
+    if(parseInt(contador)>4){
+        alert(lenguaje +" - "+"Python")
+        f=0;
+    }
+}
+}while(f==1);
