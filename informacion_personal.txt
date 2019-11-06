@@ -2,3 +2,4 @@ Alfredo
 alfredop@lagash.com
 Edad: 24 años
 Profesión: Developer
+Nacimiento: 17-02-1995
