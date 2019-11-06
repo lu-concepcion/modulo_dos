@@ -2,3 +2,4 @@ Nombre: Ivette Fernández
 Correo: ivettef@lagash.com
 Edad: 24 años
 Profesión: Estudiante de Ingeniería civil biomédica
+Fecha de Nacimiento: 19 Mayo 1995 
