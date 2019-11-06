@@ -1,13 +1,17 @@
 var cont = 0
-var lp2 = ""
+var lpcadena = ""
+var lpingresado = ""
+var separacion = " - "
+var exit
 do
 {
-    var lp1 = prompt("introduzca un lp")
-    if(lp1!="Phython")
+    var lpingresado = prompt("introduzca un lp")
+    if(lpingresado!="Python")
         {
-            lp2 = lp2+lp1
+            lpcadena = lpcadena+separacion+lpingresado
             cont++
         }
-    
-}while ((cont<4)&&(lp1!="Phython"))
-alert(lp2)
+    exit= ((lpingresado!="Python")||(cont<4)) 
+}while (exit)
+var ultimo = "Python"
+alert(lpcadena+ultimo)
