@@ -4,3 +4,5 @@ Correo: maximilianogom@lagash.com
 
 Profesión: Estudiante programador
 
+edad: 26 años
+
