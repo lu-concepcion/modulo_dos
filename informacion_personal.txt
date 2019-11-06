@@ -1,3 +1,4 @@
 Nombre: Marco Sebastián Acuña Gonzale
 Correo: marcoac@lagash.com
 Edad: 18
+Profesion: Estudiante de Ingenieria Civil en Informatica
