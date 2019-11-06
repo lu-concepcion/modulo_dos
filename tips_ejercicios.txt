@@ -1,0 +1,3 @@
+// concatenar texto
+
+var texto1 = texto1 + " - " + texto2;
