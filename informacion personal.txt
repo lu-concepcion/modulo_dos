@@ -1,3 +1,4 @@
 nombre:alab benavente
 correo:alanb@lagash.com
 edad:21
+profesion:estudiante de ingenieria civil biomedica
