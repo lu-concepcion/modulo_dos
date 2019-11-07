@@ -6,11 +6,14 @@ for(var i=0; i < 5; i++){
     if(numero[i] % 2 == 0 || numero[i] < 2 || numero[i] > 20){
         alert("Par");
         numeros.push(numero[i]);
+        if(){
+
+        }
     }
     else{
         numero[i] = prompt("Numero incorreto, ingrese nuevamente: ");
         if(numero[i] % 2 == 0 ){
-
+            
         }
     }
     
