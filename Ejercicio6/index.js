@@ -1,8 +1,7 @@
 var numero = [];
 var numeropar = [];
-var uno = 1;
 var suma = 0;
-var multiplicacion = 0;
+var multiplicacion = 1;
 
  for(var i = 0; i<5; i++)
  {
