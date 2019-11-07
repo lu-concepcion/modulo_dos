@@ -12,10 +12,10 @@ do{
     var n = prompt("Ingrese un numero entre 3 y 15");
 }while(n<=3 || n>=15);
 
-for(i=0;i<n;i++){
+for(i=0;i<n-2;i++){
     generado=f0+f1;
     f0=f1;
     f1=generado;
-    resultado+='-',generado;
+    resultado+='-'+generado;
 }
 document.write(resultado)
