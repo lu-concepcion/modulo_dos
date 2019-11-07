@@ -1,31 +1,17 @@
-let lenguajes;
-let cont = 0;
-let ingresePhyton = false;
-let python = 0;
+let lenguajes = "";
+let contador = 0;
+
 while(true){
-    input = prompt('Ingrese un lenguaje de programación');
-    if (input == 'Python') {
-        ingresePhyton = true;
-        python++;
-    }
-    if (ingresePhyton == true && cont >= 4) {
-        if (python > 0) {
-            break;
-        }
-        if (cont == 0) {
-            lenguajes = '-' + input;
-        } else {
-            lenguajes += input + '-';
-        }
+    lenguajeEntrada = prompt('Ingresa lenguaje de programación ' + 'número: ' + (contador + 1));
+    if (contador >= 4 && lenguajeEntrada == 'Python') {
+        lenguajes += lenguajeEntrada;
         break;
+    } else if (lenguajeEntrada == 'Python') {
+        continue;
     } else {
-        if (cont == 0) {
-            lenguajes = '-' + input;
-        } else {
-            lenguajes += input + '-';
-        }
+        lenguajes += lenguajeEntrada + ' - ';
     }
-    cont++;
+    contador++;
 }
 
 alert(lenguajes);
