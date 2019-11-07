@@ -3,7 +3,6 @@ var nombre = ""
 var cadena = ""
 var edad = 0
 var edadant = 0
-var separacion = " - "
 do
 {
     nombre = prompt("ingrese un nombre")
