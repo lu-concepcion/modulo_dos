@@ -15,9 +15,12 @@ for (let i = 1; i < n; i++) {
      var sumatoria = parseInt(primero) + parseInt(segundo);
      primero= segundo;
      segundo = sumatoria;
-
+     if (i==n) {
+        listado = listado + sumatoria;
+    }
+    else{
      listado = listado + sumatoria + ", ";
-     
+    }
     
 }
 alert(listado);
