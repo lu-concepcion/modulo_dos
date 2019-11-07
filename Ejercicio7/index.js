@@ -7,3 +7,13 @@
 //Ej: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34….
 
 var numero = prompt("Ingrese numero");
+var fibonacci=[];
+fibonacci[0]=0, fibonacci[1]=1;
+
+if(numero>= 3 && numero<=15)
+{
+    for(i=2; i<numero;i++){
+        fibonacci[i]= fibonacci[i-1]+ fibonacci[i-2]
+    }
+    document.write(fibonacci)
+}
