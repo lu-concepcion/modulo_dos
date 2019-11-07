@@ -5,8 +5,8 @@ fibonacci = 0;
 do{
 var limite_de_secuencia = prompt ("¿Hasta que numero se hará la secuencia?");
 }while(limite_de_secuencia>15||limite_de_secuencia<3);
-
-for(i=0;i<limite_de_secuencia;i++){
+fibonacci= "0, 1"
+for(i=2;i<limite_de_secuencia;i++){
     variable_n3= parseInt(variable_n1) + parseInt(variable_n2);
     variable_n1=variable_n2;
     variable_n2=variable_n3;
