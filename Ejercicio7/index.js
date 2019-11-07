@@ -7,7 +7,7 @@
 // Fibonacci es una sucesión de números naturales, comenzando del 0 y 1, luego de estos cada número que 
 //continúa es la suma de los dos anteriores, 
 // Ej: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34….
-var i=0;
+var i=0,f0=0,f1=1,generado=0;
 do{
     var n = prompt("Ingrese un numero entre 3 y 15");
 }while(n>=3 && n<=15);
