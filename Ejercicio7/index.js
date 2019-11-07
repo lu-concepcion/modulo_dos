@@ -1,6 +1,6 @@
 do {
     var secuencia = prompt("Ingresar el largo de la secuencia")    
-} while ((parseInt(secuencia) < 3)&&(parseInt(secuencia) > 15));
+} while ((secuencia < 3)||(secuencia > 15));
 var num1 = 0;
 var num2 = 1;
 var num3 = 0;
