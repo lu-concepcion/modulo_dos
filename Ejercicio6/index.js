@@ -20,6 +20,7 @@
 //     alert(salida)
 var numero = [];
 var numeropar = [];
+var uno = 1;
 var suma = 0;
 var multiplicacion = 0;
 
@@ -35,12 +36,18 @@ var multiplicacion = 0;
       }
     }
       numeropar[i] = numero[i];
-    var pregunta = prompt("Ingrese S para sumar los números ingresados o M para multiplicarlos");
-    
-    if (pregunta == "S")
-    {
-       suma = cero+ numeropar[i]
-    }
-    
  }
-alert(numeropar)
+for (var j = 0; j<5; j++)
+{
+   var pregunta = prompt("Ingrese S para sumar los números ingresados o M para multiplicarlos");
+   if (pregunta == "S")
+    {
+       suma = parseInt(suma)+ parseInt(numeropar[j]);
+      
+    } 
+    if (pregunta == "M")
+    {
+      multiplicacion = parseInt(uno) * parseInt(numeropar[j]);
+      alert(multiplicacion)
+    }
+}alert(suma)
