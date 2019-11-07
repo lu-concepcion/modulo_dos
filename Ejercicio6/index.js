@@ -1,7 +1,6 @@
 var contador = 0;
 const numeros = [];
-var sumar = 0;
-var multiplicar = 0;
+var resultado = 0;
 var good=false;
 
 do {
@@ -19,22 +18,23 @@ while(contador < 5);
 do {
     var accion = prompt("Que tipo de operacion, deseas realizar: Sumar o Multiplicar?");
 if (accion.toLowerCase() == "sumar") {
-    var good=true;
     for (const item in numeros) {
-        sumar = parseInt(sumar) + parseInt(numeros[item]);
+        resultado = parseInt(resultado) + parseInt(numeros[item]);
     }
-    alert("Tu resultado es: "+sumar);
+    alert("Tu resultado es: "+resultado);
+    var good=true;
 }
 else if (accion.toLowerCase() == "multiplicar") {
-    var good=true;
-    for (const item in multiplicar) {
-        multiplicar = parseInt(multiplicar) * parseInt(numeros[item]);
+    var resultado =1;
+    for (const item in numeros) {
+        resultado = parseInt(resultado) * parseInt(numeros[item]);
     }
-    alert("Tu resultado es: "+multiplicar);
+    alert("Tu resultado es: "+ resultado);
+    var good=true;
 }
 else {
-    alert("Ingresa una opción");
+    alert("Ingresa una Opción");
     var good=false;
 }
-}while(good == true);
+}while(!good);
 
