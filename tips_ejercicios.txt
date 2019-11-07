@@ -1,0 +1,12 @@
+// concatenar texto
+
+var texto1 = texto1 + " - " + texto2;
+
+// repetir logica hasta que condicion se cumpla
+contador = 0;
+do {
+  // logica
+ contador++;
+}while(contador< 7)
+
+
