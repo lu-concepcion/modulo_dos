@@ -18,3 +18,4 @@ for(i=0;i<n;i++){
     f1=generado;
     resultado+='-',generado;
 }
+document.write(resultado)
