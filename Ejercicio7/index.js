@@ -11,7 +11,6 @@
 
 var numeroIngresadoCorrecto= 0;
 var secuencia=[]
-var suma=0;
 
 while(numeroIngresadoCorrecto == 0) {
     var numero = prompt("Ingrese un número del 3 a 15");
@@ -22,23 +21,14 @@ while(numeroIngresadoCorrecto == 0) {
 }
 
 for (i=0; i<numeroParaSecuencia; i++ ){
-
     if (i==0){
         secuencia[i]= i;
     } else if (i==1){
         secuencia[i]=i
     }else {
-       // aux=i-1;
-
-        suma= secuencia[i-1]+ (i-1);
-        secuencia[i] = secuencia[i-1] + secuencia[i-2]
+        secuencia[i] = secuencia[i-1] + secuencia[i-2]; 
     }
-
-    //suma=i-1;
-    //secuencia= secuencia +","+
-
-
 }
 
-document.write(secuencia);
-alert(secuencia);
+var secuenciaConEspacios = secuencia.join(', ');
+document.write(secuenciaConEspacios);
