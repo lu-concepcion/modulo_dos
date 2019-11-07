@@ -13,5 +13,5 @@ do
         }
     exit= ((lpingresado!="Python")||(cont<4)) 
 }while (exit)
-var ultimo = "Python"
+var ultimo = " - Python"
 alert(lpcadena+ultimo)
