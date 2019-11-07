@@ -10,7 +10,7 @@
 var i=0,f0=0,f1=1,generado=0,resultado='0-1';
 do{
     var n = prompt("Ingrese un numero entre 3 y 15");
-}while(n<=3 || n>=15);
+}while(n<3 || n>15);
 
 for(i=0;i<n-2;i++){
     generado=f0+f1;
