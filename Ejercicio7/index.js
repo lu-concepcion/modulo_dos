@@ -13,12 +13,14 @@
 // a2 = a0 + a1
 // a3 = a1 + a2
 // = a13 + a14
-do {
- var N = prompt("ingrese ")
- 
 
+f = [0, 1]
+do {
+ var N = prompt("ingrese numero de sucesiones deseadas ")
+ 
 }while (N < 3 || N > 15)
 
-
- 
+for (var i = 2; i < N; i++)
+    f[i] = f[i-1] +f[i-2]
+ document.write(f)
 
