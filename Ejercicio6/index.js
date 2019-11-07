@@ -9,9 +9,19 @@ var nombre_mayor=""
 //Ejercicio 5
 var contador=0
 var numerosPares = [];
-var numero = prompt("Introduce numero");
-if(numero%2==0 && numero>=2 && numero<=20){
-    numerosPares[contador]= numero;
-    contador++;
-}
+
+
+do{
+    var numero = prompt("Introduce numero");
+    if(numero%2==0 && numero>=2 && numero<=20){
+        numerosPares[contador]= numero;
+        contador++;
+        if(contador==4){
+            break
+        }
+    
+    }
+    
+
+}while(contador>0)
 document.write(numerosPares)
