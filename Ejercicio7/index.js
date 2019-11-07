@@ -1,13 +1,16 @@
-variable_auxiliar = 1;
-variable_suma= 0;
+variable_n1 = 0;
+variable_n2= 1;
+variable_n3= 0;
 fibonacci = 0;
 do{
 var limite_de_secuencia = prompt ("¿Hasta que numero se hará la secuencia?");
 }while(limite_de_secuencia>15||limite_de_secuencia<3);
+
 for(i=0;i<limite_de_secuencia;i++){
-    variable_suma=variable_auxiliar
-    fibonacci = fibonacci +", "+ variable_auxiliar;
-    variable_auxiliar= parseInt(variable_auxiliar) + parseInt(variable_suma);
-    
+    variable_n3= parseInt(variable_n1) + parseInt(variable_n2);
+    variable_n1=variable_n2;
+    variable_n2=variable_n3;
+    fibonacci = fibonacci +", "+ variable_n3;
+
 }
 document.write(fibonacci)
