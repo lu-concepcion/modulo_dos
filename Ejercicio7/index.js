@@ -1,6 +1,7 @@
 let sucesiones = 0;
-let anterior = 0;
+let anterior = 1;
 let cadenaCompleta = '';
+let suma = 0;
 
 while(true){
     sucesiones = prompt('Ingresa el número de secesiones (entre 2 y 15)');
@@ -11,8 +12,9 @@ while(true){
     }
 }
 
-sucesiones = prompt('Ingresa el número de secesiones (entre 2 y 15)');
-
  for (let i = 0; i < sucesiones; i++) {
-     
+     suma = suma + anterior;
+     cadenaCompleta += suma + ',';
+     anterior = suma;
  }
+ document.write(cadenaCompleta);
