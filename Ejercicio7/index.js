@@ -5,13 +5,16 @@ do{
 var nPrimero = 0;
 var nSegundo = 1;
 var nTotal = nPrimero+nSegundo;
-var secuencia = "0 " + "1 ";
+var secuencia = "0, " + "1, ";
 
 for(var i=0; i<=size-3; i++){
     nSegundo = nPrimero;
     nPrimero = nTotal;
     nTotal = nPrimero+nSegundo;
-    secuencia = secuencia + nTotal + " ";
+    secuencia = secuencia + nTotal;
+    if(i != size-3){
+        secuencia = secuencia + ", "
+    }
 }
 
 document.write(secuencia);
