@@ -6,14 +6,13 @@
 //Fibonacci es una sucesión de números naturales, comenzando del 0 y 1, luego de estos cada número que continúa es la suma de los dos anteriores, 
 //Ej: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34….
 
-var numero = prompt("Ingrese numero");
+
 var fibonacci=[];
 fibonacci[0]=0, fibonacci[1]=1;
-
-if(numero>= 3 && numero<=15)
-{
+do {
+    var numero = prompt("Ingrese numero entre 3 y 15");
+}while(numero <3 || numero>15)
     for(i=2; i<numero;i++){
         fibonacci[i]= fibonacci[i-1]+ fibonacci[i-2]
     }
     document.write(fibonacci)
-}
