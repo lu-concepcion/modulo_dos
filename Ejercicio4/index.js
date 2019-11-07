@@ -1,23 +1,23 @@
-// variable guardará lo introducido en el prompt
 var contador = 0;
-var lenguaje = "";
+var lenguajes = "";
+var salir = false;
 do{
     lenguaje = prompt("Ingrese un lenguaje de programación");
 
-    if(lenguaje != "Python"){
+    if(lenguaje != "Python"){ //Si no es python
         if(contador == 0){
             lenguajes = lenguaje;
         }else{
             lenguajes = lenguajes + " - " + lenguaje;
         }
         contador++;
-    }else{
-        if(contador >= 4 && lenguaje == "Python"){
+    }else{ //Si es python
+        if(contador >= 4){
             lenguajes = lenguajes + " - " + lenguaje;
+            salir = true;
         }
-        lenguaje == "";
     }
 
-}while(contador < 4 && lenguaje != "Python" );
+}while(salir == false);
 
 alert(lenguajes)
