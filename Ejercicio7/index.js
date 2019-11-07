@@ -1,17 +1,14 @@
 var limite = 0
 var limite =prompt("introduzca el limite de la serie")
-var serie = []
-if (limite<=15 &&limite>=3)
+var serie = [0,1]
+if (limite<16 && limite>2)
 {
-    serie[0]=0
-    serie[1]=1
-    serie[2]=1
-    for (var i=3;i<=limite;i++)
+    for (var i=2;i<=limite;i++)
         {   
-            var j=i--
-            serie[i]=parseInt(serie[j]+serie[j--])
+             serie[i]=parseInt(serie[i-1])+parseInt(serie[i-2])
+           
         }
-    document.write(serie)
+        document.write(serie)
 }
 else
 {
