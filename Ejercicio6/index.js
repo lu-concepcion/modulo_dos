@@ -22,10 +22,11 @@ if (operacion=="sumar")
     }
 }
 if (operacion=="multuplicar")
+     resultado = 1
     {
     for (var i=0;i<5;i++)
     {
-        resultado = parseInt(resultado) + parseInt(numerospares[i])
+        resultado = parseInt(resultado) * parseInt(numerospares[i])
     }
 }
 alert(resultado)
