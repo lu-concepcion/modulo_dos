@@ -22,4 +22,7 @@ for (var i = 0; i < 5; i++) {
   // logica
 }
 
+// comando para escribir en navegador
+document.write("texto a escribir")
+
 
