@@ -3,7 +3,7 @@
 
 var primero = 0;
 var segundo = 1;
-var listado= primero + ", "+ segundo + ", ";
+var listado= primero + ", "+ segundo;
 
 do {
     var n = prompt("Indique cuantos numeros desea incluir en su secuencia de Fibonacci");
@@ -11,16 +11,14 @@ do {
 } while (n < 3 || n > 15);
 
 
-for (let i = 1; i < n; i++) {
+for (let i = 2; i < n; i++) {
      var sumatoria = parseInt(primero) + parseInt(segundo);
      primero= segundo;
      segundo = sumatoria;
-     if (i==n) {
-        listado = listado + sumatoria;
-    }
-    else{
-     listado = listado + sumatoria + ", ";
-    }
+     
+ 
+     listado = listado + ", " + sumatoria ;
+
     
 }
 alert(listado);
