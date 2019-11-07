@@ -1,6 +1,35 @@
 function Fibonacci()
 {
+	var error="false";
 
-	var numero = prompt("ingresa un numero");
+	do
+	{
+		var numero = parseInt(prompt("ingresa un numero"));
+		 error="false";
+
+		if(numero<3 || numero>15)
+		{
+		   alert("Fuera de rango!");
+		   error="true";
+
+	    }
+
+	   
+
+
+
+	}while(error=="true");
+
+
+
+	
+
+
+
+
+
+
+
+
 
 }
