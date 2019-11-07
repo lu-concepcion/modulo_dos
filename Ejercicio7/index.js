@@ -1,6 +1,6 @@
 
 prom = 0;
-var num = []
+var fibonacci = [0, 1]
 
 do{
 
@@ -10,7 +10,6 @@ do{
 
         alert ("El tamaño de la muestra debe de estar entre 3 a 15");
         
-
     }else{
 
         prom++
@@ -18,11 +17,10 @@ do{
     }
 }while(prom == 0)
 
-for(i==0; i<tam; i++){
+for(var i=0; i<tam; i++){
 
-
-    
+fibonacci en la posicion i va a ser igual a fibonacci en la posicion i - 1 MAS fibonacci en la posicion i - 2
 }
 
-document.write("hola")
+document.write(fibonacci)
 
