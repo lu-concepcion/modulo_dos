@@ -17,7 +17,6 @@ do {
 for (i = 3; i <= numero; i++) {
     num3=parseInt(num1+num3);
     num4 = parseInt(num4) + parseInt(num3);
-    console.log(num4);
     resultado += ", " + num4.toString();
     num1 = num2;
     num2 = num3;
