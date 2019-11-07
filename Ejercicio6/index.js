@@ -1,29 +1,14 @@
 var numerosPares = [];
 var numerosIngresados = [];
-for(var i=0; i=5; i++){
-    
-}
-
-
-
-
-
-var contador = 0;
-var edadmayor = 0;
-var nombremayor;
-do{
-    var nombre = prompt("Introduce un Nombre");
-    if(contador > 3){
-        if(nombre=="Salir"){
-            break;
-        }
-    }else{
-        var edad = prompt("Introduce su Edad");
-        if(edad>edadmayor){
-            edadmayor=edad;
-            nombremayor=nombre;
-        }
+var suma, multiplic = 0;
+for(var i=0; i<5; i++){
+    numerosIngresados[i] = prompt("Ingrese un número par");
+    if(numerosIngresados[i] % 2! = 0 || numerosIngresados [i]<0 || numerosIngresados[i]>20){
+        numerosIngresados [i] = prompt("Número inválido, ingrese nuevamente");
+      if (numerosIngresados [i] % 2== 0 && numerosIngresados [i] >0 && numerosIngresados [i]<21)
+      {
+         numerosPares[i] = numerosIngresados[i];
+      }
     }
-    contador++;
-}while (nombre != "Salir" || edad != "Salir" && contador < 4)
-alert(nombremayor + " es la persona mayor con " + edadmayor)
+}
+alert("")
