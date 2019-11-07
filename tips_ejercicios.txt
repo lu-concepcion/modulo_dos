@@ -32,3 +32,7 @@ var numerosPares = [2, 4, 6, 8, 10];
 // cantidad de elementos dentro del listado, siempre comienza del 0
 numerosPares.length
 
+//agregar elementos aun listado (array)
+var numerosPares = [2, 4, 6, 8, 10];
+numerosPares.push(12);
+// [2, 4, 6, 8, 10, 12]
