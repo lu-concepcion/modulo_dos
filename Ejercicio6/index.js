@@ -28,7 +28,7 @@ if (accion.toLowerCase() == "sumar") {
 else if (accion.toLowerCase() == "multiplicar") {
     var good=true;
     for (const item in multiplicar) {
-        multiplicar = parseInt(multiplicar)*parseInt(numeros[item]);
+        multiplicar = parseInt(multiplicar) * parseInt(numeros[item]);
     }
     alert("Tu resultado es: "+multiplicar);
 }
@@ -36,5 +36,5 @@ else {
     alert("Ingresa una opción");
     var good=false;
 }
-}while(good);
+}while(good == true);
 
