@@ -1,5 +1,5 @@
 // Defino las variables
-var persona = new Object();
+const persona = new Object();
 
 do {
     var nombre = prompt("Cual es tu Nombre?");
@@ -49,8 +49,5 @@ do {
     }
 }while(!pasoEdad);
 
-var datos = prompt("Si deseas ver tu datos ingresa SI");
-
-if (datos.toLowerCase() == "si") {
-    alert("Tu nombre es: " +persona[Nombre] + "\nTu apellido es: " +persona[Apellido]);
-}
+    //alert("Tu nombre es: " +persona[Nombre] + "\nTu apellido es: " +persona[Apellido]);
+    console.log(persona["Nombre"]);
