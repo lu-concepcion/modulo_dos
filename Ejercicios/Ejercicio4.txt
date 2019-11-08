@@ -1,0 +1,4 @@
+Escribir un algoritmo que solicite lenguajes de programación, cuando se ingrese el lp Python  
+la ejecución debe culminar y entregar como respuesta todos los lenguajes ingresados
+
+Al menos se deben ingresar 4 Lenguajes antes de dar término a la ejecución
