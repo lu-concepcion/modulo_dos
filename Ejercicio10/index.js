@@ -1,19 +1,57 @@
-var numero = new Object();
-
-numero.simbolo = ["I", "II","III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
-numero.valor = [1,2,3,4,5,6,7,8,9,10]
+var numero = [{
+    nombreNumero: "Uno",
+    numeroRomano: "I"
+},
+{
+    nombreNumero: "Dos",
+    numeroRomano: "II"
+},
+{
+    nombreNumero: "Tres",
+    numeroRomano: "III"
+},
+{
+    nombreNumero: "Cuatro",
+    numeroRomano: "IV"
+},
+{
+    nombreNumero: "Cinco",
+    numeroRomano: "V"
+},
+{
+    nombreNumero: "Seis",
+    numeroRomano: "VI"
+},
+{
+    nombreNumero: "Siete",
+    numeroRomano: "VII"
+},
+{
+    nombreNumero: "Ocho",
+    numeroRomano: "VIII"
+},
+{
+    nombreNumero: "Nueve",
+    numeroRomano: "IX"
+},
+{
+    nombreNumero: "Diez",
+    numeroRomano: "X"
+}];
 
 var ingreso = prompt("Ingrese un número romano");
 
 for(var i = 0; i<10; i++)
 
 {
-    while(ingreso != numero.simbolo[i])
+    while(ingreso!=numero[i].numeroRomano)
+{
+    ingreso = prompt("Error,Ingrese un número romano nuevamente");
+}
+    while(ingreso == numero[i].numeroRomano)
     {
-        ingreso = prompt("Error, Ingrese un número romano nuevamente");
+        alert(numero[i].nombreNumero)
     }
-    if(ingreso == numero.simbolo[i])
-    {
-        alert(numero.valor[i])
-    }
+
+
 }
