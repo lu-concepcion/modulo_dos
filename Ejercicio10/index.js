@@ -43,5 +43,6 @@ var numeroIngresado = prompt("Ingrese un numero romano");
 for(i=0;i<10;i++){
     if(nRomano[i].numero==numeroIngresado){
         document.write(nRomano[i].palabra)
+        break;
     }
 }
