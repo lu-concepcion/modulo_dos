@@ -1,46 +1,50 @@
 var romanos = [{
-    id:1,
+    id:"uno",
     simbolo:"I"
 },
 {
-    id:2,
+    id:"dos",
     simbolo:"II"
 },
 {
-    id:3,
+    id:"tres",
     simbolo:"III"
 },
 {
-    id:4,
+    id:"cuatro",
     simbolo:"IV"
 },
 {
-    id:5,
+    id:"cinco",
     simbolo:"V"
 },
 {
-    id:6,
+    id:"seis",
     simbolo:"VI"
 },
 {
-    id:7,
+    id:"siete",
     simbolo:"VII"
 },
 {
-    id:8,
+    id:"ocho",
     simbolo:"VIII"
 },
 {
-    id:9,
+    id:"nueve",
     simbolo:"IX"
 },
 {
-    id:10,
+    id:"diez",
     simbolo:"X"
 }]
 var ingresado
-var flag
-do{
-    ingresado = prompt("ingrese un numero romano")
-
-}while(flag) 
+var i=0
+ingresado = prompt("ingrese un numero romano")
+for (i;i<10;i++)
+{
+    if(romanos[i].simbolo==ingresado)
+    {
+        alert (romanos[i].id)
+    }
+}
