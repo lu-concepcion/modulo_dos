@@ -71,3 +71,9 @@ var listaObjetos = [
     valor: "dos"
   }
 ];
+
+
+parseInt("hola") -> NaN
+parseInt("9") -> true
+isNaN(parseInt("hola")) -> true
+isNaN(parseInt("9")) -> false
