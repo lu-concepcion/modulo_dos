@@ -4,7 +4,6 @@ var num = [2,4,6,8,10];
 
 for(var i=0; i<5; i++){
 
-
 var ns = prompt ("Ingrese un numero par");
 
 if (ns<2 || ns>20){
@@ -15,13 +14,9 @@ if (ns<2 || ns>20){
   
   if(ns%2 == 0){
 
-  
-  
   num[i] = parseInt(ns);
  
-  
-
-}else {
+  }else {
 
   alert ("El numero ingresado no es par");
 
