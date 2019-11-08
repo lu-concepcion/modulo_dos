@@ -10,7 +10,7 @@ var contador=0;
 var informacionPersona={};
 
 var personaMayor;
-var EdadMayor;
+var edadMayor=0;
 
 do{
     informacionPersona.Nombre=prompt("Ingrese nombre")
@@ -18,6 +18,12 @@ do{
         informacionPersona.Edad=prompt("Ingrese edad");
         informacion[contador]=informacionPersona;
         contador++;
+        if (parseInt(informacionPersona.Edad)> edadMayor){
+            edadMayor= parseInt(informacionPersona.Edad);
+            personaMayor= informacionPersona.Nombre;
+        }
+
     }
 }while (contador <4 || informacionPersona.Nombre !="Salir")
 
+alert("La persona de mayor edad es " + personaMayor);
