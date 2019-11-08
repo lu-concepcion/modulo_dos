@@ -23,17 +23,6 @@ do{
         }while(!isNaN(persona.profesion));
 
 
-var menu = prompt("Nombre: 1 ");
-
-switch (menu) {
-    case value:
-        
-        break;
-
-    default:
-        break;
-}
-
 
 
         alert("Nombre: " + persona.nombre + "\nApellidos: " + persona.apellidos + "\nEdad: " + persona.edad + "\nApellidos: " + persona.profesion);
