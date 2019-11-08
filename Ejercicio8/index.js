@@ -10,20 +10,28 @@ var persona = {
     Nombre:"",
     Apellidos:"",
     Edad: 0,
-    Profesion:""
+    Profesion:"",
 };
 
 do{
-persona.Nombre=prompt("Ingrese su Nombre");
+    persona.Nombre=prompt("Ingrese su Nombre");
 }while(parseInt(persona.Nombre));
 
-alert(persona.Nombre);
+do{
+    persona.Apellidos=prompt("Ingrese su Apellido");
+}while(parseInt(persona.Apellidos));
 
-persona.Apellidos=prompt("Ingrese su Apeliido");
+do{
+    persona.Edad=prompt("Ingrese su Edad");
+}while(!parseInt(persona.Edad));
 
-persona.Edad=prompt("Ingrese su Edad");
+do{
+    persona.Profesion=prompt("Ingrese su Profesión");
+}while(parseInt(persona.Profesion));
 
-persona.Profesion=prompt("Ingrese su Profesión");
+var res =   "Nombre: " + persona.Nombre +
+                "<br> Apellidos: " + persona.Apellidos +
+                "<br> Edad: " + persona.Edad +
+                "<br> Profesión: " + persona.Profesion;
 
-//probando validaciones
-
+    document.write(res);
