@@ -5,10 +5,10 @@ var contador=1;
 
 do{
 nombre =prompt("Ingrese Nombre: ");
-Edad=parseInt(prompt("Ingrese edad: "));
-contador= contador+1;
-alert(nombre+""+Edad+"");
 if(nombre == "Salir" && contador >=4){
 Salir = true;
 }
+Edad=parseInt(prompt("Ingrese edad: "));
+contador= contador+1;
+
 }while(Salir== false );
