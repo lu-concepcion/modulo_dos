@@ -36,7 +36,7 @@ var opcion = prompt("Ingrese una de las siguientes opciones para mostrar en pant
 
 switch (opcion)
 {
-    case 0:
+    case "0":
         alert(persona.nombre)
         break;
     
