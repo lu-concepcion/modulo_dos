@@ -42,5 +42,5 @@ persona.profesion = profesion;
 document.write(persona.nombre + ', ');
 document.write(persona.apellido + ', ');
 document.write(persona.edad + ', ');
-document.write(persona.profesion + ', ');
+document.write(persona.profesion);
 
