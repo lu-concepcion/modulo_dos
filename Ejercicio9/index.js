@@ -1,9 +1,12 @@
-marca = "";
-modelo = "";
-año = "";
-color = "";
-var vehiculo = new Object();
-
+var vehiculo ={
+    marca:"",
+    modelo:"",
+    año: 0,
+    color : {
+        html:"",
+        nombre:"",
+    }
+}
 do {
     var año = prompt("Ingrese al año del vehiculo");
 } while (Number.isNaN(parseInt(año)));
@@ -24,7 +27,7 @@ do {
 if (elegir_color == 1) {
     do {
         var color = prompt("Ingrese el color del auto(Incluya el #):");
-    } while (String.length(color) > 7 || String.length(color) < 0);
+    } while (color.length > 7 || color.length < 0);
     vehiculo.color = color;
 } else {
     if (elegir_color == 2) {
@@ -36,9 +39,9 @@ if (elegir_color == 1) {
         do {
             var color1 = prompt("Ingrese el color del auto en HTML(Incluya el #):");
         } while (color1.length > 7 || color1.length < 0);
-        vehiculo.color_html = color1;
+        vehiculo.color.html = color1;
         var color2 = prompt("Ingrese el color del auto por su nombre ");
-        vehiculo.color_nombre = color2;
+        vehiculo.color.nombre = color2;
     }
 }
 var elegir_opcion = prompt("¿Que desea ver? \n1.- Año \n2.- Marca \n3.- Modelo \n4.- Color \n5.- Todo");
@@ -57,7 +60,7 @@ if (elegir_opcion == 1) {
                 if (elegir_color == 1 || elegir_color == 2) {
                     alert("Año: " + vehiculo.año + "\nMarca: " + vehiculo.año + "\nModelo: " + vehiculo.modelo + "\nColor: " + vehiculo.color)
                 } else {
-                    alert("Año: " + vehiculo.año + "\nMarca: " + vehiculo.año + "\nModelo: " + vehiculo.modelo + "\nColor HTML: " + vehiculo.color_html + "\nColor por nombre: " + vehiculo.color_nombre);
+                    alert("Año: " + vehiculo.año + "\nMarca: " + vehiculo.año + "\nModelo: " + vehiculo.modelo + "\nColor HTML: " + vehiculo.color.html + "\nColor por nombre: " + vehiculo.color.nombre);
                 }
             }
         }
