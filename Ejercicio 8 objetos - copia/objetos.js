@@ -4,32 +4,37 @@ var apell;
 var ed;
 var profesion;
 
-nom = prompt("Ingrese nombre");
-if (nom != parseInt(nom)) {
-    persona.nombre = nom;
-} else {
-    prompt("Debe ingresar texto");
-}
+do {
+    nom = prompt("Ingrese nombre");
+    if (!isNaN(parseInt(nom))) {
+        alert("debe ingresar texto")
+    }
+} while (!isNaN(parseInt(nom)));
+persona.nombre = nom;
 
-apell = prompt("Ingrese apellido");
-if (apell != parseInt(apell)) {
-    persona.apellido = apell;
-} else {
-    prompt("Debe ingresar texto");
-}
+do {
+    apell = prompt("Ingrese apellido");
+    if (!isNaN(parseInt(apell))) {
+        alert("debe ingresar texto")
+    }
+} while (!isNaN(parseInt(apell)));
+persona.apellido = apell;
 
-ed = prompt("Ingresar Edad");
-if (ed == parseInt(ed)) {
-    persona.edad = ed;
-} else {
-    prompt("Debe ingresar números")
-}
+do {
+    ed = prompt("Ingrese edad");
+    if (isNaN(parseInt(ed))) {
+        alert("debe ingresar numeros")
+    }
+} while (isNaN(parseInt(ed)));
+persona.edad = ed;
 
-profesión = prompt("ingrese profesion");
-if (profesion != parseInt(profesion)) {
-    persona.profes = profesion;
-} else {
-    prompt("Debe ingresar texto")
-}
+do {
+    profesion = prompt("ingrese profesion");
+    if (!isNaN(parseInt(profesion))) {
+        alert("debe ingresar texto")
+    }
+} while (!isNaN(parseInt(profesion)));
+persona.profes = profesion;
 
-alert(persona.nombre + " " + persona.edad);
+
+alert(persona.nombre + " " + persona.apellido + " " + persona.edad + " " + persona.profes);
