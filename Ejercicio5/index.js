@@ -16,7 +16,7 @@ do {
 
  contador++;
 
-}while(nombre = "salir" && contador <=3)
+}while(nombre != "salir" && contador <=3)
 
 alert ("La persona de mayor edad es: "+sobnombre+" con "+sobedad)
 
