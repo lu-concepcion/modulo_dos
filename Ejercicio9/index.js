@@ -4,38 +4,40 @@ auto.marca = prompt("Ingrese la marca de su automóvil");
 
 while(!isNaN(auto.marca))
 {
-    auto.marca = prompt("Error, ingrese nuevamente");
+    auto.marca = prompt("Error, ingrese la marca nuevamente");
 }
 
 auto.modelo = prompt("Ingrese el modelo de su automóvil");
 
 while(!isNaN(auto.modelo))
 {
-    auto.modelo = prompt("Error, ingrese nuevamente");
+    auto.modelo = prompt("Error, ingrese el modelo nuevamente");
 }
 
 auto.año = prompt("Ingrese el año de su automóvil");
 
 while(isNaN(auto.año))
 {
-    auto.marca = prompt("Error, ingrese nuevamente");
+    auto.año = prompt("Error, ingrese el año nuevamente");
 }
+
 auto.color = new Object();
 auto.color.codigo = prompt("Ingrese el codigo del color de su automóvil");
 
 while(!isNaN(auto.color.codigo))
 {
-    auto.color = prompt("Error, ingrese nuevamente");
+    auto.color = prompt("Error, ingrese el codigo del color nuevamente");
 }
 
 auto.color.paleta = prompt("Ingrese el nombre del color de su automóvil");
 
 while(!isNaN(auto.color.paleta))
 {
-    auto.color = prompt("Error, ingrese nuevamente");
+    auto.color = prompt("Error, ingrese el nombre del color nuevamente");
 }
 var colorTodo = auto.color.codigo + "-" + auto.color.paleta;
-var opcion = prompt("Ingrese una de las siguientes opciones para mostrar en pantalla:\n 0:marca\n 1:modelo\n 2:año\n 3:código del color\n 4:nombre del color\n 5:código y nombre del color");
+var Todo = "Marca:"+ auto.marca+"\n Modelo:"+ auto.modelo+"\n Año:"+ auto.año+"\n Código del color:"+ auto.color.codigo+"\n Nombre del color:"+ auto.color.paleta;
+var opcion = prompt("Ingrese una de las siguientes opciones para mostrar en pantalla:\n 0: Marca\n 1: Modelo\n 2: Año\n 3: Código del color\n 4: Nombre del color\n 5: Código y nombre del color\n 6: Toda la información");
 
 switch (opcion)
 {
@@ -61,5 +63,9 @@ switch (opcion)
                 
     case "5":
         alert(colorTodo)
+        break;
+        
+    case "6":
+        alert(Todo)
         break;
 }
