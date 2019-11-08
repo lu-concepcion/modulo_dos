@@ -24,21 +24,21 @@ if (ns<2 || ns>20){
 }
 }
 
-var ope = prompt ("Ingrese una operacion a realizar: Multiplicar, Sumar. Para finalizar, escriba Salir")
+var ope = prompt ("Ingrese una operacion a realizar: Multiplicar, Sumar.")
 if (ope == "multiplicar"){
 
   var total = num[0]*num[1]*num[2]*num[3]*num[4];
-
+  document.write("El valor es: "+ total);
 }else{
   
   if(ope == "sumar"){
 
   var total = num[0]+num[1]+num[2]+num[3]+num[4];
-
+  document.write("El valor es: "+ total);
 }else{
 
   alert("La operacion no logra reconocerse" )
   
 }
 }
-document.write("El valor es: "+ total);
+
