@@ -7,7 +7,7 @@
 // Utilizar OBJETOS
 
 var Persona = new Object();
-Persona.nombre='Jorge';
-Persona.apellidos='Gajardo Reyes';
-Persona.edad='26';
-Persona.profesion='Ing. Informatico';
+Persona.nombre=prompt("Ingrese su nombre");
+Persona.apellidos=prompt("Ingrese sus apellidos");
+Persona.edad=prompt("Ingrese su edad");
+Persona.profesion=prompt("Ingrese su profesion");
