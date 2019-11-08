@@ -13,15 +13,18 @@ var vehiculo={
     marca:vehMar,
     modelo:vehMod,
     año:vehAn,
-    color:vehCoN,
-    codCo:vehCoD
-
+    color:{
+        nombreCol:vehCoN,
+        codCo:vehCoD
+    },
+        
 };
 
-vehiculo.marca;
-vehiculo.modelo;
-vehiculo.año;
-vehiculo.color;
-vehiculo.codCo;
 
-document.write(vehiculo.marca+", ",vehiculo.modelo+", ",vehiculo.año+", ",vehiculo.color+", ",vehiculo.codCo )
+vehiculo.marca
+vehiculo.modelo
+vehiculo.año
+vehiculo.color.nombreCol
+vehiculo.color.codCo
+
+document.write(vehiculo.marca+", ", vehiculo.modelo+", ", vehiculo.año+", ", vehiculo.color.nombreCol+", ", vehiculo.color.codCo)
