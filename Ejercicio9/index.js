@@ -8,6 +8,7 @@
 //Utilizar OBJETOS
 
 var vehiculo= {};
+vehiculo.color ={};
 do{
     var marca = prompt("Ingrese marca del vehiculo");
     if(!parseInt(marca)){
@@ -26,3 +27,18 @@ do{
         vehiculo.año = año;
     }
 }while(!parseInt(año))
+do{
+    var nombreColor = prompt("Ingrese color del vehiculo");
+    if(!parseInt(nombreColor)){
+        vehiculo.color.nombreColor = nombreColor;
+    }
+}while(parseInt(nombreColor))
+do{
+    var codigoColor = prompt("Ingrese codigo del color de su vehiculo");
+    if(!parseInt(codigoColor)){
+        vehiculo.color.codigoColor = codigoColor;
+    }
+}while(parseInt(codigoColor))
+
+document.write("Marca: "+vehiculo.marca+"<br>", "Modelo: "+ vehiculo.modelo+"<br>",
+"Año: "+vehiculo.año+"<br>","Nombre color: "+ vehiculo.color.nombreColor+"<br>","Codigo Color:"+ vehiculo.color.codigoColor)
