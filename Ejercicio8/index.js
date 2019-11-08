@@ -24,3 +24,15 @@ do{ //Profesión
     persona.profesion = prompt("Ingrese su profesión");
 }while(parseInt(persona.profesion));
 
+do{ //Información
+    var informacion = prompt("Desea ver su información? (Si/No)");
+}while(informacion != "Si" && informacion != "No");
+
+if(informacion == "Si"){
+    var mensaje =   "Nombre: " + persona.nombre +
+                "<br> Apellidos: " + persona.apellidos +
+                "<br> Edad: " + persona.edad +
+                "<br> Profesión: " + persona.profesion;
+
+    document.write(mensaje);
+}
