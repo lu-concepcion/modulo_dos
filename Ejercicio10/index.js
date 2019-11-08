@@ -42,16 +42,21 @@ var numero = [{
 var ingreso = prompt("Ingrese un número romano");
 
 for(var i = 0; i<10; i++)
-
 {
-    while(ingreso!=numero[i].numeroRomano)
-{
-    ingreso = prompt("Error,Ingrese un número romano nuevamente");
-}
-    while(ingreso == numero[i].numeroRomano)
+    if(ingreso != numero[i].numeroRomano)
     {
-        alert(numero[i].nombreNumero)
+        ingreso = prompt("Error, Ingrese un número romano nuevamente, tiene 1 intento más");
+        break;
     }
 
+}
+
+for(var i = 0; i<10; i++)
+{
+    if(ingreso == numero[i].numeroRomano)
+    {
+        alert(numero[i].nombreNumero)
+        break;
+    }
 
 }
