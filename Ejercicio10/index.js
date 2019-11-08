@@ -39,14 +39,14 @@ var romanos = [{
     simbolo:"X"
 }]
 var ingresado
-var i=0
 do{
 ingresado = prompt("ingrese un numero romano")
 }while(!isNaN(ingresado))
-for (i;i<10;i++)
+for (var i=0;i<10;i++)
 {
     if(romanos[i].simbolo==ingresado)
     {
         alert (romanos[i].id)
+        break
     }
 }
