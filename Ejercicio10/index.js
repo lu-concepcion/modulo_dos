@@ -3,29 +3,35 @@ let letraRomana = '';
 let letraUsuario = '';
 
 for (let i = 1; i <= 10; i++) {
-    letraRomana = i == 0? 'I':'';
-    letraRomana = i == 1? 'II':'';
-    letraRomana = i == 2? 'III':'';
-    letraRomana = i == 3? 'IV':'';
-    letraRomana = i == 4? 'V':'';
-    letraRomana = i == 5? 'VI':'';
-    letraRomana = i == 6? 'VII':'';
-    letraRomana = i == 7? 'VIII':'';
-    letraRomana = i == 8? 'IX':'';
-    letraRomana = i == 9? 'X':'';
-    romano = {
+    if (i == 1) {letraRomana = 'I'}
+    if (i == 2) {letraRomana = 'II'}
+    if (i == 3) {letraRomana = 'III'}
+    if (i == 4) {letraRomana = 'IV'}
+    if (i == 5) {letraRomana = 'V'}
+    if (i == 6) {letraRomana = 'VI'}
+    if (i == 7) {letraRomana = 'VII'}
+    if (i == 8) {letraRomana = 'VIII'}
+    if (i == 9) {letraRomana = 'IX'}
+    if (i == 10) {letraRomana = 'X'}
+    var romano = {
         numRomano: letraRomana,
-        numNormal : (i+1)
+        numNormal : i
     } 
-    romanos[i] = romano;
+    romanos[i-1] = romano;
 }
 
-for (let i = 0; i < romanos.length; i++) {
-    letraUsuario = prompt('Ingresa número romano (1 a 10)');
+console.log(romanos);
 
+console.log(romanos[1]);
+letraUsuario = prompt('Ingresa número romano (1 a 10)');
+for (let i = 0; i < romanos.length; i++) { 
+    if (romanos[i].numRomano === letraUsuario) {
+        alert(romanos[i].numRomano + ' es el número: ' + romanos[i].numNormal);
+        break;
+    } 
 }
 
 
 
-alert(romano.numRomano + ' es el número: ' + romano.numNormal)
+
 
