@@ -35,7 +35,7 @@ if(numero.includes("I") || numero.includes("V") || numero.includes("X")){
     if(numeroRomano.valor =="VIII"){
         alert("Ocho")
     }
-    if(numeroRomano.valor =="VIIII"){
+    if(numeroRomano.valor =="IX"){
         alert("Nueve")
     }
     if(numeroRomano.valor =="X"){
