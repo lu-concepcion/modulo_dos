@@ -17,9 +17,9 @@ do{
     }
 }while(prom == 0)
 
-for(var i=0; i<tam; i++){
+for(var i=2; i<tam; i++){
 
-fibonacci en la posicion i va a ser igual a fibonacci en la posicion i - 1 MAS fibonacci en la posicion i - 2
+fibonacci [i] = fibonacci [i-1] + fibonacci [i-2]
 }
 
 document.write(fibonacci)
