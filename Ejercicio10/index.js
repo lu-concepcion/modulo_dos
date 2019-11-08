@@ -40,3 +40,12 @@ var numeroRomano = [
         nombre: "diez"
     },
 ];
+
+var numeroComparado = prompt("Ingrese numero romano de I - X");
+
+for (let i = 0; i < numeroRomano.length; i++) {
+    if (numeroRomano[i].romano == numeroComparado) {
+        alert(numeroRomano[i].nombre)
+    }
+    
+}
