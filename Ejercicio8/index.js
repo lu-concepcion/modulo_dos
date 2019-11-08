@@ -6,20 +6,40 @@ var edadObjeto;
 
 do{
 persona.nombre =  prompt("Ingrese nombre de la persona (solo texto)");
-}while(isNaN(persona.nombre)==false)
-
-//persona.apellidos = prompt("Ingrese edad");
-
- persona.edad = prompt("Ingrese edad");
-
-//persona.profesion = prompt("Ingrese edad");
+}while(!isNaN(persona.nombre));
 
 
+do{
+    persona.apellidos = prompt("Ingrese apellido (solo texto)");
+    }while(!isNaN(persona.apellidos));
 
-if ( isNaN(persona.edad) == false) {
-    alert(persona.edad);
 
+ do{
+    persona.edad = prompt("Ingrese edad (solo números)");
+    }while(isNaN(parseInt(persona.edad)));
+
+    do{
+        persona.profesion = prompt("Ingrese profesion (solo texto)");
+        }while(!isNaN(persona.profesion));
+
+
+var menu = prompt("Nombre: 1 ");
+
+switch (menu) {
+    case value:
+        
+        break;
+
+    default:
+        break;
 }
+
+
+
+        alert("Nombre: " + persona.nombre + "\nApellidos: " + persona.apellidos + "\nEdad: " + persona.edad + "\nApellidos: " + persona.profesion);
+
+
+
 
 
 
