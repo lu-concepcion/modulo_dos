@@ -8,23 +8,46 @@
 //Utilizar OBJETOS
 
 var persona= {};
-var nombre= prompt("Ingrese nombre");
-var apellido= prompt("Ingrese apellido");
-var edad = prompt("Ingrese edad");
-var profesion = prompt("ingrese profesion")
+do{
+    var nombre= prompt("Ingrese nombre");
+    if(!parseInt(nombre)){
+        persona.nombre = nombre;
+    }
+}while(parseInt(nombre))
 
+do{
+    var apellido= prompt("Ingrese apellido");
+    if(!parseInt(apellido)){
+        persona.apellido = apellido
+    }
+}while(parseInt(apellido))
 
+do{
+    var edad = prompt("Ingrese edad");
+    if(parseInt(edad)){
+        persona.edad = edad
+    }
+}while(!parseInt(edad))
 
-if(parseInt(nombre)){
-}else{
-    persona.nombre = nombre;
+do{
+    var profesion = prompt("ingrese profesion")
+    if(!parseInt(profesion)){
+        persona.profesion= profesion
+    }
+}while(parseInt(profesion))
+
+document.write(persona.nombre+"-", persona.apellido+"-",persona.edad+"-", persona.profesion)
+
+var opcion = prompt("Que desea visualizar?")
+if(opcion=="nombre"){
+    document.write("Nombre: "+ persona.nombre)
 }
-if(parseInt(apellido)){
-}else{persona.apellido = apellido}
-if(parseInt(edad)){
-    persona.edad = edad
+if(opcion=="apellido"){
+    document.write("Apellido: "+ persona.apellido)
 }
-if(parseInt(profesion)){
-
-}else{persona.profesion= profesion}
-document.write(persona.nombre, persona.apellido,persona.edad, persona.profesion)
+if(opcion=="edad"){
+    document.write("Edad: "+ persona.edad)
+}
+if(opcion=="profesion"){
+    document.write("Profesion: "+ persona.profesion)
+}
