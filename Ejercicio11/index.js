@@ -9,14 +9,14 @@ var contador=0;
 var edadAuxiliar=0;
 var nombreAuxiliar='';
 var persona=[
-    {
-        nombre,
-        edad
-    }
+    
+        nombre="",
+        edad=12
+    
 ]
 do{
     var nombreIngresado = prompt("Ingrese su nombre");
-    if(nombre=='Salir')
+    if(nombreIngresado=='Salir')
     {
         if(contador>3){
             break;
