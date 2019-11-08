@@ -14,49 +14,49 @@ flag = 0;
 
 do {
     var consultar_opcion = prompt("Ingrese su numero romano");
-    consultar_opcion = consultar_opcion.toLocaleUpperCase;
-    switch (consultar_opcion) {
-        case I:
+    consultar_opcion = consultar_opcion.toUpperCase();
+    switch (consultar_opcion){
+        case "I":
             alert(numeros_romanos.I)
             flag = 1;
             break;
-        case II:
+        case "II":
             alert(numeros_romanos.II)
             flag = 1;
             break;
-        case III:
+        case "III":
             alert(numeros_romanos.III)
             flag = 1;
             break;
-        case IV:
+        case "IV":
             alert(numeros_romanos.IV)
             flag = 1;
             break;
-        case V:
+        case "V":
             alert(numeros_romanos.V)
             flag = 1;
             break;
-        case VI:
+        case "VI":
             alert(numeros_romanos.VI)
             flag = 1;
             break;
-        case VII:
+        case "VII":
             alert(numeros_romanos.VII)
             flag = 1;
             break;
-        case VIII:
+        case "VIII":
             alert(numeros_romanos.VIII)
             flag = 1
             break;
-        case IX:
+        case "IX":
             alert(numeros_romanos.IX)
             flag = 1;
             break;
-        case X:
+        case "X":
             alert(numeros_romanos.X)
             flag = 1
             break;
         default:
-            alert("El valor ingresado no es romano")
+            alert("El valor ingresado no es romano o no está entre 1 y 10")
     }
 } while (flag == 0);
