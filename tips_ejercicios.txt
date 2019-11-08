@@ -1,6 +1,5 @@
 // concatenar texto
-
-var texto1 = texto1 + " - " + texto2;
+var textoConcatenado = `${nombre} ${apellido}`;
 
 // repetir logica hasta que condicion se cumpla
 contador = 0;
