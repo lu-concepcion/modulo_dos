@@ -18,9 +18,20 @@ do{
     var modelo = prompt("Ingrese el modelo del auto");
 }while(Number.isNaN(parseInt(modelo))==false);
 vehiculo.modelo = modelo;
-
-var color = prompt("Ingrese el color del auto:");
-vehiculo.color = color;
+do{
+var elegir_color = prompt("Como desea ingresar su color \n1.- HTML \n2.- Por su nombre")
+}while(parseInt(elegir_opcion)<1||parseInt(elegir_opcion)>2);
+if(elegir_color==1){
+    do{
+var color = prompt("Ingrese el color del auto(Incluya el #):");
+    }while(String.length(color)>7||String.length(color)<0);
+    vehiculo.color = color;
+}else{
+    do{
+        var color = prompt("Ingrese el color del auto:");
+    }while(Number.isNaN(parseInt(modelo))==false);
+    vehiculo.color=color
+}
 
 var elegir_opcion("¿Que desea ver? \n1.- Año \n2.- Marca \n3.- Modelo \n4.- Color \n5.- Todo")
 if(elegir_opcion==1){
