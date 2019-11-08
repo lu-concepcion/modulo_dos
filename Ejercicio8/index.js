@@ -16,23 +16,29 @@ do{
     persona.profesion = prompt("Ingrese profesion: ");
 }while(isNaN(persona.profesion) == false)
 
-var respuesta = prompt("¿Que información desea ver?" +
-                        "1.- Nombre" +
-                        "2.- Apellidos" +
-                        "3.- Edad" +
-                        "4.- Profesión" );
+do{
+    var respuesta = prompt("Ingrese opcion: 1.Nombre 2.Apellidos 3.Edad 4.Profesion 5.Todo");
+    var rep = false;
+    switch(respuesta){
+        case "1":
+            alert("Nombre : " + persona.nombre);
+            break;
+        case "2":
+            alert("Apellido : " + persona.apellidos);
+            break;
+        case "3":
+            alert("Edad : " + persona.edad);
+            break;
+        case "4":
+            alert("Profesion : " + persona.profesion);
+            break;
+        case "5":
+            alert("Nombre: " + persona.nombre + ", Apellidos: " + persona.apellidos + ", Edad: " + persona.edad
+                  + ", Profesion: " + persona.profesion)
 
-switch(respuesta){
-    case 1:
-        alert(persona.nombre);
-        break;
-    case 2:
-        alert(persona.apellidos);
-        break;
-    case 3:
-        alert(persona.edad);
-        break;
-    case 4:
-        alert(persona.profesion);
-        break;
-}
+        default:
+            rep = true;
+            alert("Ingrese opcion valida");
+    }
+    
+}while(rep);
