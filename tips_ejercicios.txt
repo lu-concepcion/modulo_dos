@@ -36,9 +36,6 @@ var numerosPares = [2, 4, 6, 8, 10];
 numerosPares.push(12);
 // [2, 4, 6, 8, 10, 12]
 
-
-
-
 //declaracion de objetos 1
 var persona = new Object();
 persona.nombre = "Hernán";
@@ -51,12 +48,17 @@ var objeto = {
   nombre: "Hernán"
 }
 
-//acceso a informacion de objetos
-
+//acceso a informacion de objetos 1
 var objetoId = objeto.id;
 var objetoNombre = objeto.nombre;
 // la variable objetoId tomaria el valor de 1
 // la variable objetoNombre tomaria el valor de  Hernán
+
+
+//acceso a informacion de objetos 2
+var { nombre, edad } = persona;
+alert(`${nombre} ${edad}`); 
+
 
 // array de objetos
 var listaObjetos = [
