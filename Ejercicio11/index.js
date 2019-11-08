@@ -2,17 +2,20 @@ var personaMayor={
     edad: 0,
     nombre: ""
 }
-
+var contador = 0;
 do {
      do {
     var nombreNuevo = prompt("Indique su nombre"); 
      } while (!isNaN(nombreNuevo));
     
     if (nombreNuevo == "Salir") {
-        break;
+        if(contador >= 4){ 
+        break;}
     }
 else{
+
     do {
+        contador++;
         var edadNueva = prompt("Indique su edad"); 
     } while (isNaN(edadNueva));
    
@@ -23,6 +26,6 @@ else{
 
 }
 
-} while (nombreNuevo != "Salir");
+} while (nombreNuevo != "Salir" || contador < 4);
 
 alert(`Persona Mayor \nNombre: ${personaMayor.nombre} \nEdad: ${personaMayor.edad}`);
