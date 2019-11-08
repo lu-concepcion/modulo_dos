@@ -1,48 +1,29 @@
-romano = {
-    numRomano: '',
-    numNormal : 0
+let romanos = [];
+let letraRomana = '';
+let letraUsuario = '';
+
+for (let i = 1; i <= 10; i++) {
+    letraRomana = i == 0? 'I':'';
+    letraRomana = i == 1? 'II':'';
+    letraRomana = i == 2? 'III':'';
+    letraRomana = i == 3? 'IV':'';
+    letraRomana = i == 4? 'V':'';
+    letraRomana = i == 5? 'VI':'';
+    letraRomana = i == 6? 'VII':'';
+    letraRomana = i == 7? 'VIII':'';
+    letraRomana = i == 8? 'IX':'';
+    letraRomana = i == 9? 'X':'';
+    romano = {
+        numRomano: letraRomana,
+        numNormal : (i+1)
+    } 
+    romanos[i] = romano;
 }
 
+for (let i = 0; i < romanos.length; i++) {
+    letraUsuario = prompt('Ingresa número romano (1 a 10)');
 
-do {
-    romano.numRomano = prompt('Ingresa número romando (solo del 1 al 10').toUpperCase();
-    switch (romano.numRomano) {
-        case 'I':
-            romano.numNormal = 1;
-            break;
-        case 'II':
-            romano.numNormal = 2;
-            break;
-        case 'III':
-            romano.numNormal = 3;
-            break;
-        case 'IV':
-            romano.numNormal = 4;
-            break;
-        case 'V':
-            romano.numNormal = 5;
-            break;
-        case 'VI':
-            romano.numNormal = 6;
-            break;
-        case 'VII':
-            romano.numNormal = 7;
-            break;
-        case 'VIII':
-            romano.numNormal = 8;
-            break;
-        case 'IX':
-            romano.numNormal = 9;
-            break;
-        case 'X':
-            romano.numNormal = 10;
-            break;
-        default:
-            continue;
-    }
-    break;
-} while(true);
-
+}
 
 
 
