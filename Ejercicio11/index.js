@@ -44,3 +44,10 @@ do{
     }
 }while(flag==1);
 
+for(i=0;i<=auxiliar;i++){
+    if(datos_persona.edades[i]>datos_persona.mayor.edad){
+        datos_persona.mayor.edad = datos_persona.edades[i];
+        datos_persona.mayor.nombre = datos_persona.nombres[i];
+    }
+}
+alert(datos_persona.mayor.nombre+" es el(la) mayor con "+datos_persona.mayor.edad+" años.")
