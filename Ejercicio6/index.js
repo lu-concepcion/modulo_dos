@@ -4,24 +4,35 @@
 //Sumar: suma cada uno de los números y entrega el resultado
 //Multiplicar: multiplica cada uno de los números y entrega el resultado
 
-var mayor = 0
-var nombre_mayor=""
-//Ejercicio 5
+//Ejercicio 6
 var contador=0
 var numerosPares = [];
+var sumar=0,multiplicar=1;
 
 
 do{
     var numero = prompt("Introduce numero");
     if(numero%2==0 && numero>=2 && numero<=20){
-        numerosPares[contador]= numero;
-        contador++;
+        numerosPares[contador]= parseInt(numero);
+        
         if(contador==4){
             break
         }
-    
+        contador++;
     }
     
 
 }while(contador>0)
 document.write(numerosPares)
+
+var operacion = prompt("Opciones:ingrese si desea sumar o multiplicar");
+for( i=0;i<5;i++){
+    sumar+=numerosPares[i];
+    multiplicar*=numerosPares[i];
+}
+if(operacion=='sumar'){
+    alert(sumar);
+}
+if(operacion=='multiplicar'){
+    alert(multiplicar);
+}
