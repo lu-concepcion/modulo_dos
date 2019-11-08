@@ -6,12 +6,12 @@ do
 do
 {
     auto.modelo=prompt("ingrese modelo")
-} while(parseInt(auto.marca))
+} while(parseInt(auto.modelo))
 do
 {
     auto.año=prompt("ingrese año")
-} while(parseInt(auto.marca))
+} while(isNaN(auto.año))
 do
 {
     auto.color=prompt("ingrese color")
-} while(parseInt(auto.marca))
+} while(parseInt(auto.color))
