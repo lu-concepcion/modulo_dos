@@ -40,7 +40,9 @@ var romanos = [{
 }]
 var ingresado
 var i=0
+do{
 ingresado = prompt("ingrese un numero romano")
+}while(!isNaN(ingresado))
 for (i;i<10;i++)
 {
     if(romanos[i].simbolo==ingresado)
