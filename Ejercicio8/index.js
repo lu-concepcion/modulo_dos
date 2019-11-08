@@ -29,7 +29,7 @@ do {
     var profession = prompt("Cual es tu profession?");
     if (profession !== "" || isNaN(profession) ) {
         persona.Profession = profession;
-        var pasoProfression = true;
+        var pasoProfession = true;
     }
     else {
         alert ("Ingresa tu profession correctamente!");
