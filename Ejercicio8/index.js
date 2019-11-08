@@ -19,6 +19,4 @@ do{
 do{
     Persona.profesion=prompt("Ingrese su profesion");
 }while(parseInt(Persona.profesion));
-
-var consulta= prompt("Ingrese una opcion a ver: nombre, apellidos, edad, profesion");
-document.write(Persona.consulta)
+document.write(Persona.nombre+' '+Persona.apellidos+' '+Persona.edad+' '+Persona.profesion)
