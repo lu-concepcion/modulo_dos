@@ -1,56 +1,56 @@
-var nroRomano = {
-    I: "Uno",
-    II: "Dos",
-    III: "Tres",
-    IV: "Cuatro",
-    V: "Cinco",
-    VI: "Seis",
-    VII: "Siete",
-    VIII: "Ocho",
-    IX: "Nueve",
-    X: "Diez"
-}
-
+var numRomanos = [
+    {
+        numero: "I",
+        valor: "Uno"
+    },
+    {
+        numero: "II",
+        valor: "Dos"
+    },
+    {
+        numero: "III",
+        valor: "Tres"
+    },
+    {
+        numero: "IV",
+        valor: "Cuatro"
+    },
+    {
+        numero: "V",
+        valor: "Cinco"
+    },
+    {
+        numero: "VI",
+        valor: "Seis"
+    },
+    {
+        numero: "VII",
+        valor: "Siete"
+    },
+    {
+        numero: "VIII",
+        valor: "Ocho"
+    },
+    {
+        numero: "IX",
+        valor: "Nueve"
+    },
+    {
+        numero: "X",
+        valor: "Diez"
+    }
+]
 do {
     var resp = prompt("Ingrese numero romano: ");
     resp = resp.toUpperCase();
-    var rep = false;
-    
-    switch(resp){
-        case "I":
-            alert(nroRomano.I);
-            break;
-        case "II":
-            alert(nroRomano.II);
-            break;
-        case "III":
-            alert(nroRomano.III);
-            break;
-        case "IV":
-            alert(nroRomano.IV);
-            break;
-        case "V":
-            alert(nroRomano.V);
-            break;
-        case "VI":
-            alert(nroRomano.VI);
-            break;
-        case "VII":
-            alert(nroRomano.VII);
-            break;
-        case "VIII":
-            alert(nroRomano.VIII);
-            break;
-        case "IX":
-            alert(nroRomano.IX);
-            break;
-        case "X":
-            alert(nroRomano.X);
-            break;
+}while(resp.length <= 0 || resp.length >= 5)
 
-        default:
-            alert("Ingrese opción valida");
-            rep = true;
+for(var i=0;i < 10; i++){
+    if(numRomanos[i].numero == resp){
+        alert("El valor es: " + numRomanos[i].valor);
+        break;
     }
-
-}while(rep);
+    if(i == 9){
+        alert("Numero desconocido");
+    }
+}
