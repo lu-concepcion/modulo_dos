@@ -2,6 +2,7 @@ let marca = "";
 let modelo = "";
 let anio = "";
 let color = "";
+let colorHexa = "";
 
 while(true){
     marca = prompt('Ingresa marca');
@@ -25,8 +26,22 @@ while(true){
     alert('Error: Ingrese solo números y no dejes campo vacío');
 }
 while(true){
-    color = prompt('Ingresa color');
+    color = prompt('Ingresa color (azul, rojo, blanco)');
     if (isNaN(color) && color != '') {
+        switch (color) {
+            case 'azul':
+                colorHexa = '#0000FF';
+                break;
+            case 'rojo':
+                colorHexa = '#FF0000';
+                break;
+            case 'blanco':
+                colorHexa = '#FFFFFF';
+            break;
+            default:
+                colorHexa = 'No detectado'
+                break;
+        }
         break;
     }
     alert('Error: Ingrese solo letras y no dejes campo vacío');
@@ -42,6 +57,5 @@ vahiculo.color = color;
 document.write(vahiculo.marca + ', ');
 document.write(vahiculo.modelo + ', ');
 document.write(vahiculo.anio + ', ');
-document.write(vahiculo.color);
-console.log(color);
+document.write(vahiculo.color + ' - color hexadecimal: ' + colorHexa);
 
