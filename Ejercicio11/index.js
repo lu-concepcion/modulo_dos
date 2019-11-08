@@ -5,7 +5,7 @@
 
 // Utilizar OBJETOS
 
-var informacion=[]:
+var informacion=[];
 var contador=0;
 var informacionPersona={};
 
@@ -15,8 +15,9 @@ var EdadMayor;
 do{
     informacionPersona.Nombre=prompt("Ingrese nombre")
     if (informacionPersona.Nombre != "Salir"){
-        informacion[contadaor]=informacionPersona;
+        informacionPersona.Edad=prompt("Ingrese edad");
+        informacion[contador]=informacionPersona;
+        contador++;
     }
+}while (contador <4 || informacionPersona.Nombre !="Salir")
 
-
-}while (contador <4 || informacionPersona.Nombre!="Salir")
