@@ -19,7 +19,7 @@ while(true){
 }
 while(true){
     edad = prompt('Ingresa edad');
-    if (/^([0-9])*$/.test(edad) && edad != '') {
+    if (!isNaN(edad) && edad != '') {
         break;
     }
     alert('Error: Ingrese solo números y no dejes campo vacío');
