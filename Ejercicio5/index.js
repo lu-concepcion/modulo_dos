@@ -1,25 +1,22 @@
 
-contador = 1;
+contador = 0;
+sobedad = 0;
+
 
 do {
 
-  var sobnombre = prompt ("Ingrese un Nombre");
-
-  if (nombre == salir && contador >= 4){
-
-    alert ("la persona con la mayor edad ingresada es "+sobnombre)
-
-  }else{
+  var nombre = prompt ("Ingrese un Nombre");
   var edad = prompt ("Ingrese su edad") 
   
-  if (parseInt(sobedad)>parseInt(edad)) {
+  if (parseInt(edad)>sobedad) {
    sobnombre = nombre  
    sobedad = edad
   }
-}
 
 
  contador++;
 
-}while(contador == 4)
+}while(nombre = "salir" && contador <=3)
+
+alert ("La persona de mayor edad es: "+sobnombre+" con "+sobedad)
 
