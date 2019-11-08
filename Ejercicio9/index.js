@@ -39,7 +39,6 @@ do{
     var info =   "Marca: " + vehiculo.Marca +
                 "<br> Modelo: " + vehiculo.Modelo +
                 "<br> Año: " + vehiculo.Agno +
-                "<br> Código de Color: " + vehiculo.Color.Codigo +
-                "<br> Nombre del Color: " + vehiculo.Color.Nombre;
+                "<br> Nombre del Color y Codigo: " + vehiculo.Color.Nombre + " ("+vehiculo.Color.Codigo+")";
 
     document.write(info);
