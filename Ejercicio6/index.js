@@ -20,14 +20,27 @@ if (ns<2 || ns>20){
 
 }else {
 
-  alert ("El numero ingresado no es par")
+  alert ("El numero ingresado no es par");
 
 }
 }
-}while(numpar <= 5)
+}while(numpar <= 4)
 
+var ope = prompt ("Ingrese una operacion a realizar: Multiplicar, Sumar. Para finalizar, escriba Salir")
 if (ope == "multiplicar"){
+
+  var total = num[0]*num[1]*num[2]*num[3]*num[4];
 
 }else{
   
+  if(ope == "sumar"){
+
+  var total = num[0]+num[1]+num[2]+num[3]+num[4];
+
+}else{
+
+  alert("La operacion no logra reconocerse" )
+  
 }
+}
+document.write("El valor es: "+ total);
