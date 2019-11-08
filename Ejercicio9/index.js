@@ -1,4 +1,5 @@
 var auto = Object()
+var flag = 1
 do
 {
     auto.marca=prompt("ingrese marca")
@@ -13,30 +14,35 @@ do
 } while(isNaN(auto.año))
 do
 {
-    auto.color.nombre=prompt("ingrese color")
-} while(parseInt(auto.color.nombre))
-do{
-info= prompt("¿que informacion desea ver?")
-switch(info)
+    auto.color=prompt("ingrese color")
+} while(parseInt(auto.color))
+do
 {
-    case "marca":
-    alert(auto.marca)
-    flag = 0
-    break
-    case "modelo":
-    alert(auto.modelo)
-    flag = 0
-    break
-    case "año":
-    alert (auto.año) 
-    flag = 0
-    break 
-    case "color":
-    alert (auto.color.nombre)
-    flag = 0
-    break
-    default:
-    alert ("expresion invalida, intente nuevamente")
-
-
-}while(flag)
+    auto.colorHEX=prompt("ingrese color (HEX)")
+} while(isNaN(auto.colorHEX))
+do{
+    info= prompt("¿que informacion desea ver?")
+    switch(info)
+    {
+        case "marca":
+        alert(auto.marca)
+        flag = 0;
+        break
+        case "modelo":
+        alert(auto.modelo)
+        flag = 0;
+        break
+        case "año":
+        alert (auto.año) 
+        flag = 0;
+        break 
+        case "color":
+        alert (auto.color.nombre)
+        flag = 0;
+        break
+        default:
+        alert ("expresion invalida, intente nuevamente")
+    
+    
+    }
+    }while(flag)
