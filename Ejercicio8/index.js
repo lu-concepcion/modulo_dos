@@ -76,8 +76,11 @@ function DatosPersona()
 
 	}while(repite=true)
 
-
-	document(Persona.nombre,Persona.apellido,Persona.edad,Persona.profesion);
+	
+	document.write(Persona.nombre+" ");
+	document.write(Persona.apellido+" ");
+	document.write(Persona.edad+" ");
+	document.write(Persona.profesion+ " ");
 
 
 	
