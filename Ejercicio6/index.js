@@ -2,7 +2,7 @@
 numpar = 0;
 var num = [2,4,6,8,10];
 
-do{
+for(var i=0; i<5; i++){
 
 
 var ns = prompt ("Ingrese un numero par");
@@ -14,9 +14,12 @@ if (ns<2 || ns>20){
 }else{ 
   
   if(ns%2 == 0){
+
   
-  num[numpar] = parseInt (numpar);  
-  numpar++
+  
+  num[i] = parseInt(ns);
+ 
+  
 
 }else {
 
@@ -24,7 +27,7 @@ if (ns<2 || ns>20){
 
 }
 }
-}while(numpar <= 4)
+}
 
 var ope = prompt ("Ingrese una operacion a realizar: Multiplicar, Sumar. Para finalizar, escriba Salir")
 if (ope == "multiplicar"){
