@@ -50,4 +50,4 @@ do {
 }while(!pasoEdad);
 
     alert("Tú nombre es: " +persona["nombre"] + "\nTus apellidos son: " +persona["apellido"] +
-    "\nTú edad es:" +persona["edad"] + "\nTú professión es:" + persona["profession"]);
+    "\nTú edad es:" +persona["edad"] + "\nTú professión es: " + persona["profession"]);
