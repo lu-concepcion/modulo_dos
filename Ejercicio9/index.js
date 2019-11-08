@@ -1,14 +1,14 @@
 count = 0;
 
 do{
-    var vehMar = prompt ("Ingrese marca de vehiculo");
+    var vehMarca = prompt ("Ingrese marca de vehiculo");
     
-    if (vehMar === ""){
+    if (vehMarca === ""){
     
         alert ("Debe de ingresar datos")
     
     }else{
-        if(isNaN(parseInt(vehMar)) == true){
+        if(isNaN(parseInt(vehMarca)) == true){
 
             count++
     
@@ -21,13 +21,13 @@ do{
     
 }while(count < 1);
 do{
-        var vehMod = prompt ("Ingrese modelo de vehiculo");
-        if (vehMod === ""){
+        var vehModelo = prompt ("Ingrese modelo de vehiculo");
+        if (vehModelo === ""){
     
             alert ("Debe de ingresar datos")
         
         }else{
-            if(isNaN(parseInt(vehMod)) == true){
+            if(isNaN(parseInt(vehModelo)) == true){
     
                 count++
         
@@ -39,13 +39,13 @@ do{
         }
 }while(count < 2);
 do{
-    var vehAn = prompt ("Ingrese año del vehiculo");
-    if (vehAn === ""){
+    var vehAno = prompt ("Ingrese año del vehiculo");
+    if (vehAno === ""){
 
         alert ("Debe de ingresar datos")
     
     }else{
-        if(isNaN(parseInt(vehAn)) == false){
+        if(isNaN(parseInt(vehAno)) == false){
 
             count++
     
@@ -57,13 +57,13 @@ do{
     }
 }while(count < 3);
 do{
-        var vehCoN = prompt ("Ingrese nombre de color del vehiculo");
-        if (vehCoN === ""){
+        var vehCoNombre = prompt ("Ingrese nombre de color del vehiculo");
+        if (vehCoNombre === ""){
     
             alert ("Debe de ingresar datos")
         
         }else{
-            if(isNaN(parseInt(vehCoN)) == true){
+            if(isNaN(parseInt(vehCoNombre)) == true){
     
                 count++
         
@@ -76,9 +76,9 @@ do{
 }while(count < 4);
 do{  
 
-    var vehCoD = prompt ("Ingrese codigo de color");
+    var vehCoDigo = prompt ("Ingrese codigo de color");
 
-    if (vehCoD === ""){
+    if (vehCoDigo === ""){
 
         alert ("Debe de ingresar datos");
 
@@ -92,21 +92,17 @@ do{
 
 var vehiculo={
 
-    marca:vehMar,
-    modelo:vehMod,
-    año:vehAn,
+    marca:vehMarca,
+    modelo:vehModelo,
+    año:vehAno,
     color:{
-        nombreCol:vehCoN,
-        codCo:vehCoD
+        nombreColor:vehCoNombre,
+        codColor:vehCoDigo
     },
         
 };
 
 
-vehiculo.marca
-vehiculo.modelo
-vehiculo.año
-vehiculo.color.nombreCol
-vehiculo.color.codCo
+var { marca, modelo, año, color } = vehiculo;
+alert(`${marca} ${modelo} ${año} ${color.nombreColor} ${color.codColor}`); 
 
-document.write(vehiculo.marca+", ", vehiculo.modelo+", ", vehiculo.año+", ", vehiculo.color.nombreCol+", ", vehiculo.color.codCo)
