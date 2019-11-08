@@ -1,19 +1,91 @@
-function DatosPersonas()
+function DatosPersona()
 {
+	var bool=false; var n; var e; var repite=true;
 
-	var n=prompt("Ingrese Nombre");
-	var a=prompt("ingrese Apellidos");
-	var e=prompt("ingrese Edad");
-	var p=prompt("ingrese Profesion");
-
-	
-	var Persona
-	{
-		Nombre="",
-		Apellidos="",
-		Edad=0,
-		Profesion
+	var Persona={
+		nombre:"",
+		npellidos:"",
+		ndad:0,
+		profesion:""
 
 
 	}
+
+	do
+	{
+		n=prompt("Ingrese nombre");
+		if( isNaN(n)==true)
+		{
+			Persona.nombre=n;
+			break;
+
+		}else
+		{
+			alert("No se admiten numeros!")
+			repite=true;
+		}
+
+	}while(repite=true)
+
+
+	do
+	{
+		n=prompt("Ingrese apellido");
+		if( isNaN(n)==true)
+		{
+			Persona.apellido=n;
+			break;
+
+		}else
+		{
+			alert("No se admiten numeros!")
+			repite=true;
+		}
+
+	}while(repite=true)
+
+
+
+
+	do
+	{
+		e=prompt("Ingrese edad");
+		if( isNaN(e)!=true)
+		{
+
+			Persona.edad=parseInt(e);
+			break;
+
+		}else
+		{
+			alert("la edad debe ser numerica")
+			repite=true;
+		}
+
+	}while(repite=true)
+
+
+
+	do
+	{
+		n=prompt("Ingrese profesion");
+		if( isNaN(n)==true)
+		{
+			Persona.profesion=n;
+			break;
+
+		}else
+		{
+			alert("No se admiten numeros!")
+			repite=true;
+		}
+
+	}while(repite=true)
+
+
+	alert(Persona.nombre,Persona.apellido,Persona.edad,Persona.profesion);
+
+
+	
+
 }
