@@ -6,3 +6,24 @@
 //Mostrar información por pantalla (a elección)
 //Utilizar OBJETO
 
+var persona = { 
+    Nombre:"",
+    Apellidos:"",
+    Edad: 0,
+    Profesion:""
+};
+
+do{
+persona.Nombre=prompt("Ingrese su Nombre");
+}while(parseInt(persona.Nombre));
+
+alert(persona.Nombre);
+
+persona.Apellidos=prompt("Ingrese su Apeliido");
+
+persona.Edad=prompt("Ingrese su Edad");
+
+persona.Profesion=prompt("Ingrese su Profesión");
+
+//probando validaciones
+
