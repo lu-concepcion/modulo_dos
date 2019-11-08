@@ -21,8 +21,6 @@ do{
     do{
         persona.profesion = prompt("Ingrese profesion (solo texto)");
         }while(!isNaN(persona.profesion));
-
-
        
 
       do{  
