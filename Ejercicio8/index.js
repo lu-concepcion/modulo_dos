@@ -7,8 +7,6 @@ function DatosPersona()
 		npellidos:"",
 		ndad:0,
 		profesion:""
-
-
 	}
 
 	do
@@ -45,8 +43,6 @@ function DatosPersona()
 	}while(repite=true)
 
 
-
-
 	do
 	{
 		e=prompt("Ingrese edad");
@@ -63,8 +59,6 @@ function DatosPersona()
 		}
 
 	}while(repite=true)
-
-
 
 	do
 	{
@@ -83,7 +77,7 @@ function DatosPersona()
 	}while(repite=true)
 
 
-	alert(Persona.nombre,Persona.apellido,Persona.edad,Persona.profesion);
+	document(Persona.nombre,Persona.apellido,Persona.edad,Persona.profesion);
 
 
 	
