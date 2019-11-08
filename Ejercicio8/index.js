@@ -2,9 +2,9 @@
 const persona = new Object();
 
 do {
-    var nombre = prompt("Cual es tu Nombre?");
+    var nombre = prompt("Cual es tu nombre?");
     if (nombre !== "" || isNaN(nombre)) {
-        persona.Nombre = nombre;
+        persona.nombre = nombre;
          var pasoNombre = true;
     }
     else {
@@ -16,7 +16,7 @@ do {
 do {
     var apellido = prompt("Cuales son tus apellidos?");
     if (apellido !== "" || isNaN(apellido)) {
-        persona.Apellido = apellido;
+        persona.apellido = apellido;
          var pasoApellido = true;
     }
     else {
@@ -28,7 +28,7 @@ do {
 do {
     var profession = prompt("Cual es tu profession?");
     if (profession !== "" || isNaN(profession) ) {
-        persona.Profession = profession;
+        persona.profession = profession;
         var pasoProfession = true;
     }
     else {
@@ -39,8 +39,8 @@ do {
 
 do {
     var edad = prompt("Cual es tu edad?");
-    if (edad !== "" || !isNaN(profession) || edad !== 0) {
-        persona.Edad = edad;
+    if (edad !== "" || !isNaN(edad) || edad !== 0) {
+        persona.edad = edad;
         var pasoEdad = true;
     }
     else {
@@ -49,5 +49,5 @@ do {
     }
 }while(!pasoEdad);
 
-    //alert("Tu nombre es: " +persona[Nombre] + "\nTu apellido es: " +persona[Apellido]);
-    console.log(persona["Nombre"]);
+    alert("Tú nombre es: " +persona["nombre"] + "\nTus apellidos son: " +persona["apellido"] +
+    "\nTú edad es:" +persona["edad"] + "\nTú professión es:" + persona["profession"]);
