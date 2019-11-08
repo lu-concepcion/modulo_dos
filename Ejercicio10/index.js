@@ -1,6 +1,7 @@
 function Numeros()
 {
-	var input =  prompt("ingresa un numero Romano").toUpperCase() ;
+	var input;  var bool=false;
+
 
 		var numerosRomanos =[
 			{
@@ -42,6 +43,32 @@ function Numeros()
 				numeroRomano: "X"
 			},
 		];
+
+
+
+		do
+		{
+
+			input =  prompt("ingresa un numero Romano").toUpperCase() ;
+
+			for(var i=0;i<10;i++)
+				{
+					if(numerosRomanos[i].numeroRomano==input)
+					{
+						bool=true;
+
+
+					}else
+					{
+						bool=false;
+
+					}
+				}
+
+				if(bool==false){ alert("Fuera de rango!");}
+
+
+		}while(bool==false)
 
 	
 	for(var i=0;i<10;i++)
