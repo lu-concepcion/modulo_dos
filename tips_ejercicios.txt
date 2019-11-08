@@ -37,8 +37,15 @@ numerosPares.push(12);
 // [2, 4, 6, 8, 10, 12]
 
 
-//declaracion de objetos
 
+
+//declaracion de objetos 1
+var persona = new Object();
+persona.nombre = "Hernán";
+persona.apellido = "Candia";
+persona.edad = 29;
+
+//declaracion de objetos 2
 var objeto = { 
   id: 1,
   nombre: "Hernán"
