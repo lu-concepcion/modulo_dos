@@ -22,3 +22,21 @@ vehiculo.modelo = modelo;
 var color = prompt("Ingrese el color del auto:");
 vehiculo.color = color;
 
+var elegir_opcion("¿Que desea ver? \n1.- Año \n2.- Marca \n3.- Modelo \n4.- Color \n5.- Todo")
+if(elegir_opcion==1){
+    alert(vehiculo.año)
+}else{
+    if(elegir_opcion==2){
+        alert(vehiculo.marca)
+    }else{
+        if(elegir_opcion==3){
+            alert(vehiculo.modelo)
+        }else{
+            if(elegir_opcion==4){
+                alert(vehiculo.color)
+            }else{
+                alert("Año: "+vehiculo.año+"\nMarca: "+vehiculo.año+"\nModelo: "+vehiculo.modelo+"\nColor: "+vehiculo.color)
+            }
+        }
+    }
+}
