@@ -7,7 +7,18 @@
 // Utilizar OBJETOS
 
 var Persona = new Object();
-Persona.nombre=prompt("Ingrese su nombre");
-Persona.apellidos=prompt("Ingrese sus apellidos");
-Persona.edad=prompt("Ingrese su edad");
-Persona.profesion=prompt("Ingrese su profesion");
+do{
+    Persona.nombre=prompt("Ingrese su nombre");
+}while(parseInt(Persona.nombre));
+do{
+    Persona.apellidos=prompt("Ingrese sus apellidos");
+}while(parseInt(Persona.apellidos));
+do{
+    Persona.edad=prompt("Ingrese su edad");
+}while(isNaN(Persona.edad));
+do{
+    Persona.profesion=prompt("Ingrese su profesion");
+}while(parseInt(Persona.profesion));
+
+var consulta= prompt("Ingrese una opcion a ver: nombre, apellidos, edad, profesion");
+document.write(Persona.consulta)
