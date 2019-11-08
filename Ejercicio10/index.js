@@ -14,8 +14,8 @@ do {
     var numero = prompt("Ingresa un número en romano:");
     var paso = false;
     if(numero !== "" && isNaN(numero)) {
-        if (numerosObjeto.indexOf(numero.toUpperCase() !== -1)) {
-            alert("Tú numero ingresado es:" + numerosObjeto[numero.toUpperCase()]);
+        if (numerosObjeto[numero.toUpperCase()]) {
+            alert("Tú numero ingresado es: " + numerosObjeto[numero.toUpperCase()]);
             var paso = true;
         }
         else {
