@@ -6,8 +6,12 @@ var vehiculo = new Object();
 
 do {
     var marca = prompt("Ingrese el modelo del vehiculo");
-} while (!isNaN(parseInt(marca)));
-
+} while (!isNaN(marca));
 vehiculo.marca = marca;
+
+do {
+    var modelo = prompt("Ingrese el modelo del vehiculo");
+} while (!isNaN(parseInt(modelo)));
+vehiculo.modelo = modelo;
 
 alert(vehiculo.marca);
