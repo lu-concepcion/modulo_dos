@@ -47,15 +47,18 @@ while(true){
     alert('Error: Ingrese solo letras y no dejes campo vacío');
 }
 
-var vahiculo = new Object();
+var vehiculo = {
+    marca : marca,
+    modelo : modelo,
+    anio : anio,
+    color : {
+        normal : color,
+        hexa : colorHexa
+    }
+}
 
-vahiculo.marca = marca;
-vahiculo.modelo = modelo;
-vahiculo.anio = anio;
-vahiculo.color = color;
-
-document.write(vahiculo.marca + ', ');
-document.write(vahiculo.modelo + ', ');
-document.write(vahiculo.anio + ', ');
-document.write(vahiculo.color + ' - color hexadecimal: ' + colorHexa);
+document.write(vehiculo.marca + ', ');
+document.write(vehiculo.modelo + ', ');
+document.write(vehiculo.anio + ', ');
+document.write(vehiculo.color.normal + ' - color hexadecimal: ' + vehiculo.color.hexa);
 
