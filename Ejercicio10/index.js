@@ -1,43 +1,44 @@
-let numRomano = '';
-let numSalida = 0;
+romano = {
+    numRomano: '',
+    numNormal : 0
+}
 
-numRomano = prompt('Ingresa número romando (solo del 1 al 10').toUpperCase();
+romano.numRomano = prompt('Ingresa número romando (solo del 1 al 10').toUpperCase();
 
-switch (numRomano) {
+switch (romano.numRomano) {
     case 'I':
-        numSalida = 1;
+        romano.numNormal = 1;
         break;
     case 'II':
-        numSalida = 2;
+        romano.numNormal = 2;
         break;
     case 'III':
-        numSalida = 3;
+        romano.numNormal = 3;
         break;
     case 'IV':
-        numSalida = 4;
+        romano.numNormal = 4;
         break;
     case 'V':
-        numSalida = 5;
+        romano.numNormal = 5;
         break;
     case 'VI':
-        numSalida = 6;
+        romano.numNormal = 6;
         break;
     case 'VII':
-        numSalida = 7;
+        romano.numNormal = 7;
         break;
     case 'VIII':
-        numSalida = 8;
+        romano.numNormal = 8;
         break;
     case 'IX':
-        numSalida = 9;
+        romano.numNormal = 9;
         break;
     case 'X':
-        numSalida = 10;
+        romano.numNormal = 10;
         break;
     default:
         break;
 }
 
-romano = {
-    valor : numSalida;
-}
+alert(romano.numRomano + ' es el número: ' + romano.numNormal)
+
