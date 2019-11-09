@@ -1,52 +1,26 @@
 function Ingresar()
 {
 
-	var contador=0;
-	var listado = " ";
-	var lenguaje;
-	var p;
+	var lenguaje; var contador=0; var listadoLenguajes=[]; var control =false;
+	do
+	{
+		lenguaje=prompt("Ingresa un lenguaje"+(contador+1));
+		if(lenguaje!="Python")
+		{
+			listadoLenguajes[contador]=lenguaje;
+			contador++;
+		}
 
-	
-		do {
+		if(contador>3 && lenguaje=="Python")
+		{
+			listadoLenguajes[contador]=lenguaje;
+			control=true;
+			contador++;
+		}
 
-			lenguaje = prompt("Ingresa un lenguaje");
+	}while(control==false)
 
-			if(lenguaje!="Python")
-			{
-              listado = listado + " "+lenguaje;
-              contador++;
-
-			}
-
-			if(contador==3)
-			{
-				do
-				{
-					lenguaje = prompt("Ingresa Python");
-
-				}while(lenguaje!="Python")
-
-				
-				listado= listado+" "+lenguaje;
-				contador++;
-				
-
-			}
-
-			
-
-			
-
-			
-
-		}while(contador< 5 )
-
-
-
-		alert(listado);
-
-	
-
+	alert(listadoLenguajes);
 
 	
 }
