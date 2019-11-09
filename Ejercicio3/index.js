@@ -1,8 +1,26 @@
-function Calificar()
+function calificar()
 {
-	var nota = parseInt(prompt("ingresa una nota"));
-	if(nota>=1 && nota<=3){alert("Muy bajo");}
-	if(nota>=4 && nota<=5){alert("Regular");}
-	if(nota>=6 && nota<=7){alert("Muy bueno");}
+	var calificacion = parseInt(prompt("Ingresa calificacion"));
+
+	if(calificacion>0 && calificacion<4)
+	{
+		alert("Muy bajo");
+
+	}
+
+	if(calificacion>3 && calificacion<6)
+	{
+		alert("Regular");
+
+	}
+
+	if(calificacion>5 && calificacion<8)
+	{
+		alert("Muy Bueno");
+
+	}
+	
+
+
 	
 }

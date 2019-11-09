@@ -1,12 +1,11 @@
-function Suma()
+function suma()
 {
-	var numero=0; var suma=0;
-	for(var i=0;i<2;i++)
-	{
-		numero = parseInt( prompt("ingresa un numero"));
-		suma = suma+numero;
-		
-    }  
-	alert("La suma es: "+suma);
-}
+	var n1 = parseInt(prompt("Ingresa n1"));
+	var n2 = parseInt(prompt("Ingresa n2"));
 
+
+	var r= n1+n2;
+
+
+	alert("el resultado es: " + r);
+}

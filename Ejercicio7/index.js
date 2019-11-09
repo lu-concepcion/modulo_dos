@@ -1,29 +1,39 @@
 function Fibonacci()
 {
-	var numero=0; var fibonacci=[0,1]; var bool=false;
+	var error="false"; var a=0; var b=1; f=[0,1];
+
 	do
 	{
-		numero=parseInt(prompt("Ingresa un Numero: "));
+		var numero = parseInt(prompt("ingresa un numero"));
+		 error="false";
 
-		if(numero>=3 &&numero <=15)
+		if(numero<3 || numero>15)
 		{
-			bool=false;
-			for(var i=2;i<numero;i++)
-			{
-				fibonacci[i]=fibonacci[i-1]+fibonacci[i-2];
-			}
-		}else
-		{
-			alert("Numero Invalido");
-			bool=true;
+		   alert("Fuera de rango!");
+		   error="true";
 
-		}
+	    }
 
-	}while(bool==true)
+	}while(error=="true");
 
-	document.write(fibonacci);
+	//document.write(a,b);
+
+	for(var i=2;i<numero;i++)
+	{
+		f[i]=f[i-1]+f[i-2];
+
+	}
+
+	document.write(f);
+
 	
 
-	
+
+
+
+
+
+
+
 
 }
