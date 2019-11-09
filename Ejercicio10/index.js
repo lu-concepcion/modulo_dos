@@ -20,15 +20,20 @@ for (let i = 1; i <= 10; i++) {
     romanos[i-1] = romano;
 }
 
-console.log(romanos);
+let salirCicloWhile = false;
 
-console.log(romanos[1]);
-letraUsuario = prompt('Ingresa número romano (1 a 10)');
-for (let i = 0; i < romanos.length; i++) { 
-    if (romanos[i].numRomano === letraUsuario) {
-        alert(romanos[i].numRomano + ' es el número: ' + romanos[i].numNormal);
-        break;
-    } 
+while (!salirCicloWhile){
+    letraUsuario = prompt('Ingresa número romano (1 a 10)');
+    for (let i = 0; i < romanos.length; i++) { 
+        if (romanos[i].numRomano === letraUsuario) {
+            alert(romanos[i].numRomano + ' es el número: ' + romanos[i].numNormal);
+            salirCicloWhile = true;
+            break;
+        } 
+    }
+    if (!salirCicloWhile) {
+        alert('No se encontró número correspondiente');
+    }
 }
 
 
