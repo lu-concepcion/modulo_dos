@@ -1,13 +1,11 @@
-function edad()
+function Jubilar()
 {
-	var edad = parseInt(prompt("Ingresa EDAD"));
-
-	if(edad>65)
+	if(parseInt(prompt("ingresa tu edad"))>65)
 	{
-		alert("Felicidades, ya puedes jubilar..no mas AFP!!, pinche karol dance xD");
+		alert("Puedes Jubilar, felicidades!");
 	}else
 	{
-		alert("No puedes jubilar")
+		alert("aun no!, sigue trabajando uwu");
 	}
 
 	

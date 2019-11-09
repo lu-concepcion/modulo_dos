@@ -1,43 +1,27 @@
-function Agregar()
+function AgregarPersonas()
 {
-	var Nombre="";
-	var Edad=0;
-	var contador=1; 
-	var nombremayor= "";
-	var mayor=0; var x=1;
-
-
+	var nombre; var edad; var edadMayor=0; var contador=1;  var nombreMayor="";
 	do
 	{
-		Nombre = prompt("ingresa el nombre "+contador);
+		nombre=prompt("ingrese un Nombre "+contador);
+		if(contador>4 &&nombre=="salir")
+		{
+			
+			break;
+		}
 
+		edad = parseInt(prompt("ingrese la Edad de: "+nombre));
+		if(edad>edadMayor)
+		{
+			edadMayor=edad;
+			nombreMayor=nombre;
+		}
 
-		 if(Nombre=="salir" && contador>=4)
-	    {
-	    	break;
+		contador++;
 
-	    }
-	    Edad = prompt("ingresa la edad "+contador);
+	}while(contador!=0)
 
-
-
-	    if(Edad>mayor)
-	    {
-	    	nombremayor=Nombre;
-	    	mayor=parseInt(Edad);
-
-	    }
-
-
-
-	    contador++;
-
-	}while(x==1);
-
-	alert("el mayor es: "+nombremayor+" y tiene: "+mayor);
-
-
-
+	alert("El mayor es: "+nombreMayor+" con: "+edadMayor+" anios");
 	
 
 }
