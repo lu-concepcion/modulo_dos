@@ -15,11 +15,13 @@ function NombreEdad()
 		edad: 0
 	}
 
-	
-
 	do
 	{
 		persona.nombre=prompt("ingresa nombre "+(contador+1));
+		if(contador>=4 && persona.nombre=="salir")
+		{
+			break;
+		}
 		persona.edad=(parseInt(prompt("ingresa la edad de: "+persona.nombre)));
 
 		if(persona.edad>mayor.edad)
@@ -29,7 +31,7 @@ function NombreEdad()
 		}
 		contador++;
 
-	}while(contador<4)
+	}while(contador>0)
 
 	alert("El mayor es: "+mayor.nombre+" con: "+mayor.edad+" anios");
 }
