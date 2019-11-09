@@ -2,7 +2,6 @@ function Numeros()
 {
 	var input;  var bool=false;
 
-
 		var numerosRomanos =[
 			{
 				numero: "uno",
@@ -44,12 +43,10 @@ function Numeros()
 			},
 		];
 
-
-
 		do
 		{
 
-			input =  prompt("ingresa un numero Romano").toUpperCase() ;
+			input=prompt("ingresa un numero Romano").toUpperCase();
 
 			for(var i=0;i<10;i++)
 				{
@@ -80,7 +77,5 @@ function Numeros()
 
 		}
 	}
-
-
 	
 }

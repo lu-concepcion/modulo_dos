@@ -1,8 +1,8 @@
 function Auto()
 {
-	 var repite=true; var d; var n;
+	 var repite=true; var inputTexto; var inputNumero;
 
-	 var Vehiculo = {
+	 var vehiculo = {
 
 	 	marca: "",
 	 	modelo: "",
@@ -16,10 +16,10 @@ function Auto()
 
 	 do
 	{
-		d=prompt("Marca");
-		if( isNaN(d)==true)
+		inputTexto=prompt("Marca");
+		if( isNaN(inputTexto)==true)
 		{
-			Vehiculo.marca=d;
+			vehiculo.marca=inputTexto;
 			break;
 
 		}else
@@ -33,10 +33,10 @@ function Auto()
 
 	 do
 	{
-		d=prompt("Modelo");
-		if( isNaN(d)==true)
+		inputTexto=prompt("Modelo");
+		if( isNaN(inputTexto)==true)
 		{
-			Vehiculo.modelo=d;
+			vehiculo.modelo=inputTexto;
 			break;
 
 		}else
@@ -49,10 +49,10 @@ function Auto()
 
 	 do
 	{
-		n=prompt("anio");
-		if( isNaN(n)!=true)
+		inputNumero=prompt("anio");
+		if( isNaN(inputNumero)!=true)
 		{
-			Vehiculo.anio= parseInt(n);
+			vehiculo.anio= parseInt(inputNumero);
 			break;
 
 		}else
@@ -66,10 +66,10 @@ function Auto()
 
 	 do
 	{
-		d=prompt("codigo Color");
-		if( isNaN(d)==true)
+		inputTexto=prompt("codigo Color");
+		if( isNaN(inputTexto)==true)
 		{
-			Vehiculo.color.codigo=d;
+			vehiculo.color.codigo=inputTexto;
 			break;
 
 		}else
@@ -83,10 +83,10 @@ function Auto()
 
 	 do
 	{
-		d=prompt("Nombre Color");
-		if( isNaN(d)==true)
+		inputTexto=prompt("Nombre Color");
+		if( isNaN(inputTexto)==true)
 		{
-			Vehiculo.color.nombre=d;
+			vehiculo.color.nombre=inputTexto;
 			break;
 
 		}else
@@ -98,10 +98,10 @@ function Auto()
 	}while(repite=true)
 
 
-	document.write(Vehiculo.marca+" ");
-	document.write(Vehiculo.modelo+" ");
-	document.write(Vehiculo.anio+" ");
-	document.write(Vehiculo.color.codigo+" ");
-	document.write(Vehiculo.color.nombre+" ");
+	document.write(vehiculo.marca+" ");
+	document.write(vehiculo.modelo+" ");
+	document.write(vehiculo.anio+" ");
+	document.write(vehiculo.color.codigo+" ");
+	document.write(vehiculo.color.nombre+" ");
 
 }

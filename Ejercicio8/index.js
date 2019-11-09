@@ -1,20 +1,20 @@
 function DatosPersona()
 {
-	var bool=false; var n; var e; var repite=true;
+	var bool=false; var inputTexto; var inputEdad; var repite=true;
 
-	var Persona={
+	var persona={
 		nombre:"",
-		npellidos:"",
-		ndad:0,
+		apellidos:"",
+		edad:0,
 		profesion:""
 	}
 
 	do
 	{
-		n=prompt("Ingrese nombre");
-		if( isNaN(n)==true)
+		inputTexto=prompt("Ingrese nombre");
+		if( isNaN(inputTexto)==true)
 		{
-			Persona.nombre=n;
+			persona.nombre=inputTexto;
 			break;
 
 		}else
@@ -28,10 +28,10 @@ function DatosPersona()
 
 	do
 	{
-		n=prompt("Ingrese apellido");
-		if( isNaN(n)==true)
+		inputTexto=prompt("Ingrese apellido");
+		if( isNaN(inputTexto)==true)
 		{
-			Persona.apellido=n;
+			persona.apellido=inputTexto;
 			break;
 
 		}else
@@ -45,11 +45,11 @@ function DatosPersona()
 
 	do
 	{
-		e=prompt("Ingrese edad");
-		if( isNaN(e)!=true)
+		inputEdad=prompt("Ingrese edad");
+		if( isNaN(inputEdad)!=true)
 		{
 
-			Persona.edad=parseInt(e);
+			persona.edad=parseInt(inputEdad);
 			break;
 
 		}else
@@ -62,10 +62,10 @@ function DatosPersona()
 
 	do
 	{
-		n=prompt("Ingrese profesion");
-		if( isNaN(n)==true)
+		inputTexto=prompt("Ingrese profesion");
+		if( isNaN(inputTexto)==true)
 		{
-			Persona.profesion=n;
+			persona.profesion=inputTexto;
 			break;
 
 		}else
@@ -77,10 +77,10 @@ function DatosPersona()
 	}while(repite=true)
 
 	
-	document.write(Persona.nombre+" ");
-	document.write(Persona.apellido+" ");
-	document.write(Persona.edad+" ");
-	document.write(Persona.profesion+ " ");
+	document.write(persona.nombre+" ");
+	document.write(persona.apellido+" ");
+	document.write(persona.edad+" ");
+	document.write(persona.profesion+ " ");
 
 
 	
