@@ -8,7 +8,7 @@ output: Diez
 Utilizar OBJETOS*/
 
 var nn ;
-r=true;
+r=false;
 var numeror = [
 {
     numero: "uno",
@@ -63,9 +63,9 @@ do{
     }
 if(r==false){
             alert("No esta en el Rango!");
-            true;
+           
         }
-}while(r==true);
+}while(r==false);
 
 for(var i = 0; i<10;i++)
 if(nn==numeror[i].numeroromano){
