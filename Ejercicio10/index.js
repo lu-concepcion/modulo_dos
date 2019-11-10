@@ -7,7 +7,8 @@ output: Diez
 
 Utilizar OBJETOS*/
 
-var nn = prompt("Ingresa un numero Romano: ").toUpperCase();
+var nn ;
+r=true;
 var numeror = [
 {
     numero: "uno",
@@ -50,6 +51,22 @@ var numeror = [
     numeroromano: "X"
 },
 ]
+
+do{
+    nn = prompt("Ingresa un numero Romano: ").toUpperCase();
+    for(var i=0;i<10;i++){
+        if(nn==numeror[i].numeroromano){
+            r=true;
+        }else{
+            r=false;
+        }
+    }
+if(r==false){
+            alert("No esta en el Rango!");
+            true;
+        }
+}while(r==true);
+
 for(var i = 0; i<10;i++)
 if(nn==numeror[i].numeroromano){
     document.write("El numero romanos es: "+ numeror[i].numero);
