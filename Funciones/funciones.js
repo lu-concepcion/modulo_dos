@@ -8,30 +8,30 @@ const restar = (num1,num2) => {
 
 const esUnNumero = (num) => {
     if (!isNaN(num)) 
-        return alert("Es un número correcto!");
+        return true;
         else
-        return alert("Lo siento no es numero!");
+        return false;
 }
 
 const esUnTexto = (text) => {
     if (isNaN(text))
-    return alert("Correcto! es un texto");
+    return true;
     else
-    return alert("Upsss! lo siento no es un texto ):");
+    return false;
 }
 
 const textoEnMayuscula = (text) => {
     if (text == "" || !isNaN(text))
-    return alert("Solo se aceptan textos!");
+    return false;
     else
-    return alert("Tu texto: " + text.toLowerCase());
+    return text.toLowerCase();
 }
 
 const textoEnMinuscula = (text) => {
     if (text == "" || !isNaN(text))
-    return alert("Solo se aceptan textos!");
+    return false;
     else
-    return alert("Tu texto: " + text.toUpperCase());
+    return text.toUpperCase();
 }
 
 export {
