@@ -70,4 +70,14 @@ const palindromo = texto =>
     }
 }
 
-export { esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo}
+const random = numero =>
+{let sorteo = [];
+
+    for(let i = 0; i<6;i++)
+    {
+        sorteo [i] = parseInt(Math.random() * (41 - 1) + 1);
+    }
+    return sorteo
+}
+
+export { esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random}
