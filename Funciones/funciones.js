@@ -46,6 +46,10 @@ const esPalindromo = (text) => {
     return true;
 }
 
+const empezarLoto = (numeros) => {
+    
+}
+
 export {
-    sumar, restar, esUnNumero, esUnTexto, textoEnMayuscula, textoEnMinuscula, cuantasVocales, esUnaVocal, esPalindromo
+    sumar, restar, esUnNumero, esUnTexto, textoEnMayuscula, textoEnMinuscula, cuantasVocales, esUnaVocal, esPalindromo, empezarLoto
 }
