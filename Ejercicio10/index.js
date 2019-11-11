@@ -12,6 +12,7 @@
   //  case"II":alert("Dos");
 //}
 
+
 var palito = [
     {
         numeroPalito: "I",
