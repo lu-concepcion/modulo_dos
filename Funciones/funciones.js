@@ -38,6 +38,20 @@ const esVocal = (letra) =>{
     return false;
 }
 
+const esPalindromo = (cadena) =>{
+    const palabra = aMinuscula(cadena);
+    let j = (palabra.length-1);
+
+    for(let i=0; i<palabra.length; i++){
+        if(palabra.charAt(i) != palabra.charAt(j)){
+            return false;
+        }
+        j--;
+    }
+
+    return true;
+}
+
 export{
-    cuantasVocales
+    esPalindromo
 }
