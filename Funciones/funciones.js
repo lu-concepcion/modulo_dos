@@ -32,6 +32,18 @@ const convertirEnMayuscula=(texto) =>{
     
     }
 
+ const contarVocales=(texto)=>{
+ let vocales; 
+ const textoComparar = texto.toLowerCase();
+    for (let i = 0; o < texto.length; i++) {
+        if (textoComparar.charAt(i) == "a" || textoComparar.charAt(i) == "e" || textoComparar.charAt(i) == "i" || textoComparar.charAt(i) == "o" || textoComparar.charAt(i) == "u"  ) {
+          vocales++;  
+        } ;
+        return vocales;
+    }
+
+
+ }   
 
 
 export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula
