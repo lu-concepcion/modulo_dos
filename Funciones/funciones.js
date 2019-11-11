@@ -36,6 +36,10 @@ const cuentaVocales = texto => {
     return contador;
 }
 
+const contieneEspacios = texto => {
+    return texto.indexOf(' ') === -1;
+}
+
 const esPalindromo = texto => {
     let textoAlRevez = '';
     for (let i = texto.length; i > 0; i--) {
@@ -53,5 +57,6 @@ export {
     convierteMayuscula,
     cuentaVocales,
     esPalindromo,
-    campoVacio
+    campoVacio,
+    contieneEspacios
 }
