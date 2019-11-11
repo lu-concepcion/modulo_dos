@@ -1,62 +1,51 @@
-var numeros_romanos = {
-    I: "Uno",
-    II: "Dos",
-    III: "Tres",
-    IV: "Cuatro",
-    V: "Cinco",
-    VI: "Seis",
-    VII: "Siete",
-    VIII: "Ocho",
-    IX: "Nueve",
-    X: "Diez"
-};
+var numeros_romanos = [
+    {
+      id: "I",
+      valor: "uno"
+    },
+    {
+      id: "II",
+      valor: "dos"
+    },
+    {
+      id: "III",
+      valor: "tres"
+    },
+    {
+      id: "IV",
+      valor: "cuatro"
+    },
+    {
+      id: "V",
+      valor: "cinco"
+    },
+    {
+      id: "VI",
+      valor: "seis"
+    },
+    {
+      id: "VII",
+      valor: "siete"
+    },
+    {
+      id: "VIII",
+      valor: "ocho"
+    },
+    {
+      id: "IX",
+      valor: "nueve"
+    },
+    {
+      id: "X",
+      valor: "diez"
+    }
+];
 flag = 0;
 
-do {
     var consultar_opcion = prompt("Ingrese su numero romano");
     consultar_opcion = consultar_opcion.toUpperCase();
-    switch (consultar_opcion){
-        case "I":
-            alert(numeros_romanos.I)
-            flag = 1;
-            break;
-        case "II":
-            alert(numeros_romanos.II)
-            flag = 1;
-            break;
-        case "III":
-            alert(numeros_romanos.III)
-            flag = 1;
-            break;
-        case "IV":
-            alert(numeros_romanos.IV)
-            flag = 1;
-            break;
-        case "V":
-            alert(numeros_romanos.V)
-            flag = 1;
-            break;
-        case "VI":
-            alert(numeros_romanos.VI)
-            flag = 1;
-            break;
-        case "VII":
-            alert(numeros_romanos.VII)
-            flag = 1;
-            break;
-        case "VIII":
-            alert(numeros_romanos.VIII)
-            flag = 1
-            break;
-        case "IX":
-            alert(numeros_romanos.IX)
-            flag = 1;
-            break;
-        case "X":
-            alert(numeros_romanos.X)
-            flag = 1
-            break;
-        default:
-            alert("El valor ingresado no es romano o no está entre 1 y 10")
+    for(i=0;i<11;i++){
+        if(consultar_opcion==numeros_romanos[i].id){
+            document.write(numeros_romanos[i].valor);
+        }
     }
-} while (flag == 0);
