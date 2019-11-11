@@ -2,5 +2,5 @@ import
 {
     sumar,
     restar
-}from'./funciones.js'
+}from'./Funciones.js'
 alert(restar(1,2)) 
