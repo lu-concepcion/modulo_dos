@@ -7,31 +7,19 @@ const restar = (num1,num2) => {
 }
 
 const esUnNumero = (num) => {
-    if (!isNaN(num)) 
-        return true;
-        else
-        return false;
+    return (!isNaN(num)) ? true : false;
 }
 
 const esUnTexto = (text) => {
-    if (isNaN(text))
-    return true;
-    else
-    return false;
+    return (isNaN(text)) ? true : false;
 }
 
 const textoEnMayuscula = (text) => {
-    if (text == "" || !isNaN(text))
-    return false;
-    else
-    return text.toUpperCase();
+    return (text == "" || !isNaN(text)) ? false : text.toUpperCase();
 }
 
 const textoEnMinuscula = (text) => {
-    if (text == "" || !isNaN(text))
-    return false;
-    else
-    return text.toLowerCase();
+    return (text == "" || !isNaN(text)) ? false : text.toLowerCase();
 }
 
 const cuantasVocales = (text) => {
@@ -53,9 +41,7 @@ const esPalindromo = (text) => {
     var text = textoEnMinuscula(text);
     text = text.replace(/ /g, "");
     for (var i = 0; i <text.length;i++) {
-        if (text[i]!=text[text.length-i-1]) {
-            return false;
-        }
+        if (text[i]!=text[text.length-i-1]) return false;
     }
     return true;
 }
