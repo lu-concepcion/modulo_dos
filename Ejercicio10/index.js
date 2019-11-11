@@ -1,71 +1,57 @@
+var listNumeros = [
+    {
+        numero: "i",
+        valor: "uno"
+    },
+    {
+        numero: "ii",
+        valor: "dos"
+    },
+    {
+        numero: "iii",
+        valor: "tres"
+    },
+    {
+        numero: "iv",
+        valor: "cuatro"
+    },
+    {
+        numero: "v",
+        valor: "cinco"
+    },
+    {
+        numero: "vi",
+        valor: "seis"
+    },
+    {
+        numero: "vii",
+        valor: "siete"
+    },
+    {
+        numero: "viii",
+        valor: "ocho"
+    },
+    {
+        numero: "ix",
+        valor: "nueve"
+    },
+    {
+        numero: "x",
+        valor: "diez"
+    },
+];
 
-var romano = [
-{
+var input = "";
+do{
+    input = prompt("Ingrese su numero romano");
+}while(input.length <= 0 || input.length >=5)
 
-    numero = "1",
-    valor = "I"
-
-},{
-
-    numero = "2",
-    valor = "II"
-
-},{
-
-    numero = "3",
-    valor = "III"
-
-},{
-
-    numero = "4",
-    valor = "IV"
-
-},{
-
-    numero = "5",
-    valor = "V"
-
-},{
-
-    numero = "6",
-    valor = "VI"
-
-},{
-
-    numero = "7",
-    valor = "VII"
-
-},{
-  
-    numero = "8",
-    valor = "VIII"
-
-},{
-
-    numero = "9",
-    valor = "IX"
-
-},{
-
-    numero = "10",
-    valor = "X"
-
-}];
-
-
-var numIngresado = prompt ("Ingrese un numero romano a convertir");
-
-
-
-var romano={
-
-    numConvertir: numIngresado,
-    numRomano: numero
-
-};
-
-var { numConvertir, numRomano } = romano;
-alert(`${numConvertir} ${numRomano}`); 
-
-
-    
+for(var i=0; i<10; i++){
+    if(listNumeros[i].numero == input.toLowerCase()){
+        alert("El valor "+input+" equivale a: " + listNumeros[i].valor);
+        break;
+    }
+    if(i == 9){
+        alert("Numero desconocido");
+    }
+}
