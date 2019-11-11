@@ -15,11 +15,25 @@ const verNumero = (numero) => {
     }
 }
 
-const converTexto = (texto) => {
-    if()
+const converTextoMinus = (texto) => {
+    if(isNaN(texto)){
+        return texto.toLowerCase()
+    }
+    else{
+        return "El valor ingresado no se puede convertir a minusculas"
+    }
+}
+
+const converTextoMayus = (texto) => {
+    if(isNaN(texto)){
+        return texto.toUpperCase()
+    }
+    else{
+        return "El valor ingresado no se puede convertir a mayusculas"
+    }
 }
 
 
 export {
-    sumar, restar, verNumero
+    sumar, restar, verNumero, converTextoMinus, converTextoMayus
 }
