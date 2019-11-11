@@ -46,7 +46,7 @@ return flag;
  let vocales = 0; 
 
     for (let i = 0; i < texto.length; i++) {
-        if (esVocal(texto) ) {
+        if ( esVocal(texto.charAt(i)) ) {
           vocales = parseInt(vocales)+ 1;  
         } ;
        

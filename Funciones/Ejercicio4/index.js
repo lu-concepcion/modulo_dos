@@ -1,5 +1,5 @@
-import {contarVocales, esVocal} from '../funciones.js';
+import {contarVocales} from '../funciones.js';
 
 let textoContar = prompt("indique texto para contar vocales");
 
-alert(esVocal(textoContar));
+alert(contarVocales(textoContar));
