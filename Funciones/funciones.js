@@ -47,6 +47,25 @@ const buscaVocal = (buscaABC) => {
     return cuentavocal
 }
 
+//busca palabras que son palíndrimo
+const palindrimo = (palin) => {
+    let TextoAlVerre="";
+    for (let i = palin.length; i > 0; i--) {
+        TextoAlVerre += palin.charAt(i-1);
+    }
+    if(palin == TextoAlVerre){
+        return "el texto es palindrimo";
+    }else return "el texto no es palindrimo";
+}
+
+//quita los espacios
+const quitaEspacio = (quitaEsp) => {
+    for(i=0 ; i<quitaEsp.length; i++){
+        if(quitaEsp=" "){
+        }
+    }
+}
+
 export {
     sumar,
     restar,
@@ -54,5 +73,7 @@ export {
     convertirMinuscula,
     esNumero,
     esTexto,
-    buscaVocal
+    buscaVocal,
+    palindrimo,
+    quitaEspacio
 }
