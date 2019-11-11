@@ -22,12 +22,9 @@ const convierteMinuscula = texto => {
     return texto.toLowerCase();
 }
 
-// const campoVacio = texto => {
-//     if (texto === '') {
-//         return true;
-//     }
-//     return false;
-// }
+const campoVacio = texto => {
+    return texto === '';
+}
 
 const cuentaVocales = texto => {
     let contador = 0;
@@ -55,5 +52,6 @@ export {
     convierteMinuscula,
     convierteMayuscula,
     cuentaVocales,
-    esPalindromo
+    esPalindromo,
+    campoVacio
 }

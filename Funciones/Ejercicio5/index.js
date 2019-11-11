@@ -1,9 +1,13 @@
-import { esTexto,convierteMinuscula, esPalindromo } from '../funciones.js';
+import { esTexto,convierteMinuscula, esPalindromo,campoVacio } from '../funciones.js';
 
 let texto = '';
 
 while(true){
     texto = prompt('Ingrese una palabra por favor');
+    if (campoVacio(texto) || !esTexto(texto)) {
+        alert('No ingreses campo vacío ni números');
+        continue;
+    }
     if (esPalindromo(convierteMinuscula(texto))) {
         alert('La palabra es un palíndromo');
         break;
@@ -11,6 +15,5 @@ while(true){
         alert('La palabra no es un palíndromo');
         break;
     }
-    alert('Ingresa solo texto');
 }
 
