@@ -28,7 +28,17 @@ const cuentaVocales=(palabra)=>{
     return contador;
 }
 
+//ejercicio5
+const palabraInversa=(palabra)=>{
+    for(let i=0; i<palabra.length;i++){
+        if(palabra.charAt(i)!=palabra.charAt((palabra.length-1)-i)){
+            return false
+        }
+    }
+    return true
+}
+
 
 export{
-    validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales
+    validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa
 }
