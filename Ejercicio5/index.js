@@ -5,10 +5,9 @@ var personaMayor ="";
 
 do{
     var nombrePersona = prompt("Igrese nombre");
-    var edadPersona = prompt("Ingrese edad");
-    if (nombrePersona!="Salir" || edadPersona !="Salir" ){
+    if (nombrePersona!="Salir"){
         contador++;
-       // if (parseInt(edadPersona) > parseInt(edadMayor) ){
+        var edadPersona = prompt("Ingrese edad");
         if (parseInt(edadPersona) > parseInt(edadMayor) ){
             personaMayor = nombrePersona; 
             edadMayor= edadPersona;
@@ -17,6 +16,6 @@ do{
         //     personaMayor= personaMayor + "-"+ nombrePersona;  
         // }
     }
-} while ( (contador<4)||(nombrePersona!="Salir") || (edadPersona !="Salir"));
+} while ( (contador<4)||(nombrePersona!="Salir") );
 
 alert(personaMayor + "es la persona con mayor edad"); 
