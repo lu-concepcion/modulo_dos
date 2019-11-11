@@ -1,3 +1,5 @@
-import {sumar, restar} from './funciones.js';
+import{validarNumero} from './funciones.js';
 
-alert(sumar(4,5));
+let prueba = ("Ingrese para saber si es numero")
+
+alert(validarNumero(prueba));
