@@ -25,13 +25,7 @@ if(texto(valor2)){
 
 }else{
      alert("No es un Texto");
-   /* let p = prompt("quieres hacerlo mayuscula o minuscula: ");
-    if(p == "mayuscula"){
-        alert(mayuscula(valor2))
-    }
-    if(p=="minusculo"){
-            alert(minuscula(valor2))
-    }   }*/ 
+
 }
 
 
