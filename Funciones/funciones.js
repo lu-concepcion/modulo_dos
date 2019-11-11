@@ -8,6 +8,11 @@ const validarTexto = text => {
 
 }
 
+const textoAMinuscula = text => text.toLowerCase();
+
+const textoAMayuscula = text2 => text2.toUpperCase();
+
+
 export{
-    sumar, validarTexto
+    sumar, validarTexto, textoAMinuscula, textoAMayuscula
 }
