@@ -51,10 +51,23 @@ return flag;
         } ;
        
     }
-
     return vocales;
  }   
 
+const eliminarEspacios=(texto)=>{
+    let textoSinEspacios="";
+  for (let i = 0; i < texto.length; i++) {
+      if (texto.charAt(i) != " " ) {
+        textoSinEspacios = textoSinEspacios + texto.charAt(i);
+      } 
+  }
+  return textoSinEspacios
+}
 
-export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales,esVocal
+ const esPalindromo=(texto) =>{
+
+}
+
+
+export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios
 }
