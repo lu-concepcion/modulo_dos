@@ -3,11 +3,12 @@
 // Al menos se deben ingresar 4 nombres
 // Utilizar OBJETOS
 
-var persona =[
-    nombre="",
-    edad=0
-]
+var persona =[{
+    nombre:"",
+    edad:0
+}]
 //Ejercicio 11
+var edadAuxiliar=0, nombreAuxiliar="";
 var contador=0
 do{
     var nombre = prompt("Introduce nombre");
@@ -23,5 +24,12 @@ do{
         alert(persona[contador].nombre)
         contador++;
     }
+    
 }while(contador >=0)   
-document.write("El mayor es "+ persona.nombre)
+for(i=0;i<contador;i++){
+    if(edadAuxiliar<persona[i].edad){
+        edadAuxiliar=persona[i].edad;
+        nombreAuxiliar=persona[i].nombre;
+    }
+}
+document.write("El mayor es "+ nombreAuxiliar, edadAuxiliar)
