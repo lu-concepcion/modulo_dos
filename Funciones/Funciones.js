@@ -18,13 +18,7 @@ const esNumero=(num)=>
 }
 const esTexto=(texto)=>
 {
-    if(isNaN(texto))
-    {
-        return alert ("el caracter si es texto")
-    }
-    else{
-        return alert ("el caracter no es texto")
-    }
+return isNaN(texto)
 }
 const aMayusculas=(texto)=>
 {
@@ -34,6 +28,20 @@ const aMinusculas=(texto)=>
 {
     return alert(texto.toLowerCase())
 }
+let contadorVocales=(texto)=>
+{
+    texto=texto.toLowerCase()
+    const limite= texto.length
+    let contadorVocal=0
+    for (var i = 0;i<=limite;i++)
+    {
+        if(texto.charAt(i)=="a"||texto.charAt(i)=="e"||texto.charAt(i)=="i"||texto.charAt(i)=="o"||texto.charAt(i)=="u")
+        {
+            contadorVocal++
+        }
+    }
+    return(contadorVocal)
+}
 export
 {
     sumar,
@@ -41,5 +49,6 @@ export
     esNumero,
     esTexto,
     aMayusculas,
-    aMinusculas
+    aMinusculas,
+    contadorVocales
 }
