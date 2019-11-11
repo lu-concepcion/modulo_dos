@@ -1,4 +1,4 @@
-import { esTexto,cuentaVocales,convierteMinuscula, esPalindromo } from '../funciones.js';
+import { esTexto,convierteMinuscula, esPalindromo } from '../funciones.js';
 
 let texto = '';
 
