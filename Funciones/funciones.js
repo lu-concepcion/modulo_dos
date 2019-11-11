@@ -1,39 +1,29 @@
 
 const texto = (textoingresado) =>{
 
-    if(isNaN(parseInt(textoingresado)) == true){
-
-    alert ("Es un texto")
-
-    }else{
-
-    alert ("No es un texto");
-
+    if (isNaN(parseInt(textoingresado)) == false){
+        return "Es un numero";
     }
-    return textoingresado
+    else{
+        return "Es un texto"
+    }
 
 }
-const numero = (num1, num2) =>{
+const mayuscula = (textoingresado) =>{
 
-    return num1 + num2
+    return textoingresado.toUpperCase()
     
 }
-const mayuscula = (num1, num2) =>{
 
-    return num1 + num2
-        
-}
+const minuscula = (textoingresado) =>{
 
-const minuscula = (num1, num2) =>{
-
-    return num1 - num2
+    return textoingresado.toLowerCase()
 
 }
 
 export {
 
     texto,
-    numero,
     mayuscula,
     minuscula
 
