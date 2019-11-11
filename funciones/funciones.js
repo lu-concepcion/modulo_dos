@@ -21,5 +21,11 @@ const minuscula = (b) => {
 const mayuscula = (c) => {
     return c.toUpperCase();
 }
-
-export {lala, lili,esnum,minuscula,mayuscula} 
+const caracter = (x) => {
+ let contador = 0;
+    for (let i= 0; i < x.length; i++) {
+     if (x.charAt(i) == "a" || x.charAt(i) == "e"|| x.charAt(i) == "i"|| x.charAt(i) == "o"|| x.charAt(i) == "u" ) {
+        contador++; }
+    }return contador
+}
+export {lala, lili,esnum,minuscula,mayuscula,caracter} 
