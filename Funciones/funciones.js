@@ -22,6 +22,7 @@ const minuscula = (textoingresado) =>{
 const contarVocales = (textoingresado) =>{
 
     let vocalcontada=0;
+    textoingresado = textoingresado.toLowerCase()
 
     for(let i=0; i < textoingresado.length;i++){
         if(textoingresado.charAt(i)=="a" || textoingresado.charAt(i)=="e" ||textoingresado.charAt(i)=="i" ||textoingresado.charAt(i)=="o" ||textoingresado.charAt(i)=="u"){
