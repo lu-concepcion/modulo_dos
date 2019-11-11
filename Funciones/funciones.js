@@ -58,6 +58,10 @@ const esPalindromo = (cadena) =>{
     return true;
 }
 
+const loteria = (array) =>{
+
+}
+
 export{
     esPalindromo
 }
