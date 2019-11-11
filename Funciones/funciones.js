@@ -43,6 +43,12 @@ const esPalindromo = (cadena) =>{
     let j = (palabra.length-1);
 
     for(let i=0; i<palabra.length; i++){
+        if(palabra.charAt(i) == " "){
+            i++
+        }
+        if(palabra.charAt(j) == " "){
+            j--
+        }
         if(palabra.charAt(i) != palabra.charAt(j)){
             return false;
         }
