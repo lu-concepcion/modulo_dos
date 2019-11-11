@@ -41,8 +41,23 @@ const esPalindromo = (string1)=>{
         if (resultado.charAt(i) == resultado.charAt((resultado.length - i)))contador++;
         
     }
-    if (contador == resultado.length )return true
+    return contador == resultado.length 
 }
+
+const loto = (numerosUsuario)=>{
+    numerosGanadores[6];
+    let aciertos = 0;
+    for (let i = 0; i < 6; i++) {
+        numerosGanadores[i] = Math.floor(Math.random() *  (40)) + 1;   
+    }
+    for (let i = 0; i < 6; i++) {
+        for (let k = 0; k < 6; k++) {
+            if(numerosUsuario[i] == numerosGanadores[k])aciertos++;  
+        }     
+    }
+    return aciertos;
+}
+
 export{
     validaNumero,validaTexto,aMayusculas,aMinusculas,contarVocales,esVocal,esPalindromo
 }
