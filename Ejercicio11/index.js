@@ -3,33 +3,29 @@
 // Al menos se deben ingresar 4 nombres
 // Utilizar OBJETOS
 
-var persona =[{
+var persona ={
     nombre:"",
     edad:0
-}]
+}
 //Ejercicio 11
-var edadAuxiliar=0, nombreAuxiliar="";
+var mayor=0, nombreMayor="";
 var contador=0
 do{
-    var nombre = prompt("Introduce nombre");
-    if(nombre == "Salir"){
+     persona.nombre = prompt("Introduce nombre");
+    if(persona.nombre == "Salir"){
         if(contador >3){
             break;
         }
         
     }else{
-        var edad = prompt("Introduce edad");
-        persona[contador].nombre = nombre;
-        persona[contador].edad = edad;
-        alert(persona[contador].nombre)
+         persona.edad = prompt("Introduce edad");
+        if(persona.edad>mayor){
+            mayor = persona.edad
+            nombreMayor = persona.nombre
+        }
         contador++;
     }
     
 }while(contador >=0)   
-for(i=0;i<contador;i++){
-    if(edadAuxiliar<persona[i].edad){
-        edadAuxiliar=persona[i].edad;
-        nombreAuxiliar=persona[i].nombre;
-    }
-}
-document.write("El mayor es "+ nombreAuxiliar, edadAuxiliar)
+
+document.write("El mayor es "+ nombreMayor," "+ mayor)
