@@ -42,6 +42,21 @@ let contadorVocales=(texto)=>
     }
     return(contadorVocal)
 }
+const palindromo=(texto)=>
+{
+    texto=texto.toLowerCase()
+    let limite=texto.length-1
+    let flag = true 
+    for (var i=0;i<((texto.length)/2)+1;i++)
+    {
+        if(!(texto.charAt(i)==texto.charAt(limite)))
+        {
+            flag=false
+            break
+        } 
+    }
+    return (flag)
+}
 export
 {
     sumar,
@@ -50,5 +65,6 @@ export
     esTexto,
     aMayusculas,
     aMinusculas,
-    contadorVocales
+    contadorVocales,
+    palindromo
 }
