@@ -17,12 +17,7 @@ const transformaMayusculas = texto =>{
     return texto.toUpperCase();
 }
 //Ejercicio4
-const verificarVocal = letra =>{
-    if(letra=='a'||letra=='e'||letra=='i'
-    ||letra=='o'||letra=='u'){
-        return true
-    }
-}
+const verificarVocal = letra => (letra=='a'||letra=='e'||letra=='i'||letra=='o'||letra=='u')
 
 let contador=0,i;
 const cuentaVocal = texto =>{
