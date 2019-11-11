@@ -59,11 +59,16 @@ const palindrimo = (palin) => {
 }
 
 //quita los espacios
-const quitaEspacio = (quitaEsp) => {
-    for(i=0 ; i<quitaEsp.length; i++){
-        if(quitaEsp=" "){
-        }
-    }
+//const quitaEspacio = (quitaEsp) => {
+  //  for(i=0 ; i<quitaEsp.length; i++){
+    //    if(quitaEsp=" "){
+      //  }
+    //}
+//}
+
+//sorteo de numero aleatorios de loto (1-36)
+const sorteoLoto = (loto) => {
+    
 }
 
 export {
