@@ -14,9 +14,30 @@ const aMinuscula = (variable)=>{
     return variable.toLowerCase();
 }
 
+const cuantasVocales = (cadena) =>{
+    const palabra = aMinuscula(cadena);
+    let contador = 0;
+    
+    for(let i=0; i<palabra.length; i++){
+        if( esVocal(palabra.charAt(i)) ){
+            contador++;
+        }
+    }
+    return contador;
+}
+
+const esVocal = (letra) =>{
+    const vocales = ["a", "e", "i", "o", "u"];
+
+    for(let i=0; i<vocales.length; i++){
+        if(letra == vocales[i]){
+            return true;
+        }
+    }
+
+    return false;
+}
+
 export{
-    esNumero,
-    esTexto,
-    aMinuscula,
-    aMayuscula
+    cuantasVocales
 }
