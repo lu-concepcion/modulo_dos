@@ -4,8 +4,16 @@
 // Utilizar Math.random(), ver documentación.
 // Utilizar Funciones
 
-import{ sorteoLoteria } from '../funciones.js';
- let numeros = prompt("Ingrese sus numeros"); 
-
- sorteoLoteria(numeros);
+import{ sorteoLoteria, guardarNumero } from '../funciones.js';
+ 
+let contador=0;
+ do{
+    let numeros = prompt("Ingrese sus numeros");
+    if(parseInt(numeros)){
+        guardarNumero(numeros)
+        contador++;
+    }
+ }while(contador<6)
+ sorteoLoteria();
+ 
 

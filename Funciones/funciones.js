@@ -37,19 +37,23 @@ const palabraInversa=(palabra)=>{
     }
     return true
 }
-
+let numerosLoteria=[]
+const guardarNumero=(numero)=>{
+    numerosLoteria.push(parseInt(numero));
+}
 
 //ejercicio6
-let numerosRandom={}
-const sorteoLoteria=(numero)=>{
+let numerosRandom=[];
+const sorteoLoteria=()=>{
     for(let i=0;i<6;i++){
-        numerosRandom=Math.floor(Math.random() * 37);
-        console.log(numerosRandom)
+        numerosRandom[i]=Math.floor(Math.random() * 37);
     }
+    console.log(numerosRandom)
+    console.log(numerosLoteria)
     
 }
 
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
-    sorteoLoteria
+    sorteoLoteria, guardarNumero
 }
