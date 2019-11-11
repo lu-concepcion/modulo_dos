@@ -16,14 +16,14 @@
 //}
 
 var nota = prompt("ingrese la nota");
-if (parseInt(nota)<=3)
+if (nota<=3 && nota>=1)
 {
     alert ("Muy Bajo")
 }
-if (parseint(nota)>=4 && parseInt(nota)<=5) {
+if (nota>=4 && nota<=5) {
     alert ("Regular")
 } 
-if (parseInt(nota)>=6 && parseInt(nota)<=7)
+if (nota>=6 && nota<=7)
 {
     alert("Muy bueno")
 }
