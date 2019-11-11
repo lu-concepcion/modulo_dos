@@ -66,9 +66,13 @@ const palindrimo = (palin) => {
     //}
 //}
 
-//sorteo de numero aleatorios de loto (1-36)
+//sorteo de numero aleatorios de loto (1-41)
 const sorteoLoto = (loto) => {
-    
+    numerosAleatorios = []
+    for(i=1; i<6; i++){
+        numerosAleatorios[i] = Math.floor((Math.random() * 41) + 1);
+    }
+    alert(numerosAleatorios)
 }
 
 export {
@@ -80,5 +84,6 @@ export {
     esTexto,
     buscaVocal,
     palindrimo,
-    quitaEspacio
+    //quitaEspacio,
+    sorteoLoto
 }
