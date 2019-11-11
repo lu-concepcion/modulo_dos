@@ -59,7 +59,7 @@ const palindromo = texto =>
     }
     for (let j = 0; j<texto.length; j++)
     {
-        if(texto[j]==inverso[j])
+        if (texto[j]==inverso[j])
         {
            return alert("La palabra ingresada corresponde a un palindromo")
         }
