@@ -16,6 +16,24 @@ const transformaMinusculas = texto =>{
 const transformaMayusculas = texto =>{
     return texto.toUpperCase();
 }
+//Ejercicio4
+const verificarVocal = letra =>{
+    if(letra=='a'||letra=='e'||letra=='i'
+    ||letra=='o'||letra=='u'){
+        return true
+    }
+}
+
+let contador=0,i;
+const cuentaVocal = texto =>{
+    texto=transformaMinusculas(texto);
+    for(i=0;i<texto.length;i++){
+        if(verificarVocal(texto.charAt(i))){
+           contador++; 
+        }
+    }
+    return contador
+}
 export{
-    sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas
+    sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal
 }
