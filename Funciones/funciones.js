@@ -39,10 +39,21 @@ const cuentaVocales = texto => {
     return contador;
 }
 
+const esPalindromo = texto => {
+    let textoAlRevez = '';
+    for (let i = texto.length; i > 0; i--) {
+        textoAlRevez += texto.charAt(i-1);
+    }
+    console.log(textoAlRevez);
+
+    return texto == textoAlRevez;
+}
+
 export {
     esNumero,
     esTexto,
     convierteMinuscula,
     convierteMayuscula,
-    cuentaVocales
+    cuentaVocales,
+    esPalindromo
 }
