@@ -66,6 +66,30 @@ const palindromo=(texto)=>
     }
     return (flag)
 }
+const sorteo=(max,min)=>
+{
+    let salida= []
+    for (i=0;i<6;i++)
+    {
+        salida[i]=Math.random() * (max - min) + min;
+    }
+    return (salida)
+}
+const aciertosSorteo=(ganadores,elegidos)=>
+{
+    let aciertos
+    for (i=0;i<6;i++)
+    {
+        for (j=0;j<6;j++)
+        {
+            if(ganadores[i]==elegidos[j])
+            {
+                aciertos++
+            }
+        }
+    }
+    return (aciertos)
+}
 export
 {
     sumar,
