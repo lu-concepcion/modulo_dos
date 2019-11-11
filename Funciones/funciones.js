@@ -75,10 +75,20 @@ for (let i = 0; i < texto.length; i++) {
 return true;
 }
 
-function getRandomInt(min, max) {
+const numeroAzar =(min, max)  =>{
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
+  const lotto =(numeros) =>{
+     ganadores[6];
 
-export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios, esPalindromo
+for (let i = 0; i <5; i++) {
+    
+    
+}
+
+  }
+
+
+export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios, esPalindromo,numeroAzar
 }
