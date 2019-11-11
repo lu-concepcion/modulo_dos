@@ -65,9 +65,16 @@ const eliminarEspacios=(texto)=>{
 }
 
  const esPalindromo=(texto) =>{
-
+     let aux = texto.length-1;
+for (let i = 0; i < texto.length; i++) {
+    if (texto.charAt(i) != texto.charAt(aux)) {
+       return false;
+    }
+   aux--;
+}
+return true;
 }
 
 
-export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios
+export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios, esPalindromo
 }
