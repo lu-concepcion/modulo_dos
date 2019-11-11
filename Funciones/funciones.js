@@ -38,8 +38,22 @@ const esPalindromo = texto =>{
         return(texto.charAt(i)==texto.charAt((largo-1)-i))
     }
 }
+//Ejercicio 6
+const numeroExiste = (array,numero) =>{
+    return(array.includes(numero))
+}
+let arraySorteo=[];
+const generaLoteria=()=>{
+    for(let i=0;i<6;i++){
+        do{
+            arraySorteo[i]=Math.floor(Math.random()*37)
+            console.log(arraySorteo)
+        }while(numeroExiste(arraySorteo,arraySorteo[i]));
+    }
+}
 
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
+    ,generaLoteria
 }
 
