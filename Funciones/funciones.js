@@ -33,8 +33,22 @@ const textoMayuscula = texto =>{
 }
 
 
+const numeroVocales= palabra =>{
+    let contador=0
+    for (var i=0; i<=palabra.length-1; i++){
+        if ((palabra.charAt(i)=="a") || (palabra.charAt(i)=="e") || (palabra.charAt(i)=="i") || (palabra.charAt(i)=="o") ||(palabra.charAt(i)=="u")){
+            contador++;
+        }
+    } 
+    return contador
+
+}
+
+ 
+
+
 
 
 export{  //siempre debe ir al final
-    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula 
+    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales 
 }
