@@ -12,7 +12,14 @@ const esnum = (a) => {
  else {
      return "es texto"
  }
-
 }
 
-export {lala, lili,esnum} 
+const minuscula = (b) => {
+    return b.toLowerCase();
+}
+
+const mayuscula = (c) => {
+    return c.toUpperCase();
+}
+
+export {lala, lili,esnum,minuscula,mayuscula} 
