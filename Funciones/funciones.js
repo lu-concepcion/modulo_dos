@@ -32,19 +32,29 @@ const convertirEnMayuscula=(texto) =>{
     
     }
 
+const esVocal = (caracter) =>{
+  caracter = caracter.toLowerCase(); 
+  let flag = false; 
+if (caracter == "a" || caracter == "e" || caracter == "i" || caracter == "o" || caracter == "u" ) {
+    flag = true;
+}
+return flag;
+}
+
+
  const contarVocales=(texto)=>{
- let vocales; 
- const textoComparar = texto.toLowerCase();
-    for (let i = 0; o < texto.length; i++) {
-        if (textoComparar.charAt(i) == "a" || textoComparar.charAt(i) == "e" || textoComparar.charAt(i) == "i" || textoComparar.charAt(i) == "o" || textoComparar.charAt(i) == "u"  ) {
-          vocales++;  
+ let vocales = 0; 
+
+    for (let i = 0; i < texto.length; i++) {
+        if (esVocal(texto) ) {
+          vocales = parseInt(vocales)+ 1;  
         } ;
-        return vocales;
+       
     }
 
-
+    return vocales;
  }   
 
 
-export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales
+export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales,esVocal
 }
