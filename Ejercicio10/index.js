@@ -43,7 +43,7 @@ var listNumeros = [
 
 var input = "";
 do{
-    input = prompt("Ingrese su numero romano");
+    input = prompt("Ingrese un numero romano a convertir");
 }while(input.length <= 0 || input.length >=5)
 
 for(var i=0; i<10; i++){
@@ -52,6 +52,6 @@ for(var i=0; i<10; i++){
         break;
     }
     if(i == 9){
-        alert("Numero desconocido");
+        alert("Numero ingresado se desconoce");
     }
 }
