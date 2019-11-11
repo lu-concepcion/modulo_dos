@@ -49,6 +49,14 @@ const palindromo=(texto)=>
     let flag = true 
     for (var i=0;i<((texto.length)/2)+1;i++)
     {
+        if (texto.charAt(i)==" ")
+        {
+            i++
+        }
+        if (texto.charAt(limite)==" ")
+        {
+            limite++
+        }
         if(texto.charAt(i)!=texto.charAt(limite))
         {
             flag=false
