@@ -33,11 +33,13 @@ const cuentaVocal = texto =>{
 //Ejercicio 5
 const esPalindromo = texto =>{
     texto=transformaMinusculas(texto);
-    for(let i=0;i<texto.length;i++){
-        if(texto.charAt(i)!=texto.charAt(texto.length-i)){
+    let largo = texto.length;
+    for(let i=0;i<largo/2;i++){
+        if(texto.charAt(i)!=texto.charAt((largo-1)-i)){
             return false
         }
     }
+    return true
 }
 
 export{
