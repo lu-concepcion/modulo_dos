@@ -39,6 +39,17 @@ const palabraInversa=(palabra)=>{
 }
 
 
+//ejercicio6
+let numerosRandom={}
+const sorteoLoteria=(numero)=>{
+    for(let i=0;i<6;i++){
+        numerosRandom=Math.floor(Math.random() * 37);
+        console.log(numerosRandom)
+    }
+    
+}
+
 export{
-    validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa
+    validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
+    sorteoLoteria
 }
