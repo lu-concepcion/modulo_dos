@@ -29,6 +29,18 @@ const cuentaVocal = texto =>{
     }
     return contador
 }
-export{
-    sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal
+
+//Ejercicio 5
+const esPalindromo = texto =>{
+    texto=transformaMinusculas(texto);
+    for(let i=0;i<texto.length;i++){
+        if(texto.charAt(i)!=texto.charAt(texto.length-i)){
+            return false
+        }
+    }
 }
+
+export{
+    sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
+}
+
