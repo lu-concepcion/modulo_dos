@@ -4,3 +4,4 @@ var n2 = prompt("Introduce el segundo numero");
 var res = parseInt(n1)+ parseInt(n2);
 //levanta una ventana con la edad ingresada
 alert(res)
+
