@@ -39,8 +39,7 @@ const cuantasVocales = (text) => {
         var textoString = textoEnMinuscula(text);
         for (var i = 0; i <= textoString.length;i++) 
         {
-            if (esUnaVocal(textoString.charAt(i)))
-            contador++;
+            if (esUnaVocal(textoString.charAt(i))) contador++;
         }
     return contador;
 }
