@@ -1,10 +1,13 @@
-import { esTexto } from '../funciones.js';
+import { esTexto,cuentaVocales,convierteMinuscula } from '../funciones.js';
 
 let texto = '';
 
-texto = prompt('Ingrese una palabra por favor');
-
-if (esTexto(texto)) {
-    alert('El texto contiene ' + cuentaVocales(texto) + ' vocales');
+while(true){
+    texto = prompt('Ingrese una palabra por favor');
+    if (esTexto(texto)) {
+        alert('El texto contiene ' + cuentaVocales(convierteMinuscula(texto)) + ' vocales');
+        break;
+    }
+    alert('Ingresa solo texto');
 }
 
