@@ -1,14 +1,16 @@
+
 /*
 Escribir un algoritmo que indique, dado un número romano, este mismo en palabras,
  solo del 1 al 10, ej;
 
+// levanta una ventana con la edad ingresada
+alert(edad)
 input: X
 output: Diez
 
 Utilizar OBJETOS*/
 
-var nn ;
-r=false;
+var nn = prompt("Ingresa un numero Romano: ").toUpperCase();
 var numeror = [
 {
     numero: "uno",
@@ -20,7 +22,7 @@ var numeror = [
 },
 {
     numero: "Tres",
-    numeroromano: "IIi"
+    numeroromano: "III"
 },
 {
     numero: "Cuatro",
@@ -50,26 +52,18 @@ var numeror = [
     numero: "Dies",
     numeroromano: "X"
 },
-]
-
-do{
-    nn = prompt("Ingresa un numero Romano: ").toUpperCase();
-    for(var i=0;i<10;i++){
-        if(nn==numeror[i].numeroromano){
-            r=true;
-        }else{
-            r=false;
-        }
-    }
-if(r==false){
-            alert("No esta en el Rango!");
-           
-        }
-}while(r==false);
+];
+var r=true;
 
 for(var i = 0; i<10;i++)
 if(nn==numeror[i].numeroromano){
+       r=true
     document.write("El numero romanos es: "+ numeror[i].numero);
     break;
-
+} else{
+    r=false;
 }
+if(r==false){
+    alert("No esta en el rango");
+}
+
