@@ -11,10 +11,6 @@ for (i = 2; i < limite_de_secuencia; i++) {
     variable_n1 = variable_n2;
     variable_n2 = variable_n3;
     fibonacci = fibonacci + ", " + variable_n3;
-edad = 0;
-nombre = "";
-apellidos = "";
-profesion = "";
 
 }
 document.write(fibonacci)
