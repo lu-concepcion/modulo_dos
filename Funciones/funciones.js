@@ -47,12 +47,20 @@ const cuantasVocales = (text) => {
 
 const esUnaVocal = (vocal) => {
     const vocales = ['a', 'e', 'i', 'o', 'u'];
-    if (vocales.indexOf(vocal) !== -1)
+    return (vocales.indexOf(vocal) !== -1) ? true : false;
+}
+
+const esPalindromo = (text) => {
+    var text = textoEnMinuscula(text);
+    text = text.replace(/ /g, "");
+    for (var i = 0; i <text.length;i++) {
+        if (text[i]!=text[text.length-i-1]) {
+            return false;
+        }
+    }
     return true;
-    else
-    return false;
 }
 
 export {
-    sumar, restar, esUnNumero, esUnTexto, textoEnMayuscula, textoEnMinuscula, cuantasVocales, esUnaVocal
+    sumar, restar, esUnNumero, esUnTexto, textoEnMayuscula, textoEnMinuscula, cuantasVocales, esUnaVocal, esPalindromo
 }
