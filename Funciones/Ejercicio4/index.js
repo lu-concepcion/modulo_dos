@@ -1,1 +1,2 @@
-import {} from '../funciones.js';
+import {contarVocales} from '../funciones.js';
+

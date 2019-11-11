@@ -46,5 +46,5 @@ const convertirEnMayuscula=(texto) =>{
  }   
 
 
-export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula
+export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales
 }
