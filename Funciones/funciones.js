@@ -33,10 +33,29 @@ const contarVocales = (textoingresado) =>{
     return vocalcontada
 
 }
+const palindromo = (textopalindromo) =>{
+
+    for (i=0; i<textopalindromo.length; i++)
+
+    if(textopalindromo.charAt(i)==textopalindromo.charAt(i-1)){
+
+        alert("es un palindromo")
+
+    }else{
+
+        alert("No es un palindromo")
+    
+    } 
+
+
+    return textopalindromo
+
+}
+
 
 export {
 
-    contarVocales
+    palindromo
 
 }
 
