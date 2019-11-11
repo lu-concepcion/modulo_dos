@@ -50,6 +50,10 @@ const esPalindromo = texto => {
     return texto == textoAlRevez;
 }
 
+const generaAleatorios = (minimo,maximo) => {
+    return Math.floor(Math.random() * ((maximo+1)-minimo)+minimo);
+}
+
 export {
     esNumero,
     esTexto,
