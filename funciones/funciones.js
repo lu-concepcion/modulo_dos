@@ -28,4 +28,15 @@ const caracter = (x) => {
         contador++; }
     }return contador
 }
-export {lala, lili,esnum,minuscula,mayuscula,caracter} 
+const palindromo = (palabra) => {
+    let variable = palabra.length-1;
+    for (let i = 0; i < palabra.length; i++) {
+        if (palabra.charAt(i) != palabra.charAt(variable)){
+        return "palabra no es palindromo"
+        }
+    variable--;
+    }
+   return "palabra es palindromo";
+}
+
+export {lala, lili,esnum,minuscula,mayuscula,caracter,palindromo} 
