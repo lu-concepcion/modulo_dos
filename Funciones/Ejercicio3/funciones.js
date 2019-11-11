@@ -4,6 +4,7 @@ export const voltear_palabra = palabra =>{
     let largo = palabra.length
 
     for(var i=largo;i>=0;i--){
+        if(palabra.charAt(i)!==" "){
         console.log(`b: ${palabra.charAt(i)}`)
         if(nueva_palabra==""){
 
@@ -12,6 +13,7 @@ export const voltear_palabra = palabra =>{
             nueva_palabra = nueva_palabra+palabra.charAt(i);
         }
     }
+}
     return nueva_palabra
 }
 
