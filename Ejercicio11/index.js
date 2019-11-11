@@ -3,9 +3,9 @@ modEdad = 0;
 
 do{
 
-    var perNombre = prompt ("Ingrese un nombre")
+    const perNombre = prompt ("Ingrese un nombre")
 
-    var perEdad = prompt ("Ingrese su edad")
+    const perEdad = prompt ("Ingrese su edad")
 
     if (perEdad>modEdad){
 
