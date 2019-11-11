@@ -59,6 +59,10 @@ const esPalindromo = (texto) => {
     return texto == textoAlRevez;
 }
 
+const getNumeroRandom = (min, max) => {
+    return Math.random() * (max - min) + min;
+}
+
 export {
-    sumar, restar, verNumero, converTextoMinus, converTextoMayus, contarVocales, esPalindromo
+    sumar, restar, verNumero, converTextoMinus, converTextoMayus, contarVocales, esPalindromo, getNumeroRandom
 }
