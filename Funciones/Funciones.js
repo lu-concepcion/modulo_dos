@@ -99,5 +99,7 @@ export
     aMayusculas,
     aMinusculas,
     contadorVocales,
-    palindromo
+    palindromo,
+    sorteo,
+    aciertosSorteo
 }
