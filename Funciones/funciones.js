@@ -62,5 +62,6 @@ export {
     cuentaVocales,
     esPalindromo,
     campoVacio,
-    contieneEspacios
+    contieneEspacios,
+    generaAleatorios
 }
