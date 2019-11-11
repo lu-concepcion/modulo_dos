@@ -36,6 +36,11 @@ while(true){
 
 let contador = 0;
 
+for (let i = 0; i < arregloAleatorios.length; i++) {
+    console.log(arregloAleatorios[i]);
+    
+}
+
 for (let i = 0; i < arregloNumeros.length; i++) {
     for (let a = 0; a < arregloAleatorios.length; a++) {
         if (arregloNumeros[i] == arregloAleatorios[a]) {
