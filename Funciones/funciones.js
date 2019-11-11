@@ -35,11 +35,8 @@ const esPalindromo = texto =>{
     texto=transformaMinusculas(texto);
     let largo = texto.length;
     for(let i=0;i<largo/2;i++){
-        if(texto.charAt(i)!=texto.charAt((largo-1)-i)){
-            return false
-        }
+        return(texto.charAt(i)==texto.charAt((largo-1)-i))
     }
-    return true
 }
 
 export{
