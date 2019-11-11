@@ -33,7 +33,23 @@ const converTextoMayus = (texto) => {
     }
 }
 
+const contarVocales = (texto) => {
+    converTextoMinus(texto);
+    let contador = 0;
+    if(isNaN(texto)){
+        for(let i=0; i < texto.length ; i++){
+            if(texto.charAt(i) == "a" || texto.charAt(i) == "e" || texto.charAt(i) == "i" || texto.charAt(i) == "o" || texto.charAt(i) =="u"){
+                contador ++;
+            }
+        }
+        return "Cantidad de vocales es: " + contador;
+    }
+    else{
+        return "El valor ingresado no es un texto";
+    }
+}
+
 
 export {
-    sumar, restar, verNumero, converTextoMinus, converTextoMayus
+    sumar, restar, verNumero, converTextoMinus, converTextoMayus, contarVocales
 }
