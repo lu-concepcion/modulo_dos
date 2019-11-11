@@ -1,33 +1,30 @@
+nombre = "";
+edad = 0;
 contador = 0;
 var persona = {
-    nombre: "",
-    edad: 0,
     mayor: {
-        edad: "",
-        nombre: 0
+        nombre: ""
     }
 };
 
 flag=1
 do{
-    var edad = prompt("Ingrese la edad de la persona");
-    if(edad.toLowerCase()=="salir"&&contador>=4){
+    var pedir_edad = prompt("Ingrese la edad de la persona");
+    if(pedir_edad.toLowerCase()=="salir"&&contador>=4){
         alert("La persona con mayor edad es: "+persona.mayor.nombre)
         flag=0;
     }else{
         if(!isNaN(edad)){
-            persona.edad = edad;
             var nombre = prompt("Ingrese el nombre de esa persona");
-            if(nombre=="Salir"||nombre=="salir"&&contador>=4){
+            if(nombre.toLowerCase()=="salir"&&contador>=4){
                 alert("La persona con mayor edad es: "+persona.mayor.nombre)
                 flag=0;
             }else{
-                persona.nombre= nombre
                 contador++;
-                if(isNaN(nombre)==false){
-                    if(persona.edad>edad){
-                        edad= persona.edad;
-                        persona.mayor.nombre = persona.nombre;
+                if(isNaN(nombre)){
+                    if(pedir_edad>edad){
+                        edad = pedir_edad;
+                        persona.mayor.nombre = nombre;
                     }
                 }
             }
