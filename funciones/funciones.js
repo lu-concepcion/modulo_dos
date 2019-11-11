@@ -49,7 +49,16 @@ const contarVocales = (texto) => {
     }
 }
 
+const esPalindromo = (texto) => {
+    let textoAlRevez = "";
+    for(let i = texto.length; i > 0; i--){
+        textoAlRevez += texto.charAt(i-1);
+    }
+    console.log(textoAlRevez);
+
+    return texto == textoAlRevez;
+}
 
 export {
-    sumar, restar, verNumero, converTextoMinus, converTextoMayus, contarVocales
+    sumar, restar, verNumero, converTextoMinus, converTextoMayus, contarVocales, esPalindromo
 }
