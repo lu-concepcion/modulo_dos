@@ -1,0 +1,26 @@
+const sumar  = (num1,num2) => {
+    return num1+num2
+}
+const restar = (num1,num2) => {
+    return num1-num2
+}
+
+const validarTexto = (text) => {
+    if (isNaN(text)) {
+        return  "texto ingresado correctamente"
+    } else {
+        return "Vuelta a intentar"
+    }
+}
+
+const convertirMinuscula = text => text.toLowerCase()
+
+const convertirMayuscula = text => text.toUpperCase()
+
+
+
+export {
+    sumar, validarTexto, convertirMinuscula, convertirMayuscula, restar
+}
+
+
