@@ -128,7 +128,14 @@ const digitoVerificador=(run)=>
          runinvertido = runinvertido + aux2.charAt(x);
          x--;
       }
-      return runinvertido
+      const serie=[2,3,4,5,6,7,2,3,4,5,6,7];
+      let multiplicacion=0
+      for(let i=0;i<runinvertido.length;i++)
+      {
+            multiplicacion = multiplicacion + (serie[i]*parseInt(runinvertido.charAt(i)))
+      }
+      
+      return multiplicacion
     }
 export
 {
