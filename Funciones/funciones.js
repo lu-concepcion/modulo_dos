@@ -1,5 +1,5 @@
 // función para sumar dos variables
-const sumar = (num1, num2) => num1 + num2
+const sumar = (num1, num2) => {num1 + num2}
 
 //validar lo que el usuario ingresa es texto o número
 const validarTexto = text => {
@@ -53,7 +53,15 @@ const identificarVocales = text => {
     alert("Esta palabra tiene las siguientes vocales "+contador);
 }
 
+const palindromo = text => {
+    for (let i = 0; i < text.length; i++) {
+        if (text.charAt(i) == text.charAt(i).reverse()) {
+            alert("esto es un palíndromo")
+        }else{"no es un palíndromo"}
+    }
+}
+
 
 export{
-    sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales
+    sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo
 }
