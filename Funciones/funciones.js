@@ -168,5 +168,10 @@ const division = (numA, numB) =>{ //No comprueba si está dividiendo por 0
 }
 
 export{
-    
+    esNumero,
+    aMinuscula,
+    sumar,
+    restar,
+    multiplicacion,
+    division
 }
