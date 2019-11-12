@@ -1,4 +1,12 @@
-export const numero_aleatorio = i => {
-        return Math.floor((Math.random()*36)+1)}
+const verificar_vocales = letra => (letra=="a"||letra=="e"||letra=="i"||letra=="o"||letra=="u")
 
-export const verificar_numero = numero => (isNaN(numero))
+export const contar_vocales = frase =>{
+    let contador = 0;
+    frase = frase.toLowerCase();
+    for(let i=0;i<=frase.length;i++){
+        if(verificar_vocales(frase.charAt(i))){
+            contador++;
+        }
+    }
+    return contador
+}
