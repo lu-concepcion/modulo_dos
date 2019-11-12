@@ -58,21 +58,9 @@ const palindrimo = (palin) => {
     }else return "el texto no es palindrimo";
 }
 
-//quita los espacios
-//const quitaEspacio = (quitaEsp) => {
-  //  for(i=0 ; i<quitaEsp.length; i++){
-    //    if(quitaEsp=" "){
-      //  }
-    //}
-//}
-
-//sorteo de numero aleatorios de loto (1-41)
-const sorteoLoto = (loto) => {
-    numerosAleatorios = []
-    for(i=1; i<6; i++){
-        numerosAleatorios[i] = Math.floor((Math.random() * 41) + 1);
-    }
-    alert(numerosAleatorios)
+//genera numeros aleatorios
+const numeroRandom = (minimo,maximo) => {
+    return Math.floor(Math.random() * ((maximo+1)-minimo)+minimo);
 }
 
 export {
