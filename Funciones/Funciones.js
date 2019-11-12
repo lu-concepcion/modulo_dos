@@ -134,8 +134,16 @@ const digitoVerificador=(run)=>
       {
             multiplicacion = multiplicacion + (serie[i]*parseInt(runinvertido.charAt(i)))
       }
-      
-      return multiplicacion
+      multiplicacion=multiplicacion%11
+      multiplicacion=11-multiplicacion
+      switch(multiplicacion){
+      case 11:
+          return 0
+      case 10:
+          return "k"
+      default:
+          return multiplicacion
+      }
     }
 export
 {
