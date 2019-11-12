@@ -1,7 +1,7 @@
-import {soloNumInv} from '../funciones.js'
+import {RUN} from '../funciones.js'
 
 let run = prompt("Ingrese su run");
-alert(soloNumInv(run))
+alert("El dígito verificador de su run es: "+RUN(run))
 
 
 
