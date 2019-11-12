@@ -203,22 +203,22 @@ export const buscarDeterminadoElemento = (elemento, arreglo) => {
 }
 
 export const buscarEnArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBusca) => {
-    let nuevoArreglo = Object.keys(arregloQueSeAnalizara);
+    let nuevoArreglo = Object.values(arregloQueSeAnalizara);
     let flag = 0;
+    var notificacion = "";
+
+    console.log(Object.keys(arregloQueSeAnalizara))
     for (let i = 0; i < nuevoArreglo.length; i++) {
         if (tipoDeValor == nuevoArreglo[i]) {
             if (valorQueSeBusca == nuevoArreglo[i]) {
                 flag++;
             }
-        } else {
-            Object.keys(arregloQueSeAnalizara) = 0;
         }
     }
     if (flag > 0) {
         notificacion = "El elemento si se encuentra";
     } else {
         notificacion = "El elemento no se encuentra";
-        Object.keys(arregloQueSeAnalizara) = 0;
     }
     return notificacion;
 }
