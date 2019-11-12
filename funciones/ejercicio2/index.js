@@ -1,3 +1,9 @@
-import {caracter} from '../funciones.js'; 
-let texto = prompt("ingrese texto: ")
- alert(`la cantidad de vocales es: ${caracter(texto)}`)
+//Escribir un algoritmo que reciba dos números. Y te ofrezca realizar las siguientes operaciones aritméticas:
+//Sumar
+//Multiplicar
+//Dividir (ojo con la división por cero)
+//Restar
+//Utilizar Funciones
+
+import {} from '../funciones.js'; 
+let texto = prompt(" ");

@@ -1,11 +1,18 @@
 
 //arrow function 
-const lala = (a, b) => {
+const suma = (a, b) => {
   return (a+b)
 }
-const lili = (c, d) => {
+const resta = (c, d) => {
     return c-d
 }
+const multiplicacion = (a, b) => {
+    return (a*b)
+}
+ const division = (a, b) => {
+     return (a/b)
+ }
+
 const esnum = (a) => {
   if(!isNaN(a)){
    return "es numero" }
@@ -38,5 +45,15 @@ const palindromo = (palabra) => {
     }
    return "palabra es palindromo";
 }
+const loto = (num) => {
+ let azar = Math.random()
+for (let i = 0; i < 6; i++){
+function getRandomInt(1, 41) {
+     return Math.floor(Math.random(1) * (40)) + 1 
+}  
+    }
+}
 
-export {lala, lili,esnum,minuscula,mayuscula,caracter,palindromo} 
+const suma = 
+
+export {suma, resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,loto} 
