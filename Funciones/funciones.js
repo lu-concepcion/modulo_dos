@@ -116,7 +116,11 @@ const generaDigitoVerificador = rut => {
         return 'K';
     }
     return final;
+}
 
+const encontrarElemento = (elemento, arreglo) => {
+    console.log(arreglo.includes(elemento));
+    return arreglo.includes(elemento);
 }
 
 export {
@@ -132,5 +136,6 @@ export {
     seRepite,
     calcular,
     calcularPorcentaje,
-    generaDigitoVerificador
+    generaDigitoVerificador,
+    encontrarElemento
 }
