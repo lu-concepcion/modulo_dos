@@ -84,6 +84,37 @@ const calcularPorcentaje = (numero1, numero2) => {
     return (numero1/100) * numero2;
 }
 
+const generaDigitoVerificador = rut => {
+    let rutAlRevez = '';
+    let serie = [2,3,4,5,6,7];
+    let sumaTotal = 0;
+    let contador = 0;
+    let multiplica = 0;
+    let final = 0;
+
+    for (let i = rut.length; i > 0; i--) {
+        rutAlRevez += rut.charAt(i-1);
+    }
+
+    for (let i = 0; i < rutAlRevez.length; i++) {
+        sumaTotal += parseInt(rutAlRevez.charAt(i)) * serie[contador];
+        if (i == contador) {
+            contador = 0;
+        }
+    }
+    multiplica = Math.trunc(sumaTotal/11) * 11;
+    sumaTotal = sumaTotal - multiplica;
+    final = 11 - sumaTotal;
+
+    if (final == 11) {
+        return 0;
+    } else if (final == 10) {
+        return 'K';
+    }
+    return final;
+
+}
+
 export {
     esNumero,
     esTexto,
@@ -96,5 +127,6 @@ export {
     generaAleatorios,
     seRepite,
     calcular,
-    calcularPorcentaje
+    calcularPorcentaje,
+    generaDigitoVerificador
 }
