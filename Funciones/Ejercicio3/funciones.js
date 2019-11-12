@@ -3,23 +3,17 @@
 Ejemplo: ANILINA
 
 Utilizar Funciones*/
-let r=true;
+
 let primeraletra = palabra.charAt(i);
 let ultimaletra =palabra.charAt(palabra.legth-1);
 let espacio= "";
+let nuevapalabra;
 export const validarpalindromo=(palabra)=>{
     for(let i=0;i<=palabra.legth;i++){
-              if(primeraletra==espacio){
-                  i++;
-              }
-              if(ultimaletra==espacio){
-                  palabra.legth-1;
-              }
             if(primeraletra==ultimaletra){
-                  return(r=true);
-    }
-    else{
-        return(r=true);
+                  nuevapalabra=ultimaletra;
+            }
+        return(nuevapalabra);
     }
 }
-}
+
