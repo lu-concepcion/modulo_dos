@@ -33,6 +33,12 @@ const dividir=(num1, num2)=>{
     return parseInt(num1)/ parseInt(num2);
 }
 
+//ejercicio3
+
+const porcentaje=(num1, num2)=>{
+    return (parseInt(num1)*parseInt(num2))/100;
+}
+
 //ejercicio4
 let contador=0;
 const cuentaVocales=(palabra)=>{
@@ -83,5 +89,5 @@ const sorteoLoteria=()=>{
 }
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
-    sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir
+    sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje
 }
