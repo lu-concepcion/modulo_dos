@@ -79,9 +79,20 @@ const sacarPorcentaje = (num1 , num2 ) => {
     return (num2 * 100) / num1;
 }
 
+const codigoVerificador = (rut) => {
+    let aux = rut.split("-");
+    rut = aux[0];
+    aux = rut.split(".");
+    let aux2 = [];
+
+    for (let i=0; i<aux.length; i++){
+        aux2 = aux2 + aux[i];
+    }
+}
+
 export {
     sumar, restar, verNumero, converTextoMinus,
     converTextoMayus, contarVocales, esPalindromo,
     getNumeroRandom, multiplicar, dividir, verNum,
-    sacarPorcentaje
+    sacarPorcentaje, codigoVerificador
 }
