@@ -140,10 +140,13 @@ const porcentaje = (num1, num2) =>
     return percent
 }
 
-const soloNum = num =>
+const soloNumInv = num =>
 {
     let cadena ="";
+    let acum =0;
     let i = num.length;
+    let serie = [2,3,4,5,6,7];
+    
     while(i>=0)
     {
         if(num.charAt(i)!= ".")
@@ -152,6 +155,23 @@ const soloNum = num =>
        
        }  i--; 
     }
-    return cadena
+let diferencia = parseInt(cadena.length)-parseInt(serie.length);
+let aux = [];
+    if(diferencia>0)
+    { 
+        for(let k = 0; k<diferencia.length;k++)
+        {
+            serie.push(serie[k]);
+           
+        }
+         
+    }
+  
+    // for(let j = 0;j<cadena.length;j++)
+    // {
+    //     acum = acum + cadena[j]*serie[j]; 
+    // }
+    return serie
 }
-export { soloNum,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
+
+export { soloNumInv,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
