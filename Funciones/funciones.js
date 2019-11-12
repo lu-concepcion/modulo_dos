@@ -98,7 +98,8 @@ const generaDigitoVerificador = rut => {
 
     for (let i = 0; i < rutAlRevez.length; i++) {
         sumaTotal += parseInt(rutAlRevez.charAt(i)) * serie[contador];
-        if (i == contador) {
+        contador++;
+        if (contador == serie.length) {
             contador = 0;
         }
     }
