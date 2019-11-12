@@ -1,5 +1,1 @@
-var pedirTexto = prompt ("Ingrese una textito");
-
-pedirTexto = pedirTexto.split(.)
-
-alert(pedirTexto)
+export const verificarRUN = RUN =>(!isNaN(RUN)&&RUN.length<9)
