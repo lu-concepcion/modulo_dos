@@ -17,7 +17,7 @@ const esTexto = texto =>
 }
 
 const minuscula = texto =>
-{
+{  
     return texto.toLowerCase()
 }
 
