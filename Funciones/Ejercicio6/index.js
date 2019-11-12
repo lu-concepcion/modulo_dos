@@ -1,3 +1,6 @@
-import {sorteoLoto} from '../funciones.js'
+import {numeroRandom, esNumero} from '../funciones.js'
 
-alert(sorteoLoto(prompt("numero aleatorio del 1 al 41")))
+let numeros = [];
+let numAleatorios = [];
+let aleatorio = 0;
+let numeroUsuario = 0;

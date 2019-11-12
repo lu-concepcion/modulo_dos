@@ -63,6 +63,8 @@ const numeroRandom = (minimo,maximo) => {
     return Math.floor(Math.random() * ((maximo+1)-minimo)+minimo);
 }
 
+//
+
 export {
     sumar,
     restar,
@@ -72,6 +74,5 @@ export {
     esTexto,
     buscaVocal,
     palindrimo,
-    //quitaEspacio,
-    sorteoLoto
+    numeroRandom
 }
