@@ -80,6 +80,10 @@ const calcular = (numero1, numero2, operacion) => {
     }
 }
 
+const calcularPorcentaje = (numero1, numero2) => {
+    return (numero1/100) * numero2;
+}
+
 export {
     esNumero,
     esTexto,
@@ -91,5 +95,6 @@ export {
     contieneEspacios,
     generaAleatorios,
     seRepite,
-    calcular
+    calcular,
+    calcularPorcentaje
 }

@@ -1,4 +1,4 @@
-import { esNumero, calcular} from "../funciones.js";
+import { esNumero, calcular, calcularPorcentaje} from "../funciones.js";
 
 let numero1 = 0;
 let numero2 = 0;
@@ -17,3 +17,5 @@ while(true) {
     }
     break;
 }
+
+alert('Resultado: ' calcularPorcentaje(numero1, numero2) + '%')
