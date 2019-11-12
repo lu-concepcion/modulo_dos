@@ -170,5 +170,5 @@ const division = (numA, numB) =>{ //No comprueba si está dividiendo por 0
 
 
 export{
-
+    esNumero
 }
