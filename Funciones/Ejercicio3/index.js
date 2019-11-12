@@ -2,11 +2,12 @@ import{validarpalindromo} from './funciones.js'
 
 let palabra = prompt("Ingresa una palabra: ");
 
-     alert(validarpalindromo(palabra))
+     
      if(validarpalindromo(palabra)){
-       alert("No es una palabra palindroma")
+         alert("es una palabra palindroma",validarpalidromo(palabra))  
+       
      }else{
-          alert("es una palabra palindroma")  
+          alert("No es una palabra palindroma",palabra)
      }
     
 
