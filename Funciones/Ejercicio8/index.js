@@ -24,6 +24,9 @@ let arregloPersonas = [
     }
 ];
 
-console.log(arregloPersonas);
+console.log(buscarEnArray(arregloPersonas, 'd', 'Felipe'));
+
+
+// console.log(buscarEnArray(arregloPersonas, edad, 27));
 
 

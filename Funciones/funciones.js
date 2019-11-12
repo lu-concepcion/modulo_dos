@@ -123,6 +123,22 @@ const encontrarElemento = (elemento, arreglo) => {
     return arreglo.includes(elemento);
 }
 
+const buscarEnArray = (arreglo, propiedad, valor) => {
+    console.log('Propiedad: ' + propiedad + ', Valor: ' + valor);
+    let encontrado = false;
+    arreglo.forEach(element => {
+        console.log(element[propiedad]);
+        if (element[propiedad] == valor) {
+            encontrado = true;
+        }
+    });
+
+    if (encontrado) {
+        return 'encontrado';
+    }
+    return 'no encontrado';
+}
+
 export {
     esNumero,
     esTexto,
@@ -137,5 +153,6 @@ export {
     calcular,
     calcularPorcentaje,
     generaDigitoVerificador,
-    encontrarElemento
+    encontrarElemento,
+    buscarEnArray
 }
