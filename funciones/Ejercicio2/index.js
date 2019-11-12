@@ -5,27 +5,50 @@ let secondValor = "";
 let rep = false;
 
 do{
-    firstValor = prompt("Ingrese primer valor");
-}while(isNaN(parseInt(firstValor)))
-
-do{
-    secondValor = prompt("Ingrese segundo valor");
-}while(isNaN(parseInt(secondValor)))
-
-do{
-    const resp = prompt("Ingrese opcion : \n 1.Sumar \n 2.Restar \n 3.Multiplicar \n 4.Dividir")
+    const resp = prompt("Ingrese opcion : \n  1.Sumar \n  2.Restar \n  3.Multiplicar \n  4.Dividir")
     switch(resp){
         case "1":
-            alert("El resultado es: " + sumar(firstValor, secondValor))
+            do {
+                firstValor = prompt("Ingrese primer valor: ");
+                
+            }while(isNaN(parseInt(firstValor)));
+            do{
+                secondValor = prompt("Ingrese segundo valor: ");
+            }while(isNaN(parseInt(secondValor)))
+            alert(sumar(firstValor, secondValor))
             break;
         case "2":
-            alert("El resultado es: " + restar(firstValor, secondValor))
+            do {
+                firstValor = prompt("Ingrese primer valor: ");
+                
+            }while(isNaN(parseInt(firstValor)));
+            do{
+                secondValor = prompt("Ingrese segundo valor: ");
+            }while(isNaN(parseInt(secondValor)))
+            alert(restar(firstValor, secondValor))
             break;
         case "3":
-            alert("El resultado es: " + multiplicar(firstValor, secondValor))
+            do {
+                firstValor = prompt("Ingrese primer valor: ");
+                
+            }while(isNaN(parseInt(firstValor)));
+            do{
+                secondValor = prompt("Ingrese segundo valor: ");
+            }while(isNaN(parseInt(secondValor)))
+            alert(multiplicar(firstValor, secondValor))
             break;
         case "4":
-            alert("El resultado es: " + dividir(firstValor, secondValor))
+            do {
+                firstValor = prompt("Ingrese primer valor: ");
+                
+            }while(isNaN(parseInt(firstValor)));
+            do{
+                secondValor = prompt("Ingrese segundo valor: ");
+                if(secondValor == 0){
+                    alert("El segundo valor no puede ser 0");
+                }
+            }while(isNaN(parseInt(secondValor)) || secondValor == 0)
+            alert(dividir(firstValor, secondValor))
             break;
         default:
             alert("Ingrese opcion valida");
