@@ -18,4 +18,4 @@ while(true) {
     break;
 }
 
-alert('Resultado: ' calcularPorcentaje(numero1, numero2) + '%')
+alert('Resultado: ' + calcularPorcentaje(numero1, numero2) + '%')
