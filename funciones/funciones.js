@@ -45,6 +45,8 @@ const palindromo = (palabra) => {
     }
    return "palabra es palindromo";
 }
+const porcentaje = (a,b) => {
+    return (b*100)/a + "%"
+}
 
-
-export {suma, resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,loto} 
+export {suma, resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,porcentaje} 
