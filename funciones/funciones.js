@@ -88,6 +88,15 @@ const codigoVerificador = (rut) => {
     for (let i=0; i<aux.length; i++){
         aux2 = aux2 + aux[i];
     }
+
+    let rutInvertido = "";
+    let x = aux2.length - 1;
+    while(x >= 0){
+        rutInvertido = rutInvertido + aux2.charAt(x);
+        x--;
+    }
+
+    
 }
 
 export {

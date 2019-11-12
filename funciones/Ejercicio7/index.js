@@ -1,5 +1,5 @@
-import {} from '../funciones.js'
+import {codigoVerificador} from '../funciones.js'
 
-const run = prompt("Ingrese rut");
+const rut = prompt("Ingrese rut");
 
-alert()
+alert("El código verificador es: " + codigoVerificador(rut));
