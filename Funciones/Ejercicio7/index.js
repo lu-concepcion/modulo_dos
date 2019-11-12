@@ -1,6 +1,8 @@
-import {limpiarRut} from '../funciones.js';
+import {limpiarRut, invertirCadena} from '../funciones.js';
 
 const rut =prompt("Ingrese rut");
 
-alert(limpiarRut(rut));
+
+
+alert(invertirCadena(limpiarRut(rut)));
 

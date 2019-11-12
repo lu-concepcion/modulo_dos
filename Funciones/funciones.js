@@ -98,14 +98,25 @@ const limpiarRut=(cadena) =>{
 let rut="";
 for (let i = 0; i < cadena.length; i++) {
   if (cadena.charAt(i)=="-") {
-    break
+    break;
   }
+  
   if(!isNaN(parseInt(cadena.charAt(i)))){
     rut = rut+cadena.charAt(i);
   }
   
 }
 return rut;
+}
+
+const invertirCadena=(cadena)=>{
+  let aux= cadena.length-1;
+  let cadenaInvertida = "";
+  for (let i = 0; i < cadena.length; i++) {
+    cadenaInvertida = cadenaInvertida + cadena.charAt(aux);
+    aux--;
+  }
+  return cadenaInvertida;
 }
 
 
@@ -126,5 +137,5 @@ for (let i = 0; i <5; i++) {
 
 
 export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 
-  contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, limpiarRut
+  contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, limpiarRut, invertirCadena
 }
