@@ -22,4 +22,20 @@ import {porcentaje,suma,resta,multiplicacion,digitos} from '../funciones.js'
 let run = prompt("ingrese su run: ")
 let Run = digitos(run)
 let invert = Run.split('').reverse().join('')
-alert(invert)
+let serie = [2,3,4,5,6,7,2,3]
+let sum = 0
+
+for (let i= 0; i < invert.length; i++) {
+     sum = sum + multiplicacion(invert[i],serie[i]);
+}
+let once = (11 - (sum%11))
+
+if (once == 10)  {
+    once = "K";
+} 
+
+if (once == 11)  {
+    once = 0;
+} 
+
+alert(`el digito verificador es: ${once}`)
