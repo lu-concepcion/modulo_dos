@@ -70,6 +70,35 @@ const loto = (numerosUsuario)=>{
     return aciertos;
 }
 
+
+
+const rut = (string)=>{
+    string = string.split("-");
+    let rutSinGuion = string[0];
+    rutSinGuion = rutSinGuion.split(".");
+    string="";
+    for (let i = 0; i < rutSinGuion.length - 1; i++) {
+        string = string + rutSinGuion[i];  //uniendo el rut  
+    }
+    rutSinGuion = "";
+    for (let i = string.length; i < 0 ; i--) {
+        rutSinGuion = rutSinGuion + string.charAt(i); // invirtiendo el rut
+    }
+    let resultado = 0
+    let secuencia = 2
+    for (let i = 0; i < rutSinGuion.length; i++) {
+        if(secuencia == 7)secuencia = 2
+        resultado = parseInt(resultado) + parseInt(parseint(rutSinGuion[i]) * secuencia);
+        secuencia ++;
+    }
+    resultado = parseInt(resultado) % 11;
+    resultado = 11 - parseInt(resultado);
+    
+    if(parseInt(resultado) == 11)return "0";
+    else if(parseInt(resultado) == 10)return "K";
+    else return parseInt(resultado);
+}
+
 export{
-    sumar, restar, multiplicar, dividir, validaNumero, validaTexto, aMayusculas, aMinusculas, contarVocales, esVocal, esPalindromo, porcentajes
+    sumar, restar, multiplicar, dividir, validaNumero, validaTexto, aMayusculas, aMinusculas, contarVocales, esVocal, esPalindromo, porcentajes, rut
 }
