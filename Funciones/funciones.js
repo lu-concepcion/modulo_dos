@@ -95,14 +95,17 @@ const generaDigitoVerificador = rut => {
     for (let i = rut.length; i > 0; i--) {
         rutAlRevez += rut.charAt(i-1);
     }
+    console.log(rutAlRevez);
 
     for (let i = 0; i < rutAlRevez.length; i++) {
         sumaTotal += parseInt(rutAlRevez.charAt(i)) * serie[contador];
+        console.log('num rut: ' + rutAlRevez.charAt(i) + ' * serie:' + serie[contador]);
         contador++;
         if (contador == serie.length) {
             contador = 0;
         }
     }
+    console.log('Suma total: ', sumaTotal);
     multiplica = Math.trunc(sumaTotal/11) * 11;
     sumaTotal = sumaTotal - multiplica;
     final = 11 - sumaTotal;
