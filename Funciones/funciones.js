@@ -133,4 +133,10 @@ const dividir = (num1,num2) =>
     }
     return num1/num2;
 }
-export { esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir}
+
+const porcentaje = (num1, num2) =>
+{
+    let percent = num1*num2/100;
+    return percent
+}
+export { esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
