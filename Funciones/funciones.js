@@ -59,7 +59,8 @@ const numeroVocales= palabra =>{
 
 
 const verificarPalindromo =palabra =>{
-    palabra=palabra.trim();
+    palabra=palabra.replace(/\s+/g, "");
+    palabra=palabra.toLowerCase();
 
     let palabraIngresada=[];
     let palabraAlReves=[];
