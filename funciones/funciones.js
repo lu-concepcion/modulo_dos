@@ -96,7 +96,22 @@ const codigoVerificador = (rut) => {
         x--;
     }
 
-    
+    const serie = [2,3,4,5,6,7,2,3,4,5,6,7];
+    let multiplicacion = 0;
+    for(let i=0; i < rutInvertido.length; i++){
+        multiplicacion = multiplicacion + (serie[i] * parseInt(rutInvertido.charAt(i)));
+    }
+
+    multiplicacion = multiplicacion % 11;
+    multiplicacion = 11 - multiplicacion;
+    switch(multiplicacion){
+        case 11:
+            return 0;
+        case 10:
+            return "K"
+        default:
+            return multiplicacion;
+    }
 }
 
 export {
