@@ -51,11 +51,37 @@ const palindromo = (textopalindromo) =>{
     return textopalindromo
 
 }
+const sumar = (n1, n2) =>{
 
+    const resultado = parseInt(n1) + parseInt(n2); 
+    return resultado
+
+}
+const restar = (n1, n2) =>{
+
+    const resultado = parseInt(n1) - parseInt(n2);
+    return resultado
+
+}
+const dividir = (n1, n2) =>{
+
+    const resultado = parseInt(n1) / parseInt(n2);
+    return resultado
+
+}
+const multiplicar = (n1, n2) =>{
+
+    const resultado = parseInt(n1) * parseInt(n2);
+    return resultado
+
+}
 
 export {
 
-    palindromo
+    sumar,
+    restar,
+    dividir,
+    multiplicar
 
 }
 
