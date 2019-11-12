@@ -87,7 +87,29 @@ const sorteoLoteria=()=>{
     console.log(numerosLoteria)
     
 }
+
+//ejercicio7
+const formatoPunto=(run)=>{
+    return run.split(".")
+}
+
+const inversa=(run)=>{
+    if(run.includes(".")){
+        let numeros= formatoPunto(run)
+        console.log(numeros)
+        for(let i=numeros.length-1;i>=0;i--){
+            guardarNumero(numeros[i])
+        }
+        console.log(numerosLoteria)
+    }else{
+        for(let i=run.length-1; i>=0;i--){
+            guardarNumero(run.charAt(i))
+        }
+        console.log(numerosLoteria)
+    }
+    
+}
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
-    sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje
+    sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje, formatoPunto, inversa
 }
