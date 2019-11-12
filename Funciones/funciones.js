@@ -186,27 +186,39 @@ export const verificarSeparaciones = RUN => {
 
 export const buscarDeterminadoElemento = (elemento, arreglo) => {
     var notificacion = "";
-    for (i = 0; i < arreglo.length; i++) {
-        if (elemento == arreglo[i]) {
-            notificacion = "El elemento se encuentra en el arreglo";
-        } else {
-            notificacion = "El elemento no se encuentra en el arreglo";
+    let nuevoArreglo = Object.values(arreglo)
+    let flag = 0;
+    console.log(nuevoArreglo)
+    for (let i = 0; i < Object.keys(arreglo).length; i++) {
+        if (elemento == nuevoArreglo[i]) {
+            flag++;
         }
+    }
+    if (flag > 0) {
+        notificacion = "El elemento se encuentra en el arreglo";
+    } else {
+        notificacion = "El elemento no se encuentra en el arreglo";
     }
     return notificacion;
 }
 
 export const buscarEnArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBusca) => {
-
-    if (tipoDeValor == Object.keys(arregloQueSeAnalizara)[i]) {
-        if (valorQueSeBusca == Object.values(arregloQueSeAnalizara)[i]){
-            notificacion = "El elemento si se encuentra";
-        }else{
-            notificacion = "El elemento no se encuentra";
-            Object.keys(arregloQueSeAnalizara)=0;
+    let nuevoArreglo = Object.keys(arregloQueSeAnalizara);
+    let flag = 0;
+    for (let i = 0; i < nuevoArreglo.length; i++) {
+        if (tipoDeValor == nuevoArreglo[i]) {
+            if (valorQueSeBusca == nuevoArreglo[i]) {
+                flag++;
+            }
+        } else {
+            Object.keys(arregloQueSeAnalizara) = 0;
         }
-    }else{
-        Object.keys(arregloQueSeAnalizara)=0;
+    }
+    if (flag > 0) {
+        notificacion = "El elemento si se encuentra";
+    } else {
+        notificacion = "El elemento no se encuentra";
+        Object.keys(arregloQueSeAnalizara) = 0;
     }
     return notificacion;
 }
