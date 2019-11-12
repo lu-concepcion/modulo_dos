@@ -14,7 +14,7 @@
 // 	filtrarArray(arrayDondeFiltrara, propiedadAFiltrar, valorPropiedad)
 // 	Debe retornar un array vacío en caso de no encontrar nada
 
-import{ encontrarElemento, buscarEnArrayObjeto  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
+import{ encontrarElemento, buscarEnArrayObjeto, filtrarArray  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
 
 
 
@@ -39,3 +39,28 @@ const arrayObjetos=[
 const propiedadAFiltrar="edad";
 const valorPropiedad=22;
 console.log(buscarEnArrayObjeto(arrayObjetos, propiedadAFiltrar, valorPropiedad))
+
+
+
+
+
+const arrayObjetosFiltrar=[
+    {
+        nombre: "Victoria",
+        edad: 23
+    },
+    {
+        nombre:"Andrea",
+        edad: 24
+    },
+    {
+        nombre:"Victoria",
+        edad: 25
+    }
+]
+const propiedadAFiltrar="nombre";
+const valorPropiedad="Victoria";
+
+
+
+console.log(filtrarArray(arrayObjetosFiltrar,propiedadAFiltrar,valorPropiedad))
