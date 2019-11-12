@@ -1,31 +1,31 @@
 export const verificarNumero = RUN => (!isNaN(RUN))
 
-export const digitoVerificador = RUN =>{
+export const digitoVerificador = RUN => {
     let multiplicador = 2;
     let numeroVerificador = "";
     let resto = 0;
     let resultado = 0;
     let digitoVerificador = 0;
 
-    for(let i=0;i<8;i++){
-        if(numeroVerificador==""){
-        numeroVerificador = parseInt(RUN.charAt(i)*multiplicador);
-        }else{
-            numeroVerificador = parseInt(numeroVerificador) + parseInt(RUN.charAt(i)*multiplicador);
+    for (let i = 0; i < 8; i++) {
+        if (numeroVerificador == "") {
+            numeroVerificador = parseInt(RUN.charAt(i) * multiplicador);
+        } else {
+            numeroVerificador = parseInt(numeroVerificador) + parseInt(RUN.charAt(i) * multiplicador);
         }
         multiplicador++
-        if(multiplicador>7){
-            multiplicador=2;
+        if (multiplicador > 7) {
+            multiplicador = 2;
         }
     }
-    resto = numeroVerificador%11;
+    resto = numeroVerificador % 11;
     resultado = 11 - resto;
-    if(resultado==11){
+    if (resultado == 11) {
         digitoVerificador = 0;
-    }else{
-        if(resultado==10){
+    } else {
+        if (resultado == 10) {
             digitoVerificador = K;
-        }else{
+        } else {
             digitoVerificador = resultado;
         }
     }
@@ -35,10 +35,10 @@ export const digitoVerificador = RUN =>{
 export const invertirRUN = RUN => {
     let invertidoRUN = "";
     for (let i = RUN.length; i >= 0; i--) {
-        if(invertidoRUN==""){
-        invertidoRUN = RUN.charAt(i);
-        }else{
-            invertidoRUN = invertidoRUN+RUN.charAt(i);
+        if (invertidoRUN == "") {
+            invertidoRUN = RUN.charAt(i);
+        } else {
+            invertidoRUN = invertidoRUN + RUN.charAt(i);
         }
     }
     return invertidoRUN
