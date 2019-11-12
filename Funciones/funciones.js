@@ -67,6 +67,6 @@ const dividir = (num1,num2) =>{
 
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
-    ,generaLoteria
+    ,generaLoteria,multiplicar,dividir
 }
 
