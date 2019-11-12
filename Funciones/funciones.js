@@ -65,6 +65,12 @@ const dividir = (num1,num2) =>{
     }
 }
 
+//Ejercicio 3
+
+const calculaPorcentaje = (num1,num2) =>{
+    return (num1/100)*num2
+}
+
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
     ,generaLoteria,multiplicar,dividir
