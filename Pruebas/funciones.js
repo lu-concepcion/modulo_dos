@@ -10,6 +10,12 @@ const multiplicar = (Num1,Num2)=>{
 const dividir = (Num1,Num2)=>{
     return parseInt(Num1) / parseInt(Num2);
 }
+const porcentajes = (Num1,Num2)=>{
+    let resultados;
+    resultados = parseInt(Num2) * parseInt(100);
+    resultados = parseInt(resultados) / parseInt(Num1);
+    return parseInt(resultados);
+}
 const validaNumero = (string1)=>{
     if(parseInt(string1))return "Si";
     else return "No";
@@ -65,5 +71,5 @@ const loto = (numerosUsuario)=>{
 }
 
 export{
-    sumar, restar, multiplicar, dividir, validaNumero, validaTexto, aMayusculas, aMinusculas, contarVocales, esVocal, esPalindromo
+    sumar, restar, multiplicar, dividir, validaNumero, validaTexto, aMayusculas, aMinusculas, contarVocales, esVocal, esPalindromo, porcentajes
 }
