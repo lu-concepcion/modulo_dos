@@ -285,6 +285,28 @@ const buscaElemento=(elemento,array)=>{
         return false;
     }
 
+}
+
+
+const buscaObjeto=(array,propiedad,valor)=>{
+
+    
+
+    let objeto={};
+
+    for(let i=0;i<array.length;i++)
+    {
+
+        console.log(Object.keys(array[i]));
+
+
+
+        
+        
+        
+    }
+
+    
 
 }
 
@@ -300,6 +322,7 @@ export{
     convierteMinuscula,
     validaRepetidos,
     digitoVerificador,
-    buscaElemento
+    buscaElemento,
+    buscaObjeto
 }
 
