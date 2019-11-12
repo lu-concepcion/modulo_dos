@@ -151,7 +151,21 @@ const loteria = () =>{
     return mensaje;
 }
 
+const sumar = (numA, numB) =>{
+    return (numA + numB);
+}
 
+const restar = (numA, numB) =>{
+    return (numA + numB);
+}
+
+const multiplicacion = (numA, numB) =>{
+    return (numA * numB);
+}
+
+const division = (numA, numB) =>{ //No comprueba si está dividiendo por 0
+    return (numA / numB);
+}
 
 export{
     
