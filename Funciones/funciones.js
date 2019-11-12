@@ -52,6 +52,19 @@ const generaLoteria=()=>{
     }
 }
 
+// Ejercicio 2
+const multiplicar = (num1,num2) =>{
+    return num1*num2
+}
+
+const dividir = (num1,num2) =>{
+    if(num2==0){
+        alert("No existe la division por 0")
+    }else{
+        return num1/num2
+    }
+}
+
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
     ,generaLoteria
