@@ -1,5 +1,16 @@
 export const verificarNumero = RUN => (!isNaN(RUN))
 
+export const invertirRUN = RUN => {
+    let invertidoRUN = "";
+    for (let i = RUN.length; i <= 0; i--) {
+        if(invertidoRUN==""){
+        invertidoRUN = RUN.charAt(i);
+        }else{
+            invertidoRUN = invertidoRUN+RUN.charAt(i);
+        }
+    }
+}
+
 export const verificarSeparaciones = RUN => {
     let nuevoRUN = "";
     let nuevoCambioDeRut = "";
@@ -23,18 +34,22 @@ export const verificarSeparaciones = RUN => {
         for (let i = 0; i < 8; i++) {
             if (nuevoCambioDeRut == "") {
                 nuevoCambioDeRut = nuevoRUN.charAt(i);
+                invertirRUN(nuevoCambioDeRut);
             } else {
                 nuevoCambioDeRut = nuevoCambioDeRut + nuevoRUN.charAt(i);
+                invertirRUN(nuevoCambioDeRut);
             }
         }
     }
 
     if (cambiarRUT == 0) {
         if (RUN.length <= 8 && RUN.length > 6) {
-            nuevoCambioDeRut = "RUT CORRECTO"
+            nuevoCambioDeRut = RUN;
+            invertirRUN(nuevoCambioDeRut);
         } else {
-            nuevoCambioDeRut = "RUT INCORRECTO"
+            nuevoCambioDeRut = "RUT INCORRECTO O INTRODUCIDO CON NUMERO DESPUES DEL GUION";
         }
     }
+
     return nuevoCambioDeRut
 }
