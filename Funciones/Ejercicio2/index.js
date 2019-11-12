@@ -15,5 +15,15 @@ while(true) {
         alert('Ingresa solo números');
         continue;
     }
-    operacion = prompt('Por favor, elija número de operación a realizar\n1. Suma\n2. Resta\n3. Division\n4. Multiplicación');
+    while(true) {
+        operacion = parseInt(prompt('Por favor, elija número de operación a realizar\n1. Suma\n2. Resta\n3. Division\n4. Multiplicación'));
+        if (operacion >= 1 && operacion <= 4) {
+            break;
+        }
+        alert('Error: Eliga una de las opciones anteriores');
+    }
+    break;
 }
+console.log('Very good, info: num1: ' + numero1 + ' num2: ' + numero2 + ' operación: ' + operacion);
+
+

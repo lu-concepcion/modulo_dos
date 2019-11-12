@@ -65,8 +65,16 @@ const seRepite = (numero, arreglo) => {
 }
 
 // Día 2 funciones
-
-
+const calcular = (numero1, numero2, operacion) => {
+    switch (operacion) {
+        case 1:
+        return numero1 + numero2;
+        case 2:
+            return numero1 - numero2;
+        default:
+            break;
+    }
+}
 
 export {
     esNumero,
