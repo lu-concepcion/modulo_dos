@@ -6,6 +6,12 @@
 // Utilizar Funciones
 
 
+import{ porcentaje } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
+
+let numero1=prompt("Ingrese el primer numero");
+let numero2=prompt("Ingrese el segundo numero");
+
+alert(porcentaje(numero1,numero2)+"%")
 
 
 
