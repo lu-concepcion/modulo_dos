@@ -74,28 +74,38 @@ const calculaPorcentaje = (num1,num2) =>{
 //Ejercicio 7
 const eliminaFormato = (rut) =>{
     let rutSinFormato=[];
-    for(let i=0;i<rut.length;i++){
+    //console.log("antes  "+rutSinFormato)
+    for(let i=0;i<rut.length-1;i++){
         if(validaNumero(rut.charAt(i))){
             let contador = rutSinFormato.push(rut.charAt(i))
-        }else{
-            if(rut.charAt(rut.length-1)=='k'){
-                contador = rutSinFormato.push(rut.charAt(i))
-            }
-        }   
+         }//else{
+        //     if(i==(rut.length-1) && (rut.charAt(i)=='k' || rut.charAt(i)=='K')){
+        //         contador = rutSinFormato.push(rut.charAt(i))
+        //     }
+        // }   
     }
+    //console.log("dsps  "+rutSinFormato)
+    return rutSinFormato
 }
 
 const invertirArray = (array) =>{
     let invertido = array.reverse();
+    return invertido
 }
 
 const moduloOnce = (array) =>{
+    console.log("antes de quitar formato "+array)
+    array=eliminaFormato(array)
+    console.log("dsps de quitar formato antes de invertir "+array)
+    array=invertirArray(array)
+    console.log("dsps de invertir "+array)
     const serieVerificacion = [2,3,4,5,6,7]
-    let suma=0;
+    let suma=0,j=0;
     for(let i=0;i<array.length;i++){
-        if(j==5){
+        if(j==6){
             j=0;
         }
+        console.log("i= "+i+"j= "+j+"suma= "+suma)
         suma+=array[i]*serieVerificacion[j]
         j++;
     }
@@ -105,7 +115,9 @@ const moduloOnce = (array) =>{
         digitoVerificador=0;
     }else{
         if(digitoVerificador==10){
+            console.log("antes DVVV "+digitoVerificador)
             digitoVerificador='k'
+            console.log("dsps DVVV "+digitoVerificador)
         }
     }
     return digitoVerificador
@@ -113,6 +125,6 @@ const moduloOnce = (array) =>{
 
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
-    ,generaLoteria,multiplicar,dividir,calculaPorcentaje
+    ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce
 }
 

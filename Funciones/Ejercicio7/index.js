@@ -18,3 +18,6 @@
 // let texto = "Hola;Hernan"
 // console.log(texto.split(";"))
 // // ["Hola","Hernan"]
+import { moduloOnce } from '../funciones.js'
+let run = prompt("Ingrese su run")
+alert(moduloOnce(run))
