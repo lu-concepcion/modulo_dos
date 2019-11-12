@@ -1,15 +1,15 @@
-export const validar_numero = (n1)=>{
+export const validar_numero = (n1) => {
     return (isNaN(n1))
 }
 
-export const validar_texto =(t1)=>{
-    return(isNaN(t1))
+export const validar_texto = (t1) => {
+    return (isNaN(t1))
 }
-export const transformar_mayuscula = (t2)=>{
-    return(t2.toUpperCase())
+export const transformar_mayuscula = (t2) => {
+    return (t2.toUpperCase())
 }
-export const transformar_minuscula = (t3)=>{
-    return(t3.toLowerCase())
+export const transformar_minuscula = (t3) => {
+    return (t3.toLowerCase())
 }
 
 export const operacionesAritmeticas = (opcion, numero1, numero2) => {
@@ -26,7 +26,7 @@ export const operacionesAritmeticas = (opcion, numero1, numero2) => {
                 if (numero2 == 0) {
                     resultado = "No se puede realizar esta division"
                 } else {
-                    resultado = parseInt(numero1)/parseInt(numero2);
+                    resultado = parseInt(numero1) / parseInt(numero2);
                 }
             }
         }
@@ -38,7 +38,7 @@ export const verificarNumeros = (numero) => (isNaN(numero))
 
 export const sacarPorcentaje = (numero, porcentaje) => {
     var resultado = 0;
-    if (porcentaje <= 0 || porcentaje > 100|| numero<0) {
+    if (porcentaje <= 0 || porcentaje > 100 || numero < 0) {
         resultado = "No se puede sacar un porcentaje con esos valores"
     } else {
         resultado = (numero * porcentaje) / 100;
@@ -47,44 +47,45 @@ export const sacarPorcentaje = (numero, porcentaje) => {
 }
 
 
-export const verificarNumero = (numero) =>(isNaN(numero))
+export const verificarNumero = (numero) => (isNaN(numero))
 
-const verificar_vocales = letra => (letra=="a"||letra=="e"||letra=="i"||letra=="o"||letra=="u")
+const verificar_vocales = letra => (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u")
 
-export const contar_vocales = frase =>{
+export const contar_vocales = frase => {
     let contador = 0;
     frase = frase.toLowerCase();
-    for(let i=0;i<=frase.length;i++){
-        if(verificar_vocales(frase.charAt(i))){
+    for (let i = 0; i <= frase.length; i++) {
+        if (verificar_vocales(frase.charAt(i))) {
             contador++;
         }
     }
     return contador
 }
 
-export const voltear_palabra = palabra =>{
-    var nueva_palabra="";
+export const voltear_palabra = palabra => {
+    var nueva_palabra = "";
     console.log(`a: ${palabra.length}`)
     let largo = palabra.length
 
-    for(var i=largo;i>=0;i--){
-        if(palabra.charAt(i)!==" "){
-        console.log(`b: ${palabra.charAt(i)}`)
-        if(nueva_palabra==""){
+    for (var i = largo; i >= 0; i--) {
+        if (palabra.charAt(i) !== " ") {
+            console.log(`b: ${palabra.charAt(i)}`)
+            if (nueva_palabra == "") {
 
-        nueva_palabra= palabra.charAt(i);
-        }else{
-            nueva_palabra = nueva_palabra+palabra.charAt(i);
+                nueva_palabra = palabra.charAt(i);
+            } else {
+                nueva_palabra = nueva_palabra + palabra.charAt(i);
+            }
         }
     }
-}
     return nueva_palabra
 }
 
-export const verificar_palindrome = (frase) =>(voltear_palabra(frase)==frase)
+export const verificar_palindrome = (frase) => (voltear_palabra(frase) == frase)
 
 export const numero_aleatorio = i => {
-    return Math.floor((Math.random()*36)+1)}
+    return Math.floor((Math.random() * 36) + 1)
+}
 
 export const verificar_numero = numero => (isNaN(numero))
 
@@ -183,16 +184,30 @@ export const verificarSeparaciones = RUN => {
 
 //FUNCIONES EJERCICIO 8
 
-export const buscarDeterminadoElemento = (elemento, arreglo)=>{
+export const buscarDeterminadoElemento = (elemento, arreglo) => {
     var notificacion = "";
-    for(i=0;i<arreglo.length;i++){
-    if(elemento==arreglo[i]){
-        notificacion = "El elemento se encuentra en el arreglo";
-    }else{
-        notificacion = "El elemento no se encuentra en el arreglo";
-    }
+    for (i = 0; i < arreglo.length; i++) {
+        if (elemento == arreglo[i]) {
+            notificacion = "El elemento se encuentra en el arreglo";
+        } else {
+            notificacion = "El elemento no se encuentra en el arreglo";
+        }
     }
     return notificacion;
 }
 
-export const buscarEnArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBusca)
+export const buscarEnArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBusca) => {
+
+    if (tipoDeValor == Object.keys(arregloQueSeAnalizara)[i]) {
+        if (valorQueSeBusca == Object.values(arregloQueSeAnalizara)[i]){
+            notificacion = "El elemento si se encuentra";
+        }else{
+            notificacion = "El elemento no se encuentra";
+            Object.keys(arregloQueSeAnalizara)=0;
+        }
+    }else{
+        Object.keys(arregloQueSeAnalizara)=0;
+    }
+    return notificacion;
+}
+
