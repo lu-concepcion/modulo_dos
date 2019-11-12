@@ -1,11 +1,21 @@
 //sumar dos numeros
 const sumar = (num1, num2) => {
-    return num1 + num2
+    return (num1 + num2);
 }
 
 //restar dos numeros
 const restar = (num1, num2) => {
-    return num1 - num2
+    return (num1 - num2);
+}
+
+//multiplicar dos números
+const multiplicar = (num1, num2) => {
+    return (num1 * num2);
+}
+
+//dividir dos numeros
+const dividir = (num1, num2) => {
+    return (num1 / num2);
 }
 
 //valido si es numero
@@ -25,14 +35,12 @@ const esTexto = (esTxt) =>{
 
 //convierte texto a mayuscula
 const convertirMayuscula = (convertMayusc) => {
-    convertMayusc = convertMayusc.toUpperCase();
-    return convertMayusc;
+    return convertMayusc.toUpperCase();
 }
 
 //convierte texto a minuscula
 const convertirMinuscula = (convertMinusc) => {
-    convertMinusc = convertMinusc.toLowerCase();
-    return convertMinusc;
+    return convertMinusc.toLowerCase();
 }
 
 //recorre todo el texto buscando una vocal y las cuenta
@@ -83,5 +91,7 @@ export {
     buscaVocal,
     palindrimo,
     numeroRandom,
-    repiteNumero
+    repiteNumero,
+    multiplicar,
+    dividir
 }
