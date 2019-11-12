@@ -11,8 +11,8 @@ while(true) {
         continue;
     }
     numero2 = parseInt(prompt ('Ingrese número 2'));
-    if (!esNumero(numero2)) {
-        alert('Ingresa solo números');
+    if (!esNumero(numero2) || numero2 <= 0) {
+        alert('Ingresa solo números positivos mayores a 0');
         continue;
     }
     break;
