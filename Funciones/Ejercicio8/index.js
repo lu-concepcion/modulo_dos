@@ -1,1 +1,1 @@
-import { } from '../funciones';
+import { } from '../funciones.js';

@@ -1,4 +1,4 @@
-import { validar_texto, transformar_mayuscula, transformar_minuscula, validar_numero } from '../funciones';
+import { validar_texto, transformar_mayuscula, transformar_minuscula, validar_numero } from '../funciones.js';
 var texto = prompt("Ingrese un texto")
 if(validar_texto(texto)){
     var opcion_texto = prompt ("Que desea hacer con su texto \n1.- Mayuscula \n2.- Minuscula \n3.- Nada");

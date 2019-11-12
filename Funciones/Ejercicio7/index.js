@@ -1,4 +1,4 @@
-import { verificarSeparaciones, invertirRUN, digitoVerificador } from '../funciones';
+import { verificarSeparaciones, invertirRUN, digitoVerificador } from '../funciones.js';
 
 let RUN = 0;
 let flag = 0;
