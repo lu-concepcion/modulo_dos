@@ -7,7 +7,7 @@ export const verificarSeparaciones = RUN => {
     let arregloRUN = [];
 
     for (let i = 0; i < RUN.length; i++) {
-        console.log(RUN.charAt(i))
+        if (!isNaN(RUN.charAt(i)))
         if (RUN.charAt(i) == ".") {
 
             arregloRUN = RUN.split(".");
