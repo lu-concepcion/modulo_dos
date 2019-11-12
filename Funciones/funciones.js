@@ -48,6 +48,10 @@ const operacionesMatematicas = (opcion, num1, num2) => {
     }
 }
 
+//funcion para porcentaje
+const calcularPorcentaje = (num1,num2) => {
+    return num2 * num1 / 100
+}
 
 
 
@@ -77,7 +81,7 @@ const encontrarVocales = text => {
 
 export {
     sumar, validarTexto, convertirMinuscula, convertirMayuscula, restar, encontrarVocales,
-    validarNumeros, operacionesMatematicas
+    validarNumeros, operacionesMatematicas, calcularPorcentaje
 }
 
 
