@@ -94,6 +94,21 @@ const calcularPorcentaje=(a,b) => {
  return ((a*b)/100)
 }
 
+const limpiarRut=(cadena) =>{
+let rut="";
+for (let i = 0; i < cadena.length; i++) {
+  if (cadena.charAt(i)=="-") {
+    break
+  }
+  if(!isNaN(parseInt(cadena.charAt(i)))){
+    rut = rut+cadena.charAt(i);
+  }
+  
+}
+return rut;
+}
+
+
 const numeroAzar =(min, max)  =>{
     return Math.floor(Math.random() * (max - min)) + min;
   }
@@ -111,5 +126,5 @@ for (let i = 0; i <5; i++) {
 
 
 export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 
-  contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje
+  contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, limpiarRut
 }
