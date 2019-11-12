@@ -6,6 +6,16 @@ const restar=(a,b)=> {
     return(a- b);
 }
 
+const multiplicar=(a,b)=> {
+  return(a*b);
+}
+
+const dividir=(a,b)=> {
+  return(a/b);
+}
+
+
+
 const validarNumero =(dato) =>{
   let  validacion = true;
 if (isNaN(dato)) {
@@ -88,6 +98,7 @@ for (let i = 0; i <5; i++) {
 }
 
   }
+  
 
 
 export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios, esPalindromo,numeroAzar
