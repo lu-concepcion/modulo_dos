@@ -4,6 +4,7 @@ let numeros = [];
 let numAleatorios = [];
 let aleatorio = 0;
 let numeroUsuario = 0;
+let ciclo = true;
 
 for (let i = 0; i < 6; i++) {
     aleatorio = numeroRandom(1,41);
@@ -12,6 +13,40 @@ for (let i = 0; i < 6; i++) {
         continue;
     } else {
         numAleatorios[i] = aleatorio;
+    }
+}
+
+while(ciclo){
+
+    for(let i=0; i<6; i++){
+        while(true){
+            numeroUsuario = prompt("ingresa el " + (i+1) + " número");
+            if(esNumero(parseInt(numeroUsuario))){
+                break;
+            }
+            alert("Por favor ingresa un número válido")
+        }
+
+        if(repiteNumero(numeroUsuario, numeros)){
+            alert("no puede repetir los números, porfavor ingrese otro");
+            i--;
+            continue;
+        }else {
+            numeros[i] = numeroUsuario;
+        }
+    }
+
+    while(ciclo){
+        let salir  = prompt("¿Desea cambiar sus números? (Si / No)");
+        if (salir != "Si" && salir != "No") {
+            alert("Ingrese una opción correcta");
+            continue;
+        } else if (salir == "Si"){
+            numeros = [];
+            break;
+        } else {
+            ciclo = false;
+        }
     }
 }
 
