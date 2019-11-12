@@ -53,6 +53,8 @@ const identificarVocales = text => {
     alert("Esta palabra tiene las siguientes vocales "+contador);
 }
 
+
+//función para crear un palíndromo
 const palindromo = text => {
     let alReves = text.length;
     for (let i = 0; i < text.length; i++) {
@@ -63,6 +65,41 @@ const palindromo = text => {
     }
 }
 
+/*
+función para que reciba dos números, y te ofrezca realizar las siguientes operaciones aritméticas:
+Sumar
+Multiplicar
+Dividir (ojo con la división por cero)
+Restar
+*/
+
+const aritmetica = (numero1, numero2) => {
+    if (text == sumar) {
+       return resultado = numero1 + numero2
+    }
+
+    if (text == multiplicar) {
+        return resultado = numero1 * numero2
+    }
+
+    if (text == restar) {
+        return resultado = numero1 - numero2
+    }
+
+    if (text == dividir) {
+        while (numero1 > 0 && numero2 > 0) {
+       let opcion =  prompt("si desea que el primer numero ingresado se divida por el segundo ingrese 1, de lo contrario numero 2 para la inversa");
+       if (opcion == 1) {
+            return resultado = numero1 / numero2
+       }
+       if (opcion == 2) {
+            return resultado = numero2 / numero1
+    }
+  }
+}
+}
+
+
 export{
-    sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo
+    sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo, aritmetica
 }
