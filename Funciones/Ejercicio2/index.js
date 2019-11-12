@@ -1,7 +1,14 @@
-import { contar_vocales } from './funciones.js';
-var pedir_texto = prompt("Ingrese el texto para contar sus vocales");
-if(isNaN(pedir_texto)){
-alert(contar_vocales(pedir_texto));
-}else{
-    alert("No se ingreso un texto valido")
+import { operacionesAritmeticas, verificarNumeros } from './funciones.js';
+
+
+var pedir_numero1 = prompt("Ingrese el primer numero");
+if (!verificarNumeros(pedir_numero1)) {
+    var pedir_numero2 = prompt("Ingrese el segundo numero")
+    if(!verificarNumeros(pedir_numero2)){
+        do{
+        var pedir_operacion = prompt ("¿Que operacion desea realizar?\n1.- Suma\n2.- Resta\n3.- Multiplicacion \n4.- Division")
+        }while(verificarNumeros(pedir_operacion)||pedir_operacion<1&&pedir_operacion>4)
+    }
 }
+
+

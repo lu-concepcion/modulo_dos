@@ -1,12 +1,12 @@
-const verificar_vocales = letra => (letra=="a"||letra=="e"||letra=="i"||letra=="o"||letra=="u")
-
-export const contar_vocales = frase =>{
-    let contador = 0;
-    frase = frase.toLowerCase();
-    for(let i=0;i<=frase.length;i++){
-        if(verificar_vocales(frase.charAt(i))){
-            contador++;
+export const operacionesAritmeticas = (opcion, numero1, numero2) =>{
+    let resultado = 0;
+    if(opcion==1){
+        resultado = parseInt(numero1)+parseInt(numero2);
+    }else{
+        if(opcion==2){
+            
         }
     }
-    return contador
 }
+
+export const verificarNumeros = (numero) =>(isNaN(numero))
