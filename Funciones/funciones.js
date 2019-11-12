@@ -81,6 +81,11 @@ const repiteNumero = (numero, array) => {
     return false;
 }
 
+//regla de 3 simple
+const regla3 = (num1, num2) => {
+    return (num2 * 100 / num1 + "%");
+}
+
 export {
     sumar,
     restar,
@@ -93,5 +98,6 @@ export {
     numeroRandom,
     repiteNumero,
     multiplicar,
-    dividir
+    dividir,
+    regla3
 }
