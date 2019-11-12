@@ -34,13 +34,7 @@ const porcentaje=(num1,num2)=>
 }
 const esNumero=(num)=>
 {
-     if (!isNaN(num))
-     {
-         return alert ("el caracter si es un numero")
-     }
-     else{
-         return alert ("el caracter no es un numero")
-     }
+     return (!isNaN(num));
 }
 const esTexto=(texto)=>
 {
@@ -122,6 +116,7 @@ export
     restar,
     multiplicar,
     dividir,
+    porcentaje,
     esNumero,
     esTexto,
     aMayusculas,
