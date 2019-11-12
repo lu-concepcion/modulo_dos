@@ -151,6 +151,8 @@ const loteria = () =>{
     return mensaje;
 }
 
+
+
 export{
-    loteria
+    
 }
