@@ -7,7 +7,7 @@ export const digitoVerificador = RUN => {
     let resultado = 0;
     let digitoVerificador = 0;
 
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < RUN.length; i++) {
         if (numeroVerificador == "") {
             numeroVerificador = parseInt(RUN.charAt(i) * multiplicador);
         } else {
