@@ -88,8 +88,6 @@ export const numero_aleatorio = i => {
 
 export const verificar_numero = numero => (isNaN(numero))
 
-export const verificarNumero = RUN => (!isNaN(RUN))
-
 export const digitoVerificador = RUN => {
     let multiplicador = 2;
     let numeroVerificador = "";
