@@ -262,6 +262,32 @@ const digitoVerificador=(rut)=>{
 
 }
 
+
+const buscaElemento=(elemento,array)=>{
+
+    let bool=false;
+    if(validaNumero(elemento)==true)
+    {
+        elemento=parseInt(elemento);
+
+    }
+
+    for(let i=0;i<array.length;i++)
+    {
+        if(array[i]==elemento)
+        {
+            bool=true;
+            return true;
+        }
+    }
+    if(bool==false)
+    {
+        return false;
+    }
+
+
+}
+
 export{
     validaNumero,
     cuentaVovales,
@@ -273,6 +299,7 @@ export{
     opciones,
     convierteMinuscula,
     validaRepetidos,
-    digitoVerificador
+    digitoVerificador,
+    buscaElemento
 }
 
