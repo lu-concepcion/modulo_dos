@@ -23,6 +23,8 @@ if (operacion=="Sumar"){
     alert(dividir(numero1,numero2))
 } else if (operacion=="Multiplicar"){
     alert(multiplicar(numero1,numero2))
+} else {
+    alert("Operación no válida")
 }
 
 
