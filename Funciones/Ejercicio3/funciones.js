@@ -8,4 +8,4 @@ export const sacarPorcentaje = (numero, porcentaje) => {
     return resultado
 }
 
-export const verificarNumero = (numero) =>(isNan(numero))
+export const verificarNumero = (numero) =>(isNaN(numero))
