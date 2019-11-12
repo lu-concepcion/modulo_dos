@@ -54,13 +54,14 @@ const identificarVocales = text => {
 }
 
 const palindromo = text => {
+    let alReves = text.length;
     for (let i = 0; i < text.length; i++) {
-        if (text.charAt(i) == text.charAt(i).reverse()) {
-            alert("esto es un palíndromo")
-        }else{"no es un palíndromo"}
+        alReves -= 1;
+        if (text.charAt(i) == text.charAt(alReves)) {
+            alert(text+" es un palíndromo")
+        }else{ return text + " no es un palíndromo"}
     }
 }
-
 
 export{
     sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo
