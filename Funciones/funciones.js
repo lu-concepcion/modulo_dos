@@ -172,6 +172,5 @@ const porcentajeDelPrimero = (numA, numB)=>{ //Obtiene el porcentaje del segundo
 }
 
 export{
-    esNumero,
-    porcentajeDelPrimero
+    
 }
