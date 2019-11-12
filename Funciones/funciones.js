@@ -63,7 +63,15 @@ const numeroRandom = (minimo,maximo) => {
     return Math.floor(Math.random() * ((maximo+1)-minimo)+minimo);
 }
 
-//
+//verifica si se repite un numero en un array
+const repiteNumero = (numero, array) => {
+    for(let i=0; i<array.length; i++){
+        if(numero == array[i]){
+            return true;
+        }
+    }
+    return false;
+}
 
 export {
     sumar,
@@ -74,5 +82,6 @@ export {
     esTexto,
     buscaVocal,
     palindrimo,
-    numeroRandom
+    numeroRandom,
+    repiteNumero
 }
