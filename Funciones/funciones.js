@@ -1,9 +1,9 @@
 const validaNumero=(numero)=>{
-   return(isNaN(numero))
+   return(!isNaN(numero))
 }
 
 const validaLetra=(numero)=>{
-    return(!isNaN(numero))
+    return(isNaN(numero))
 }
 
 const convertirMayuscula=(numero)=>{
@@ -15,6 +15,23 @@ const convertirMinuscula=(numero)=>{
 
 const validarVocal=(letra)=>(letra == 'a' || letra=='e' || letra=='i' || letra=='o'|| letra=='u')
 
+//ejercicio2
+
+const sumar=(num1,num2)=>{
+    return parseInt(num1) + parseInt(num2);
+}
+
+const multiplicar=(num1,num2 )=>{
+    return parseInt(num1) * parseInt(num2);
+}
+
+const restar=(num1, num2)=>{
+    return parseInt(num1)-parseInt(num2);
+}
+
+const dividir=(num1, num2)=>{
+    return parseInt(num1)/ parseInt(num2);
+}
 
 //ejercicio4
 let contador=0;
@@ -66,5 +83,5 @@ const sorteoLoteria=()=>{
 }
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
-    sorteoLoteria, guardarNumero
+    sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir
 }
