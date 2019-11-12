@@ -90,6 +90,11 @@ for (let i = 0; i < texto.length; i++) {
 return true;
 }
 
+calcularPorcentaje=(a,b) => {
+ return (a*b)/100
+
+}
+
 const numeroAzar =(min, max)  =>{
     return Math.floor(Math.random() * (max - min)) + min;
   }
