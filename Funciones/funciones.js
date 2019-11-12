@@ -72,7 +72,7 @@ const calcular = (numero1, numero2, operacion) => {
         case 2:
             return numero1 - numero2;
         case 3:
-            return numero2 == 0? 'Error: No se puede dividir por 0': numero1-numero2;
+            return numero2 == 0? 'Error: No se puede dividir por 0': numero1/numero2;
         case 4:
             return numero1 * numero2;
         default:
