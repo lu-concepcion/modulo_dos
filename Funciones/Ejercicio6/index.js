@@ -1,4 +1,4 @@
-import { verificar_numero, numero_aleatorio,} from './funciones.js';
+import { verificar_numero, numero_aleatorio,} from '../funciones';
 
 var contador = 0;
 var tus_numeros= "";

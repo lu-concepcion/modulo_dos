@@ -1,4 +1,4 @@
-import { operacionesAritmeticas, verificarNumeros } from './funciones.js';
+import { operacionesAritmeticas, verificarNumeros } from '../funciones';
 
 
 var pedir_numero1 = prompt("Ingrese el primer numero");

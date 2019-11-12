@@ -1,4 +1,4 @@
-import { sacarPorcentaje, verificarNumero } from './funciones.js';
+import { sacarPorcentaje, verificarNumero } from '../funciones';
 
 var pedirNumero = prompt("Ingrese un valor al que sacarle porcentaje");
 if (!verificarNumero(pedirNumero)) {

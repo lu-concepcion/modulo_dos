@@ -1,4 +1,4 @@
-import { verificar_palindrome, voltear_palabra } from './funciones.js';
+import { verificar_palindrome, voltear_palabra } from '../funciones';
 
 let preguntar_texto = prompt("Ingrese un texto");
 alert(voltear_palabra(preguntar_texto))
