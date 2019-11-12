@@ -1,9 +1,8 @@
-import{validarpalindromo,} from './funciones.js'
+import{palíndromo} from './funciones.js'
 
 let palabra = prompt("Ingresa una palabra: ");
 
-    // if(isNaN(palabra)){
-     alert(validarpalindromo(palabra))
+     alert("",palíndromo(palabra))
     
      
 
