@@ -167,8 +167,11 @@ const division = (numA, numB) =>{ //No comprueba si está dividiendo por 0
     return (numA / numB);
 }
 
-
+const porcentajeDelPrimero = (numA, numB)=>{ //Obtiene el porcentaje del segundo número con respecto al primero
+    return parseInt(numB*100/numA);
+}
 
 export{
-    esNumero
+    esNumero,
+    porcentajeDelPrimero
 }

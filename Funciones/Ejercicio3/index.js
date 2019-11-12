@@ -1,5 +1,6 @@
 import{
-    esNumero
+    esNumero,
+    porcentajeDelPrimero
 } from '../funciones.js';
 
 let numA = 0;
@@ -18,5 +19,4 @@ do{
     }
 }while(!esNumero(numB));
 
-const total = parseInt(numB*100/numA);
-alert("El porcentaje del segundo número con respecto al primero es: " + total + "%")
+alert("El porcentaje del segundo número con respecto al primero es: " + porcentajeDelPrimero(numA, numB) + "%")
