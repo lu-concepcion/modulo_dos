@@ -107,13 +107,18 @@ const dividir=(num1,num2) =>{
     }
 }
 
+const porcentaje=(num1,num2) =>{
+    return parseInt(num1)*parseInt(num2)/100
+
+}
+
 
 
 
 
 
 export{  //siempre debe ir al final
-    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo, sumar, restar, dividir, multiplicar
+    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje
 }
 
 
