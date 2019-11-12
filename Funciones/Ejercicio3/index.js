@@ -1,10 +1,11 @@
 
-import {} from '../funciones.js';
+import {porcentaje} from '../funciones.js';
 
-const textoingresado = prompt ("ingrese texto o numero a analizar")
+const n1 = prompt ("ingrese un numero")
+const n2 = prompt ("ingrese otro numero")
 
 
-    alert (texto(textoingresado))
+    porcentaje(n1, n2)
 
 
 

@@ -75,13 +75,24 @@ const multiplicar = (n1, n2) =>{
     return resultado
 
 }
+const porcentaje = (n1, n2) =>{
+
+    const resultado1 = (parseInt(n2) * 100)/parseInt(n1); 
+    return alert(resultado1+"%")
+
+}
 
 export {
 
+    contarVocales,
+    texto,
+    mayuscula,
+    minuscula,
     sumar,
     restar,
     dividir,
-    multiplicar
+    multiplicar,
+    porcentaje
 
 }
 
