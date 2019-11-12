@@ -1,15 +1,35 @@
-import {sumar, restar, multiplicar, dividir} from '../funciones.js'; 
+import {sumar, restar, multiplicar, dividir, convertirEnMinuscula} from '../funciones.js'; 
 
 
 
 let respuesta = "";
 let repetir = true;
-
 let numero1 = prompt("ingrese primer numero")
 let numero2 = prompt("ingrese segundo numero")
 
 do {
-    respuesta = prompt("Seleccione: \nSumar \nRestar \nMultiplicar \nDividir");
-    
+    respuesta = convertirEnMinuscula(prompt("Seleccione: \nSumar \nRestar \nMultiplicar \nDividir"));
+
+    if (respuesta == "sumar") {
+        alert(sumar(numero1,numero2));
+        break;
+    }
+    if (respuesta == "restar") {
+       alert(restar(numero1,numero2));
+        break;
+    }
+    if (respuesta == "multiplicar") {
+        alert(multiplicar(numero1,numero2));
+        break;
+    }
+    if (respuesta == "dividir") {
+         if (numero2== 0) {
+            alert("Infinito") 
+         }
+         else{
+        alert(dividir(numero1,numero2));
+         }
+        break;
+    }
 
 } while (repetir);
