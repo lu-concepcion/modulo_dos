@@ -86,6 +86,28 @@ const verificarPalindromo =palabra =>{
     }
 }
 
+
+const aciertosLoto= numerosPersona =>{
+    let numerosParaSorteo=[];
+    for (let i=0; i<6; i++){
+        let numeroSorteo=Math.floor(Math.random() * 41) + 1;
+        if (numerosParaSorteo.includes(numeroSorteo)) {
+            console.log("El numero ya esta");
+            numeroSorteo=Math.floor(Math.random() * 41) + 1;
+        } 
+        numerosParaSorteo[i]=numeroSorteo;
+    }
+    let aciertos=0;
+    for (let i=0; i<6; i++){
+        if (numerosParaSorteo.includes(numerosPersona[i])) {
+            console.log("El numero esta");
+            aciertos++;
+            console.log(aciertos)
+        } 
+    }
+    return aciertos
+}
+
 const sumar=(num1,num2) =>{
     return parseInt(num1)+parseInt(num2)
 }
@@ -186,6 +208,8 @@ const filtrarArray= (arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)=>{
 }
 
 export{  //siempre debe ir al final
-    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento, buscarEnArrayObjeto, filtrarArray}
+    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, 
+    verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento, 
+    buscarEnArrayObjeto, filtrarArray, aciertosLoto}
 
 
