@@ -92,7 +92,7 @@ const sorteoLoteria=()=>{
 const formatoPunto=(run)=>{
     return run.split(".")
 }
-
+let numVerificador=0;
 const inversa=(run)=>{
     if(run.includes(".")){
         let numeros= formatoPunto(run)
@@ -107,6 +107,26 @@ const inversa=(run)=>{
         }
         console.log(numerosLoteria)
     }
+    let  multiplicacion=[], resultadoSuma=0;
+    let contador=2;
+    for(let j=0;j<numerosLoteria.length;j++){
+        if(contador>7){
+            contador=2
+        }
+        else{
+            multiplicacion=multiplicar(numerosLoteria[j],contador)
+            resultadoSuma= sumar(multiplicacion, resultadoSuma)
+            contador++; 
+        }
+   
+    }
+    numVerificador = resultadoSuma % 11
+    numVerificador = restar(11,numVerificador)
+    if(numVerificador==11)(numVerificador=0)
+    if(numVerificador==10)(numVerificador="k")
+    console.log(multiplicacion)
+    console.log(resultadoSuma)
+    return alert("Su rut con digito es: "+run+"-"+numVerificador)
     
 }
 export{

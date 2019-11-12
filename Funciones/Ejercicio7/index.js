@@ -15,10 +15,10 @@
 // let texto = "Hola;Hernan"
 // console.log(texto.split(";"))
 // // ["Hola","Hernan"]
-import{ formatoPunto, inversa } from '../funciones.js';
+import{ inversa } from '../funciones.js';
 let run = "";
 
 run = prompt("Ingrese su run");
-console.log(inversa(run))
+inversa(run)
 
 
