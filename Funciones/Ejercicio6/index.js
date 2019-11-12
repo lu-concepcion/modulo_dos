@@ -9,7 +9,7 @@ import{ sorteoLoteria, guardarNumero } from '../funciones.js';
 let contador=0;
  do{
     let numeros = prompt("Ingrese sus numeros");
-    if(parseInt(numeros)){
+    if(parseInt(numeros) && parseInt(numeros)>0 && parseInt(numeros)<37){
         guardarNumero(numeros)
         contador++;
     }

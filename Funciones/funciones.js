@@ -43,16 +43,27 @@ const guardarNumero=(numero)=>{
 }
 
 //ejercicio6
-let numerosRandom=[];
+let numerosRandom=[], aciertos=0,numGenerado=0;
 const sorteoLoteria=()=>{
     for(let i=0;i<6;i++){
-        numerosRandom[i]=Math.floor(Math.random() * 37);
+        numGenerado=Math.floor(Math.random() * (37-1))+1;
+        if(numGenerado!=numerosRandom[i]){
+            numerosRandom[i]=numGenerado;
+        }
+        
     }
+    for(let i=0;i<numerosRandom.length;i++){
+        for(let j=0;j<numerosLoteria.length;j++){
+            if(numerosRandom[i]==numerosLoteria[j]){
+                aciertos++
+            }
+        }
+    }
+    alert("Cantidad de aciertos: "+aciertos)
     console.log(numerosRandom)
     console.log(numerosLoteria)
     
 }
-
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
     sorteoLoteria, guardarNumero
