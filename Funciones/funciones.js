@@ -96,23 +96,25 @@ export const digitoVerificador = RUN => {
     let digitoVerificador = 0;
 
     for (let i = 0; i < RUN.length; i++) {
+        if (multiplicador > 7) {
+            multiplicador = 2;
+        }
         if (numeroVerificador == "") {
             numeroVerificador = parseInt(RUN.charAt(i) * multiplicador);
         } else {
             numeroVerificador = parseInt(numeroVerificador) + parseInt(RUN.charAt(i) * multiplicador);
         }
         multiplicador++
-        if (multiplicador > 7) {
-            multiplicador = 2;
-        }
+
     }
     resto = numeroVerificador % 11;
     resultado = 11 - resto;
+    console.log(resto, resultado)
     if (resultado == 11) {
         digitoVerificador = 0;
     } else {
         if (resultado == 10) {
-            digitoVerificador = K;
+            digitoVerificador = "K";
         } else {
             digitoVerificador = resultado;
         }
