@@ -1,14 +1,14 @@
 const sumar = (Num1,Num2)=>{
-    return Num1 + Num2;
+    return parseInt(Num1) + parseInt(Num2);
 }
 const restar = (Num1,Num2)=>{
-    return Num1 - Num2;
+    return parseInt(Num1) - parseInt(Num2);
 }
 const multiplicar = (Num1,Num2)=>{
-    return Num1 * Num2;
+    return parseInt(Num1) * parseInt(Num2);
 }
 const dividir = (Num1,Num2)=>{
-    return Num1 / Num2;
+    return parseInt(Num1) / parseInt(Num2);
 }
 const validaNumero = (string1)=>{
     if(parseInt(string1))return "Si";
