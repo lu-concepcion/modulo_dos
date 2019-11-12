@@ -183,16 +183,14 @@ export const verificarSeparaciones = RUN => {
 
 //FUNCIONES EJERCICIO 8
 
-export const buscarDeterminadoElemento = (elemento, objeto)=>{
-    let notificacion = "";
-    Object.keys(objeto);
-    for(let i=0; i<Object.keys(objeto).length;i++){
-        if(elemento==objeto[i]){
-            notificacion = "El elemento si se encuentra en el arreglo";
-        }else{
-            notificacion = "El elemento no se encuentra en el arreglo";
-            Object.keys(objeto).length=0;
-        }
+export const buscarDeterminadoElemento = (elemento, arreglo)=>{
+    var notificacion = "";
+    for(i=0;i<arreglo.length;i++){
+    if(elemento==arreglo[i]){
+        notificacion = "El elemento se encuentra en el arreglo";
+    }else{
+        notificacion = "El elemento no se encuentra en el arreglo";
+    }
     }
     return notificacion;
 }
