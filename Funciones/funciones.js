@@ -28,25 +28,14 @@ const validarNumeros = numero => (isNaN(numero))
 const operacionesMatematicas = (opcion, num1, num2) => {
     let resultado = 0;
 
-    if (opcion == 1) {
-        resultado = parseInt(num1) + parseInt(num2);
-    } else {
-        if (opcion == 2) {
-            resultado = parseInt(num1) - parseInt(num2);
-        } else {
-            if (opcion == 3) {
-                resultado = parseInt(num1) * parseInt(num2);
-            } else {
-                if (num2 == 0) {
-                    resultado = "Operacion no realizada"
-                } else {
-                    resultado = parseInt(num1)/parseInt(num2);
-                }
-            }
-        }
+         if (opcion == 1) { resultado = sumar(num1,num2)}      
+         if (opcion == 2) { resultado = restar(num1,num2)}  
+         if (opcion == 3) { resultado = multiplicar(num1,num2)}
+         if (opcion == 4) { if (num2 == 0) { resultado = "Operacion no realizada"; } 
+                     else { resultado = dividir(num1,num2) } }
+
         return resultado
     }
-}
 
 //funcion para porcentaje
 const calcularPorcentaje = (num1,num2) => {
