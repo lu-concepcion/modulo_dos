@@ -109,6 +109,8 @@ export
 {
     sumar,
     restar,
+    multiplicar,
+    dividir,
     esNumero,
     esTexto,
     aMayusculas,
