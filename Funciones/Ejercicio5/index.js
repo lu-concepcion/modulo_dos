@@ -1,8 +1,12 @@
 import{sumar,restar,multiplicar,dividir} from './funciones.js'
 
 let numero1= parseInt(prompt("ingrese numero1: "));
-let numero2= parseInt(prompt("ingrese numero2: "));
 
+
+ let numero2= parseInt(prompt("ingrese numero2: "));
+
+
+if((!isNaN(numero1))&&(!isNaN(numero2))){
 let opcion=prompt("Ingrese que opcion quiere realizar sumar , restar, multiplicar o dividir");
 if(opcion=="sumar"){
     alert(sumar(numero1,numero2));
@@ -19,6 +23,9 @@ if(opcion=="dividir"){
   }else{
     alert(dividir(numero1,numero2));
 }
+}
+}else{
+     alert("no es numero")
 }
      
     
