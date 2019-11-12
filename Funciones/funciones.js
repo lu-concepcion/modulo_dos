@@ -171,6 +171,47 @@ const porcentajeDelPrimero = (numA, numB)=>{ //Obtiene el porcentaje del segundo
     return parseInt(numB*100/numA);
 }
 
+const calculoNumeroVerificador = (rutSinGuion) =>{
+    let rutInvertido = "";
+    for(let i=rutSinGuion.length; i>=0; i--){ //Invierte rut
+        rutInvertido+=rutSinGuion.charAt(i);
+    }
+
+    let resultado = 0;
+    if(rutInvertido.length == 8){ //ej:19788788
+        resultado = rutInvertido.charAt(0)*2;
+        resultado += rutInvertido.charAt(1)*3;
+        resultado += rutInvertido.charAt(2)*4;
+        resultado += rutInvertido.charAt(3)*5;
+        resultado += rutInvertido.charAt(4)*6;
+        resultado += rutInvertido.charAt(5)*7;
+        resultado += rutInvertido.charAt(6)*2;
+        resultado += rutInvertido.charAt(7)*3;
+    }else{ // == 7 ej:1788788
+        resultado = rutInvertido.charAt(0)*2;
+        resultado += rutInvertido.charAt(1)*3;
+        resultado += rutInvertido.charAt(2)*4;
+        resultado += rutInvertido.charAt(3)*5;
+        resultado += rutInvertido.charAt(4)*6;
+        resultado += rutInvertido.charAt(5)*7;
+        resultado += rutInvertido.charAt(6)*2;
+    }
+
+    const moduloRutInvertido = parseInt(resultado/11);
+    const moduloMultiplicado = moduloRutInvertido*11;
+    const valorAbsoluto = resultado - moduloMultiplicado;
+    let digitoVerificador = 11-valorAbsoluto;
+    
+    if(digitoVerificador == 11){
+        digitoVerificador = 0;
+    }
+    if(digitoVerificador == 10){
+        digitoVerificador = "K";
+    }
+    
+    return digitoVerificador;
+}
+
 const numeroVerificador = () =>{
     let rut = "";
     let salir = false;
@@ -196,58 +237,35 @@ const numeroVerificador = () =>{
             salir = false;
             let arrayRut = rut.split(".");
 
-            if(arrayRut.length == 3){ //[19][199][199-4]
-                if( (arrayRut[0].length == 1 || arrayRut[0].length == 2) && esNumero(arrayRut[0]) ){ //[19]
-                    if(arrayRut[1].length == 3 && esNumero(arrayRut[1])){ // [199]
-                        if(arrayRut[2].length == 5 && !esNumero(arrayRut[2])){ //[199-4]
-                            
-                            let arrayRutGuion = arrayRut[2].split("-"); //[199][4]
-                            if(arrayRutGuion[0].length == 3){ //[199]
-                                if(arrayRutGuion[1].length == 1){ //[199]
-                                    
-                                    //Rut correcto, comienza la lógica
-                                    salir = true;
-                                    const rutSinGuion = arrayRut[0] + arrayRut [1] + arrayRutGuion[0];
-                                    
-                                    let rutInvertido = "";
-                                    for(let i=rutSinGuion.length; i>=0; i--){ //Invierte rut
-                                        rutInvertido+=rutSinGuion.charAt(i);
+            if(esNumero(rut)){
+                if(rut.length == 9){
+                    return calculoNumeroVerificador(rut.slice(0,8));
+                }else{
+                    if(rut.length == 8){
+                        return calculoNumeroVerificador(rut.slice(0,7));
+                    }else{
+                        salir = false;
+                    }
+                }
+            }else{
+                if(arrayRut.length == 3){ //[19][199][199-4]
+                    if( (arrayRut[0].length == 1 || arrayRut[0].length == 2) && esNumero(arrayRut[0]) ){ //[19]
+                        if(arrayRut[1].length == 3 && esNumero(arrayRut[1])){ // [199]
+                            if((arrayRut[2].length == 4 || arrayRut[2].length == 5) && !esNumero(arrayRut[2])){ //[199-4]
+                                
+                                let arrayRutGuion = arrayRut[2].split("-"); //[199][4]
+                                if(arrayRutGuion[0].length == 3){ //[199]
+                                    if(arrayRutGuion[1].length == 1){ //[199]
+                                        
+                                        //Rut correcto, comienza la lógica
+                                        salir = true;
+                                        const rutSinGuion = arrayRut[0] + arrayRut [1] + arrayRutGuion[0];
+                    
+                                        return calculoNumeroVerificador(rutSinGuion);
                                     }
-
-                                    let resultado = 0;
-                                    if(rutInvertido.length == 8){ //ej:19788788
-                                        resultado = rutInvertido.charAt(0)*2;
-                                        resultado += rutInvertido.charAt(1)*3;
-                                        resultado += rutInvertido.charAt(2)*4;
-                                        resultado += rutInvertido.charAt(3)*5;
-                                        resultado += rutInvertido.charAt(4)*6;
-                                        resultado += rutInvertido.charAt(5)*7;
-                                        resultado += rutInvertido.charAt(6)*2;
-                                        resultado += rutInvertido.charAt(7)*3;
-                                    }else{ // == 7 ej:1788788
-                                        resultado = rutInvertido.charAt(0)*2;
-                                        resultado += rutInvertido.charAt(1)*3;
-                                        resultado += rutInvertido.charAt(2)*4;
-                                        resultado += rutInvertido.charAt(3)*5;
-                                        resultado += rutInvertido.charAt(4)*6;
-                                        resultado += rutInvertido.charAt(5)*7;
-                                        resultado += rutInvertido.charAt(6)*2;
-                                    }
-
-                                    const moduloRutInvertido = parseInt(resultado/11);
-                                    const moduloMultiplicado = moduloRutInvertido*11;
-                                    const valorAbsoluto = resultado - moduloMultiplicado;
-                                    let digitoVerificador = 11-valorAbsoluto;
-                                    
-                                    if(digitoVerificador == 11){
-                                        digitoVerificador = 0;
-                                    }
-                                    if(digitoVerificador == 10){
-                                        digitoVerificador = "K";
-                                    }
-
-                                    return digitoVerificador;
                                 }
+                            }else{
+                                salir = false;
                             }
                         }else{
                             salir = false;
@@ -255,11 +273,9 @@ const numeroVerificador = () =>{
                     }else{
                         salir = false;
                     }
-                }else{
+                }else{//Más puntos de los que debería o no tiene puntos
                     salir = false;
                 }
-            }else{//Más puntos de los que debería ej: 19.199.199.199-4 => [19][199][199][199-4]
-                salir = false;
             }
 
             if(salir == false){
