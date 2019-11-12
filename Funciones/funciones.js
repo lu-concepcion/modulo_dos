@@ -207,7 +207,7 @@ export const buscarEnArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBu
     let flag = 0;
     var notificacion = "";
 
-    console.log(Object.keys(arregloQueSeAnalizara))
+    console.log(Object.values(arregloQueSeAnalizara))
     for (let i = 0; i < nuevoArreglo.length; i++) {
         if (tipoDeValor == nuevoArreglo[i]) {
             if (valorQueSeBusca == nuevoArreglo[i]) {
