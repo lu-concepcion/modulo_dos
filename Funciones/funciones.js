@@ -54,7 +54,7 @@ const identificarVocales = text => {
 }
 
 
-//función para crear un palíndromo
+//función para verificar un palíndromo
 const palindromo = text => {
     let alReves = text.length;
     for (let i = 0; i < text.length; i++) {
@@ -110,4 +110,23 @@ const porcentajes = (numero1, numero2) => {
     return ((numero1 / 100)* numero2);
 }
 
-export{ sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo, aritmetica, porcentajes }
+//algoritmo que calcula el digito verificador de un RUN, implementando el módulo 11.
+const digitoVerificador = numero => {
+    console.log(numero.split()); /*Esta funcion convierte la variable "numero" en un arreglo de esa manera podemos buscar indices[i] */
+    for (let i = 0; i < numero.length; i++) {
+        if (numero[i] == ".") {
+            return alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
+        }
+        if (numero[i] == "-") {
+            return alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
+        }
+        if (numero.length != 8) {
+            return alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
+        }
+        let runInvertido = run.reverse(); 
+        console.log(numero.reverse());
+        alert("Su rut es" +numero[1]);
+    }
+}
+
+export{ sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo, aritmetica, porcentajes, digitoVerificador }
