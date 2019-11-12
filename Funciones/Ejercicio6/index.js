@@ -1,15 +1,19 @@
-import { random } from '../funciones.js'
+import { random,validMinMax, iqualNumber } from '../funciones.js'
 let i = 0;
 let input = []
 
-for(i;i<6;i++)
-{
-    input [i]= prompt ("Ingrese un número entre 1 y 41");
 
-    if (input[i]<"1" || input[i]>"41")
-    {
-        input [i]= prompt ("Número no válido, ingrese un número entre 1 y 41");
-    }
+
+while(i<6)
+{   input[i] = prompt ("Ingrese un número entre 1 y 41");
+   if(input [i]<"1" || input[i]>"41") 
+   {
+       input[i] = validMinMax(input[i], "1", "41");
+   }
+    i++;
 }
 
-alert(input)
+let iqual = random()
+
+alert("estos son los numeros ganadores:" + iqual+"\n Usted escogió los siguientes números:"+input)
+alert("sus aciertos fueron:"+iqualNumber(iqual,input))

@@ -70,7 +70,7 @@ const palindromo = texto =>
     }
 }
 
-const random = numero =>
+const random = () =>
 {let sorteo = [];
 
     for(let i = 0; i<6;i++)
@@ -80,4 +80,33 @@ const random = numero =>
     return sorteo
 }
 
-export { esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random}
+const validMinMax = (num,min,max) =>
+{   let i =0;
+    while( num<min || num>max)
+    {
+        num = prompt ("Número no válido, ingrese un número entre"+  min  + "y" +  max);
+        i++;
+       
+    } return num
+    
+}
+
+const iqualNumber = (num1, num2) =>
+{
+    let i = 0;
+    let j = 0;
+
+    for(i;i<num1.length;i++)
+    {
+        for(j;j<num2.length;j++)
+        {
+            if(num1[i]==num2[j])
+            {
+                return num1.length
+            }
+            else
+            return "0"
+        }
+    }
+} 
+export { esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber}
