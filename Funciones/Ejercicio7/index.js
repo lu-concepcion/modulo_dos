@@ -21,6 +21,13 @@
 // console.log(texto.split(";"))
 // // ["Hola","Hernan"]
 
+import{ run  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
+
+let run =prompt("Ingrese RUN");
+
+alert(verificarRun(run))
+
+
 
 
 
