@@ -49,4 +49,16 @@ const porcentaje = (a,b) => {
     return (b*100)/a + "%"
 }
 
-export {suma, resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,porcentaje} 
+const digitos = (run) =>{
+    let RUN = "";
+    for (let i = 0; i < run.length; i++) {
+      if (cadena.charAt(i)=="-") {
+        break;
+      }
+      if(!isNaN(parseInt(run.charAt(i)))){
+        RUN = RUN+run.charAt(i);
+      }
+    }
+    return RUN;
+    }
+export {suma, resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,porcentaje,digitos} 
