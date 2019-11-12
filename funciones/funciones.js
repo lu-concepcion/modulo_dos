@@ -6,6 +6,14 @@ const restar = (num1, num2) => {
     return parseInt(num1) - parseInt(num2);
 }
 
+const multiplicar = (num1, num2) => {
+    return parseInt(num1) * parseInt(num2);
+}
+
+const dividir = (num1, num2) => {
+    return parseInt(num1) / parseInt(num2);
+}
+
 const verNumero = (numero) => {
     if(isNaN(numero) == false){
         return "Valor ingresado es un numero";
@@ -64,5 +72,7 @@ const getNumeroRandom = (min, max) => {
 }
 
 export {
-    sumar, restar, verNumero, converTextoMinus, converTextoMayus, contarVocales, esPalindromo, getNumeroRandom
+    sumar, restar, verNumero, converTextoMinus,
+    converTextoMayus, contarVocales, esPalindromo,
+    getNumeroRandom, multiplicar, dividir
 }
