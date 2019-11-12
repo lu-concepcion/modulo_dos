@@ -14,6 +14,10 @@ const dividir = (num1, num2) => {
     return parseInt(num1) / parseInt(num2);
 }
 
+const verNum = (numero) => {
+    return isNaN(numero);
+}
+
 const verNumero = (numero) => {
     if(isNaN(numero) == false){
         return "Valor ingresado es un numero";
@@ -71,8 +75,13 @@ const getNumeroRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
+const sacarPorcentaje = (num1 , num2 ) => {
+    return (num1 + num2) / 100;
+}
+
 export {
     sumar, restar, verNumero, converTextoMinus,
     converTextoMayus, contarVocales, esPalindromo,
-    getNumeroRandom, multiplicar, dividir
+    getNumeroRandom, multiplicar, dividir, verNum,
+    sacarPorcentaje
 }
