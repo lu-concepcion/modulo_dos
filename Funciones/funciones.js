@@ -119,6 +119,16 @@ const invertirCadena=(cadena)=>{
   return cadenaInvertida;
 }
 
+const calcularDigitoVerificador=(cadena) =>{
+  const cadenaInvertida = invertirCadena(limpiarRut(cadena));
+  const serie=[2,3,4,5,6,7,2,3];
+  let sumatoria=0;
+  for (let i = 0; i < cadena.length; i++) {
+    sumatoria = sumatoria + (parseInt(cadenaInvertida.charAt(i))*serie[i]) ;   
+  }
+return 11-(sumatoria%11) ;
+}
+
 
 const numeroAzar =(min, max)  =>{
     return Math.floor(Math.random() * (max - min)) + min;
@@ -137,5 +147,6 @@ for (let i = 0; i <5; i++) {
 
 
 export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 
-  contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, limpiarRut, invertirCadena
+  contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, 
+  limpiarRut, invertirCadena,calcularDigitoVerificador
 }
