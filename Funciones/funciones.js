@@ -1,5 +1,5 @@
 const sumar=(a,b)=> {
-return(a+ b);
+return(parseInt(a)+ parseInt(b));
 }
 
 const restar=(a,b)=> {
@@ -21,7 +21,7 @@ if (b==0) {
 
 
 
-const validarNumero =(dato) =>{
+const esNumero =(dato) =>{
   let  validacion = true;
 if (isNaN(dato)) {
     validacion = false;
@@ -29,7 +29,7 @@ if (isNaN(dato)) {
 return validacion;
 }
 
-const validarLetra =(dato) =>{
+const esLetra =(dato) =>{
     let  validacion = true;
   if (!isNaN(dato)) {
       validacion = false;
@@ -106,5 +106,5 @@ for (let i = 0; i <5; i++) {
   
 
 
-export {sumar, restar, multiplicar, dividir,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios, esPalindromo,numeroAzar
+export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios, esPalindromo,numeroAzar
 }

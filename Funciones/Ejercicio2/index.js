@@ -1,11 +1,13 @@
-import {sumar, restar, multiplicar, dividir, convertirEnMinuscula} from '../funciones.js'; 
+import {sumar, restar, multiplicar, dividir, convertirEnMinuscula, esNumero} from '../funciones.js'; 
 
 
 
 let respuesta = "";
 let repetir = true;
-let numero1 = prompt("ingrese primer numero")
-let numero2 = prompt("ingrese segundo numero")
+
+
+let numero1 = prompt("ingrese primer numero"); 
+let numero2 = prompt("ingrese segundo numero");
 
 do {
     respuesta = convertirEnMinuscula(prompt("Seleccione: \nSumar \nRestar \nMultiplicar \nDividir"));
