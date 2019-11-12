@@ -4,7 +4,7 @@ var pedirNumero = prompt("Ingrese un valor al que sacarle porcentaje");
 if (!verificarNumero(pedirNumero)) {
     var pedirPorcentaje = prompt("Ingrese el porcentaje");
     if (!verificarNumero(pedirPorcentaje)) {
-        sacarPorcentaje(pedirNumero, pedirPorcentaje)
+        alert(sacarPorcentaje(pedirNumero, pedirPorcentaje))
     } else {
         alert("El valor ingresado no es un numero")
     }
