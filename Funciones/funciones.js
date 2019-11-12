@@ -101,5 +101,5 @@ for (let i = 0; i <5; i++) {
   
 
 
-export {sumar, restar,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios, esPalindromo,numeroAzar
+export {sumar, restar, multiplicar, dividir,validarNumero, validarLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios, esPalindromo,numeroAzar
 }
