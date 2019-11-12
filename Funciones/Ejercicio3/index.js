@@ -4,3 +4,8 @@
 // Resultado: 36%
 
 // Utilizar Funciones
+
+import { calculaPorcentaje } from '../funciones.js'
+let numero1 = prompt ("Ingrese el primer numero")
+let numero2 = prompt ("Ingrese el segundo numero")
+alert("Resultado: "+ calculaPorcentaje(numero1,numero2)+"%")

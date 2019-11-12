@@ -73,6 +73,6 @@ const calculaPorcentaje = (num1,num2) =>{
 
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
-    ,generaLoteria,multiplicar,dividir
+    ,generaLoteria,multiplicar,dividir,calculaPorcentaje
 }
 
