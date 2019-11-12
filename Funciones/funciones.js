@@ -1,8 +1,21 @@
+//Funcion para sumar
 const sumar  = (num1,num2) => {
     return num1+num2
 }
+
+//Funcion para restar
 const restar = (num1,num2) => {
     return num1-num2
+}
+
+//Funcion para multiplicar
+const multiplicar =(num1, num2) => {
+    return num1*num2
+}
+
+//Funcion para dividir
+const dividir = (num1,num2) => {
+    return num1/num2
 }
 
 const validarTexto = text => {
