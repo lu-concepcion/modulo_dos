@@ -1,7 +1,7 @@
 
 //arrow function 
 const suma = (a, b) => {
-  return (a+b)
+  return parseInt(a)+parseInt(b)
 }
 const resta = (c, d) => {
     return c-d
@@ -45,15 +45,6 @@ const palindromo = (palabra) => {
     }
    return "palabra es palindromo";
 }
-const loto = (num) => {
- let azar = Math.random()
-for (let i = 0; i < 6; i++){
-function getRandomInt(1, 41) {
-     return Math.floor(Math.random(1) * (40)) + 1 
-}  
-    }
-}
 
-const suma = 
 
 export {suma, resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,loto} 
