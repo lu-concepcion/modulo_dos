@@ -90,10 +90,10 @@ const identificaPalindromo=(input)=>
 
 const invierteTexto=(input)=>{
     
-    let inversa;
+    let inversa="",letra;
     for(let i=input.length-1;i> -1;i--)
     {
-        letra= texto.charAt(i);
+        letra= input.charAt(i);
         inversa = inversa+letra;
     }
 
@@ -164,6 +164,33 @@ const validaRepetidos=(array,numero)=>{
 
 }
 
+const digitoVerificador=(rut)=>{
+
+    let letra, texto="",textoInvertido;
+
+    for(let i=0;i<rut.length;i++)
+    {
+        letra=rut.charAt(i);
+        if(letra!=".")
+        {
+            if(letra=="-")
+            {
+                break;
+            }
+            texto=texto+letra;
+
+        }
+
+    }
+    console.log("el rut ingresado es: "+texto);
+
+    textoInvertido=invierteTexto(texto);
+    console.log("rut invertido: "+textoInvertido);
+
+
+
+}
+
 export{
     validaNumero,
     cuentaVovales,
@@ -174,6 +201,7 @@ export{
     validarRango,
     opciones,
     convierteMinuscula,
-    validaRepetidos
+    validaRepetidos,
+    digitoVerificador
 }
 
