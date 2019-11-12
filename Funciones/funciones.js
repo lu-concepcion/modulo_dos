@@ -111,22 +111,29 @@ const porcentajes = (numero1, numero2) => {
 }
 
 //algoritmo que calcula el digito verificador de un RUN, implementando el módulo 11.
-const digitoVerificador = numero => {
-    console.log(numero.split()); /*Esta funcion convierte la variable "numero" en un arreglo de esa manera podemos buscar indices[i] */
-    for (let i = 0; i < numero.length; i++) {
-        if (numero[i] == ".") {
+const digitoVerificador = run => {
+    console.log(run.split()); /*Esta funcion convierte la variable "numero" en un arreglo de esa manera podemos buscar indices[i] */
+    for (let i = 0; i < run.length; i++) {
+        if (run[i] == ".") {
             return alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
         }
-        if (numero[i] == "-") {
+        if (run[i] == "-") {
             return alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
         }
-        if (numero.length != 8) {
+        if (run.length != 8) {
             return alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
         }
-        let runInvertido = run.reverse(); 
-        console.log(numero.reverse());
-        alert("Su rut es" +numero[1]);
+
+
+        let alReves = run.length;
+        let rutInvertido = run;
+        console.log(rutInvertido.split());
+    for (let i = 0; i < run.length; i++) {
+        alReves -= 1;
+        (run.charAt(i) = run.charAt(alReves))
+        alert("Su rut es" +run);
     }
+}
 }
 
 export{ sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo, aritmetica, porcentajes, digitoVerificador }
