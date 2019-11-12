@@ -139,4 +139,19 @@ const porcentaje = (num1, num2) =>
     let percent = num1*num2/100;
     return percent
 }
-export { esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
+
+const soloNum = num =>
+{
+    let cadena ="";
+    let i = num.length;
+    while(i>=0)
+    {
+        if(num.charAt(i)!= ".")
+       {
+          cadena = cadena+num.charAt(i)
+       
+       }  i--; 
+    }
+    return cadena
+}
+export { soloNum,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
