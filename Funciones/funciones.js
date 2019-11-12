@@ -108,5 +108,29 @@ const iqualNumber = (num1, num2) =>
             return "0"
         }
     }
-} 
-export { esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber}
+}
+
+const sumar = (num1,num2) =>
+{
+    return num1+num2
+}
+
+const restar = (num1,num2) =>
+{
+    return num1-num2
+}
+
+const multiplicar = (num1, num2) =>
+{
+    return num1*num2
+}
+
+const dividir = (num1,num2) =>
+{
+    while (num2==0)
+    {
+        num2 = prompt("Error, el divisor no puede ser 0, ingrese nuevamente");
+    }
+    return num1/num2;
+}
+export { esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir}
