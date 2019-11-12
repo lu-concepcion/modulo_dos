@@ -14,3 +14,11 @@
 // 	filtrarArray(arrayDondeFiltrara, propiedadAFiltrar, valorPropiedad)
 // 	Debe retornar un array vacío en caso de no encontrar nada
 
+import{ encontrarElemento  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
+
+
+
+const arrayElemtos=["hola", "chao", 1, 2];
+let elementoAEncontrar ="4";//prompt("Ingrese elemento a encontrar");
+
+alert(encontrarElemento(arrayElemtos, elementoAEncontrar))
