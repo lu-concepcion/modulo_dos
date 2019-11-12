@@ -99,10 +99,11 @@ export const digitoVerificador = RUN => {
         if (multiplicador > 7) {
             multiplicador = 2;
         }
+        console.log(invertirRUN(RUN).charAt(i), multiplicador, numeroVerificador)
         if (numeroVerificador == "") {
-            numeroVerificador = parseInt(RUN.charAt(i) * multiplicador);
+            numeroVerificador = parseInt(invertirRUN(RUN).charAt(i) * multiplicador);
         } else {
-            numeroVerificador = parseInt(numeroVerificador) + parseInt(RUN.charAt(i) * multiplicador);
+            numeroVerificador = parseInt(numeroVerificador) + parseInt(invertirRUN(RUN).charAt(i) * multiplicador);
         }
         multiplicador++
 
