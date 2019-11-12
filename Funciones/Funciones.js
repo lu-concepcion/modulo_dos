@@ -6,6 +6,10 @@ const restar=(num1,num2)=>
 {
     return num1-num2
 }
+const multiplicar=(num1,num2)=>
+{
+    return num1*num2
+}
 const esNumero=(num)=>
 {
      if (!isNaN(num))
