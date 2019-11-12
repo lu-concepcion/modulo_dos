@@ -5,5 +5,15 @@ let numero1;
 let numero2;
 
 
+   
+do {
     numero1 = prompt("ingrese porcentaje que desea calcular");
-    numero2 = prompt("ingrese numero que desee calcular el porcentaje")
+} while (isNaN(parseInt(numero1)));
+
+do {
+    numero2 = prompt("ingrese numero que desee calcular el porcentaje");
+} while (isNaN(parseInt(numero1)));
+
+  
+
+
