@@ -20,4 +20,6 @@
 import {porcentaje,suma,resta,multiplicacion,digitos} from '../funciones.js'
 
 let run = prompt("ingrese su run: ")
-
+let Run = digitos(run)
+let invert = Run.split('').reverse().join('')
+alert(invert)

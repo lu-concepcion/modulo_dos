@@ -49,14 +49,14 @@ const porcentaje = (a,b) => {
     return (b*100)/a + "%"
 }
 
-const digitos = (run) =>{
+const digitos = (a) =>{
     let RUN = "";
-    for (let i = 0; i < run.length; i++) {
-      if (cadena.charAt(i)=="-") {
+    for (let i = 0; i < a.length; i++) {
+      if (a.charAt(i)=="-") {
         break;
       }
-      if(!isNaN(parseInt(run.charAt(i)))){
-        RUN = RUN+run.charAt(i);
+      if(!isNaN(parseInt(a.charAt(i)))){
+        RUN = RUN + a.charAt(i);
       }
     }
     return RUN;
