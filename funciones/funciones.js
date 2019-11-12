@@ -215,8 +215,6 @@ const digitoVerificador=(rut)=>{
 
     texto=quitaPuntosGuion(rut);
 
-   
-
     textoInvertido=invierteTexto(texto);
     
 
@@ -229,15 +227,11 @@ const digitoVerificador=(rut)=>{
             
         }
 
-        
-
         for(let i=0;i<numerosRut.length;i++)
         {
             suma=suma+(numerosRut[i]*serie[i]);
 
         }
-
-        
 
         dv= 11-(suma%11);
 
@@ -257,21 +251,14 @@ const digitoVerificador=(rut)=>{
         {
             resultado=resultado+"K";
         }
-
-        
-
+  
         return resultado;
-
-
 
     }else
     {
-        alert("rut invalido!");
+        
         return "Error!"
     }
-
-    
-
 
 }
 
