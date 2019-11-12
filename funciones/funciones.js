@@ -15,7 +15,7 @@ const dividir = (num1, num2) => {
 }
 
 const verNum = (numero) => {
-    return isNaN(numero);
+    return isNaN(parseInt(numero));
 }
 
 const verNumero = (numero) => {
@@ -76,7 +76,7 @@ const getNumeroRandom = (min, max) => {
 }
 
 const sacarPorcentaje = (num1 , num2 ) => {
-    return (num1 + num2) / 100;
+    return (num1 * num2) / 100;
 }
 
 export {
