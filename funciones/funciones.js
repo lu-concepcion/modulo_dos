@@ -164,13 +164,13 @@ const validaRepetidos=(array,numero)=>{
 
 }
 
-const digitoVerificador=(rut)=>{
+const quitaPuntosGuion=(input)=>{
 
-    let letra, texto="",textoInvertido;
+    let letra, texto="";
 
-    for(let i=0;i<rut.length;i++)
+    for(let i=0;i<input.length;i++)
     {
-        letra=rut.charAt(i);
+        letra=input.charAt(i);
         if(letra!=".")
         {
             if(letra=="-")
@@ -182,11 +182,95 @@ const digitoVerificador=(rut)=>{
         }
 
     }
-    console.log("el rut ingresado es: "+texto);
+    return texto;
+}
+
+const buscaLetras=(input)=>{
+
+    let control=true;
+
+    for(let i=0;i<input.length;i++)
+    {
+        if(validaNumero(input.charAt(i))==false)
+        {
+           
+            control=false;
+            return true;
+            
+        }
+          
+    }
+
+    if(control==true)
+    {
+        return false;
+    }
+
+
+}
+
+const digitoVerificador=(rut)=>{
+
+    let texto="",textoInvertido, numerosRut=[], serie=[2,3,4,5,6,7,2,3,4,5,6,7],suma=0,dv,resultado="";
+
+    texto=quitaPuntosGuion(rut);
+
+   
 
     textoInvertido=invierteTexto(texto);
-    console.log("rut invertido: "+textoInvertido);
+    
 
+    if(buscaLetras(textoInvertido)==false)
+    {
+        for(let i=0;i<textoInvertido.length;i++)
+        {
+            
+           numerosRut[i]=parseInt(textoInvertido.charAt(i));
+            
+        }
+
+        
+
+        for(let i=0;i<numerosRut.length;i++)
+        {
+            suma=suma+(numerosRut[i]*serie[i]);
+
+        }
+
+        
+
+        dv= 11-(suma%11);
+
+       
+        if(dv>0&&dv<10)
+        {
+            resultado=resultado+dv;
+        }
+
+        if(dv==11)
+        {
+            dv=0;
+            resultado=resultado+dv;
+        }
+
+        if(dv==10)
+        {
+            resultado=resultado+"K";
+        }
+
+        
+
+        return resultado;
+
+
+
+    }else
+    {
+        alert("rut invalido!");
+        return "Error!"
+    }
+
+    
 
 
 }

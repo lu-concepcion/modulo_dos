@@ -1,3 +1,4 @@
 import{digitoVerificador} from '../funciones.js'
 
-digitoVerificador(prompt("ingresa un rut"));
+let digito=digitoVerificador(prompt("ingresa un rut"));
+alert("El digito verificador es: "+digito);
