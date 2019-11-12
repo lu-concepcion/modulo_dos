@@ -54,6 +54,15 @@ const generaAleatorios = (minimo,maximo) => {
     return Math.floor(Math.random() * ((maximo+1)-minimo)+minimo);
 }
 
+const seRepite = (numero, arreglo) => {
+    for (let i = 0; i < arreglo.length; i++) {
+        if (numero == arreglo[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
 export {
     esNumero,
     esTexto,
@@ -63,5 +72,6 @@ export {
     esPalindromo,
     campoVacio,
     contieneEspacios,
-    generaAleatorios
+    generaAleatorios,
+    seRepite
 }
