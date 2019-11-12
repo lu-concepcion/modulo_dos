@@ -1,10 +1,3 @@
-// const sumar=(num1,num2) =>{
-//     return num1+num2
-// }
-
-// const restar=(num1,num2) =>{
-//     return num1-num2
-// }
 
 const verificarTexto =palabra => {
     if (isNaN(palabra)==true){
@@ -93,8 +86,34 @@ const verificarPalindromo =palabra =>{
     }
 }
 
+const sumar=(num1,num2) =>{
+    return parseInt(num1)+parseInt(num2)
+}
+
+const restar=(num1,num2) =>{
+    return parseInt(num1)-parseInt(num2)
+}
+
+const multiplicar=(num1,num2) =>{
+    return parseInt(num1)*parseInt(num2)
+}
+
+const dividir=(num1,num2) =>{
+    if (parseInt(num2)==0){
+        return "No se puede dividir por 0"
+    } else {
+        return parseInt(num1)/parseInt(num2)
+
+    }
+}
+
+
+
+
+
+
 export{  //siempre debe ir al final
-    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo
+    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo, sumar, restar, dividir, multiplicar
 }
 
 
