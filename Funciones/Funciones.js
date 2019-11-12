@@ -112,9 +112,23 @@ const aciertosSorteo=(ganadores,elegidos)=>
 }
 const digitoVerificador=(run)=>
     {
-      let res =run.split("-")
-      run=res[0]   
-      return run
+      let aux =run.split("-")
+      run=aux[0] 
+      aux=run.split(".")
+      let aux2=[]
+      for (let i=0;i<aux.length;i++)
+      {
+          aux2=aux2+aux[i]
+      }
+      let runinvertido=""
+      var x = aux2.length-1;
+ 
+      while (x>=0)
+      {
+         runinvertido = runinvertido + aux2.charAt(x);
+         x--;
+      }
+      return runinvertido
     }
 export
 {
