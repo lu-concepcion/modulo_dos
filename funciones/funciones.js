@@ -119,17 +119,24 @@ const sorteoLoto=(numeros)=>{
    let numero, aciertos=0;
    for(let i=0;i<6;i++)
    {
-       numerosLoto[i]=Math.floor(Math.random() * (42 - 1)) + 1;
-       console.log(numerosLoto[i]);
-
-       if(numeros[i]==numerosLoto[i])
+       numero=Math.floor(Math.random() * (42 - 1)) + 1;
+       if(validaRepetidos(numerosLoto,numero)==false)
        {
-           aciertos++;
-       }
+           numerosLoto[i]=numero;
+           console.log(numerosLoto[i]);
+           if(numeros[i]==numerosLoto[i])
+           {
+               aciertos++;
+           }
+
+       }else
+       {
+           i--;
+       }  
  
    }
 
-   return  "Numeros ganadores: "+numerosLoto+"  sus aciertos: "+aciertos;  
+   return  "sus numeros: "+numeros+" Numeros ganadores: "+numerosLoto+"  sus aciertos: "+aciertos;  
 
 }
 
@@ -145,6 +152,18 @@ const opciones =() =>{
     }
 }
 
+const validaRepetidos=(array,numero)=>{
+
+   if(array.includes(numero))
+   {
+       return true;
+   }else
+   {
+       return false;
+   }
+
+}
+
 export{
     validaNumero,
     cuentaVovales,
@@ -154,6 +173,7 @@ export{
     sorteoLoto,
     validarRango,
     opciones,
-    convierteMinuscula
+    convierteMinuscula,
+    validaRepetidos
 }
 
