@@ -110,6 +110,12 @@ const aciertosSorteo=(ganadores,elegidos)=>
     }
     return (aciertos)
 }
+const digitoVerificador=(run)=>
+    {
+      let res =run.split("-")
+      run=res[0]   
+      return run
+    }
 export
 {
     sumar,
