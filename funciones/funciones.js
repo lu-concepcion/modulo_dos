@@ -153,6 +153,7 @@ export{
     identificaPalindromo,
     sorteoLoto,
     validarRango,
-    opciones
+    opciones,
+    convierteMinuscula
 }
 
