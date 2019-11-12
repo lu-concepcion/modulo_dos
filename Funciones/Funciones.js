@@ -21,6 +21,17 @@ const dividir=(num1,num2)=>
         return num1/num2
     }
 }
+const porcentaje=(num1,num2)=>
+{
+    if(num1==0)
+    {
+        return "error"
+    }
+    else 
+    {
+        return (num2/num1)*100
+    }
+}
 const esNumero=(num)=>
 {
      if (!isNaN(num))
