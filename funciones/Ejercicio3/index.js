@@ -5,8 +5,15 @@ let num2 = "";
 
 do{
     num1 = prompt("Ingrese valor");
-}while(isNaN(parseInt(num1)))
+}while(verNum(num1))
 
+do{
+    do{
+        num2 = prompt("Ingrese porcentaje");
+        if(num2 <= 0 || num2 >= 100){
+            alert("Ingrese un numero entre 1 y 99")
+        }
+    }while(num2 <= 0 || num2 >= 100);
+}while(verNum(num2))
 
-
-alert(num1)
+alert("El porcentaje del valor es: " + sacarPorcentaje(num1, num2) + "%")
