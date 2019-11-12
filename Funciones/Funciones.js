@@ -130,5 +130,6 @@ export
     contadorVocales,
     palindromo,
     sorteo,
-    aciertosSorteo
+    aciertosSorteo,
+    digitoVerificador
 }
