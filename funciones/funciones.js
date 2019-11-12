@@ -76,7 +76,7 @@ const getNumeroRandom = (min, max) => {
 }
 
 const sacarPorcentaje = (num1 , num2 ) => {
-    return (num1 * num2) / 100;
+    return (num2 * 100) / num1;
 }
 
 export {
