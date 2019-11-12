@@ -71,6 +71,46 @@ const calculaPorcentaje = (num1,num2) =>{
     return (num1/100)*num2
 }
 
+//Ejercicio 7
+const eliminaFormato = (rut) =>{
+    let rutSinFormato=[];
+    for(let i=0;i<rut.length;i++){
+        if(validaNumero(rut.charAt(i))){
+            let contador = rutSinFormato.push(rut.charAt(i))
+        }else{
+            if(rut.charAt(rut.length-1)=='k'){
+                contador = rutSinFormato.push(rut.charAt(i))
+            }
+        }   
+    }
+}
+
+const invertirArray = (array) =>{
+    let invertido = array.reverse();
+}
+
+const moduloOnce = (array) =>{
+    const serieVerificacion = [2,3,4,5,6,7]
+    let suma=0;
+    for(let i=0;i<array.length;i++){
+        if(j==5){
+            j=0;
+        }
+        suma+=array[i]*serieVerificacion[j]
+        j++;
+    }
+    let resto=suma%11
+    let digitoVerificador=11-resto
+    if(digitoVerificador==11){
+        digitoVerificador=0;
+    }else{
+        if(digitoVerificador==10){
+            digitoVerificador='k'
+        }
+    }
+    return digitoVerificador
+}
+
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
     ,generaLoteria,multiplicar,dividir,calculaPorcentaje
