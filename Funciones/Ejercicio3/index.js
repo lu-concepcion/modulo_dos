@@ -14,6 +14,7 @@ do {
     numero2 = prompt("ingrese numero que desee calcular el porcentaje");
 } while (isNaN(parseInt(numero1)));
 
+alert(calcularPorcentaje(numero1,numero2));
   
 
 
