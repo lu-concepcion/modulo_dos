@@ -166,7 +166,26 @@ const buscarEnArrayObjeto=(arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)
     
 }
 
+const filtrarArray= (arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)=>{
+    let elementosFiltrados=[];
+    if ((isNaN(valorPropiedad)==true)) {
+        for (let i in arrayDondeBuscara){
+            if (arrayDondeBuscara[i][propiedadAFiltrar]==valorPropiedad){
+                elementosFiltrados.push(arrayDondeBuscara[i])
+            }
+        }
+        return elementosFiltrados
+    } else if ((isNaN(valorPropiedad)==false)) {
+        for (let i in arrayDondeBuscara){
+            if (arrayDondeBuscara[i][propiedadAFiltrar]==parseInt(valorPropiedad)){
+                elementosFiltrados.push(arrayDondeBuscara[i])
+            }
+        }
+        return elementosFiltrados
+    } 
+}
+
 export{  //siempre debe ir al final
-    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento, buscarEnArrayObjeto}
+    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento, buscarEnArrayObjeto, filtrarArray}
 
 
