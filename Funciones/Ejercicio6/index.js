@@ -50,3 +50,19 @@ while(ciclo){
     }
 }
 
+let contador = 0;
+
+for (let i = 0; i < numAleatorios.length; i++) {
+    console.log(numAleatorios[i]);
+    
+}
+
+for (let i = 0; i < numeros.length; i++) {
+    for (let a = 0; a < numAleatorios.length; a++) {
+        if (numeros[i] == numAleatorios[a]) {
+            contador++;
+        }
+    }
+}
+
+alert("Número de aciertos: " + contador);
