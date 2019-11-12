@@ -1,9 +1,17 @@
 const sumar=(num1,num2) => {
-    return num1+num2;
+    return parseInt(num1)+parseInt(num2);
 }
 
 const restar = (num1,num2) => {
-    return num1-num2;
+    return parseInt(num1)-parseInt(num2);
+}
+
+const multiplicar = (num1,num2) => {
+    return parseInt(num1)*parseInt(num2);
+}
+
+const dividir = (num1,num2) => {
+    return parseInt(num1)/parseInt(num2);
 }
 
 const esUnNumero = (num) => {
@@ -51,5 +59,5 @@ const empezarLoto = (numeros) => {
 }
 
 export {
-    sumar, restar, esUnNumero, esUnTexto, textoEnMayuscula, textoEnMinuscula, cuantasVocales, esUnaVocal, esPalindromo, empezarLoto
+    sumar, restar, dividir, multiplicar, esUnNumero, esUnTexto, textoEnMayuscula, textoEnMinuscula, cuantasVocales, esUnaVocal, esPalindromo, empezarLoto
 }
