@@ -1,19 +1,19 @@
 const esNumero = num1 =>
 {
     if(!isNaN(num1))
-    return alert("El/ Los carácteres ingresados corresponden a un número")
+    return 0
 
     else
-    return alert("El/ Los carácteres ingresados no corresponden a un número")
+    return 1
 }
 
 const esTexto = texto =>
 {
     if(isNaN(texto))
-    return alert("El/ Los carácteres ingresados corresponden a Texto")
+    return 0
 
     else
-    return alert("El/ Los carácteres ingresados no corresponden a Texto")
+    return 1
 }
 
 const minuscula = texto =>
