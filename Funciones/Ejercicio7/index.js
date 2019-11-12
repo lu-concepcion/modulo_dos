@@ -21,17 +21,17 @@
 // console.log(texto.split(";"))
 // // ["Hola","Hernan"]
 
-import{ run  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
+import{ verificarRun  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
 
 let run =prompt("Ingrese RUN");
+let numerosRun=[];
+let index=0
+for (let i=0; i<=run.length-2; i++){
+    if (isNaN(run.charAt(i))==false){
+        numerosRun[index]=run.charAt(i);
+        index++;
+    }
+}
 
-alert(verificarRun(run))
 
-
-
-
-
-
-
-
-
+alert(verificarRun(numerosRun))
