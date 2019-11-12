@@ -16,4 +16,4 @@ do{
     }while(num2 <= 0 || num2 >= 100);
 }while(verNum(num2))
 
-alert("El porcentaje del valor es: " + sacarPorcentaje(num1, num2) + "%")
+alert("El porcentaje del segundo valor con respecto al primero es: " + sacarPorcentaje(num1, num2) + "%")
