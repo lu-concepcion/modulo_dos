@@ -3,13 +3,15 @@ import
     porcentaje,
     esNumero
 }from'../Funciones.js'
+let total
+let fraccion
 do{
-const total=prompt("ingrese el total");
-}while(!esNumero)
+total=prompt("ingrese el total");
+}while(!esNumero(total))
 do{
-const fraccion=prompt("ingrese la fraccion");
-}while(!esNumero)
-alert (porcentaje(total,fraccion)+"%");
+fraccion=prompt("ingrese la fraccion");
+}while(!esNumero(fraccion))
+alert (fraccion +" representa el "+porcentaje(total,fraccion)+"% de "+ total);
 
 
 
