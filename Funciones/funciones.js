@@ -112,14 +112,31 @@ const porcentaje=(num1,num2) =>{
 
 }
 
+const verificarRun = run =>{
+    const runInvertido= run.reverse();
+    const multiplicadores=[2, 3, 4, 5, 6, 7,2, 3, 4, 5, 6, 7];
+    let suma=0;
+    for (let i in runInvertido){
+        suma=suma+ parseInt(runInvertido[i])*multiplicadores[i]
+    }
+    const modulo = suma % 11;
+    const resta= 11- modulo;
+
+    if (resta==11){
+        return 0
+    } else if (resta==10){
+       return "K"
+   } else {
+       return resta
+   }
+}
 
 
 
 
 
 export{  //siempre debe ir al final
-    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje
-}
+    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun}
 
 
 
