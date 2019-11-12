@@ -1,3 +1,4 @@
+// Día 1 funciones
 const esNumero = texto => {
     if (!isNaN(texto)) {
         return true;
@@ -62,6 +63,10 @@ const seRepite = (numero, arreglo) => {
     }
     return false;
 }
+
+// Día 2 funciones
+
+
 
 export {
     esNumero,
