@@ -23,12 +23,7 @@ do {
         break;
     }
     if (respuesta == "dividir") {
-         if (numero2== 0) {
-            alert("Infinito") 
-         }
-         else{
         alert(dividir(numero1,numero2));
-         }
         break;
     }
 

@@ -11,7 +11,12 @@ const multiplicar=(a,b)=> {
 }
 
 const dividir=(a,b)=> {
-  return(a/b);
+if (b==0) {
+  return "Infinito"
+}else{
+  return (a/b);
+}
+
 }
 
 
