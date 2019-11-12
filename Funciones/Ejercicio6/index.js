@@ -7,6 +7,9 @@
 
 // Utilizar Funciones
 
+import{ aciertosLoto  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
+
+
 let numerosPersona=[];
 let cambiarNumeros="No";
 
@@ -26,3 +29,8 @@ do{
 
 
 
+//FUNCION COMPARAR
+
+
+
+alert("El número de aciertos es " + aciertosLoto(numerosPersona))
