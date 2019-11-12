@@ -111,5 +111,6 @@ for (let i = 0; i <5; i++) {
   
 
 
-export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, contarVocales, eliminarEspacios, esPalindromo,numeroAzar
+export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 
+  contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje
 }
