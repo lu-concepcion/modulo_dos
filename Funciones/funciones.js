@@ -132,11 +132,20 @@ const verificarRun = run =>{
 }
 
 
+const encontrarElemento = (arrayElementos, elementoAEncontrar) =>{
+    if ((isNaN(elementoAEncontrar)==true) && (arrayElementos.includes(elementoAEncontrar))){
+        return "Elemento se encuentra"
+    } else if ((isNaN(elementoAEncontrar)==false) && (arrayElementos.includes(parseInt(elementoAEncontrar)))){
+        return "Elemento se encuentra"
+    } else{
+        return "Elemento no se encuentra"
+    }    
+}
+
 
 
 
 export{  //siempre debe ir al final
-    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun}
-
+    verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento}
 
 
