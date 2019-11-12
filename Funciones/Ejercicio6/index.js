@@ -8,27 +8,20 @@
 // Utilizar Funciones
 
 let numerosPersona=[];
-let numerosParaSorteo=[];
+let cambiarNumeros="No";
 
-// for (let i=0; i<6; i++){
-//     let numero=prompt("Ingrese un numero");
-//     if (numerosPersona.includes(numero)) {
-//         console.log("El numero ya esta");
-//         numero=prompt("Ingrese un numero")
-//     } 
-//     numerosPersona[i]=numero;
-// }
+do{
+    for (let i=0; i<6; i++){
+        let numero=prompt("Ingrese un numero");
+        if ((numerosPersona.includes(numero)) || (parseInt(numero)>41)) {
+            numero=prompt("Ingrese un numero")
+        } 
+        numerosPersona[i]=numero;
+    }
+    cambiarNumeros=prompt("Desea cambiar los números? Ingrese Si o No");
+} while(cambiarNumeros =="Si")
 
 
-for (let i=0; i<6; i++){
-    let numeroSorteo=Math.floor(Math.random() * 30) + 1;
-    if (numerosParaSorteo.includes(numeroSorteo)) {
-        console.log("El numero ya esta");
-        numeroSorteo=Math.floor(Math.random() * 30) + 1;
-    } 
-    numerosParaSorteo[i]=numeroSorteo;
-    console.log(numerosParaSorteo)
-}
 
 
 
