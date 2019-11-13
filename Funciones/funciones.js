@@ -143,19 +143,18 @@ const filtrarEnArray = (arreglo, propiedad, valor) => {
 }
 
 // Funciones día 3
-const ordenaMayorMenor = arregloNumeros => {
+const ordenaMayorMenor = arreglo => {
     let aux;
-    let arregloNumeros = [];
-    for (let i = 0; i < arregloNumeros.length; i++) {
-        for (let j = 1; j < (arregloNumeros.length - i); j++) {
-            if (arregloNumeros[j - 1] > arregloNumeros[j]) {
-                aux = arregloNumeros[j - 1];
-                arregloNumeros[j - 1] = arregloNumeros[j];
-                arregloNumeros[j] = aux;
+    for (let i = 0; i < arreglo.length; i++) {
+        for (let j = 1; j < (arreglo.length - i); j++) {
+            if (arreglo[j - 1] > arreglo[j]) {
+                aux = arreglo[j - 1];
+                arreglo[j - 1] = arreglo[j];
+                arreglo[j] = aux;
             }
         }
     }
-    return arregloNumeros;
+    return arreglo;
 }
 
 export {
@@ -174,5 +173,6 @@ export {
     generaDigitoVerificador,
     encontrarElemento,
     buscarEnArray,
-    filtrarEnArray
+    filtrarEnArray,
+    ordenaMayorMenor
 }
