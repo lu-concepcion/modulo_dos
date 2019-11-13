@@ -250,26 +250,34 @@ export const voltearArreglo = (arreglo, opcion) => {
     let auxiliar1 = 0;
     let auxiliar2 = 0;
     let nuevoArreglo = [];
-
-    console.log(arreglo)
-    if (opcion == 1) {
-        for (let i = 0; i < arreglo.length; i++) {
-            for (let j = i+1; j < arreglo.length; j++) {
-                console.log(parseInt(arreglo[i]) < parseInt(arreglo[j]), arreglo[i],arreglo[j])
-                if (arreglo[i] < arreglo[j]) {
-                    auxiliar1 = arreglo[i];
-                    auxiliar2 = arreglo[j];
-                    arreglo[i]= auxiliar2;
-                    arreglo[j]= auxiliar1;
-                    console.log(arreglo[i])
-                }
+    for (let i = 0; i < arreglo.length; i++) {
+        for (let j = i + 1; j < arreglo.length; j++) {
+            if (arreglo[i] < arreglo[j]) {
+                auxiliar1 = arreglo[i];
+                auxiliar2 = arreglo[j];
+                arreglo[i] = auxiliar2;
+                arreglo[j] = auxiliar1;
             }
         }
-        nuevoArreglo[0]=arreglo[0];
-        for(let i=1;i<arreglo.length;i++){
-            nuevoArreglo[i]= arreglo[i];
-        }
+    }
+    nuevoArreglo[0] = arreglo[0];
+    for (let i = 1; i < arreglo.length; i++) {
+        nuevoArreglo[i] = arreglo[i];
+    }
+    if(opcion==1){
         notificacion = arreglo;
+    }else{
+        if(opcion==2){
+            let j = 0;
+            for(let i=arreglo.length-1;i>=0;i--){
+            nuevoArreglo[j]=arreglo[i];
+            console.log(nuevoArreglo)
+            j++;
+            }
+            notificacion=nuevoArreglo;
+        }else{
+            notificacion="Opcion no valida"
+        }
     }
     return notificacion
 }
