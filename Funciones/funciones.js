@@ -86,6 +86,40 @@ const regla3 = (num1, num2) => {
     return (num2 * 100 / num1 + "%");
 }
 
+//validar rut
+const validaRun = (run) => {
+    let aux =run.split("-");
+    run=aux[0] ;
+    aux=run.split(".");
+    let aux2=[];
+    for (let i=0;i<aux.length;i++){
+        aux2=aux2+aux[i];
+    }
+    let runinvertido="";
+    let x = aux2.length-1;
+ 
+    while (x>=0){
+        runinvertido = runinvertido + aux2.charAt(x);
+        x--;
+    }
+    const serie=[2,3,4,5,6,7,2,3,4,5,6,7];
+    let multiplicar=0;
+    for(let i=0;i<runinvertido.length;i++){
+            multiplicar = multiplicar + (serie[i]*parseInt(runinvertido.charAt(i)));
+    }
+    multiplicar=multiplicar%11;
+    multiplicar=11-multiplicar;
+    switch(multiplicar){
+        case 11:
+            return 0;
+        case 10:
+            return "k";
+        default:
+            return multiplicar;
+    }
+}
+
+//exporto funciones a los demás archivos
 export {
     sumar,
     restar,
@@ -99,5 +133,6 @@ export {
     repiteNumero,
     multiplicar,
     dividir,
-    regla3
+    regla3,
+    validaRun
 }
