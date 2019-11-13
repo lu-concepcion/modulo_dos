@@ -185,40 +185,36 @@ export const verificarSeparaciones = RUN => {
 //FUNCIONES EJERCICIO 8
 
 export const buscarDeterminadoElemento = (elemento, arreglo) => {
-    var notificacion = "";
-    let nuevoArreglo = Object.values(arreglo)
-    let flag = 0;
-    console.log(nuevoArreglo)
-    for (let i = 0; i < Object.keys(arreglo).length; i++) {
-        if (elemento == nuevoArreglo[i]) {
-            flag++;
+    let flag=0;
+    let notificacion = "";
+    for(let i=0;i<arreglo.length;i++){
+        if(elemento==arreglo[i]){
+            flag=1;
         }
     }
-    if (flag > 0) {
-        notificacion = "El elemento se encuentra en el arreglo";
-    } else {
-        notificacion = "El elemento no se encuentra en el arreglo";
+    if(flag>0){
+        notificacion = "Si se encuentra en el arreglo";
+    }else{
+        notificacion = "No se encuentra en el arreglo";
     }
-    return notificacion;
+    return notificacion
 }
 
 export const buscarEnArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBusca) => {
-    let nuevoArregloKeys = Object.keys(arregloQueSeAnalizara);
     let flag = 0;
+    let arreglo  = [];
     var notificacion = "";
-    let nuevoArregloValues = Object.values(arregloQueSeAnalizara);
-    for (let i = 0; i < nuevoArregloValues.length; i++) {
-        if (tipoDeValor == nuevoArregloKeys[i]) {
-            console.log(nuevoArregloValues[i])
-            if (valorQueSeBusca == nuevoArregloValues[i]) {
-                flag++;
-            }
+    for(let i in arregloQueSeAnalizara){
+        console.log(arregloQueSeAnalizara[i][tipoDeValor])
+        if(arregloQueSeAnalizara[i][tipoDeValor]==valorQueSeBusca){
+            flag++
+            arreglo = arregloQueSeAnalizara[i][tipoDeValor];
         }
     }
     if (flag > 0) {
-        notificacion = "El elemento si se encuentra";
+        notificacion = (arreglo+" se encuentra en el objeto "+tipoDeValor);
     } else {
-        notificacion = "El elemento no se encuentra";
+        notificacion = arreglo;
     }
     return notificacion;
 }

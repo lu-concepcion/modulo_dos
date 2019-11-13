@@ -1,8 +1,5 @@
 import { buscarEnArreglo, buscarDeterminadoElemento } from '../funciones.js';
-var persona = {
-    nombre: "Jorge",
-    edad: 20
-};
+var persona = ["Jorge", "Eduardo", "Rodrigo"];
 
 var personaArreglo = [
     {
@@ -19,5 +16,9 @@ var personaArreglo = [
     },
 ];
 
-alert(buscarDeterminadoElemento("Jorge", persona))
-alert(buscarEnArreglo(personaArreglo, 0, "Rodrigo"))
+var pedirValor= prompt("¿Que valor estas buscando?");
+let pedirIndice = prompt("¿En que indice quieres buscarlo?")
+
+console.log(pedirValor, pedirIndice)
+alert(buscarDeterminadoElemento(pedirValor, persona))
+alert(buscarEnArreglo(personaArreglo, pedirIndice, pedirValor))
