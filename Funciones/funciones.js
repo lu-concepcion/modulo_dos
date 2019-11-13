@@ -31,7 +31,7 @@ const buscarNumeroTexto = (array, elemento) => {
     console.log(array.includes(elemento))
     return array.includes(elemento);
 }
-
+//funcion para buscar en array
 const buscarEnArray = (array, propiedad, valor) => {
     let objeto = {};
     array.forEach(element => {
@@ -41,7 +41,7 @@ const buscarEnArray = (array, propiedad, valor) => {
     });
     return objeto;
 }
-
+//funcion para filtrar array
 const filtrarEnArray = (array, propiedad, valor) => {
     let objeto = [];
     array.forEach(element => {
@@ -51,6 +51,18 @@ const filtrarEnArray = (array, propiedad, valor) => {
     });
     return objeto;
 }
+
+//funcion para ordenar menor a mayor array
+const ordenarMenorAmayor = (num1,num2) => {
+    return num1-num2
+
+}
+//funcion para ordenar mayor a menor array
+const ordenarMayorAmenor = (num1,num2) => {
+    return num1+num2
+}
+
+
 
 //funcion para todas las operaciones
 const operacionesMatematicas = (opcion, num1, num2) => {
@@ -119,7 +131,7 @@ const encontrarVocales = text => {
 export {
     sumar, validarTexto, convertirMinuscula, convertirMayuscula, restar, encontrarVocales,
     validarNumeros, operacionesMatematicas, calcularPorcentaje, aleatorios, buscarNumeroTexto,buscarEnArray,
-    filtrarEnArray, factorial
+    filtrarEnArray, factorial, ordenarMenorAmayor, ordenarMayorAmenor
 }
 
 

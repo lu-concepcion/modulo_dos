@@ -1,6 +1,17 @@
-import { buscarNumeroTexto,buscarEnArray } from '../funciones.js';
+import { buscarNumeroTexto,buscarEnArray, ordenarMenorAmayor, ordenarMayorAmenor } from '../funciones.js';
+
+let array = [100,2,5,8,10,200,44,22,60,21]
 
 
+
+console.log("funcion 1")
+console.log(array.sort(ordenarMenorAmayor))
+
+
+console.log("funcion 2")
+console.log(array.reverse(ordenarMayorAmenor))
+
+/*
 let array = [1,2,3,4,5,6,7,8]
 let elemento = 100;
 
@@ -27,7 +38,7 @@ console.log(buscarEnArray(arrayPersonas,"nombre", "Máximo"))
 
 console.log("funcion 3")
 console.log(buscarEnArray(arrayPersonas,"sexo", "F"))
-
+*/
 
 //empezamos a crear los objetos
 
