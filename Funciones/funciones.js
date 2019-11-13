@@ -210,9 +210,14 @@ const filtrarArray= (arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)=>{
     } 
 }
 
+const ordenarArrayMenorMayor = elementosOrdenar =>{
+
+    return elementosOrdenar.sort()
+}
+
 export{  //siempre debe ir al final
     verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, 
     verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento, 
-    buscarEnArrayObjeto, filtrarArray, aciertosLoto}
+    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArrayMenorMayor}
 
 
