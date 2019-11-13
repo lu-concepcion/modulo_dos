@@ -1,4 +1,4 @@
-import {buscarEnArray, objetoEnArray, listarPropiedades} from '../funciones.js'
+import {buscarEnArray, objetoEnArray, listarPropiedades, filtrarEnArray} from '../funciones.js'
 
 let arreglo=[];
 arreglo[0] = 1;
@@ -7,9 +7,9 @@ arreglo[2] = 3;
 arreglo[3] = 4;
 arreglo[4] = 5;
 
-//alert(arreglo);
 
-//alert(buscarEnArray(arreglo, "");
+//buscar elemento en array
+//alert(buscarEnArray(arreglo, 5);
 
 var Persona= new Object();
 var Perro = new Object();
@@ -33,8 +33,13 @@ let arreglo2=[Persona, Perro, Gato];
 
 
 
-alert(objetoEnArray(arreglo2, "nombre", "chispita"));
 
+const propiedad = prompt("ingrese propiead a buscar");
+const valor = prompt("Ingrese valor de propiedad")
+// Buscar un objeto en array
+//alert(listarPropiedades(objetoEnArray(arreglo2, propiedad, valor)));
 
-
-
+// Filtrar objetos de array
+for (let i = 0; i < filtrarEnArray(arreglo2, propiedad,valor).length; i++) {
+    alert(listarPropiedades(filtrarEnArray(arreglo2, propiedad,valor)[i]));
+}
