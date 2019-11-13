@@ -173,21 +173,23 @@ const digitoVerificador = run => {
 
 //encontrar texto o numeros entre los elementos de un arreglo
 const verificarTexto = text => {
-    if (isNaN(text)){
-        return "Lo ingresado es un texto"
-    } else {
-        return "Lo ingresado no es texto"
+    const elementosArray = ["nombre", "Pedro", 4, 8];
+    let contador = 0;
+    for (let i = 0; i < elementosArray.length; i++) {
+        if (elementosArray[i] == text) {
+            return true   
+        }
+        if (elementosArray[i] != text) {
+            contador++
+            if (contador == elementosArray.length) {
+                return false
+            }
+        }
     }
 }
 
-const verificarNumero = numero => {
-    if (isNaN(numero)){
-        return "Lo ingresado es un número"
-    } else {
-        return "Lo ingresado no corresponde a un número"
-    }
-}
+const
 
 export{
-    sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo, aritmetica, porcentajes, digitoVerificador, verificarTexto, verificarNumero
+    sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo, aritmetica, porcentajes, digitoVerificador, verificarTexto
 }
