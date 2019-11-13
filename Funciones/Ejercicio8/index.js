@@ -15,5 +15,7 @@ const arrayDePrueba=[{
     id:3
 }]
 const propiedad="propiedad1"
-const valor="amarillo"
-alert(objectFinder(arrayDePrueba,propiedad,valor))
+const valor="verde"
+alert (arrayDePrueba[1].propiedad1)
+let objeto = objectFinder(arrayDePrueba,propiedad,valor)
+alert(objeto.id)
