@@ -1,0 +1,5 @@
+Escribir un algoritmo que identifique cuantas vocales tiene una palabra.
+
+Utilizar método String.charAt(i), buscar en documentación;
+
+Utilizar Funciones
