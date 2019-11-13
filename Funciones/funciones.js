@@ -124,10 +124,8 @@ const encontrarElemento = (elemento, arreglo) => {
 
 const buscarEnArray = (arreglo, propiedad, valor) => {
     let objeto = {};
-    let encontrado = false;
     arreglo.forEach(element => {
         if (element[propiedad] == valor) {
-            encontrado = true;
             objeto = element;
         }
     });
