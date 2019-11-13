@@ -296,10 +296,24 @@ const numeroVerificador = () =>{
     }while(salir != true);
 }
 
+const encontrarElementoEnArray= (array, elemento)=>{
+    let encontrado = false;
+
+    for(let i=0; i<array.length; i++){
+        if(array[i] == elemento){
+            encontrado = true;
+            break;
+        }
+    }
+
+    return elemento;
+}
+
 
 
 
 
 export{
-    loteria
+    encontrarElementoEnArray,
+    
 }
