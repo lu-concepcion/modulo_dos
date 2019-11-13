@@ -70,6 +70,15 @@ const calcularPorcentaje = (num1,num2) => {
     return num2 * num1 / 100
 }
 
+//funcion factorial
+const factorial =(num) => {
+    let total = 1; 
+    let i = 0;
+	for (i=1; i<=num; i++) {
+		total = total * i; 
+	}
+	return total; 
+}
 
 
 
@@ -110,7 +119,7 @@ const encontrarVocales = text => {
 export {
     sumar, validarTexto, convertirMinuscula, convertirMayuscula, restar, encontrarVocales,
     validarNumeros, operacionesMatematicas, calcularPorcentaje, aleatorios, buscarNumeroTexto,buscarEnArray,
-    filtrarEnArray
+    filtrarEnArray, factorial
 }
 
 

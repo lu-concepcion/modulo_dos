@@ -1,6 +1,15 @@
-import { buscarNumeroTexto,buscarEnArray } from '../funciones.js';
+import { buscarNumeroTexto,buscarEnArray, factorial } from '../funciones.js';
+
+let numero = prompt ("ingrese un número")
+numero = parseInt(numero)
+
+alert(factorial(numero))
 
 
+
+
+
+/*
 let array = [1,2,3,4,5,6,7,8]
 let elemento = 100;
 
@@ -44,4 +53,4 @@ console.log(buscarEnArray(arrayPersonas,"sexo", "F"))
 // pais.habitantes = 1000000000
 
 
-// let elemento = prompt("ingrese un digito")
+// let elemento = prompt("ingrese un digito")*/
