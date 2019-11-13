@@ -114,10 +114,12 @@ const codigoVerificador = (rut) => {
     }
 }
 
-const buscarEnArray = (array, elemento) => {
+const buscarElemento = (array, elemento) => {
     console.log(array.includes(elemento));
     return array.includes(elemento);
 }
+
+const 
 
 
 
@@ -125,5 +127,5 @@ export {
     sumar, restar, verNumero, converTextoMinus,
     converTextoMayus, contarVocales, esPalindromo,
     generaNumAleatorios, multiplicar, dividir, verNum,
-    sacarPorcentaje, codigoVerificador, buscarEnArray
+    sacarPorcentaje, codigoVerificador, buscarElemento
 }
