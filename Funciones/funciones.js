@@ -119,22 +119,29 @@ const generaDigitoVerificador = rut => {
 }
 
 const encontrarElemento = (elemento, arreglo) => {
-    console.log(arreglo.includes(elemento));
     return arreglo.includes(elemento);
 }
 
 const buscarEnArray = (arreglo, propiedad, valor) => {
-    console.log('Propiedad: ' + propiedad + ', Valor: ' + valor);
     let objeto = {};
     let encontrado = false;
     arreglo.forEach(element => {
-        console.log(element[propiedad]);
         if (element[propiedad] == valor) {
             encontrado = true;
             objeto = element;
         }
     });
     return objeto;
+}
+
+const filtrarEnArray = (arreglo, propiedad, valor) => {
+    let objetos = [];
+    arreglo.forEach(element => {
+        if (element[propiedad] == valor) {
+            objetos.push(element);
+        }
+    });
+    return objetos;
 }
 
 export {
@@ -152,5 +159,6 @@ export {
     calcularPorcentaje,
     generaDigitoVerificador,
     encontrarElemento,
-    buscarEnArray
+    buscarEnArray,
+    filtrarEnArray
 }
