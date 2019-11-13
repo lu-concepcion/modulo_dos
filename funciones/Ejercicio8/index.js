@@ -19,12 +19,12 @@ import {encontrar,buscar} from '../funciones.js';
 //alert (encontrar(array1,elemento))
 
 let persona1 = { nombre: 'ana', apellido: 'saez', edad: '18' };
-let persona2 = { nombre: 'andi', apellido: 'popo', edad: '24'};
+let persona2 = { nombre: 'ana', apellido: 'popo', edad: '24'};
 let persona3 = { nombre: 'javier', apellido: 'gonzalez', edad: '32'};
 let arregle = [persona1, persona2, persona3]
 let prop = prompt("ingrese propiedad que desea buscar: ")
 let value = prompt("ingrese atributo que desea buscar: ")
-alert(buscar(arregle,prop,value))
+console.log(buscar(arregle,prop,value))
  
 
 

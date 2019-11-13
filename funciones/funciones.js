@@ -72,17 +72,36 @@ const encontrar = (arreglo=[], dato) => {
     return presente  
     }
 const buscar = (arreglo = [], propiedad, valor) => {
-    
    for (let i = 0; i < arreglo.length; i++) {
        for (let j = 0; j < Object.keys(arreglo[i]).length; j++) {
         if (propiedad == Object.keys(arreglo[i])[j]){
          if (valor == Object.values(arreglo[i])[j]) {
-                return(`existe el siguiente registro :\n ${Object.keys(arreglo[i])} \n${Object.values(arreglo[i])}`)
+            return(`existe el siguiente registro :\n ${Object.keys(arreglo[i])}\n${Object.values(arreglo[i])}`)
               }
           }
       }
        
    }
-   return "criterio ingresado no existe en el arreglo "
+   return "no existe registro en el arreglo"
 }
+// - Función que permita filtrar un array de elementos, dada una condición
+// 	filtrarArray(arrayDondeFiltrara, propiedadAFiltrar, valorPropiedad)
+// 	Debe retornar un array vacío en caso de no encontrar nada
+const filtrarArray = (arreglo=[],propiedad,valor) => {
+    let respuesta = []
+   for (let i = 0; i < arreglo.length; i++) {
+       for (let j = 0; j < Object.keys(arreglo[i]).length; j++) {
+        if (propiedad == Object.keys(arreglo[i])[j]){
+         if (valor == Object.values(arreglo[i])[j]) {
+             respuesta.push(arreglo[i])
+              }
+          }
+      }
+       
+   }
+   return respuesta
+
+}
+
+
 export {suma,resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,porcentaje,digitos,encontrar,buscar} 
