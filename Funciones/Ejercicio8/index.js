@@ -1,5 +1,6 @@
 import{
     encontrarElementoEnArray,
+    encontrarObjetoEnArray
 
 }from '../funciones.js';
 
@@ -19,7 +20,7 @@ import{
 // }
 //----------------------------1-----------------------------
 
-var listaObjetos = [
+var array = [
     {
       id: 1,
       valor: "uno"
@@ -30,6 +31,7 @@ var listaObjetos = [
     }
 ];
 
-let encontrado = typeof listaObjetos[0] == 'object';
+let propiedad = "id";
+let valor = 1;
 
-console.log(encontrado)
+console.log(encontrarObjetoEnArray(array, propiedad, valor));

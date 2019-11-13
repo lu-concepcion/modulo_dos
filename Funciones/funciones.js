@@ -309,11 +309,34 @@ const encontrarElementoEnArray= (array, elemento)=>{
     return elemento;
 }
 
+const encontrarObjetoEnArray = (array, propiedad, valor) =>{
+    //Comprueba de que todos los elementos del array son objetos
+    for(let i=0; i<array.length; i++){
+        if(typeof array[i] != 'object'){
+            alert("Su array no es de objetos");
+            return false;
+        }
+    }
 
+    if(array.length > 0){ //Que no esté vacío
+        if(typeof array[0][propiedad] != 'undefined'){ //Si existe la propiedad
+            for(let i=0; i<array.length; i++){
+                if(array[i][propiedad] == valor){
+                    return true;
+                }
+            }
+        }else{
+            alert("No existe esa propiedad en el array");
+        }
+    }else{
+        alert("Tamaño array igual a 0");
+    }
+    return false;
+}
 
 
 
 export{
     encontrarElementoEnArray,
-    
+    encontrarObjetoEnArray
 }
