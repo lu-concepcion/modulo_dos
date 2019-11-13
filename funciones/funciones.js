@@ -292,21 +292,50 @@ const buscaObjeto=(array,propiedad,valor)=>{
 
     
 
-    let objeto={};
+    let objeto={}; let bool=false;
 
     for(let i=0;i<array.length;i++)
     {
 
-        console.log(Object.keys(array[i]));
+        if(array[i][propiedad]==valor)
+        {
+            console.log("tamos!");
+            bool=true;
+            
+            alert("encontrado");
 
-
-
-        
-        
+            objeto=array[i];
+            break;
+            
+        }          
         
     }
 
+    if(bool==false)
+    {
+        alert("No encontrado!");
+    }  
+   
+   return objeto;
     
+}
+
+const filtrarArray=(array, propiedad, valor)=>{
+
+    let otroArray=[]; let contador=0;
+
+    for(let i=0;i<array.length;i++)
+    {
+
+        if(array[i][propiedad]==valor)
+        {  
+            otroArray[contador]=array[i];   
+            
+        }   
+        
+    }
+
+    return otroArray;
 
 }
 
@@ -323,6 +352,7 @@ export{
     validaRepetidos,
     digitoVerificador,
     buscaElemento,
-    buscaObjeto
+    buscaObjeto,
+    filtrarArray
 }
 

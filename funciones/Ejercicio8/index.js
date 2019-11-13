@@ -1,4 +1,4 @@
-import{buscaElemento, buscaObjeto} from '../funciones.js'
+import{buscaElemento, buscaObjeto, filtrarArray} from '../funciones.js'
 
 let numeros=[1,2,3,4,5,6,7,8];
 let nombres=["leo","cata","juan","pato"];
@@ -8,7 +8,7 @@ let autos=[
     {
         marca: "nissan",
         modelo: "v16",
-        color: "negro"
+        color: "rojo"
     },
     {
         marca: "toyota",
@@ -23,9 +23,12 @@ let autos=[
 ];
 console.log("array numeros: "+numeros+"  array nombres: "+nombres);
 
+let opcion=prompt("ingrese opcion");
 
 
-/*if(buscaElemento(prompt("ingresa un numero para buscar"),numeros)==true)
+
+/*
+if(buscaElemento(prompt("ingresa un numero para buscar"),numeros)==true)
 {
     alert("elemento encontrado!");
 }else
@@ -33,20 +36,32 @@ console.log("array numeros: "+numeros+"  array nombres: "+nombres);
     alert("elemento perdido uwu");
 }
 
-/*if(buscaElemento(prompt("ingresa un nombre para buscar"),nombres)==true)
-{
-    alert("elemento encontrado!");
-}else
-{
-    alert("elemento perdido uwu");
-} */
+*/
 
-if(buscaObjeto(autos,"modelo","yaris"==true))
+
+/*
+
+let objeto={};
+
+if(buscaObjeto(autos,prompt("ingrese propiedad"), prompt("valor de la propiedad")))
 {
+
+
+} 
+
+*/
+
     
-}else
+
+
+let filtrado= [];
+filtrado= filtrarArray(autos,prompt("ingrese propiedad"), prompt("valor de la propiedad"));
+
+for(let i=0;i<filtrado.length;i++)
 {
-    
+    alert("resultado:"+ Object.keys(filtrado[i]));
 }
+
+
 
 
