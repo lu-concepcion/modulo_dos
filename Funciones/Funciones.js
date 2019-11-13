@@ -191,6 +191,17 @@ const objectFilter=(array,propiedad,valorPropiedad)=>
     }
     return(coincidencias)
 }
+const arraySort=()=>
+{}
+const factorial=(numero)=>
+{
+    let aux=1
+    for (let i=1;i<=numero;i++)
+    {
+        aux=aux*i
+    }
+    return (aux)
+}
 export
 {
     sumar,
