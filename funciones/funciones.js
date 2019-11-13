@@ -119,7 +119,14 @@ const buscarElemento = (array, elemento) => {
     return array.includes(elemento);
 }
 
-const 
+const buscarEnArray = (array, propiedad, valor ) => {
+    let objetos = [];
+    arreglo.forEach(element => {
+        if(element[propiedad] == valor){
+            objetos.push(element);
+        }
+    })
+}
 
 
 
@@ -127,5 +134,6 @@ export {
     sumar, restar, verNumero, converTextoMinus,
     converTextoMayus, contarVocales, esPalindromo,
     generaNumAleatorios, multiplicar, dividir, verNum,
-    sacarPorcentaje, codigoVerificador, buscarElemento
+    sacarPorcentaje, codigoVerificador, buscarElemento,
+    buscarEnArray
 }
