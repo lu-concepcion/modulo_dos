@@ -158,6 +158,20 @@ const arrayFinder=(arreglo,elemento)=>
     }
     return(flag)
 }
+const objectFinder=(arreglo,propiedad,valorPropiedad)=>
+{
+    let flag=false
+    for (let i=0;i<=arreglo.length;i++)
+    {
+       let aux=arreglo[i].propiedad
+       if (aux==valorPropiedad)
+       {
+            flag=true
+            break
+       }
+    }
+    return(flag)
+}
 export
 {
     sumar,
@@ -174,5 +188,6 @@ export
     sorteo,
     aciertosSorteo,
     digitoVerificador,
-    arrayFinder
+    arrayFinder,
+    objectFinder
 }
