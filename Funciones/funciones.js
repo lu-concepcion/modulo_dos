@@ -141,13 +141,13 @@ const filtrarArray = (array,propiedad,valor) =>{
 }
 
 const filtrarTodosArray = (array,propiedad,valor) =>{
-    arrayReturn=[]
+    let arrayReturn=[]
     for(let i=0;i<array.length;i++){
         if(array[i][propiedad]==valor){
             arrayReturn.push(array[i])
         }
     }
-    return arrayReturn
+    return arrayReturn[Object.entries(arrayReturn)]
 }
 
 

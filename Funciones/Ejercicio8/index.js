@@ -13,11 +13,12 @@
 // - Función que permita filtrar un array de elementos, dada una condición
 // 	filtrarArray(arrayDondeFiltrara, propiedadAFiltrar, valorPropiedad)
 // 	Debe retornar un array vacío en caso de no encontrar nada
-import{ buscarElemento, filtrarArray } from '../funciones.js'
+import{ buscarElemento, filtrarTodosArray } from '../funciones.js'
 const array =[1,2,3,4,5,"a","b","c","d","e"]
 const array2 =[{id:1,edad:12},{id:2,edad:22},{id:3,edad:32},{id:4,edad:12}]
+alert("mostrar "+ array2)
 let valorBusqueda = prompt("Ingrese un elemento a buscar")
 alert("Valor buscado = "+buscarElemento(array,valorBusqueda))
 let propiedadBusqueda = prompt("Ingrese una propiedad a buscar")
 let datoBusqueda = prompt("Ingrese un dato a buscar")
-alert("Objeto buscado = "+filtrarArray(array2,propiedadBusqueda,datoBusqueda))
+alert("Objeto buscado = "+filtrarTodosArray(array2,propiedadBusqueda,datoBusqueda))
