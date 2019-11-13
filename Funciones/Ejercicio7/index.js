@@ -1,4 +1,4 @@
-import{} from './funciones.js'
+import{invertir} from './funciones.js'
 
 let run = prompt("Ingresa rut: ");
 
@@ -16,6 +16,8 @@ for(let i=0;i<=runSplitGuion.length-1;i++){
 
 }
 
+  alert(invertir(runSplitPunto));
+   
 
 
 

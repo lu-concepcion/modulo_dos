@@ -20,3 +20,20 @@ let texto = "Hola;Hernan"
 console.log(texto.split(";"))
 // ["Hola","Hernan"]*/
 
+const invertir=(runSplitPunto)=>{
+   let runInvertido="";
+   for(let i =runSplitPunto.length;i>0;i--){
+      runInvertido+=runSplitPunto[i-1];
+   }
+   return(runInvertido);
+
+const numeroverificador=(runSplitPunto)=>{
+      
+}
+}
+
+
+export{
+invertir
+      
+}
