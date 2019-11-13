@@ -20,4 +20,4 @@ var personaArreglo = [
 ];
 
 alert(buscarDeterminadoElemento("Jorge", persona))
-alert(buscarEnArreglo(personaArreglo, "nombre", "Rodrigo"))
+alert(buscarEnArreglo(personaArreglo, 0, "Rodrigo"))

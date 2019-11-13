@@ -7,7 +7,9 @@ var loto = [];
 var los_numeros = "";
 
 for (var i = 0; i < 6; i++) {
+    do{
     var pedir_valores = prompt("Ingrese un numero");
+    }while(pedir_valores<0||pedir_valores>36)
     if (!verificar_numero(pedir_valores)) {
         if (i == 0) {
             numero[i] = pedir_valores;

@@ -203,14 +203,14 @@ export const buscarDeterminadoElemento = (elemento, arreglo) => {
 }
 
 export const buscarEnArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBusca) => {
-    let nuevoArreglo = Object.values(arregloQueSeAnalizara);
+    let nuevoArregloKeys = Object.keys(arregloQueSeAnalizara);
     let flag = 0;
     var notificacion = "";
-
-    console.log(Object.values(arregloQueSeAnalizara))
-    for (let i = 0; i < nuevoArreglo.length; i++) {
-        if (tipoDeValor == nuevoArreglo[i]) {
-            if (valorQueSeBusca == nuevoArreglo[i]) {
+    let nuevoArregloValues = Object.values(arregloQueSeAnalizara);
+    for (let i = 0; i < nuevoArregloValues.length; i++) {
+        if (tipoDeValor == nuevoArregloKeys[i]) {
+            console.log(nuevoArregloValues[i])
+            if (valorQueSeBusca == nuevoArregloValues[i]) {
                 flag++;
             }
         }
