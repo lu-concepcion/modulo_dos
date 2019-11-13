@@ -1,4 +1,4 @@
-import {busqueda, buscarObj} from '../funciones.js'
+import {busqueda, buscarObj, buscarObjArray} from '../funciones.js'
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~8a~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 // let input = [];
 // let i = 0;
@@ -33,9 +33,13 @@ let valor = prompt("Ingrese un valor");
 let objetos = 
 [
     {propiedad1:"valor1", propiedad2:"valor2", propiedad3: "valor3"},
-    {propiedad11:"valor11", propiedad22:"valor22", propiedad33: "valor33"},
-    {propiedad111:"valor111", propiedad222:"valor222", propiedad333: "valor333"},
+    {propiedad1:"valor1", propiedad22:"valor22", propiedad33: "valor33"},
+    {propiedad1:"valor1", propiedad222:"valor222", propiedad333: "valor333"},
 ];
 
 let objeto = buscarObj(objetos, propiedad, valor)
+let objeto2 = buscarObjArray(objetos, propiedad, valor)
 console.log(objeto)
+console.log(objeto2)
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~8b~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

@@ -208,7 +208,7 @@ const buscarObj = (array, propiedad, valor) =>
 {
     let propiedades = [];
     let valores = [];
-    let aux = 0;
+
     for(let i = 0; i<array.length;i++)
     {
         propiedades [i] = Object.keys(array[i]);
@@ -216,19 +216,43 @@ const buscarObj = (array, propiedad, valor) =>
 
         for(let j = 0;j<propiedades.length;j++)
         {
-            if(propiedades[i][j]== propiedad)
-        {
+            if(propiedades[i][j] == propiedad)
+            {
             if(valores[i][j] == valor)
-            {
+                {
                 return array[i]
-            }
+                }
             else
-            {
+                {
                 return Object()
+                }
             }
-        }
         }
     }
   
 }
-export { buscarObj,busqueda,RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
+
+const buscarObjArray= (array, propiedad, valor) =>
+{
+    let propiedades = [];
+    let valores = [];
+    let guardar = [];
+
+    for(let i = 0; i<array.length;i++)
+    {
+        propiedades [i] = Object.keys(array[i]);
+        valores [i] = Object.values(array[i]) 
+
+        for(let j = 0;j<propiedades.length;j++)
+        {
+            if(propiedades[i][j] == propiedad && valores[i][j] == valor)
+            {
+                guardar.push(array[i])
+                
+            }
+         
+        }
+    }
+  return guardar
+}
+export { buscarObjArray,buscarObj,busqueda,RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
