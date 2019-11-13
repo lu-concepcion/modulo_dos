@@ -15,17 +15,17 @@
 // 	filtrarArray(arrayDondeFiltrara, propiedadAFiltrar, valorPropiedad)
 // 	Debe retornar un array vacío en caso de no encontrar nada
 
-import {esNumero, esTexto, buscaElemento, buscarEnArray, } from "../funciones.js"
+import {esNumero, esTexto, buscaElemento, buscarEnArray, filtroEnArray, } from "../funciones.js"
 
 //const numeroLetra = [1,2,3,4,5,6,7,8,9,0,"a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z"];
 
 // let elementoBuscado= prompt("ingresa una letra o número");
 // buscaElemento(elementoBuscado, numeroLetra)
 
-const arrayElemento = [{nombre:"jeremy", value:"el mejor"},{nombre:"elguasonbb", value:"jocker"}];
+const arrayElemento = [{nombre:"jeremy", descripcion:"el mejor"},{nombre:"jeremy", descripcion:"the best"}];
 
 let propiedad = prompt("ingresa una propiedad");
-let elemento = prompt("ingresa el elemento a buscar")
+let condicion = prompt("ingresa el elemento a buscar")
 
-buscarEnArray(arrayElemento, propiedad, elemento)
-
+// alert(buscarEnArray(arrayElemento, propiedad, elemento));
+alert(filtroEnArray(arrayElemento, propiedad, condicion));

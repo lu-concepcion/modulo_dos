@@ -131,13 +131,24 @@ const buscaElemento = (elemento, array) => {
 
 // encontrar en un array un determinado objeto, dada una condicion
 const buscarEnArray = (arrayABuscar, propiedadAFiltrar, valorPropiedad) => {
-    const objetoVacio = [];
+    const objetoVacio = {};
     for(let i=0; i<arrayABuscar.length; i++){
         if(arrayABuscar[i][propiedadAFiltrar] == valorPropiedad){
-            return console.log(arrayABuscar[i]);
+            return Object.entries(arrayABuscar[i]);
         }
     }
     return console.log(objetoVacio);
+}
+
+//array para filtrar un array de elementos, dada una condición
+const filtroEnArray = (arrayABuscar, propiedadAFiltrar, valorPropiedad) => {
+    let arrayAMostrar = [];
+    for(let i=0; i<arrayABuscar.length; i++){
+        if(arrayABuscar[i][propiedadAFiltrar] == valorPropiedad){
+            arrayAMostrar.push(arrayABuscar[i])
+        }
+    }
+    return console.log(arrayAMostrar);
 }
 
 //exporto funciones a los demás archivos
@@ -157,5 +168,6 @@ export {
     regla3,
     validaRun,
     buscaElemento,
-    buscarEnArray
+    buscarEnArray,
+    filtroEnArray
 }
