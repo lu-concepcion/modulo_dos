@@ -58,10 +58,37 @@ const porcentaje = (num1,num2) => {
     return Math.round((num1*100)/num2) +"%";
 }
 
+const digitoVerificador = run => {
+    var revertido=0,rutLimpio=run,digito=1;
+    //Limpio los caracteres no necesarios
+    rutLimpio = rutLimpio.replace(/[\. ,:-]+/g, "");
+    //Compruebo si es válido
+    if (run == "" || rutLimpio.length >= 9 || rutLimpio.length <= 6)
+    return false
+    else {
+        //Creo un for con la function floor se detendra hasta llegar a cero
+        for (;rutLimpio;rutLimpio=Math.floor(rutLimpio/10))
+        digito=(digito+rutLimpio%10*(9-revertido++%6))%11;
+        return digito?digito-1:'k'
+    }
+}
 const empezarLoto = (numeros) => {
     
 }
 
 export {
-    sumar, restar, dividir, multiplicar, esUnNumero, esUnTexto, textoEnMayuscula, textoEnMinuscula, cuantasVocales, esUnaVocal, esPalindromo, empezarLoto, porcentaje
+    sumar, 
+    restar, 
+    dividir,
+    multiplicar,
+    esUnNumero,
+    esUnTexto,
+    textoEnMayuscula,
+    textoEnMinuscula,
+    cuantasVocales,
+    esUnaVocal,
+    esPalindromo,
+    empezarLoto, 
+    digitoVerificador,
+    porcentaje
 }
