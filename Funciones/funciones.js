@@ -23,9 +23,34 @@ const validarNumeros = numero => (isNaN(numero))
 
 //Funcion para numeros aleatorios
 const aleatorios = num => {
-    return (Math.random(1, 41)
+    return Math.random(1, 41)
 }
 
+//Funcion para validar array con (texto/número)
+const buscarNumeroTexto = (array, elemento) => {
+    console.log(array.includes(elemento))
+    return array.includes(elemento);
+}
+
+const buscarEnArray = (array, propiedad, valor) => {
+    let objeto = {};
+    array.forEach(element => {
+        if(element[propiedad] == valor){
+            objeto = element;
+        }
+    });
+    return objeto;
+}
+
+const filtrarEnArray = (array, propiedad, valor) => {
+    let objeto = [];
+    array.forEach(element => {
+        if(element[propiedad] == valor){
+            element.push(objeto);
+        }
+    });
+    return objeto;
+}
 
 //funcion para todas las operaciones
 const operacionesMatematicas = (opcion, num1, num2) => {
@@ -56,8 +81,19 @@ const validarTexto = text => {
     }
 }
 
+
+
+//Funcion para buscar objetos  en un array
+// const buscarElemento = elemento => {
+//     let elemento =  ["vehiculo", "hola","chao","wena", "byebye"]
+//     return elemento[2];
+// }
+
+//Funcion para convertir texto en minuscula
 const convertirMinuscula = text => text.toLowerCase()
 
+
+//FUncion para convertir texto en mayuscula
 const convertirMayuscula = text => text.toUpperCase()
 
 
@@ -73,7 +109,8 @@ const encontrarVocales = text => {
 
 export {
     sumar, validarTexto, convertirMinuscula, convertirMayuscula, restar, encontrarVocales,
-    validarNumeros, operacionesMatematicas, calcularPorcentaje, aleatorios
+    validarNumeros, operacionesMatematicas, calcularPorcentaje, aleatorios, buscarNumeroTexto,buscarEnArray,
+    filtrarEnArray
 }
 
 
