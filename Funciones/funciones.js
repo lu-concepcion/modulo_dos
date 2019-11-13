@@ -169,10 +169,9 @@ return repetido;
   for (let i = 0; i < arreglo.length; i++) {
     for (let j = 0; j < Object.keys(arreglo[i]).length ; j++) {
       if (propiedad == (Object.keys(arreglo[i]))[j] ) {
-         propiedadBuscada = Object.keys(arreglo[i])[j];
-    //   if (valorPropiedad == arreglo[i].propiedadBuscada) {
+       if (valorPropiedad == Object.values(arreglo[i])[j]) {
            return arreglo[i];
-      //  }
+        }
       }
       
     }
@@ -180,6 +179,7 @@ return repetido;
   }
 return "lo siento bro";
   }
+
 
 
 export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 

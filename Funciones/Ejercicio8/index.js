@@ -26,13 +26,14 @@ Perro.patas=4;
 
 Gato.nombre ="mishi";
 Gato.edad= 4;
+Gato.vidas=7;
 
 let arreglo2=[Persona, Perro, Gato];
 
 
 let prop = "nombre";
 
-alert((objetoEnArray(arreglo2, "sexo", "chispita")));
+alert((objetoEnArray(arreglo2, "nombre", "mishi").nombre));
 
 
 
