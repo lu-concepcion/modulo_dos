@@ -1,5 +1,6 @@
 import{
-    arrayFinder
+    arrayFinder,
+    objectFinder
 }from '../Funciones.js'
 const arrayDePrueba=[{
     propiedad1: "amarillo",
@@ -13,6 +14,6 @@ const arrayDePrueba=[{
     propiedad1:"azul",
     id:3
 }]
-let porpiedad=prompt("ingrese propiedad")
-let valor=prompt("ingrese valor")
-alert(arrayFinder(arrayDePrueba,porpiedad,valor))
+const propiedad="propiedad1"
+const valor="amarillo"
+alert(objectFinder(arrayDePrueba,propiedad,valor))
