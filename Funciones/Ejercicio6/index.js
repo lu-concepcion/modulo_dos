@@ -16,7 +16,7 @@ let cambiarNumeros="No";
 do{
     for (let i=0; i<6; i++){
         let numero=prompt("Ingrese un numero");
-        if ((numerosPersona.includes(numero)) || (parseInt(numero)>41)) {
+        if ((numerosPersona.includes(numero)) || (parseInt(numero)>36)) {
             numero=prompt("Ingrese un numero")
         } 
         numerosPersona[i]=numero;
@@ -29,8 +29,8 @@ do{
 
 
 
-//FUNCION COMPARAR
+const resultados=aciertosLoto(numerosPersona);
 
-
-
-alert("El número de aciertos es " + aciertosLoto(numerosPersona))
+console.log("El número de aciertos es " + resultados.numeroAciertos);
+console.log( " Los números del sorteo fueron: " + resultados.nuemerosSorteo);
+console.log(  " Tus números fueron "+ numerosPersona) 
