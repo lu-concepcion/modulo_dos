@@ -140,11 +140,19 @@ const filtrarArray = (array,propiedad,valor) =>{
     return Object.keys(array[0])
 }
 
-
+const filtrarTodosArray = (array,propiedad,valor) =>{
+    arrayReturn=[]
+    for(let i=0;i<array.length;i++){
+        if(array[i][propiedad]==valor){
+            arrayReturn.push(array[i])
+        }
+    }
+    return arrayReturn
+}
 
 
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
-    ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce,buscarElemento,filtrarArray
+    ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce,buscarElemento,filtrarArray,filtrarTodosArray
 }
 
