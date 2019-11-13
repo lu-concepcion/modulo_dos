@@ -165,19 +165,20 @@ return repetido;
   }
 
   const objetoEnArray=(arreglo=[], propiedad, valorPropiedad)=>{
-    let propiedadBuscada="";
+    const Vacio = new Object();
   for (let i = 0; i < arreglo.length; i++) {
+
     for (let j = 0; j < Object.keys(arreglo[i]).length ; j++) {
+
       if (propiedad == (Object.keys(arreglo[i]))[j] ) {
-       if (valorPropiedad == Object.values(arreglo[i])[j]) {
+       if ( valorPropiedad == Object.values(arreglo[i])[j] ) {
            return arreglo[i];
         }
       }
       
     }
-    
   }
-return "lo siento bro";
+return Vacio;
   }
 
 

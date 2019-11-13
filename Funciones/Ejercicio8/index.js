@@ -33,7 +33,7 @@ let arreglo2=[Persona, Perro, Gato];
 
 let prop = "nombre";
 
-alert((objetoEnArray(arreglo2, "nombre", "mishi").nombre));
+alert((objetoEnArray(arreglo2, "nombre", "mishi")));
 
 
 
