@@ -210,9 +210,14 @@ const filtrarArray= (arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)=>{
     } 
 }
 
-const ordenarArrayMenorMayor = elementosOrdenar =>{
-
-    return elementosOrdenar.sort()
+const ordenarArray = (elementosOrdenar, ordenar) =>{
+    if (ordenar=="1"){
+        return elementosOrdenar.sort()
+    } else if (ordenar=="2"){
+        return elementosOrdenar.sort().reverse()
+    } else  {
+        return "Elemento ingresado no válido"
+    }
 }
 
 export{  //siempre debe ir al final
