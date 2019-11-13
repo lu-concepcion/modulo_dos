@@ -151,6 +151,27 @@ const filtroEnArray = (arrayABuscar, propiedadAFiltrar, valorPropiedad) => {
     return console.log(arrayAMostrar);
 }
 
+//ordenar numeros de mayor a menor
+const ordenMasAMenos = (numeros) => {
+
+    for(let i=0; i<numeros.length; i++){
+
+    }
+}
+
+//factorial de un numero
+const factorial = (numero) => {
+    let resultado=0;
+    let aux=1;
+    for(let i=0; i<numero; i++){
+        
+        resultado = numero*i+1;
+        console.log(resultado);
+    }
+    alert(resultado);
+}
+
+
 //exporto funciones a los demás archivos
 export {
     sumar,
@@ -169,5 +190,7 @@ export {
     validaRun,
     buscaElemento,
     buscarEnArray,
-    filtroEnArray
+    filtroEnArray,
+    ordenMasAMenos,
+    factorial
 }
