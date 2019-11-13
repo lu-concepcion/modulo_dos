@@ -174,6 +174,23 @@ const objectFinder=(array,propiedad,valorPropiedad)=>
     }
     return(Object())
 }
+const objectFilter=(array,propiedad,valorPropiedad)=>
+{
+    let aux
+    let aux2
+    let coincidencias=[]
+    for (let i=0;i<=array.length-1;i++)
+    {
+       aux = Object.keys(array[i]);
+       aux2 = Object.values(array[i]);
+       for(let j=0;j<=aux.length;j++)
+       {
+           if(aux[j]==propiedad&&aux2[j]==valorPropiedad)
+           coincidencias.push(array[i])
+       }
+    }
+    return(coincidencias)
+}
 export
 {
     sumar,
@@ -191,5 +208,6 @@ export
     aciertosSorteo,
     digitoVerificador,
     arrayFinder,
-    objectFinder
+    objectFinder,
+    objectFilter
 }
