@@ -5,17 +5,26 @@ git status
 git add <PathFile>
 
 **Agrega todos los archivos modificados al commit**
-git commit -m "Mensaje de commit"
+git add .
 
+**commitea los cambias agregados via add**
+
+git commit -m "Mensaje de commit"
 
 **Sube tus cambios commiteados al branch en upstream (nube)**
 git push
-
 
 **Baja tus cambios desde upstream**
 git pull
 
 **verifica tu branch actual**
 git branch
+
+**cambia de rama**
+git checkout nombre_rama
+
+**mezcla cambios de rama**
+git merge nombre_rama
+
 
 
