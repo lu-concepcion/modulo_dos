@@ -91,7 +91,33 @@ const filtrarEnArray = (arrayDondeFiltrara, propiedadAFiltrar, valorPropiedad) =
         if (arrayDondeFiltrara[item][propiedadAFiltrar] == textoEnMinuscula(valorPropiedad))  array.push(arrayDondeFiltrara[item]);    
     return array;
 }
+const ordenarArray = arrayQueOrdeno => {
+    let cantidad = arrayQueOrdeno.length;
+    for (let pasar = 1; pasar < cantidad; pasar++) {
+        for (let derecha = 0; derecha < (cantidad - pasar); derecha++) {
+            let izquierda = derecha + 1;
+            if( arrayQueOrdeno[derecha] > arrayQueOrdeno[izquierda]) {
+            let valor = arrayQueOrdeno[derecha];
+            arrayQueOrdeno[derecha] = arrayQueOrdeno[izquierda];
+            arrayQueOrdeno[izquierda] = valor;
+            }
+        }
+    }
+    return arrayQueOrdeno;
+}
 
+const revertir = string => {
+    let cantidad = string.length;
+    for (let total = 0; total < cantidad; total++) {
+        for (let derecha = 0; derecha < (cantidad - total); derecha++) {
+            let izquierda = derecha-1;
+            let valor = string[derecha];
+            string[derecha] = string[izquierda];
+            string[izquierda] = valor;
+        }
+    }
+    return string;
+}
 
 const empezarLoto = (numeros) => {
     
@@ -114,5 +140,7 @@ export {
     porcentaje,
     buscarElemento,
     buscarEnArray,
-    filtrarEnArray
+    filtrarEnArray,
+    ordenarArray,
+    revertir
 }
