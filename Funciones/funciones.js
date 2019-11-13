@@ -135,7 +135,7 @@ const digitoVerificador = run => {
         //multiplicar por 2, 3, 4, 5, 6, 7,
         let multiplicador = 1;
         let multiplicador2 = -5;
-        for (let i = 0; i < run.length; i++) {
+        for (let i = 0; i < rutInvertido.length; i++) {
             multiplicador++;
             multiplicador2++;
             if (multiplicador <= 7) {
@@ -145,8 +145,14 @@ const digitoVerificador = run => {
                 rutInvertido[i] = rutInvertido[i] * multiplicador2
             }
         }
+
+        //sumar cada indice del arreglo y asignarlo a otra variable
+        let sumaTotal = [];
+        for (let i = 0; i < rutInvertido.length; i++) {
+            return sumaTotal[0] = sumaTotal[0] + rutInvertido[i]
+        }
             
-        alert("su run es "+rutInvertido);
+        alert("su run es "+sumaTotal);
 
 }
 }
