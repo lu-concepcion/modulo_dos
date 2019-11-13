@@ -1,4 +1,4 @@
-import{invertir} from './funciones.js'
+import{invertir,numeroverificador} from './funciones.js'
 
 let run = prompt("Ingresa rut: ");
 
@@ -15,9 +15,9 @@ for(let i=0;i<=runSplitGuion.length-1;i++){
     alert(runSplitPunto[i]);
 
 }
+  alert(invertir(runSplitPunto))
 
-  alert(invertir(runSplitPunto));
-   
+  alert(numeroverificador(invertir(runSplitPunto)))   
 
 
 
