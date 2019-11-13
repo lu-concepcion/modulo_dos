@@ -158,7 +158,7 @@ const encontrarEnArray=(array,propiedad,elemento)=>{
 
 
 const filtrarEnArray=(array,propiedad,elemento)=>{
-    const arrayFiltrado=[];
+    let arrayFiltrado=[];
     for(let i=0;i<array.length;i++){
         //console.log(Object.keys(array))
         if(array[i][propiedad]==elemento){
@@ -171,8 +171,39 @@ const filtrarEnArray=(array,propiedad,elemento)=>{
     return console.log(arrayFiltrado) 
 }
 
+//ejercicio9
+
+const ordenarMenor=(array)=>{
+    let menor=0;
+    for(let i=0;i<array.length-1;i++){
+        for(let j=i+1;j<array.length;j++){
+            if(array[i]>array[j]){
+                menor=array[j]
+                array[j]=array[i]
+                array[i]=menor;
+
+            }
+        }
+    }
+    return console.log(array)
+}
+
+const ordenarMayor=(array)=>{
+    let menor=0;
+    for(let i=0;i<array.length-1;i++){
+        for(let j=i+1;j<array.length;j++){
+            if(array[i]<array[j]){
+                menor=array[j]
+                array[j]=array[i]
+                array[i]=menor;
+
+            }
+        }
+    }
+    return console.log(array)
+}
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
     sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje, formatoPunto, inversa
-    ,encontrarElemento,encontrarEnArray,filtrarEnArray
+    ,encontrarElemento,encontrarEnArray,filtrarEnArray,ordenarMenor, ordenarMayor
 }
