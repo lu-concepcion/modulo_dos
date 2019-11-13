@@ -342,23 +342,28 @@ const filtrarArray=(array, propiedad, valor)=>{
 
 const ordenaArray=(array)=>
 {
-    let menor=array[0]; let ordenado=[0];
+    let tmp=0;
     console.log(array);
 
+    
+
     for(let i=0;i<array.length;i++)
-    {
-       if(array[i]<menor)
+    {  
+       for(let x=1;x<(array.length -i);x++)
        {
-           ordenado=menor;    
-           
-       }else
-       {
-         
+           if(array[x-1]>array[x])
+           {
+               tmp=array[x-1];
+               array[x-1]=array[x];
+               array[x]=tmp;
+           }
        }
 
     }
 
-    alert((JSON.stringify(array))); 
+
+   // alert((JSON.stringify(array))); 
+    return array;
 
 
 
