@@ -1,0 +1,21 @@
+**Muestra status de tu branch, archivos modificados (en rojo), commiteados (en verde)**
+git status
+
+**Agrega un archivo especifico para ser commiteado**
+git add <PathFile>
+
+**Agrega todos los archivos modificados al commit**
+git commit -m "Mensaje de commit"
+
+
+**Sube tus cambios commiteados al branch en upstream (nube)**
+git push
+
+
+**Baja tus cambios desde upstream**
+git pull
+
+**verifica tu branch actual**
+git branch
+
+
