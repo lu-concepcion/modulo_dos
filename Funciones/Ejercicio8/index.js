@@ -17,14 +17,15 @@
 
 import {esNumero, esTexto, buscaElemento, buscarEnArray, } from "../funciones.js"
 
-const numeroLetra = [1,2,3,4,5,6,7,8,9,0,"a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z"];
+//const numeroLetra = [1,2,3,4,5,6,7,8,9,0,"a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z"];
 
 // let elementoBuscado= prompt("ingresa una letra o número");
 // buscaElemento(elementoBuscado, numeroLetra)
 
-
 const arrayElemento = [{nombre:"jeremy", value:"el mejor"},{nombre:"elguasonbb", value:"jocker"}];
+
 let propiedad = prompt("ingresa una propiedad");
 let elemento = prompt("ingresa el elemento a buscar")
 
 buscarEnArray(arrayElemento, propiedad, elemento)
+

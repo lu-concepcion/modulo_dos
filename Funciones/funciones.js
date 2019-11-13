@@ -131,7 +131,13 @@ const buscaElemento = (elemento, array) => {
 
 // encontrar en un array un determinado objeto, dada una condicion
 const buscarEnArray = (arrayABuscar, propiedadAFiltrar, valorPropiedad) => {
-
+    const objetoVacio = [];
+    for(let i=0; i<arrayABuscar.length; i++){
+        if(arrayABuscar[i][propiedadAFiltrar] == valorPropiedad){
+            return console.log(arrayABuscar[i]);
+        }
+    }
+    return console.log(objetoVacio);
 }
 
 //exporto funciones a los demás archivos
