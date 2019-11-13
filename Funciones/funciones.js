@@ -334,6 +334,31 @@ const encontrarObjetoEnArray = (array, propiedad, valor) =>{
     return false;
 }
 
+const filtrarObjetosArray = (array, propiedad, valor) =>{
+    var arrayFiltrado = [];
+    //Comprueba de que todos los elementos del array son objetos
+    for(let i=0; i<array.length; i++){
+        if(typeof array[i] != 'object'){
+            alert("Su array no es de objetos");
+            return arrayFiltrado;
+        }
+    }
+
+    if(array.length > 0){ //Que no esté vacío
+        if(typeof array[0][propiedad] != 'undefined'){ //Si existe la propiedad
+            for(let i=0; i<array.length; i++){
+                if(array[i][propiedad] == valor){ //Si lo encuentra, lo añade
+                    arrayFiltrado.push(array[i]);
+                }
+            }
+        }else{
+            alert("No existe esa propiedad en el array");
+        }
+    }else{
+        alert("Tamaño array igual a 0");
+    }
+    return arrayFiltrado;
+}
 
 
 export{

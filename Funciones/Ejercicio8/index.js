@@ -20,18 +20,47 @@ import{
 // }
 //----------------------------1-----------------------------
 
-var array = [
-    {
-      id: 1,
-      valor: "uno"
-    },
-    {
-      id: 2,
-      valor: "dos"
-    }
-];
+//----------------------------2-----------------------------
+// var array = [
+//     {
+//       id: 1,
+//       valor: "uno"
+//     },
+//     {
+//       id: 2,
+//       valor: "dos"
+//     }
+// ];
 
-let propiedad = "id";
-let valor = 1;
+// let propiedad = "id";
+// let valor = 1;
 
-console.log(encontrarObjetoEnArray(array, propiedad, valor));
+// console.log(encontrarObjetoEnArray(array, propiedad, valor));
+//----------------------------2-----------------------------
+
+//----------------------------3-----------------------------
+// var array = [
+//     {
+//       id: 1,
+//       valor: "uno"
+//     },
+//     {
+//       id: 2,
+//       valor: "dos"
+//     }
+// ];
+
+// let propiedad = "id";
+// let valor = 1;
+
+// var arrayFiltrado = [];
+
+// for(let i=0; i<array.length; i++){
+//     if(array[i][propiedad] == valor){
+//         arrayFiltrado.push(array[i]);
+//     }
+// }
+
+// alert(arrayFiltrado[0]);
+// alert(arrayFiltrado[1]);
+//----------------------------3-----------------------------
