@@ -20,14 +20,22 @@ let texto = "Hola;Hernan"
 console.log(texto.split(";"))
 // ["Hola","Hernan"]*/
 
-export const verificarrun=(run)=>{
-   for(let i=0;i<run.length;i++){
-      if(i<=8){
-         let numerodadovuelta=run.length-1;
+
+       const verificarrun=(run)=>{
+      return(isNaN(run));
+   } 
+       const sacarlossignos=(run)=>{
+          let nuevorun;
+          for(i=0;i<run.length;i++){
+             if(run.split != "."||run.split!="-"||run.length-1);
+               nuevorun=run;
+             return(nuevorun);
+
+          }
+
+       }
+
+      export{
+         verificarrun,
+         sacarlossignos,
       }
-      if(i>8){
-         let digito=run.length;
-      }
-      
-   }
-}
