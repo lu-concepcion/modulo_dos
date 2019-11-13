@@ -142,6 +142,22 @@ const filtrarEnArray = (arreglo, propiedad, valor) => {
     return objetos;
 }
 
+// Funciones día 3
+const ordenaMayorMenor = arregloNumeros => {
+    let aux;
+    let arregloNumeros = [];
+    for (let i = 0; i < arregloNumeros.length; i++) {
+        for (let j = 1; j < (arregloNumeros.length - i); j++) {
+            if (arregloNumeros[j - 1] > arregloNumeros[j]) {
+                aux = arregloNumeros[j - 1];
+                arregloNumeros[j - 1] = arregloNumeros[j];
+                arregloNumeros[j] = aux;
+            }
+        }
+    }
+    return arregloNumeros;
+}
+
 export {
     esNumero,
     esTexto,
