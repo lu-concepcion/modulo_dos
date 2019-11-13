@@ -151,8 +151,18 @@ const digitoVerificador = run => {
         for (let i = 0; i < rutInvertido.length; i++) {
             sumaTotal = sumaTotal + rutInvertido[i]
         }
-            
-        alert("su run es "+sumaTotal);
+
+        // sacar el 11% a la suma total yfinalizar operación
+        let resto = sumaTotal % 11;
+        let digVerificador = 11 - resto;
+        if (digVerificador == 11) {
+            digVerificador = 0;
+        }
+        if (digVerificador == 10) {
+            digVerificador = "k";
+        }
+
+        alert("su digito verificador es "+digVerificador);
 
 }
 }
