@@ -45,6 +45,7 @@ const buscarElemento = (array,numero) =>{
             return true
         }
     }
+    return false
 }
 let arraySorteo=[];
 const generaLoteria=()=>{
@@ -130,9 +131,20 @@ const moduloOnce = (array) =>{
 
 // Ejercicio 8
 
+const filtrarArray = (array,propiedad,valor) =>{
+    for(let i=0;i<array.length;i++){
+        if(array[i][propiedad]==valor){
+            return Object.entries(array[i])
+        }
+    }
+    return Object.keys(array[0])
+}
+
+
+
 
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
-    ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce,buscarElemento
+    ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce,buscarElemento,filtrarArray
 }
 
