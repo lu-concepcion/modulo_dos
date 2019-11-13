@@ -175,6 +175,8 @@ const buscarEnArrayObjeto=(arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)
     if ((isNaN(valorPropiedad))) {
         for (let i in arrayDondeBuscara){
             if (arrayDondeBuscara[i][propiedadAFiltrar]==valorPropiedad){
+            //if (String(arrayDondeBuscara[i][propiedadAFiltrar])==String(valorPropiedad)){
+
                 objetoEncontrado =arrayDondeBuscara[i]
                 return objetoEncontrado
             }
@@ -182,7 +184,8 @@ const buscarEnArrayObjeto=(arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)
         return objetoEncontrado
     } else if ((!isNaN(valorPropiedad))) {
         for (let i in arrayDondeBuscara){
-            if (arrayDondeBuscara[i][propiedadAFiltrar]==parseInt(valorPropiedad)){
+            //if (arrayDondeBuscara[i][propiedadAFiltrar]==parseInt(valorPropiedad)){
+            if (String(arrayDondeBuscara[i][propiedadAFiltrar])==String(valorPropiedad)){
                 objetoEncontrado =arrayDondeBuscara[i]
                 return objetoEncontrado
             }
@@ -237,10 +240,29 @@ const factorial = numero =>{
     return resultado
 }
 
+const extraerTexto=texto =>{
+    let textoExtraido="";
+    for (let i=0; i<texto.length-1; i++){
+        if (texto.charAt(i)=="("){
+            i++;
+            let textoExtraidoAux="";
+            while (texto.charAt(i)!=")"){
+                textoExtraidoAux=textoExtraidoAux + texto.charAt(i);
+                i++
+            }
+            if (texto.charAt(i)){
+                textoExtraido= textoExtraido+ textoExtraidoAux+ " ";
+            }
+            
+        }
+    }
+    return textoExtraido
+}
+
 
 export{  //siempre debe ir al final
     verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, 
     verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento, 
-    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArray, factorial}
+    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArray, factorial, extraerTexto}
 
 
