@@ -39,16 +39,21 @@ const esPalindromo = texto =>{
     }
 }
 //Ejercicio 6
-const numeroExiste = (array,numero) =>{
-    return(array.includes(numero))
+const buscarElemento = (array,numero) =>{
+    for(let i=0;i<array.length;i++){
+        if(array[i]==numero){    
+            return true
+        }
+    }
 }
 let arraySorteo=[];
 const generaLoteria=()=>{
     for(let i=0;i<6;i++){
         do{
-            arraySorteo[i]=Math.floor(Math.random()*37)
+            let generado=Math.floor(Math.random()*37)
             console.log(arraySorteo)
-        }while(numeroExiste(arraySorteo,arraySorteo[i]));
+        }while(buscarElemento(arraySorteo,generado));
+        arraySorteo[i]=generado
     }
 }
 
@@ -123,8 +128,11 @@ const moduloOnce = (array) =>{
     return digitoVerificador
 }
 
+// Ejercicio 8
+
+
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
-    ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce
+    ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce,buscarElemento
 }
 

@@ -6,6 +6,16 @@
 
 // Utilizar Funciones
 
-import { generaLoteria } from '../funciones.js'
+import { generaLoteria, buscarElemento } from '../funciones.js'
+let misNumeros=[],contador=0
+do{
+    let consulta = prompt("Ingrese su numero de Loto")
+    if(consulta>36 || consulta<1 || buscarElemento(misNumeros,consulta)){
+        alert("Numero no valido, o repetido")
+    }else{
+        misNumeros[contador]=consulta;
+        contador++;
+    }
+}while(contador<6);
 let consulta = prompt("Ingrese su numero de Loto")
 alert(generaLoteria())
