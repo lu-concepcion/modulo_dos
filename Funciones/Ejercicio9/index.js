@@ -1,11 +1,23 @@
-import { ordenaMayorMenor } from '../funciones.js';
+import { ordenaMenorMayor,ordenaMayorMenor } from '../funciones.js';
 
-let arregloNumeros = [8,3,2,6,9,1,4,5,7,10];
+let arregloNumeros1 = [8,3,2,6,9,1,4,5,7,10];
+let arregloNumeros2 = [8,3,2,6,9,1,4,5,7,10];
 
-let ordenadoManoMayor = [];
+let ordenadoMenorMayor = [];
+let ordenadoMayorMenor = [];
 
-ordenadoManoMayor = ordenaMayorMenor(arregloNumeros); 
-ordenadoManoMayor.forEach(element => {
+ordenadoMenorMayor = ordenaMenorMayor(arregloNumeros1);
+ordenadoMayorMenor = ordenaMayorMenor(arregloNumeros2);
+
+// Ordenado de menor a mayor
+console.log('Ordenado de menor a mayor');
+ordenadoMenorMayor.forEach(element => {
+    console.log(element);
+});
+
+// Ordenado de mayor a menor
+console.log('Ordenado de mayor a menor');
+ordenadoMayorMenor.forEach(element => {
     console.log(element);
 });
 

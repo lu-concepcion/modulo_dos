@@ -143,7 +143,7 @@ const filtrarEnArray = (arreglo, propiedad, valor) => {
 }
 
 // Funciones día 3
-const ordenaMayorMenor = arreglo => {
+const ordenaMenorMayor = arreglo => {
     let aux;
     for (let i = 0; i < arreglo.length; i++) {
         for (let j = 1; j < (arreglo.length - i); j++) {
@@ -156,7 +156,19 @@ const ordenaMayorMenor = arreglo => {
     }
     return arreglo;
 }
-
+const ordenaMayorMenor = arreglo => {
+    let aux;
+    for (let i = 0; i < arreglo.length; i++) {
+        for (let j = 1; j < (arreglo.length - i); j++) {
+            if (arreglo[j - 1] < arreglo[j]) {
+                aux = arreglo[j - 1];
+                arreglo[j - 1] = arreglo[j];
+                arreglo[j] = aux;
+            }
+        }
+    }
+    return arreglo;
+}
 export {
     esNumero,
     esTexto,
@@ -174,5 +186,6 @@ export {
     encontrarElemento,
     buscarEnArray,
     filtrarEnArray,
+    ordenaMenorMayor,
     ordenaMayorMenor
 }
