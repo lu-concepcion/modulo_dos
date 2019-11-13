@@ -71,8 +71,8 @@ const esPalindromo = (texto) => {
     return texto == textoAlRevez;
 }
 
-const getNumeroRandom = (min, max) => {
-    return Math.floor(Math.random() * (max - min)) + min;
+const generaNumAleatorios = (min, max) => {
+    return Math.floor(Math.random() * ((max + 1) - min) + min);
 }
 
 const sacarPorcentaje = (num1 , num2 ) => {
@@ -114,9 +114,16 @@ const codigoVerificador = (rut) => {
     }
 }
 
+const buscarEnArray = (array, elemento) => {
+    console.log(array.includes(elemento));
+    return array.includes(elemento);
+}
+
+
+
 export {
     sumar, restar, verNumero, converTextoMinus,
     converTextoMayus, contarVocales, esPalindromo,
-    getNumeroRandom, multiplicar, dividir, verNum,
-    sacarPorcentaje, codigoVerificador
+    generaNumAleatorios, multiplicar, dividir, verNum,
+    sacarPorcentaje, codigoVerificador, buscarEnArray
 }
