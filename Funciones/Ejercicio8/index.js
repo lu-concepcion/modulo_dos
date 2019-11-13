@@ -1,6 +1,5 @@
-import { buscarEnArreglo, buscarDeterminadoElemento } from '../funciones.js';
+import { buscarEnArreglo, buscarDeterminadoElemento, filtrarArreglo } from '../funciones.js';
 var persona = ["Jorge", "Eduardo", "Rodrigo"];
-
 var personaArreglo = [
     {
         nombre: "Jorge",
@@ -15,10 +14,28 @@ var personaArreglo = [
         edad: 52
     },
 ];
+var pedirValor = prompt("¿Que valor estas buscando?");
+let pedirOpcion = prompt("Donde desea buscarlo \n1.- Personas \n2.- Arreglo de objetos\n3.- Array")
+if (pedirOpcion == 1) {
+    alert(buscarDeterminadoElemento(pedirValor, persona))
+} else {
+    if (pedirOpcion == 2) {
+        let pedirIndice = prompt("¿En que indice quieres buscarlo?")
+        pedirIndice = pedirIndice.toLowerCase();
+        if (buscarEnArreglo(personaArreglo, pedirIndice, pedirValor) !== "") {
+            alert(buscarEnArreglo(personaArreglo, pedirIndice, pedirValor))
+        } else {
+            personaArreglo = {};
+        }
+    }else{
+        let pedirIndice = prompt("¿En que indice quieres buscarlo?")
+        pedirIndice = pedirIndice.toLowerCase();
+        if (filtrarArreglo(personaArreglo, pedirIndice, pedirValor) !== "") {
+            alert(filtrarArreglo(personaArreglo, pedirIndice, pedirValor))
+        } else {
+            personaArreglo = [];
+        }
+    }
+}
 
-var pedirValor= prompt("¿Que valor estas buscando?");
-let pedirIndice = prompt("¿En que indice quieres buscarlo?")
-
-console.log(pedirValor, pedirIndice)
-alert(buscarDeterminadoElemento(pedirValor, persona))
-alert(buscarEnArreglo(personaArreglo, pedirIndice, pedirValor))
+//EJERCICIO 9
