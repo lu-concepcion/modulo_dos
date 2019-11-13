@@ -8,23 +8,26 @@ console.log('Existe elemento: ' + (encontrarElemento(elemento, arregloNumeros)?'
 
 let arregloPersonas = [
     {
+        id: 1,
         nombre: 'Felipe',
         edad: 27,
         sexo: 'M'
     },
     {
+        id: 2,
         nombre: 'Valentina',
         edad: 28,
         sexo: 'F'
     },
     {
+        id: 3,
         nombre: 'Homero',
         edad: 38,
         sexo: 'M'
     }
 ];
 
-console.log(buscarEnArray(arregloPersonas, 'd', 'Felipe'));
+console.log(buscarEnArray(arregloPersonas, 'id', '3'));
 
 
 // console.log(buscarEnArray(arregloPersonas, edad, 27));
