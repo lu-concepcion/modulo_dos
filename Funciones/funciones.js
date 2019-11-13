@@ -16,7 +16,6 @@ const convertirMinuscula=(numero)=>{
 const validarVocal=(letra)=>(letra == 'a' || letra=='e' || letra=='i' || letra=='o'|| letra=='u')
 
 //ejercicio2
-
 const sumar=(num1,num2)=>{
     return parseInt(num1) + parseInt(num2);
 }
@@ -113,13 +112,16 @@ const inversa=(run)=>{
         if(contador>7){
             contador=2
         }
-        else{
             multiplicacion=multiplicar(numerosLoteria[j],contador)
             resultadoSuma= sumar(multiplicacion, resultadoSuma)
+            console.log("cont "+contador+" num "+numerosLoteria[j]+" Suma: "+resultadoSuma)
             contador++; 
-        }
+        
+
    
     }
+    
+    console.log(numerosLoteria.length)
     numVerificador = resultadoSuma % 11
     numVerificador = restar(11,numVerificador)
     if(numVerificador==11)(numVerificador=0)
