@@ -358,7 +358,45 @@ const filtrarObjetosArray = (array, propiedad, valor) =>{
     return arrayFiltrado;
 }
 
+const imprimirArray = (array) =>{
+    let mensaje = "";
+    for(let i=0; i<array.length; i++){
+        mensaje += array[i] + " ";
+    }
 
+    return mensaje;
+}
+
+const ordenarArrayMenorMayor = (array) =>{
+    let size = array.length;
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            if (array[j] > array[j + 1]) {
+                let aux = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = aux;
+            }
+        }
+    }
+    return array;
+}
+
+const ordenarArrayMayorMenor = (array) =>{
+    let size = array.length;
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            if (array[j] < array[j + 1]) {
+                let aux = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = aux;
+            }
+        }
+    }
+    return array;
+}
 export{
-    
+    ordenarArrayMayorMenor,
+    ordenarArrayMenorMayor,
+    esNumero,
+    imprimirArray
 }
