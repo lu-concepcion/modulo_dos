@@ -340,6 +340,49 @@ const filtrarArray=(array, propiedad, valor)=>{
 
 }
 
+const ordenaArray=(array)=>
+{
+    let menor=array[0]; let ordenado=[0];
+    console.log(array);
+
+    for(let i=0;i<array.length;i++)
+    {
+       if(array[i]<menor)
+       {
+           ordenado=menor;    
+           
+       }else
+       {
+         
+       }
+
+    }
+
+    alert((JSON.stringify(array))); 
+
+
+
+}
+
+const factorial=(numero)=>{
+
+    let factorial=1;
+    if(validaNumero(numero)==true)
+    {
+        for(let i=1;i<numero+1;i++)
+        {
+            factorial=factorial*i;
+        }
+
+        return factorial;
+        
+
+    }else{
+        alert("esto no es un numero");
+    }
+
+}
+
 export{
     validaNumero,
     cuentaVovales,
@@ -354,6 +397,8 @@ export{
     digitoVerificador,
     buscaElemento,
     buscaObjeto,
-    filtrarArray
+    filtrarArray,
+    ordenaArray,
+    factorial
 }
 
