@@ -394,6 +394,17 @@ const ordenarArrayMayorMenor = (array) =>{
     }
     return array;
 }
+
+const factorial = (numero) =>{
+    let resultado = 1;
+
+    for(let i=1; i<=numero; i++){
+        resultado = resultado*i;
+    }
+
+    return resultado;
+}
+
 export{
-    
+    factorial
 }
