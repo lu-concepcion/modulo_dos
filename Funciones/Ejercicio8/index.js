@@ -1,6 +1,7 @@
 import{
     arrayFinder,
-    objectFinder
+    objectFinder,
+    objectFilter
 }from '../Funciones.js'
 const arrayDePrueba=[{
     propiedad1: "amarillo",
@@ -13,9 +14,14 @@ const arrayDePrueba=[{
 {
     propiedad1:"azul",
     id:3
+},
+{
+    propiedad1:"rojo",
+    id:4
 }]
 const propiedad="propiedad1"
-const valor="verde"
+const valor="rojo"
 alert (arrayDePrueba[1].propiedad1)
-let objeto = objectFinder(arrayDePrueba,propiedad,valor)
-alert(objeto.id)
+let objeto = objectFilter(arrayDePrueba,propiedad,valor)
+alert(objeto[0].id)
+alert(objeto[1].id)
