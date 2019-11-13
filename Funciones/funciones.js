@@ -133,15 +133,18 @@ const digitoVerificador = run => {
         }
 
         //multiplicar por 2, 3, 4, 5, 6, 7,
-
-            rutInvertido[0] = rutInvertido[0] * 2
-            rutInvertido[1] = rutInvertido[1] * 3
-            rutInvertido[2] = rutInvertido[2] * 4
-            rutInvertido[3] = rutInvertido[3] * 5
-            rutInvertido[4] = rutInvertido[4] * 6
-            rutInvertido[5] = rutInvertido[5] * 7
-            rutInvertido[6] = rutInvertido[6] * 2
-            rutInvertido[6] = rutInvertido[6] * 3
+        let multiplicador = 1;
+        let multiplicador2 = -5;
+        for (let i = 0; i < run.length; i++) {
+            multiplicador++;
+            multiplicador2++;
+            if (multiplicador <= 7) {
+                rutInvertido[i] = rutInvertido[i] * multiplicador
+            }
+            if (multiplicador2 >=2) {
+                rutInvertido[i] = rutInvertido[i] * multiplicador2
+            }
+        }
             
         alert("su run es "+rutInvertido);
 
