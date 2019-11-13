@@ -79,9 +79,9 @@ const buscarElemento = texto => {
 }
 
 const buscarEnArray = (arrayDondeBuscara, propiedadAFiltrar, valorPropiedad) => {
-    let objeto = {};
+    var objeto = {};
     for (let item in arrayDondeBuscara) 
-        objeto = (arrayDondeBuscara[item][propiedadAFiltrar] == textoEnMinuscula(valorPropiedad)) ? arrayDondeBuscara[item] : '';    
+        if (arrayDondeBuscara[item][propiedadAFiltrar] == textoEnMinuscula(valorPropiedad))  var objeto = arrayDondeBuscara[item];    
     return objeto;
 }
 const empezarLoto = (numeros) => {
