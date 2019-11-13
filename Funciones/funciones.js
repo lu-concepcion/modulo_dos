@@ -154,8 +154,13 @@ return   `Los números ganadores son: ${ganadores}
   }
 
   const seRepite = (arreglo=[], dato) =>{
-
-
+    let repetido = false;
+    for (let i = 0; i < arreglo.length-1; i++) {
+      if ( arreglo[i] == dato) {
+     //   repetido = true;
+      } 
+    }
+return repetido;
   }
   
 
