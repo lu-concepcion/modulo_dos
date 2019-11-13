@@ -172,7 +172,7 @@ return repetido;
 
       if (propiedad == (Object.keys(arreglo[i]))[j] ) {
        if ( valorPropiedad == Object.values(arreglo[i])[j] ) {
-           return arreglo[i];
+           return listarPropiedades(arreglo[i]);
         }
       }
       
@@ -182,9 +182,18 @@ return Vacio;
   }
 
 
+  const listarPropiedades=(objeto)=>{
+     let listado="";
+     for (let i = 0; i < Object.keys(objeto).length; i++) {
+       listado = `${listado} ${Object.keys(objeto)[i]}: ${Object.values(objeto)[i]}\n`;
+     } 
+return listado;
+  }
+
+
 
 export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 
   contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, 
   limpiarRut, invertirCadena,calcularDigitoVerificador,lotto,
-  buscarEnArray, objetoEnArray
+  buscarEnArray, objetoEnArray, listarPropiedades
 }

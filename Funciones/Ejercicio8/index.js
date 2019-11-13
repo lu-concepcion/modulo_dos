@@ -1,4 +1,4 @@
-import {buscarEnArray, objetoEnArray} from '../funciones.js'
+import {buscarEnArray, objetoEnArray, listarPropiedades} from '../funciones.js'
 
 let arreglo=[];
 arreglo[0] = 1;
@@ -31,9 +31,10 @@ Gato.vidas=7;
 let arreglo2=[Persona, Perro, Gato];
 
 
-let prop = "nombre";
 
-alert((objetoEnArray(arreglo2, "nombre", "mishi")));
+
+alert(objetoEnArray(arreglo2, "nombre", "chispita"));
+
 
 
 
