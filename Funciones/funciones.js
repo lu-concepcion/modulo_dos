@@ -297,24 +297,22 @@ const numeroVerificador = () =>{
 }
 
 const encontrarElementoEnArray= (array, elemento)=>{
-    let encontrado = false;
-
     for(let i=0; i<array.length; i++){
         if(array[i] == elemento){
-            encontrado = true;
-            break;
+            return true;
         }
     }
 
-    return elemento;
+    return false;
 }
 
 const encontrarObjetoEnArray = (array, propiedad, valor) =>{
     //Comprueba de que todos los elementos del array son objetos
+    let objeto = {};
     for(let i=0; i<array.length; i++){
         if(typeof array[i] != 'object'){
             alert("Su array no es de objetos");
-            return false;
+            return objeto;
         }
     }
 
@@ -322,7 +320,7 @@ const encontrarObjetoEnArray = (array, propiedad, valor) =>{
         if(typeof array[0][propiedad] != 'undefined'){ //Si existe la propiedad
             for(let i=0; i<array.length; i++){
                 if(array[i][propiedad] == valor){
-                    return true;
+                    return array[i];
                 }
             }
         }else{
@@ -331,7 +329,7 @@ const encontrarObjetoEnArray = (array, propiedad, valor) =>{
     }else{
         alert("Tamaño array igual a 0");
     }
-    return false;
+    return objeto;
 }
 
 const filtrarObjetosArray = (array, propiedad, valor) =>{
@@ -363,5 +361,6 @@ const filtrarObjetosArray = (array, propiedad, valor) =>{
 
 export{
     encontrarElementoEnArray,
-    encontrarObjetoEnArray
+    encontrarObjetoEnArray,
+    filtrarObjetosArray
 }
