@@ -119,6 +119,8 @@ const validaRun = (run) => {
     }
 }
 
+//
+
 //exporto funciones a los demás archivos
 export {
     sumar,
