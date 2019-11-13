@@ -156,8 +156,23 @@ const encontrarEnArray=(array,propiedad,elemento)=>{
     return console.log(arrayVacio)
 }
 
+
+const filtrarEnArray=(array,propiedad,elemento)=>{
+    const arrayFiltrado=[];
+    for(let i=0;i<array.length;i++){
+        //console.log(Object.keys(array))
+        if(array[i][propiedad]==elemento){
+            //console.log(array[i])
+            arrayFiltrado.push(array[i]);
+            //console.log(arrayFiltrado)
+            //return Object.entries(array[i]);
+        }
+    }
+    return console.log(arrayFiltrado) 
+}
+
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
     sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje, formatoPunto, inversa
-    ,encontrarElemento,encontrarEnArray
+    ,encontrarElemento,encontrarEnArray,filtrarEnArray
 }
