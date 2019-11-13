@@ -44,6 +44,12 @@ console.log(buscarEnArrayObjeto(arrayObjetos, propiedadAFiltrar, valorPropiedad)
 
 
 
+
+
+
+
+
+
 const arrayObjetosFiltrar=[
     {
         nombre: "Victoria",
