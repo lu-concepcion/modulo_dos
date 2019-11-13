@@ -89,18 +89,18 @@ const palindromo=(texto)=>
 const sorteo=(max,min)=>
 {
     let salida= []
-    for (i=0;i<6;i++)
+    for (let i=0;i<6;i++)
     {
-        salida[i]=Math.random() * (max - min) + min;
+        salida[i]=parseInt(Math.random() * (max - min) + min);
     }
     return (salida)
 }
 const aciertosSorteo=(ganadores,elegidos)=>
 {
-    let aciertos
-    for (i=0;i<6;i++)
+    let aciertos=0
+    for (let i=0;i<6;i++)
     {
-        for (j=0;j<6;j++)
+        for (let j=0;j<6;j++)
         {
             if(ganadores[i]==elegidos[j])
             {
