@@ -86,7 +86,7 @@ const regla3 = (num1, num2) => {
     return (num2 * 100 / num1 + "%");
 }
 
-//validar rut
+//calcula digito verificador
 const validaRun = (run) => {
     let aux =run.split("-");
     run=aux[0] ;
@@ -119,7 +119,20 @@ const validaRun = (run) => {
     }
 }
 
-//
+//encontrar determinado elemento en un array
+const buscaElemento = (elemento, array) => {
+    for(let i=0; i<array.length; i++){
+        if(elemento == array[i]){
+            return alert("encontre el elemento");
+        }
+    }
+    return alert("no encontre el elemento");
+}
+
+// encontrar en un array un determinado objeto, dada una condicion
+const buscarEnArray = (arrayABuscar, propiedadAFiltrar, valorPropiedad) => {
+
+}
 
 //exporto funciones a los demás archivos
 export {
@@ -136,5 +149,7 @@ export {
     multiplicar,
     dividir,
     regla3,
-    validaRun
+    validaRun,
+    buscaElemento,
+    buscarEnArray
 }
