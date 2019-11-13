@@ -190,9 +190,26 @@ const factorial = (numero) =>{
     return resultado
 }
 
+//Ejercicio 11
+
+const extraerDeParentesis = (string) =>{
+    let stringResultado=''
+    for(let i=0;i<string.length;i++){
+        if(string.charAt(i)=="("){
+            i++
+            while(string.charAt(i)!=")"){
+                stringResultado+=string.charAt(i)
+                i++
+            }
+            stringResultado+=" "
+        }
+    }
+    return stringResultado
+}
+
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
     ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce,buscarElemento,filtrarArray,filtrarTodosArray,
-    ordenarMenorAMayorArray,ordenarMayorAMenorArray, factorial
+    ordenarMenorAMayorArray,ordenarMayorAMenorArray,factorial,extraerDeParentesis
 }
 
