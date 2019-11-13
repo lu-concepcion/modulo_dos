@@ -200,7 +200,7 @@ const factorial=(numero)=>
     {
         aux=aux*i
     }
-    return (aux)
+    return aux
 }
 export
 {
@@ -220,5 +220,6 @@ export
     digitoVerificador,
     arrayFinder,
     objectFinder,
-    objectFilter
+    objectFilter,
+    factorial
 }
