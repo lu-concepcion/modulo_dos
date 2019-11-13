@@ -168,7 +168,26 @@ const digitoVerificador = run => {
 
         alert("su digito verificador es "+digVerificador);
 
-}
+    }
 }
 
-export{ sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo, aritmetica, porcentajes, digitoVerificador }
+//encontrar texto o numeros entre los elementos de un arreglo
+const verificarTexto = text => {
+    if (isNaN(text)){
+        return "Lo ingresado es un texto"
+    } else {
+        return "Lo ingresado no es texto"
+    }
+}
+
+const verificarNumero = numero => {
+    if (isNaN(numero)){
+        return "Lo ingresado es un número"
+    } else {
+        return "Lo ingresado no corresponde a un número"
+    }
+}
+
+export{
+    sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo, aritmetica, porcentajes, digitoVerificador, verificarTexto, verificarNumero
+}
