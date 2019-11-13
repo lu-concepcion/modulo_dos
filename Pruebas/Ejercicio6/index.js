@@ -1,11 +1,11 @@
 import{loto} from '../funciones.js'
 let numeros = [];
-/*for (let i = 0; i < 6; i++) {
-    numeros[i] = prompt("Ingresa tus numeros")    
-}*/
 let j = 0;
 do {
     let numeroEntrada = prompt("Ingresa tus numeros")
+    for (let i = 0; i < numeros.length; i++) {
+        if (numeroEntrada == numeros[i]) j--;
+    }
     if (numeroEntrada < 41) {
         numeros[j] = numeroEntrada;
         j++;
@@ -13,4 +13,4 @@ do {
     }
 } while (j < 6);
 let aciertos = loto(numeros)
-alert(aciertos);
+alert(aciertos + " Tus numeros fueron: " + numeros);
