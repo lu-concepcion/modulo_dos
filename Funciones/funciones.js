@@ -33,24 +33,22 @@ const contarVocales = (textoingresado) =>{
     return vocalcontada
 
 }
-const palindromo = (textopalindromo) =>{
+const palindromo = (textoingresado) =>{
 
-    for (i=0; i<textopalindromo.length; i++)
+    const textocomparacion=textoingresado.split("");
+    const textopalindromo=textoingresado.split("").reverse();
 
-    if(textopalindromo.charAt(i)==textopalindromo.charAt(i-1)){
+    for (let i=0;i<textocomparacion.length;i++){
 
-        alert("es un palindromo")
-
-    }else{
-
-        alert("No es un palindromo")
-    
-    } 
-
-
-    return textopalindromo
-
+    if(textocomparacion[i]==textopalindromo[i]){
+    alert("Esto es un palíndromo")
+    return (true);
 }
+    else{
+    alert("Esto no es un palíndromo")
+    return(false);
+}}
+    }
 const sumar = (n1, n2) =>{
 
     const resultado = parseInt(n1) + parseInt(n2); 
@@ -81,6 +79,39 @@ const porcentaje = (n1, n2) =>{
     return alert(resultado1+"%")
 
 }
+const validarRut = (n1) =>{
+
+    for(i=0; i<n1.length; i++){
+
+
+
+        return 
+
+    }
+
+    
+}
+
+const sorteo = (N) =>{
+
+    
+        let loto = [];
+        let intentos = '';
+        const x;
+    
+        for (i = 0; i <= 2; i++) {
+            x = prompt("Ingresa tus numeros de sorteo:", "");
+            loto.push(x);
+        }
+    
+        for (i = 0; i <= 2; i++) {
+            intentos += loto[i] + " ";
+        }
+    
+        document.getElementById("here").innerHTML = cont;
+    
+
+}
 
 export {
 
@@ -92,7 +123,10 @@ export {
     restar,
     dividir,
     multiplicar,
-    porcentaje
+    porcentaje,
+    validarRut,
+    palindromo,
+    sorteo
 
 }
 

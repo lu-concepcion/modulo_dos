@@ -1,10 +1,10 @@
 
-import {} from '../funciones.js';
+import {validarRut} from '../funciones.js';
 
-const textoingresado = prompt ("ingrese texto o numero a analizar")
+const n1 = prompt ("ingrese texto o numero a analizar")
 
 
-    alert (texto(textoingresado))
+    alert (validarRut(n1))
 
 
 

@@ -2,11 +2,11 @@ import {palindromo} from '../funciones.js';
 
 
 
-const textopalindromo = prompt ("ingrese una palabra a analizar")
+const textoingresado = prompt ("ingrese una palabra a analizar")
 
 
 
-    alert (palindromo(textopalindromo))
+    palindromo(textoingresado)
    
 
 
