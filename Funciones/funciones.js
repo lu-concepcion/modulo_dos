@@ -148,14 +148,16 @@ const RUN = num =>
     let digito = 0;
     let i = num.length;
     let serie = [2,3,4,5,6,7];
-    
+    num = num.split("-");
+    num = num[0];
     while(i>=0)
     {
         if(num.charAt(i)!= ".")
        {
           cadena = cadena+num.charAt(i)
        
-       }  i--; 
+       }  
+         i--; 
     }
     let diferencia = parseInt(cadena.length)-parseInt(serie.length);
 
@@ -164,9 +166,7 @@ const RUN = num =>
         for(let k = 0; k<diferencia;k++)
         {
             serie.push(serie[k]);
-           
-        }
-         
+        }  
     }
   
     for(let j = 0;j<cadena.length;j++)
@@ -184,7 +184,7 @@ const RUN = num =>
     else if (digito == 10)
     {
         digito = "k";
-    }
+   }
 
     return digito
 }
