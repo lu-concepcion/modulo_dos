@@ -302,7 +302,7 @@ const buscaObjeto=(array,propiedad,valor)=>{
             console.log("tamos!");
             bool=true;
             
-            alert("encontrado");
+           // alert(JSON.stringify(array[i]));
 
             objeto=array[i];
             break;
@@ -329,7 +329,8 @@ const filtrarArray=(array, propiedad, valor)=>{
 
         if(array[i][propiedad]==valor)
         {  
-            otroArray[contador]=array[i];   
+            otroArray[contador]=array[i]; 
+            contador++;  
             
         }   
         
