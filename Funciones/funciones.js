@@ -72,6 +72,12 @@ const digitoVerificador = run => {
         return digito?digito-1:'k'
     }
 }
+
+const buscarElemento = texto => {
+    var array = ['fresa', 'cambur', 'manzana', 'pera', 'manzana', 'mango', 'uva'];
+    return array.includes(textoEnMinuscula(texto))
+}
+
 const empezarLoto = (numeros) => {
     
 }
@@ -90,5 +96,6 @@ export {
     esPalindromo,
     empezarLoto, 
     digitoVerificador,
-    porcentaje
+    porcentaje,
+    buscarElemento
 }
