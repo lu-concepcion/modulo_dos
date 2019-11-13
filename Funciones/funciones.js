@@ -147,9 +147,9 @@ const digitoVerificador = run => {
         }
 
         //sumar cada indice del arreglo y asignarlo a otra variable
-        let sumaTotal = [];
+        let sumaTotal = 0;
         for (let i = 0; i < rutInvertido.length; i++) {
-            return sumaTotal[0] = sumaTotal[0] + rutInvertido[i]
+            sumaTotal = sumaTotal + rutInvertido[i]
         }
             
         alert("su run es "+sumaTotal);
