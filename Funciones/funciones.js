@@ -159,15 +159,30 @@ return   `Los números ganadores son: ${ganadores}
       if ( arreglo[i] == dato) {
         repetido = true;
       } 
-      
+
     }
 return repetido;
   }
 
+  const objetoEnArray=(arreglo=[], propiedad, valorPropiedad)=>{
   
+  for (let i = 0; i < arreglo.length; i++) {
+    for (let j = 0; j < parseInt(Object.keys(arreglo[i])).length ; j++) {
+      if (propiedad == (Object.keys(arreglo[i]))[j] ) {
+       //  if (valorPropiedad == arreglo[i].Object.keys(arreglo[i][j])) {
+           return "Wena";
+       //  }
+      }
+      
+    }
+    
+  }
+
+  }
 
 
 export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 
   contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, 
-  limpiarRut, invertirCadena,calcularDigitoVerificador,lotto,buscarEnArray
+  limpiarRut, invertirCadena,calcularDigitoVerificador,lotto,
+  buscarEnArray, objetoEnArray
 }
