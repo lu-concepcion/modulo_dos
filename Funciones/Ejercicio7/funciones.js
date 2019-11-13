@@ -20,17 +20,3 @@ let texto = "Hola;Hernan"
 console.log(texto.split(";"))
 // ["Hola","Hernan"]*/
 
-export const invertirnumero=(run)=>{
-   largo=rut.length;
-    runnuevo="";
-      for(let i=largo-1;i>=0;i--)
-      {
-         if(largo-1=="-"){
-
-
-            return(largo);
-                  }
-            
-
-      }
-}

@@ -1,9 +1,20 @@
-import{sitraenumeroverificador} from './funciones.js'
+import{} from './funciones.js'
 
-let rut = prompt("Ingresa rut: ");
+let run = prompt("Ingresa rut: ");
 
-    alert("el numero verificador es ",sitraenumeroverificador(rut))
+let runSplitGuion = run.split("-");
+for(let i=0;i<=runSplitGuion.length-1;i++){
+     
+    alert(runSplitGuion[i]);
 
+}
+   let runSplitPunto = runSplitGuion[0].split(".");
+    console.log(runSplitPunto.length);
+   for(let i=0;i<=runSplitPunto.length-1;i++){
+     
+    alert(runSplitPunto[i]);
+
+}
 
 
 
