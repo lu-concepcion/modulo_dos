@@ -1,4 +1,4 @@
-import {lotto, seRepite} from '../funciones.js';
+import {lotto} from '../funciones.js';
 
 const numerosElegidos=[];
 for (let i = 0; i < 6; i++) {
