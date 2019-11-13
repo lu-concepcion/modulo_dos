@@ -169,6 +169,10 @@ const ordenaMayorMenor = arreglo => {
     }
     return arreglo;
 }
+
+const generaFactorial = numero => {
+    
+}
 export {
     esNumero,
     esTexto,
@@ -187,5 +191,6 @@ export {
     buscarEnArray,
     filtrarEnArray,
     ordenaMenorMayor,
-    ordenaMayorMenor
+    ordenaMayorMenor,
+    generaFactorial
 }
