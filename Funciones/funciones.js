@@ -360,7 +360,5 @@ const filtrarObjetosArray = (array, propiedad, valor) =>{
 
 
 export{
-    encontrarElementoEnArray,
-    encontrarObjetoEnArray,
-    filtrarObjetosArray
+    
 }
