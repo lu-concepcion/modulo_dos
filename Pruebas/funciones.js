@@ -57,7 +57,7 @@ const esPalindromo = (string1) => {
 }
 
 const loto = (numerosUsuario) => {
-    numerosGanadores[6];
+    let numerosGanadores = [6];
     let aciertos = 0;
     for (let i = 0; i < 6; i++) {
         numerosGanadores[i] = Math.floor(Math.random() * (40)) + 1;
@@ -67,7 +67,7 @@ const loto = (numerosUsuario) => {
             if (numerosUsuario[i] == numerosGanadores[k]) aciertos++;
         }
     }
-    return aciertos;
+    return "tu numero de aciertos fue: " + aciertos + " El sorteo fue: " + numerosGanadores;
 }
 
 
@@ -99,5 +99,18 @@ const rut = (string) => {
 }
 
 export {
-    sumar, restar, multiplicar, dividir, validaNumero, validaTexto, aMayusculas, aMinusculas, contarVocales, esVocal, esPalindromo, porcentajes, rut
+    sumar, 
+    restar, 
+    multiplicar, 
+    dividir, 
+    validaNumero, 
+    validaTexto, 
+    aMayusculas, 
+    aMinusculas, 
+    contarVocales, 
+    esVocal, 
+    esPalindromo, 
+    porcentajes, 
+    rut,
+    loto
 }
