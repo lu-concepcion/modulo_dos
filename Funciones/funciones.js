@@ -112,7 +112,8 @@ const porcentajes = (numero1, numero2) => {
 
 //algoritmo que calcula el digito verificador de un RUN, implementando el módulo 11.
 const digitoVerificador = run => {
-    console.log(run.split()); /*Esta funcion convierte la variable "numero" en un arreglo de esa manera podemos buscar indices[i] */
+    console.log(run.split()); /*Esta funcion separa la variable "numero" en palabras o letras de acuerdo a la condicion de esa manera podemos buscar indices[i] */
+    alert(run);
     for (let i = 0; i < run.length; i++) {
         if (run[i] == ".") {
             alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
