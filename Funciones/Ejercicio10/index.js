@@ -1,7 +1,8 @@
 import {esNumero,generaFactorial} from '../funciones.js';
+let numero = 0;
 
 while(true) {
-    let numero = prompt('Ingrese un número');
+    numero = prompt('Ingrese un número');
     if (esNumero(numero)) {
         break
     }
