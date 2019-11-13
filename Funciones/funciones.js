@@ -395,8 +395,5 @@ const ordenarArrayMayorMenor = (array) =>{
     return array;
 }
 export{
-    ordenarArrayMayorMenor,
-    ordenarArrayMenorMayor,
-    esNumero,
-    imprimirArray
+    
 }
