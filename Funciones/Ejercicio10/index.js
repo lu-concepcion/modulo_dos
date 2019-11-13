@@ -1,13 +1,12 @@
+// Escriba un algoritmo que me calcule el factorial de un número. Ej: 5! = 1 * 2 * 3 * 4 * 5 = 120
 
-// Escriba una función que me ordene un array, de menor a mayor, y viceversa
-
-import{ ordenarArray  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
-
-
-
-const elementos=[4, 3, 1, 2, 10, 17,33,2];
+import{ factorial  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
 
 
 
+const numero=5;
 
-alert(ordenarArray(elementos))
+
+
+
+alert(factorial(numero))
