@@ -189,4 +189,18 @@ const RUN = num =>
     return digito
 }
 
-export { RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
+const busqueda = (input, elemento) =>
+{
+    for (var i = 0; i<input.length;i++)
+    {
+        if (input[i] == elemento)
+        {
+            return 0
+        }
+        else
+        {
+            return 1
+        }
+    }
+} 
+export { busqueda,RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
