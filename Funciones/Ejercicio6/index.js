@@ -4,7 +4,7 @@ let x = []
 for (const i=0; i < 5; i++){
 
     const loto = prompt ("ingrese sus numeros de sorteo")
-    
+    x [i]= loto.push() 
 
 }
 

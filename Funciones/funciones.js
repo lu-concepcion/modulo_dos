@@ -95,22 +95,7 @@ const validarRut = (n1) =>{
 const sorteo = (N) =>{
 
     
-        let loto = [];
-        let intentos = '';
-        const x;
-    
-        for (i = 0; i <= 2; i++) {
-            x = prompt("Ingresa tus numeros de sorteo:", "");
-            loto.push(x);
-        }
-    
-        for (i = 0; i <= 2; i++) {
-            intentos += loto[i] + " ";
-        }
-    
-        document.getElementById("here").innerHTML = cont;
-    
-
+       
 }
 
 export {
