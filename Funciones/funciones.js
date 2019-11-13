@@ -92,9 +92,9 @@ const validarRut = (n1) =>{
     
 }
 
-const sorteo = (N) =>{
+const sorteo = (x) =>{
 
-    
+    return alert (x)
        
 }
 
