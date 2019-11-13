@@ -78,6 +78,12 @@ const buscarElemento = texto => {
     return array.includes(textoEnMinuscula(texto))
 }
 
+const buscarEnArray = (arrayDondeBuscara, propiedadAFiltrar, valorPropiedad) => {
+    let objeto = {};
+    for (let item in arrayDondeBuscara) 
+        objeto = (arrayDondeBuscara[item][propiedadAFiltrar] == textoEnMinuscula(valorPropiedad)) ? arrayDondeBuscara[item] : '';    
+    return objeto;
+}
 const empezarLoto = (numeros) => {
     
 }
@@ -97,5 +103,6 @@ export {
     empezarLoto, 
     digitoVerificador,
     porcentaje,
-    buscarElemento
+    buscarElemento,
+    buscarEnArray
 }
