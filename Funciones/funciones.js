@@ -188,8 +188,26 @@ const verificarTexto = text => {
     }
 }
 
-const
+//encontrar un objeto dentro de un arreglo
+const buscarEnArray = (array, propiedad, valor) => {
+    //alert(array[0][propiedad0])
+    let contador = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i][propiedad] == valor) {
+            console.log(propiedad)
+            console.log(valor);
+        }
+        if (array[i] != propiedad) {
+            contador++
+            if (contador == array.length) {
+                console.log("NO SE ENCUENTRA EN EL ARREGLO");
+            }
+        }
+    }
+}
 
 export{
-    sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales, palindromo, aritmetica, porcentajes, digitoVerificador, verificarTexto
+    sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales,
+    palindromo, aritmetica, porcentajes, digitoVerificador, verificarTexto,
+    buscarEnArray
 }
