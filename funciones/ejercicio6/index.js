@@ -21,3 +21,5 @@ if (confirm("Deseas empezar el sorteo?")) {
 else {
     alert("Cambiar numeros!");
 }
+
+let numeros=[], numerosAleatorios=[], numeroAleatorio=0, contador=0, numeroUsuario=0;
