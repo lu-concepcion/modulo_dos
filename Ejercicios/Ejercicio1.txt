@@ -1,0 +1,1 @@
+Escribir un algoritmo que solicite 2 números y entregue la suma de estos.
