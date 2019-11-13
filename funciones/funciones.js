@@ -60,5 +60,15 @@ const digitos = (a) =>{
       }
     }
     return RUN;
+    } 
+
+const encontrar = (arreglo=[], dato) => {
+    let presente = false
+    for (let i = 0; i < arreglo.length; i++) {
+       if ( dato == arreglo[i]){
+         presente = true
+       }
     }
-export {suma, resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,porcentaje,digitos} 
+    return presente  
+    }
+export {suma, resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,porcentaje,digitos,encontrar} 
