@@ -21,7 +21,10 @@ const dividir = (num1,num2) => {
 //funcion para validar numeros
 const validarNumeros = numero => (isNaN(numero))
 
-
+//Funcion para numeros aleatorios
+const aleatorios = num => {
+    return (Math.random(1, 41)
+}
 
 
 //funcion para todas las operaciones
@@ -70,7 +73,7 @@ const encontrarVocales = text => {
 
 export {
     sumar, validarTexto, convertirMinuscula, convertirMayuscula, restar, encontrarVocales,
-    validarNumeros, operacionesMatematicas, calcularPorcentaje
+    validarNumeros, operacionesMatematicas, calcularPorcentaje, aleatorios
 }
 
 
