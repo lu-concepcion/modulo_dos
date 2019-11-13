@@ -75,6 +75,15 @@ const generaNumAleatorios = (min, max) => {
     return Math.floor(Math.random() * ((max + 1) - min) + min);
 }
 
+const seRepite = (num, array) => {
+    for (let i=0; i < array.length; i++){
+        if(num == array[i]){
+            return true;
+        }
+    }
+    return false;
+}
+
 const sacarPorcentaje = (num1 , num2 ) => {
     return (num2 * 100) / num1;
 }
@@ -145,5 +154,5 @@ export {
     converTextoMayus, contarVocales, esPalindromo,
     generaNumAleatorios, multiplicar, dividir, verNum,
     sacarPorcentaje, codigoVerificador, buscarElemento,
-    buscarEnArray, filtrarEnArray
+    buscarEnArray, filtrarEnArray, seRepite
 }
