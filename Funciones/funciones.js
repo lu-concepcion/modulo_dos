@@ -115,13 +115,16 @@ const digitoVerificador = run => {
     console.log(run.split()); /*Esta funcion convierte la variable "numero" en un arreglo de esa manera podemos buscar indices[i] */
     for (let i = 0; i < run.length; i++) {
         if (run[i] == ".") {
-            return alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
+            alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
+            break;
         }
         if (run[i] == "-") {
-            return alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
+            alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
+            break;
         }
         if (run.length != 8) {
-            return alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
+            alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
+            break;
         }
 
         //logica para invertir el run
