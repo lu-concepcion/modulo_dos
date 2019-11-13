@@ -115,7 +115,6 @@ const codigoVerificador = (rut) => {
 }
 
 const buscarElemento = (array, elemento) => {
-    console.log(array.includes(elemento));
     return array.includes(elemento);
 }
 

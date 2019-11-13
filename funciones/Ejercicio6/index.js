@@ -2,8 +2,8 @@ import { generaNumAleatorios,verNum,buscarElemento } from '../funciones.js'
 
 let arrayNumeros = [];
 let numero = "";
-let aleatorio;
-aleatorio = generaNumAleatorios(1,36);
+let arrayAleatorio = [];
+let aleatorio = "";
 let numGanadores;
 
 for(let i=1; i < 7; i++){
@@ -22,3 +22,13 @@ for(let i=1; i < 7; i++){
     }
 }
 
+for(let i=0; i < 6; i++){
+    aleatorio = generaNumAleatorios(1,36);
+    if(buscarElemento(arrayAleatorio, aleatorio)){
+        i--;
+        continue;
+    }else {
+        arrayAleatorio[i] = aleatorio;
+        console.log(aleatorio);
+    }
+}
