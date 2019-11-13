@@ -134,13 +134,27 @@ const numeroAzar =(min, max)  =>{
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  const lotto =(numeros) =>{
-     ganadores[6];
 
-for (let i = 0; i <5; i++) {
+  const lotto =(numeros=[]) =>{
+     const ganadores=[] ;
     
-    
+ let contador=0;
+for (let i = 0; i <6; i++) {
+
+ganadores[i] = numeroAzar(1,41);
+ for (let j = 0; j <6; j++) {
+   if (numeros[j] == ganadores[i]) {
+    contador++;
+   }   
+ }
 }
+return   `Los números ganadores son: ${ganadores} 
+           \nSus números son: ${numeros}
+           \n Usted acerto en ${contador} números`
+  }
+
+  const seRepite = (arreglo=[], dato) =>{
+
 
   }
   
@@ -148,5 +162,5 @@ for (let i = 0; i <5; i++) {
 
 export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 
   contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, 
-  limpiarRut, invertirCadena,calcularDigitoVerificador
+  limpiarRut, invertirCadena,calcularDigitoVerificador,lotto,seRepite
 }

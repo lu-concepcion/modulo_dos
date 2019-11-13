@@ -4,5 +4,3 @@ const rut =prompt("Ingrese rut");
 
 alert(`Digito Verificador: ${calcularDigitoVerificador(limpiarRut(rut))}`);
 
-
-
