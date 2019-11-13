@@ -1,16 +1,15 @@
-import { buscarElemento } from '../funciones.js'
+import { buscarElemento, buscarEnArray, filtrarEnArray } from '../funciones.js'
 
+//Funcion 1
 let arrayNum = [1,2,3,4,5,6,7,8,9,10]
-let elemt = 2;
-
+let elemt = 2
 
 console.log("Funcion 1")
 console.log("Existe elemento: " + (buscarElemento(arrayNum, elemt)?"Sí":"No"))
 
 
 //Funcion 2
-
-arrayPersonas = [
+let arrayPersonas = [
     {
         id: 1,
         nombre: "Bryan",
@@ -35,4 +34,12 @@ arrayPersonas = [
         edad: 19,
         sexo: "F"
     }
-]
+];
+
+console.log("Funcion 2")
+console.log(buscarEnArray(arrayPersonas, "nombre", "Bryan"));
+
+console.log("Funcion 3")
+console.log(filtrarEnArray(arrayPersonas, "sexo", "M"))
+
+

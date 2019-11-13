@@ -121,16 +121,23 @@ const buscarElemento = (array, elemento) => {
 
 const buscarEnArray = (array, propiedad, valor ) => {
     let objeto = {};
-    let encontrado = false;
-    arreglo.forEach(element => {
+    array.forEach(element => {
         if(element[propiedad] == valor){
             objeto = element;
-            encontrado = true;
         }
     });
     return objeto;
 }
 
+const filtrarEnArray = (array, propiedad, valor) => {
+    let objetos = [];
+    array.forEach(element => {
+        if(element[propiedad] == valor){
+            objetos.push(element);
+        }
+    })
+    return objetos;
+}
 
 
 export {
@@ -138,5 +145,5 @@ export {
     converTextoMayus, contarVocales, esPalindromo,
     generaNumAleatorios, multiplicar, dividir, verNum,
     sacarPorcentaje, codigoVerificador, buscarElemento,
-    buscarEnArray
+    buscarEnArray, filtrarEnArray
 }
