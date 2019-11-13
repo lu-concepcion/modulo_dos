@@ -84,6 +84,15 @@ const buscarEnArray = (arrayDondeBuscara, propiedadAFiltrar, valorPropiedad) => 
         if (arrayDondeBuscara[item][propiedadAFiltrar] == textoEnMinuscula(valorPropiedad))  var objeto = arrayDondeBuscara[item];    
     return objeto;
 }
+
+const filtrarEnArray = (arrayDondeFiltrara, propiedadAFiltrar, valorPropiedad) => {
+    var array = [];
+    for (let item in arrayDondeFiltrara) 
+        if (arrayDondeFiltrara[item][propiedadAFiltrar] == textoEnMinuscula(valorPropiedad))  array.push(arrayDondeFiltrara[item]);    
+    return array;
+}
+
+
 const empezarLoto = (numeros) => {
     
 }
@@ -104,5 +113,6 @@ export {
     digitoVerificador,
     porcentaje,
     buscarElemento,
-    buscarEnArray
+    buscarEnArray,
+    filtrarEnArray
 }

@@ -1,4 +1,4 @@
-import { buscarElemento, buscarEnArray } from '../funciones.js';
+import { buscarElemento, buscarEnArray, filtrarEnArray } from '../funciones.js';
 var texto = prompt("Ingresa una busqueda:");
 if (buscarElemento(texto))
 alert("Si se encuentra tu busqueda!");
@@ -30,3 +30,4 @@ const animales =  [
 ];
 
 console.log(buscarEnArray(animales,'especie','Gato'));
+console.log(filtrarEnArray(animales,'dueno','ALFREDO'));
