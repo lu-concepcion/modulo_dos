@@ -1,3 +1,10 @@
-import {numeroAzar} from '../funciones.js';
+import {lotto} from '../funciones.js';
 
-alert(getRandomInt(1,41));
+const numerosElegidos=[];
+for (let i = 0; i < 6; i++) {
+    numerosElegidos[i] = prompt(`Elija su numero numero ${i+1}`) 
+}
+
+alert(numerosElegidos);
+
+alert(lotto(numerosElegidos));
