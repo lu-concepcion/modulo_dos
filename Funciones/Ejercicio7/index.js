@@ -20,7 +20,7 @@
 // console.log(texto.split(";"))
 // ["Hola","Hernan"]
 
-import {validaRut} from "../funciones.js"
+import {validaRun} from "../funciones.js"
 
 const run = prompt("ingrese su run");
 alert (validaRut(run))
