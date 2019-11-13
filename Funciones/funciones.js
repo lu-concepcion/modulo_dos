@@ -100,13 +100,17 @@ const aciertosLoto= numerosPersona =>{
     }
     let aciertos=0;
     for (let i=0; i<6; i++){
-        if (numerosParaSorteo.includes(numerosPersona[i])) {
+        if (numerosParaSorteo.includes(parseInt(numerosPersona[i]))) {
             console.log("El numero esta");
             aciertos++;
             console.log(aciertos)
         } 
     }
-    return aciertos
+    let resultados={
+        numeroAciertos: aciertos,
+        nuemerosSorteo: numerosParaSorteo
+    }
+    return resultados
 }
 
 const sumar=(num1,num2) =>{
@@ -168,7 +172,7 @@ const encontrarElemento = (arrayElementos, elementoAEncontrar) =>{
 
 const buscarEnArrayObjeto=(arrayDondeBuscara, propiedadAFiltrar, valorPropiedad) =>{
     let objetoEncontrado={};
-    if ((isNaN(valorPropiedad)==true)) {
+    if ((isNaN(valorPropiedad))) {
         for (let i in arrayDondeBuscara){
             if (arrayDondeBuscara[i][propiedadAFiltrar]==valorPropiedad){
                 objetoEncontrado =arrayDondeBuscara[i]
@@ -176,17 +180,15 @@ const buscarEnArrayObjeto=(arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)
             }
         }
         return objetoEncontrado
-    } else if ((isNaN(valorPropiedad)==false)) {
+    } else if ((!isNaN(valorPropiedad))) {
         for (let i in arrayDondeBuscara){
             if (arrayDondeBuscara[i][propiedadAFiltrar]==parseInt(valorPropiedad)){
                 objetoEncontrado =arrayDondeBuscara[i]
                 return objetoEncontrado
             }
         }
-        return objetoEncontrado
-        
+        return objetoEncontrado   
     } 
-    
 }
 
 const filtrarArray= (arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)=>{
