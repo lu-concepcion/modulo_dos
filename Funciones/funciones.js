@@ -179,9 +179,20 @@ const ordenarMayorAMenorArray = (array) =>{
     return array
 }
 
+//Ejercicio 10
+
+const factorial = (numero) =>{
+    let resultado=1
+    for(let i=1;i<=numero;i++){
+        resultado*=i
+        console.log("resultado: "+resultado)
+    }
+    return resultado
+}
+
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
     ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce,buscarElemento,filtrarArray,filtrarTodosArray,
-    ordenarMenorAMayorArray,ordenarMayorAMenorArray
+    ordenarMenorAMayorArray,ordenarMayorAMenorArray, factorial
 }
 
