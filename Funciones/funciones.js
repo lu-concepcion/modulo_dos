@@ -165,19 +165,20 @@ return repetido;
   }
 
   const objetoEnArray=(arreglo=[], propiedad, valorPropiedad)=>{
-  
+    let propiedadBuscada="";
   for (let i = 0; i < arreglo.length; i++) {
-    for (let j = 0; j < parseInt(Object.keys(arreglo[i])).length ; j++) {
+    for (let j = 0; j < Object.keys(arreglo[i]).length ; j++) {
       if (propiedad == (Object.keys(arreglo[i]))[j] ) {
-       //  if (valorPropiedad == arreglo[i].Object.keys(arreglo[i][j])) {
-           return "Wena";
-       //  }
+         propiedadBuscada = Object.keys(arreglo[i])[j];
+    //   if (valorPropiedad == arreglo[i].propiedadBuscada) {
+           return arreglo[i];
+      //  }
       }
       
     }
     
   }
-
+return "lo siento bro";
   }
 
 
