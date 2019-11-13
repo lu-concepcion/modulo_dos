@@ -20,22 +20,15 @@ let texto = "Hola;Hernan"
 console.log(texto.split(";"))
 // ["Hola","Hernan"]*/
 
-
-       const verificarrun=(run)=>{
-      return(isNaN(run));
-   } 
-       const sacarlossignos=(run)=>{
-          let nuevorun;
-          for(i=0;i<run.length;i++){
-             if(run.split != "."||run.split!="-"||run.length-1);
-               nuevorun=run;
-             return(nuevorun);
-
-          }
-
-       }
-
-      export{
-         verificarrun,
-         sacarlossignos,
+export const formato1=(run)=>{
+   let rut="";
+   for(let i=length-1;i>=0;i--){
+      if((length-1)=="-"){
+         if(length-3=="."){
+            rut+=run.length-3;
+         }
       }
+
+   }
+   return(rut);
+}
