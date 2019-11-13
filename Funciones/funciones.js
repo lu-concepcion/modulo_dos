@@ -229,11 +229,18 @@ const ordenarArray = (elementosOrdenar, ordenar) =>{
     return elementosOrdenados
 }
 
+const factorial = numero =>{
+    let resultado=1;
+    for(let i=1; i<=parseInt(numero); i++){
+        resultado=resultado*i
+    }
+    return resultado
+}
 
 
 export{  //siempre debe ir al final
     verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, 
     verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento, 
-    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArray}
+    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArray, factorial}
 
 
