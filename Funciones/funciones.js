@@ -124,15 +124,20 @@ const digitoVerificador = run => {
             return alert("Debe ingresar su run sin puntos, guión, ni digito verificador");
         }
 
+        //logica para invertir el run
+        let rutInvertido = [];
+        let cont = -1;
+        for (let i=run.length; i>=0; i--){
+            rutInvertido[cont] =  run[i];
+            cont++;
+        }
 
-        let alReves = run.length;
-        let rutInvertido = run;
-        console.log(rutInvertido.split());
-    for (let i = 0; i < run.length; i++) {
-        alReves -= 1;
-        (run.charAt(i) = run.charAt(alReves))
-        alert("Su rut es" +run);
-    }
+        //multiplicar por 2, 3, 4, 5, 6, 7,
+        for (let i = 0; i < rutInvertido.length; i++) {
+            rutInvertido[i] = rutInvertido[i] * 2
+        }
+        alert("su run es "+rutInvertido);
+
 }
 }
 
