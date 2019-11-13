@@ -153,19 +153,21 @@ return   `Los números ganadores son: ${ganadores}
            \n Usted acerto en ${contador} números`
   }
 
-  const seRepite = (arreglo=[], dato) =>{
+  const buscarEnArray = (arreglo=[], dato) =>{
     let repetido = false;
-    for (let i = 0; i < arreglo.length-1; i++) {
+    for (let i = 0; i < arreglo.length; i++) {
       if ( arreglo[i] == dato) {
-     //   repetido = true;
+        repetido = true;
       } 
+      
     }
 return repetido;
   }
+
   
 
 
 export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 
   contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, 
-  limpiarRut, invertirCadena,calcularDigitoVerificador,lotto,seRepite
+  limpiarRut, invertirCadena,calcularDigitoVerificador,lotto,buscarEnArray
 }
