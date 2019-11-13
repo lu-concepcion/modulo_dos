@@ -118,9 +118,15 @@ const pedirNumerosArray = (size, entreMin, entreMax) =>{
 }
 
 const loteria = () =>{
-    let numerosGanadores = numerosAleatoriosArray(7, 1, 41);
+    let numerosGanadores = numerosAleatoriosArray(6, 1, 41);
     const listadoNumeros = pedirNumerosArray(6, 1, 41)
     let contador = 0;
+
+    
+    // do{
+    //     let opcion = prompt("Quiere escoger nuevamente los números? (Si/No)");
+
+    // }while(opcion != "")
     
     let mensaje = "Los números de la lotería son: ";
     for(let i=0; i<numerosGanadores.length; i++){
@@ -290,6 +296,10 @@ const numeroVerificador = () =>{
     }while(salir != true);
 }
 
+
+
+
+
 export{
-    numeroVerificador
+    loteria
 }
