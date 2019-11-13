@@ -202,6 +202,10 @@ const factorial=(numero)=>
     }
     return aux
 }
+const sinParentesis = (texto)=>
+{
+    let aux=split
+}
 export
 {
     sumar,
