@@ -165,7 +165,6 @@ return repetido;
   }
 
   const objetoEnArray=(arreglo=[], propiedad, valorPropiedad)=>{
-    const Vacio = new Object();
   for (let i = 0; i < arreglo.length; i++) {
 
     for (let j = 0; j < Object.keys(arreglo[i]).length ; j++) {
@@ -178,7 +177,7 @@ return repetido;
       
     }
   }
-return Vacio;
+return {};
   }
 
   const filtrarEnArray=(arreglo=[], propiedad, valorPropiedad)=>{
