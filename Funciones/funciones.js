@@ -131,7 +131,33 @@ const inversa=(run)=>{
     return alert("Su rut con digito es: "+run+"-"+numVerificador)
     
 }
+
+
+//ejercicio8
+
+const encontrarElemento=(array,elemento)=>{
+    for(let i=0;i<array.length;i++){
+        if(array[i]==elemento){
+            return console.log(true)
+        }
+        return console.log(false)
+    }
+}
+
+const encontrarEnArray=(array,propiedad,elemento)=>{
+    const arrayVacio={};
+    for(let i=0;i<array.length;i++){
+        //console.log(Object.keys(array))
+        if(array[i][propiedad]==elemento){
+            //console.log(Object.keys(array[i]))
+            return Object.entries(array[i]);
+        }
+    }
+    return console.log(arrayVacio)
+}
+
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
     sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje, formatoPunto, inversa
+    ,encontrarElemento,encontrarEnArray
 }
