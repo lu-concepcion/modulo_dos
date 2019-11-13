@@ -227,7 +227,7 @@ export const buscarEnArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBu
     return notificacion;
 }
 
-export const filtrarArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBusca) =>{
+export const filtrarArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBusca) => {
     let flag = 0;
     let arreglo = {};
     var notificacion = "";
@@ -245,3 +245,31 @@ export const filtrarArreglo = (arregloQueSeAnalizara, tipoDeValor, valorQueSeBus
     return notificacion;
 }
 
+export const voltearArreglo = (arreglo, opcion) => {
+    let notificacion = "";
+    let auxiliar1 = 0;
+    let auxiliar2 = 0;
+    let nuevoArreglo = [];
+
+    console.log(arreglo)
+    if (opcion == 1) {
+        for (let i = 0; i < arreglo.length; i++) {
+            for (let j = i+1; j < arreglo.length; j++) {
+                console.log(parseInt(arreglo[i]) < parseInt(arreglo[j]), arreglo[i],arreglo[j])
+                if (arreglo[i] < arreglo[j]) {
+                    auxiliar1 = arreglo[i];
+                    auxiliar2 = arreglo[j];
+                    arreglo[i]= auxiliar2;
+                    arreglo[j]= auxiliar1;
+                    console.log(arreglo[i])
+                }
+            }
+        }
+        nuevoArreglo[0]=arreglo[0];
+        for(let i=1;i<arreglo.length;i++){
+            nuevoArreglo[i]= arreglo[i];
+        }
+        notificacion = arreglo;
+    }
+    return notificacion
+}

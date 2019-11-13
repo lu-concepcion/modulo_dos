@@ -4,7 +4,10 @@ let pedirCantidadNumeros = prompt ("¿De cuantos numeros quieres crear tu arregl
 let pedirNumeros = [];
 
 for(let i=0;i<pedirCantidadNumeros;i++){
+    do{
     pedirNumeros[i] = prompt("Ingrese un numero para su arreglo");
+    }while(!isNaN(pedirNumeros));
 }
-let pedirOpcion = prompt("De que forma se debe ordenar \n1.- Mayor a Menor \n2.- Menor a Mayor")
-alert(voltearArreglo(pedirNumeros, pedirOpcion));
+alert (pedirNumeros)
+let pedirOrden = prompt ("¿De que forma ordenarás los numeros?\n1.- Mayor a menor\n2.- Menor a mayor")
+alert(voltearArreglo(pedirNumeros, pedirOrden));
