@@ -35,8 +35,8 @@ const contarVocales = (textoingresado) =>{
 }
 const palindromo = (textoingresado) =>{
 
-    const textocomparacion=textoingresado.split("");
-    const textopalindromo=textoingresado.split("").reverse();
+    let textocomparacion=textoingresado.split("");
+    let textopalindromo=textoingresado.split("").reverse();
 
     for (let i=0;i<textocomparacion.length;i++){
 
@@ -98,6 +98,51 @@ const sorteo = (x) =>{
        
 }
 
+const busquedaElemento = (elemento) =>{
+
+    const valoresElemento = ['Lapiz','Cuaderno','Goma','Carpeta','Estuche']
+    alert (valoresElemento[elemento])
+    return (true);
+
+}
+const busquedaElemento2 = (elemento) =>{
+
+    const valoresObjeto = [
+    {
+        id:1,
+        value: 'Men in Black',
+        categoria: 'Accion'
+    },{
+        id:2,
+        value:'Jumanji',
+        categoria: 'Aventura'
+    },{
+        id:3,
+        value:'the Ring',
+        categoria: 'Terror'
+    },{
+        id:4,
+        value:'Friday 13',
+        categoria: 'Terror'
+    }
+];
+for(let i=0; i<=elemento; i++){
+
+    if(valoresObjeto [i] == elemento){
+
+        return valoresObjeto[elemento]
+        
+    }else{
+
+        alert ("Objeto no a sido encontrado")
+
+    }
+
+}
+    return
+
+}
+
 export {
 
     contarVocales,
@@ -111,7 +156,8 @@ export {
     porcentaje,
     validarRut,
     palindromo,
-    sorteo
-
+    sorteo,
+    busquedaElemento,
+    busquedaElemento2
 }
 

@@ -1,10 +1,14 @@
 
-import {} from '../funciones.js';
-
-const textoingresado = prompt ("ingrese texto o numero a analizar")
+import {busquedaElemento2} from '../funciones.js';
 
 
-    alert (texto(textoingresado))
+
+
+    let elemento = prompt ("ingrese un numero a buscar")
+    elemento = parseInt (elemento);
+    
+    
+    busquedaElemento2(elemento)
 
 
 
