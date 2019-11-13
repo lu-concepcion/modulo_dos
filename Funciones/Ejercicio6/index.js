@@ -1,4 +1,4 @@
-import {repiteNumero, numeroRandom, esNumero} from '../funciones.js'
+import {repiteNumero, numeroRandom, esNumero, convertirMinuscula} from '../funciones.js'
 
 let numeros = [];
 let numAleatorios = [];
@@ -37,11 +37,11 @@ while(ciclo){
     }
 
     while(ciclo){
-        let salir  = prompt("¿Desea cambiar sus números? (Si / No)");
-        if (salir != "Si" && salir != "No") {
+        let salir  = convertirMinuscula(prompt("¿Desea cambiar sus números? (Si / No)"));
+        if (salir != "si" && salir != "no") {
             alert("Ingrese una opción correcta");
             continue;
-        } else if (salir == "Si"){
+        } else if (salir == "si"){
             numeros = [];
             break;
         } else {

@@ -23,4 +23,4 @@
 import {validaRun} from "../funciones.js"
 
 const run = prompt("ingrese su run");
-alert (validaRut(run))
+alert (validaRun(run))
