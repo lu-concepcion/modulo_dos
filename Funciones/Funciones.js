@@ -145,6 +145,19 @@ const digitoVerificador=(run)=>
           return multiplicacion
       }
     }
+const arrayFinder=(arreglo,elemento)=>
+{
+    let flag=false
+    for (let i=0;i<=arreglo.length;i++)
+    {
+        if (arreglo[i]==elemento)
+        {
+            flag=true
+            break
+        }
+    }
+    return(flag)
+}
 export
 {
     sumar,
@@ -160,5 +173,6 @@ export
     palindromo,
     sorteo,
     aciertosSorteo,
-    digitoVerificador
+    digitoVerificador,
+    arrayFinder
 }
