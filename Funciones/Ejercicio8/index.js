@@ -34,22 +34,9 @@ let arregloPersonas = [
 console.log('Función 2');
 console.log(buscarEnArray(arregloPersonas, 'edad', '28'));
 
-for (let i = 0; i < arregloPersonas.length; i++) {
-    if (arregloPersonas[i]['nombre'] == 'Felipe') {
-        console.log('Lo encontré');
-    }
-    
-}
-
-forEach (item in arregloPersonas) {
-    if (item['nombre'] == 'Felipe') {
-        console.log('Lo encontre en foreach');
-    }
-}
-
 // Mostrar función 3
 console.log('Función 3');
-objetos = filtrarEnArray(arregloPersonas, 'edad', '27');
+objetos = filtrarEnArray(arregloPersonas, 'sexo', 'M');
 objetos.forEach(element => {
     console.log(element);
 });
