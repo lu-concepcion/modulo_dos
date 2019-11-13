@@ -160,12 +160,19 @@ const arrayFinder=(arreglo,elemento)=>
 }
 const objectFinder=(array,propiedad,valorPropiedad)=>
 {
-    let aux=[]
-    for (let i=0;i<=array.length;i++)
+    let aux
+    let aux2
+    for (let i=0;i<=array.length-1;i++)
     {
-       aux[i] = Object.keys(array[i]);
+       aux = Object.keys(array[i]);
+       aux2 = Object.values(array[i]);
+       for(let j=0;j<=aux.length;j++)
+       {
+           if(aux[j]==propiedad&&aux2[j]==valorPropiedad)
+           return array[i]
+       }
     }
-    return(aux[1])
+    return(Object())
 }
 export
 {
