@@ -120,12 +120,15 @@ const buscarElemento = (array, elemento) => {
 }
 
 const buscarEnArray = (array, propiedad, valor ) => {
-    let objetos = [];
+    let objeto = {};
+    let encontrado = false;
     arreglo.forEach(element => {
         if(element[propiedad] == valor){
-            objetos.push(element);
+            objeto = element;
+            encontrado = true;
         }
-    })
+    });
+    return objeto;
 }
 
 
