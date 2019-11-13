@@ -264,20 +264,33 @@ export const voltearArreglo = (arreglo, opcion) => {
     for (let i = 1; i < arreglo.length; i++) {
         nuevoArreglo[i] = arreglo[i];
     }
-    if(opcion==1){
+    if (opcion == 1) {
         notificacion = arreglo;
-    }else{
-        if(opcion==2){
+    } else {
+        if (opcion == 2) {
             let j = 0;
-            for(let i=arreglo.length-1;i>=0;i--){
-            nuevoArreglo[j]=arreglo[i];
-            console.log(nuevoArreglo)
-            j++;
+            for (let i = arreglo.length - 1; i >= 0; i--) {
+                nuevoArreglo[j] = arreglo[i];
+                console.log(nuevoArreglo)
+                j++;
             }
-            notificacion=nuevoArreglo;
-        }else{
-            notificacion="Opcion no valida"
+            notificacion = nuevoArreglo;
+        } else {
+            notificacion = "Opcion no valida"
         }
+    }
+    return notificacion
+}
+
+export const factorial = numero => {
+    let b = 1;
+    let notificacion = 0;
+    if (numero == 0) {
+        notificacion = b;
+    }
+    for (let i = 1; i <= numero; i++) {
+        b = b * i;
+        notificacion = b;
     }
     return notificacion
 }
