@@ -98,7 +98,16 @@ const rut = (string) => {
     else return parseInt(resultado);
 }
 
+const encontrarElementoArray = (elemento,arreglo)=>{
+    for (let i = 0; i < arreglo.length; i++) {
+        if (elemento == arreglo[i]) return true;
+        
+    }
+    return false;
+}
+
 export {
+    encontrarElementoArray,
     sumar, 
     restar, 
     multiplicar, 
