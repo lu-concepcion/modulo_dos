@@ -211,18 +211,29 @@ const filtrarArray= (arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)=>{
 }
 
 const ordenarArray = (elementosOrdenar, ordenar) =>{
-    if (ordenar=="1"){
-        return elementosOrdenar.sort()
-    } else if (ordenar=="2"){
-        return elementosOrdenar.sort().reverse()
-    } else  {
-        return "Elemento ingresado no válido"
+    let elementosOrdenados=[];
+
+    for (let i in elementos){
+        let numeroAOrdenar= elementos[i];
+        let contador =0;
+        for (let j in elementos){
+            if ((i!=j) && (elementos[j]<=elementos[i])){
+                contador++;
+            } else if ((elementos[i]==elementos[j]) &&(elementosOrdenados.includes(elementos[i]))){
+                contador--;
+            }
+        }
+        elementosOrdenados[contador]=elementos[i];
+        console.log(elementosOrdenados)
     }
+    return elementosOrdenados
 }
+
+
 
 export{  //siempre debe ir al final
     verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, 
     verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento, 
-    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArrayMenorMayor}
+    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArray}
 
 
