@@ -71,4 +71,18 @@ const encontrar = (arreglo=[], dato) => {
     }
     return presente  
     }
-export {suma, resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,porcentaje,digitos,encontrar} 
+const buscar = (arreglo = [], propiedad, valor) => {
+    
+   for (let i = 0; i < arreglo.length; i++) {
+       for (let j = 0; j < Object.keys(arreglo[i]).length; j++) {
+        if (propiedad == Object.keys(arreglo[i])[j]){
+         if (valor == Object.values(arreglo[i])[j]) {
+                return(`existe el siguiente registro :\n ${Object.keys(arreglo[i])} \n${Object.values(arreglo[i])}`)
+              }
+          }
+      }
+       
+   }
+   return "criterio ingresado no existe en el arreglo "
+}
+export {suma,resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,porcentaje,digitos,encontrar,buscar} 
