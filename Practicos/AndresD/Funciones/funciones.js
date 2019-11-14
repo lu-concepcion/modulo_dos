@@ -254,6 +254,8 @@ return listado;
 return factorial;
   }
 
+  
+
 
 export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 
   contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, 
