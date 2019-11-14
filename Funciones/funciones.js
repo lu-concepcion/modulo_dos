@@ -212,8 +212,16 @@ const calculoFactorial=(numero)=>{
     }
     return factorial
 }
+
+
+//ejercicio11
+
+const extraerTextoParentesis=(texto)=>{
+    return texto.split("("), texto.split(")");
+    
+}
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
     sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje, formatoPunto, inversa
-    ,encontrarElemento,encontrarEnArray,filtrarEnArray,ordenarMenor, ordenarMayor, calculoFactorial
+    ,encontrarElemento,encontrarEnArray,filtrarEnArray,ordenarMenor, ordenarMayor, calculoFactorial,extraerTextoParentesis
 }
