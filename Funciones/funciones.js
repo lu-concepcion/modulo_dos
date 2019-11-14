@@ -211,6 +211,16 @@ const extraerDeParentesis = (string) =>{
 
 const calculaEdad = (fecha) =>{
     let hoy = new Date()
+    console.log("hoy= "+hoy.getFullYear())
+    let edad = (hoy.getFullYear()-fecha.getFullYear())
+    console.log("edad= "+edad)
+    console.log("fecha= "+fecha.getFullYear())
+    if(fecha.getMonth()<hoy.getMonth()){
+        if(fecha.getDay()<hoy.getDay()){
+            edad-1
+        }
+    }
+
     return hoy
 }
 

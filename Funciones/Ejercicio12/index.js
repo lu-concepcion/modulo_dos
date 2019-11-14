@@ -11,4 +11,6 @@
 // fecha.getFullYear() // retorna el año
 
 import { calculaEdad } from '../funciones.js'
-alert(calculaEdad("1990"))
+
+const fecha = new Date("1993","12","16")
+alert(calculaEdad(fecha))
