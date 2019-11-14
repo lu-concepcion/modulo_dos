@@ -171,6 +171,7 @@ const digitoVerificador = run => {
     }
 }
 
+/*
 //encontrar texto o numeros entre los elementos de un arreglo
 const verificarTexto = text => {
     const elementosArray = ["nombre", "Pedro", 4, 8];
@@ -187,8 +188,10 @@ const verificarTexto = text => {
         }
     }
 }
+*/
 
 //encontrar un objeto dentro de un arreglo
+/*
 const buscarEnArray = (array, propiedad, valor) => {
     //alert(array[0][propiedad0])
     let contador = 0;
@@ -205,9 +208,56 @@ const buscarEnArray = (array, propiedad, valor) => {
         }
     }
 }
+*/
+
+//Funcion para validar si se encuentra un numero o texto ingresado por el usuario en un array.
+const buscarNumeroTexto = (array, elemento) =>{
+    console.log(array.includes(elemento));
+    return array.includes(elemento);
+}
+/*
+//funcion para buscar en array
+const buscarEnArray = (array, propiedad, valor) => {
+    let objeto = {};
+    array.forEach(element => {
+        if(element[propiedad] == valor){
+            objeto = element;
+        }
+    });
+    return objeto;
+
+    
+}
+
+*/
+
+//funcion para buscar (el anterior era solo validar) en un arreglo.
+const buscarEnArray = (array, propiedad, valor) => {
+    let objeto = {};
+    array.forEach(element => {
+        if (element[propiedad] == valor) {
+            objeto = element;
+        }
+    }
+    );
+    return objeto;
+}
+
+
+//funcion para filtrar array
+const filtrarEnArray = (array, propiedad, valor) => {
+    let objeto = [];
+    array.forEach(element => {
+        if(element[propiedad] == valor){
+            element.push(objeto);
+        }
+    });
+    return objeto;
+}
+
 
 export{
     sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales,
-    palindromo, aritmetica, porcentajes, digitoVerificador, verificarTexto,
-    buscarEnArray
+    palindromo, aritmetica, porcentajes, digitoVerificador,
+    buscarNumeroTexto, buscarEnArray, filtrarEnArray
 }
