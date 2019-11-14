@@ -1,6 +1,12 @@
 import {limpiarRut, invertirCadena,calcularDigitoVerificador} from '../funciones.js';
 
-const rut =prompt("Ingrese rut");
+let rut;
+do {
+     rut =prompt("Ingrese rut");  
+     rut = limpiarRut(rut);  
+} while (rut.length> 8 || rut.length<7);
 
-alert(`Digito Verificador: ${calcularDigitoVerificador(limpiarRut(rut))}`);
+
+
+alert(`Rut Ingresado: ${rut}\nDigito Verificador: ${calcularDigitoVerificador(rut)}`);
 
