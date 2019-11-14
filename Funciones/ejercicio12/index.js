@@ -19,7 +19,7 @@ var paso = false;
 do{
     var edad = prompt("Cual es la edad que deseas filtrar:");
     if (edad !== "" && esUnNumero(edad)) var paso = true;
-    else alert("Ingresa una edad correctamente!");
+    else alert("Ingresa una edad correcta!");
 }while(!paso);
 console.log(edad);
 alert("Las personas mayores son: \n"+cualesSonMayores(fechas, edad));
