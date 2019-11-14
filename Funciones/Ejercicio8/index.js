@@ -18,26 +18,29 @@ import{ encontrarElemento, buscarEnArrayObjeto, filtrarArray  } from '../funcion
 
 
 
-const arrayElemtos=["hola", "chao", 1, 2];
-let elementoAEncontrar =prompt("Ingrese elemento a encontrar");
+// const arrayElemtos=["hola", "chao", 1, 2];
+// let elementoAEncontrar =prompt("Ingrese elemento a encontrar");
 
-alert(encontrarElemento(arrayElemtos, elementoAEncontrar))
+// alert(encontrarElemento(arrayElemtos, elementoAEncontrar))
 
 
 
 
 const arrayObjetos=[
     {
-        nombre: "Victoria",
-        edad: 23
+        profesion: "Victoria",
+        tieneAuto: 3
     },
     {
-        nombre:"Andrea",
-        edad: 24
+        profesion:"Andrea",
+        tieneAuto: 2
     }
 ]
-const propiedadAFiltrar="edad";
-const valorPropiedad=22;
+const propiedadAFiltrar="tieneAuto";
+const valorPropiedad=2;
+
+console.log(String(valorPropiedad));
+console.log(isNaN(valorPropiedad));
 console.log(buscarEnArrayObjeto(arrayObjetos, propiedadAFiltrar, valorPropiedad))
 
 
@@ -50,23 +53,23 @@ console.log(buscarEnArrayObjeto(arrayObjetos, propiedadAFiltrar, valorPropiedad)
 
 
 
-const arrayObjetosFiltrar=[
-    {
-        nombre: "Victoria",
-        edad: 23
-    },
-    {
-        nombre:"Andrea",
-        edad: 24
-    },
-    {
-        nombre:"Victoria",
-        edad: 25
-    }
-]
-const propiedadAFiltrar="nombre";
-const valorPropiedad="Victoria";
+// const arrayObjetosFiltrar=[
+//     {
+//         nombre: "Victoria",
+//         edad: 23
+//     },
+//     {
+//         nombre:"Andrea",
+//         edad: 24
+//     },
+//     {
+//         nombre:"Victoria",
+//         edad: 25
+//     }
+// ]
+// const propiedadAFiltrar="nombre";
+// const valorPropiedad="Victoria";
 
 
 
-console.log(filtrarArray(arrayObjetosFiltrar,propiedadAFiltrar,valorPropiedad))
+// console.log(filtrarArray(arrayObjetosFiltrar,propiedadAFiltrar,valorPropiedad))
