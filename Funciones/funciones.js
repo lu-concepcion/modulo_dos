@@ -214,7 +214,19 @@ return listado;
   }
 
   const ordenarArray=(numeros=[])=>{
+    let creciente=[] = numeros;
+    let decreciente=[] = numeros;
+    let aux;
+  for (let i = 0; i < numeros.length; i++) {
+     for (let j = 0; j < numeros.length; j++) {
+       aux = numeros[i] = aux;
+       numeros[i] = numeros[j];
+       numeros[j] = aux;
+     }
+  }
+    
 
+    return `${creciente} \n${decreciente}`;
 
   }
 
