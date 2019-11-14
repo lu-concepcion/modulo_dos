@@ -325,3 +325,9 @@ export const revisarParentesis = texto =>{
     }
     return String1
 }
+
+export const verficarLimiteEdad = (edadMaxima, arreglo, valorQueSeBusca) =>{
+    for(let i in arreglo){
+        console.log(arreglo[i][valorQueSeBusca])
+    }
+}
