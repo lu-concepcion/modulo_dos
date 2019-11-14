@@ -213,6 +213,8 @@ const capturaTexto = (texto) => {
     return (guardaTexto)       
 }
 
+//
+
 //exporto funciones a los demás archivos
 export {
     sumar,
