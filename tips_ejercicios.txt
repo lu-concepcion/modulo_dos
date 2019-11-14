@@ -1,0 +1,79 @@
+// concatenar texto
+var textoConcatenado = `${nombre} ${apellido}`;
+
+// repetir logica hasta que condicion se cumpla
+contador = 0;
+do {
+  // logica
+ contador++;
+}while(contador< 7)}
+
+
+// para terminar de un ciclo de repeticion
+break;
+
+// para saltar un paso en un ciclo de repeticion
+continue;
+
+// ciclo para iterar
+// este hace una iteracion hasta que se cumpla la condicion que i < 5
+for (var i = 0; i < 5; i++) {
+  // logica
+}
+
+// comando para escribir en navegador
+document.write("texto a escribir")
+
+
+// listado de números/texto/otros
+var numerosPares = [2, 4, 6, 8, 10];
+
+// cantidad de elementos dentro del listado, siempre comienza del 0
+numerosPares.length
+
+//agregar elementos aun listado (array)
+var numerosPares = [2, 4, 6, 8, 10];
+numerosPares.push(12);
+// [2, 4, 6, 8, 10, 12]
+
+//declaracion de objetos 1
+var persona = new Object();
+persona.nombre = "Hernán";
+persona.apellido = "Candia";
+persona.edad = 29;
+
+//declaracion de objetos 2
+var objeto = { 
+  id: 1,
+  nombre: "Hernán"
+}
+
+//acceso a informacion de objetos 1
+var objetoId = objeto.id;
+var objetoNombre = objeto.nombre;
+// la variable objetoId tomaria el valor de 1
+// la variable objetoNombre tomaria el valor de  Hernán
+
+
+//acceso a informacion de objetos 2
+var { nombre, edad } = persona;
+alert(`${nombre} ${edad}`); 
+
+
+// array de objetos
+var listaObjetos = [
+  {
+    id: 1,
+    valor: "uno"
+  },
+  {
+    id: 2,
+    valor: "dos"
+  }
+];
+
+
+parseInt("hola") -> NaN
+parseInt("9") -> true
+isNaN(parseInt("hola")) -> true
+isNaN(parseInt("9")) -> false

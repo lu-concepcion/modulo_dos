@@ -1,0 +1,7 @@
+Escribir librería de validaciones/transformaciones, que contemplen los siguientes casos:
+Si un valor ingresado es NÚMERO
+Si un valor ingresado es TEXTO
+Convertir texto a minúscula: toLowerCase()
+Convertir texto a mayúscula: toUpperCase()
+
+Utilizar Funciones
