@@ -218,6 +218,10 @@ const soloParentesis = (texto)=>
     }
     return salida
 }
+const mayoresQue = (array,edad)=>
+{
+
+}
 export
 {
     sumar,
@@ -238,5 +242,6 @@ export
     objectFinder,
     objectFilter,
     factorial,
-    soloParentesis
+    soloParentesis,
+    mayoresQue
 }
