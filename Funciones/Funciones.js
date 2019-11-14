@@ -203,13 +203,26 @@ const factorial=(numero)=>
     return aux
 }
 const sinParentesis = (texto)=>
-{
-    let aux=texto.split("(")
-    let aux2=""
+{   
+    let flag=false
+    let aux=[]
+    if (texto.charAt(0)=="(")
+    {
+        flag=true
+    }
+    aux = texto.split("(")
+    alert (aux)
+    let aux2= aux.split(")")
+  
+    const ya = aux.length
+    alert (ya)
+    
     for (let i=0;i<aux.length;i++)
     {
-        if (charAt(aux[i].length))
+       // if (charAt(aux[i].))
+       alert (aux[i].charAt(aux[i].length-1))
     }
+    return 0
 }
 export
 {
@@ -230,5 +243,6 @@ export
     arrayFinder,
     objectFinder,
     objectFilter,
-    factorial
+    factorial,
+    sinParentesis
 }
