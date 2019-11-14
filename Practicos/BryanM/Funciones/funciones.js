@@ -15,7 +15,7 @@ const dividir = (num1, num2) => {
 }
 
 const verNum = (numero) => {
-    return isNaN(numero);
+    return isNaN(parseInt(numero));
 }
 
 const verNumero = (numero) => {
