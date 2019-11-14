@@ -217,7 +217,17 @@ const calculoFactorial=(numero)=>{
 //ejercicio11
 
 const extraerTextoParentesis=(texto)=>{
-    return texto.split("("), texto.split(")");
+    let textoGuardado=[];
+    for(let i=0;i<texto.length;i++){
+        if(texto.charAt(i)=="("){
+            do{
+                i++
+                textoGuardado.push(texto.charAt(i))
+            }while(texto.charAt(i+1)!=")")
+        }
+    }
+    return textoGuardado;
+
     
 }
 export{
