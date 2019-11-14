@@ -135,6 +135,19 @@ const extraerTextoParentesis = texto => {
     return textoEncontrado;
 }
 
+const cualesSonMayores = (fechas, edadMayor) => {
+    const fechaHoy = new Date();
+    let mayores = "";
+    for (let item in fechas) {
+    let edad = fechaHoy.getFullYear() - fechas[item]['fechaNacimiento'].getFullYear();
+    let mes = (fechaHoy.getMonth() + 1) - fechas[item]['fechaNacimiento'].getMonth();
+    if (mes < 0 || (mes === 0 && fechaHoy.getDate() < fechas[item].getDate())) edad--;
+    if (edad >= edadMayor) 
+    mayores += "Nombre: "+fechas[item]['nombre']+"\nEdad:" + edad+"\n";
+    }
+    return mayores;
+}
+
 export {
     sumar, 
     restar, 
@@ -156,5 +169,6 @@ export {
     ordenarArray,
     revertir,
     factorialDeUnNumero,
-    extraerTextoParentesis
+    extraerTextoParentesis,
+    cualesSonMayores
 }
