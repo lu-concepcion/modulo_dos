@@ -204,25 +204,21 @@ const factorial=(numero)=>
 }
 const sinParentesis = (texto)=>
 {   
-    let flag=false
+    texto=texto.split("(")
+    alert(texto)
     let aux=[]
-    if (texto.charAt(0)=="(")
+    for (let i=1;i<=texto.length-1;i++)
     {
-        flag=true
+        aux=texto[i].split(")")
+        alert (aux[0])
+        texto[i]=aux[1]
     }
-    aux = texto.split("(")
-    alert (aux)
-    let aux2= aux.split(")")
-  
-    const ya = aux.length
-    alert (ya)
+    let salida
+    for (let i=0;i<texto.length;i++)
+    {
+        
+    }
     
-    for (let i=0;i<aux.length;i++)
-    {
-       // if (charAt(aux[i].))
-       alert (aux[i].charAt(aux[i].length-1))
-    }
-    return 0
 }
 export
 {
