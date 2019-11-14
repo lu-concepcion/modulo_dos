@@ -197,6 +197,12 @@ const factorial = (numero) => {
     alert(resultado);
 }
 
+//captura texto entre parentesis
+const capturaTexto = (texto) => {
+    let abre = run.split("(");
+    let cierra = run.split(")");
+    
+}
 
 //exporto funciones a los demás archivos
 export {
