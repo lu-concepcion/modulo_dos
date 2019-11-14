@@ -20,13 +20,17 @@ let texto = "Hola;Hernan"
 console.log(texto.split(";"))
 // ["Hola","Hernan"]*/
 
-const invertir=(runSplitPunto)=>{
-   let runInvertido="";
-   for(let i =1;i>0;i--){
-      runInvertido+=runSplitPunto[i-1];
 
-  
-   return(runInvertido);
+export const invertir = (run) => {
+   let invertidoRUN = "";
+   for (let i = run.length-1; i >= 0; i--) {
+       if(invertidoRUN==""){
+       invertidoRUN = run.charAt(i);
+       }else{
+           invertidoRUN = invertidoRUN+run.charAt(i);
+       }
+   }
+   return (invertidoRUN);
 }
  const multiplicar1=(numeroInvertido)=>{
    let serie=2;
@@ -35,9 +39,9 @@ const invertir=(runSplitPunto)=>{
      for(let i =0;i<=numeroInvertido.length-1;i++){
        multiplicar=numeroInvertido.charAt(i)*serie;
        suma+=multiplicar;
-       console.log("f ", numeroInvertido[i]*multiplicar,suma);
+       console.log("f ",multiplicar,suma);
        serie++;
-      if(serie>=7){
+      if(serie>7){
       serie=2;
    }
    }
@@ -70,7 +74,7 @@ const invertir=(runSplitPunto)=>{
 
 
 export{
-invertir,
+
 multiplicar1
       
 }

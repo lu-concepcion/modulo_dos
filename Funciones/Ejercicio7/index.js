@@ -8,16 +8,17 @@ for(let i=0;i<=runSplitGuion.length-1;i++){
     alert(runSplitGuion[i]);
 
 }
+let runf=[];
    let runSplitPunto = runSplitGuion[0].split(".");
     console.log(runSplitPunto.length);
    for(let i=0;i<=runSplitPunto.length-1;i++){
-     
-    alert(runSplitPunto[i]);
+     runf+=runSplitPunto[i];
+    alert(runf );
 
 }
-  alert(invertir(runSplitPunto))
+  alert(invertir(runf))
 
-  alert(multiplicar1(invertir(runSplitPunto)))   
+  alert(multiplicar1(invertir(runf)))   
 
 
 
