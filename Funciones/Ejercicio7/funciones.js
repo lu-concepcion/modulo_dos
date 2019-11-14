@@ -22,9 +22,10 @@ console.log(texto.split(";"))
 
 const invertir=(runSplitPunto)=>{
    let runInvertido="";
-   for(let i =3;i>0;i--){
+   for(let i =1;i>0;i--){
       runInvertido+=runSplitPunto[i-1];
-   }
+
+  
    return(runInvertido);
 }
  const multiplicar1=(numeroInvertido)=>{
