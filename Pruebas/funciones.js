@@ -98,28 +98,98 @@ const rut = (string) => {
     else return parseInt(resultado);
 }
 
-const encontrarElementoArray = (elemento,arreglo)=>{
+const encontrarElementoArray = (elemento, arreglo) => {
     for (let i = 0; i < arreglo.length; i++) {
         if (elemento == arreglo[i]) return true;
-        
+
     }
     return false;
 }
 
+const buscarEnArray = (arreglo, busqueda, valor) => {
+    let objetoEncontrado = {};
+    if ((!parseInt(valor))) {
+        for (let i = 0; i < arreglo.length; i++) {
+            if (arreglo[i][busqueda] == valor) {
+                objetoEncontrado = arreglo[i]
+                return objetoEncontrado
+            }
+        }
+        return objetoEncontrado
+    } else if ((parseInt(valor))) {
+        for (let i = 0; i < arreglo.length; i++) {
+            if (arreglo[i][busqueda] == parseInt(valor)) {
+                objetoEncontrado = arreglo[i]
+                return objetoEncontrado
+            }
+        }
+        return objetoEncontrado
+    }
+}
+const arrayFiltrado = (arreglo, busqueda, valor) => {
+    let arrayFiltro = [];
+    if ((!parseInt(valor))) {
+        for (let i = 0; i < arreglo.length; i++) {
+            if (arreglo[i][busqueda] == valor) {
+                arrayFiltro.push(arreglo[i])
+            }
+        }
+        return arrayFiltro;
+    } else if ((parseInt(valor))) {
+        for (let i = 0; i < arreglo.length; i++) {
+            if (arreglo[i][busqueda] == parseInt(valor)) {
+                arrayFiltro.push(arreglo[i])
+            }
+        }
+        return arrayFiltro;
+    }
+}
+
+const ordenArray = (arreglo,orden) => {
+    let swap = 0;
+    if(orden == "mayor"){
+        for (let j = 0; j < arreglo.length; j++) {
+            for (let i = 0; i < arreglo.length; i++) {
+                if (arreglo[i] > arreglo[j]) {
+                    swap = arreglo[i];
+                    arreglo[i] = arreglo[j];
+                    arreglo[j] = swap;
+                }
+            }
+        }
+    }
+    if(orden == "menor"){
+        for (let j = 0; j < arreglo.length; j++) {
+            for (let i = 0; i < arreglo.length; i++) {
+                if (arreglo[i] < arreglo[j]) {
+                    swap = arreglo[i];
+                    arreglo[i] = arreglo[j];
+                    arreglo[j] = swap;
+                }
+            }
+        }
+    }
+    return arreglo;
+}
+
+
 export {
+    ordenArray,
+    arrayFiltrado,
+    buscarEnArray,
     encontrarElementoArray,
-    sumar, 
-    restar, 
-    multiplicar, 
-    dividir, 
-    validaNumero, 
-    validaTexto, 
-    aMayusculas, 
-    aMinusculas, 
-    contarVocales, 
-    esVocal, 
-    esPalindromo, 
-    porcentajes, 
+    sumar,
+    restar,
+    multiplicar,
+    dividir,
+    validaNumero,
+    validaTexto,
+    aMayusculas,
+    aMinusculas,
+    contarVocales,
+    esVocal,
+    esPalindromo,
+    porcentajes,
     rut,
     loto
 }
