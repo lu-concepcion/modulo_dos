@@ -102,6 +102,14 @@ const filtrarArray = (arreglo=[],propiedad,valor) => {
    return respuesta
 
 }
-
+const ordenar = (arreglo=[]) => {
+   let ordenado = [] 
+   for (let i = 0; i < arreglo.length; i++) {
+       if ( arreglo[i+1] < arreglo[i] ){
+           ordenado.push(arreglo[i+1])
+       }   
+   }
+   return ordenado
+}
 
 export {suma,resta,multiplicacion,division,esnum,minuscula,mayuscula,caracter,palindromo,porcentaje,digitos,encontrar,buscar} 
