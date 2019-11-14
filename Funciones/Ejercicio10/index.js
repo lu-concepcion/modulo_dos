@@ -1,3 +1,3 @@
-import { factorial } from "../funciones.js"
+import { factorial, esNumero } from "../funciones.js"
 
-alert(factorial(prompt("ingrese un numero")));
+factorial(esNumero(prompt("ingresa el número")));

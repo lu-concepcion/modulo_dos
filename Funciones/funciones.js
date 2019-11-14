@@ -176,12 +176,9 @@ const ordenMasAMenos = (numeros) => {
 
 //factorial de un numero
 const factorial = (numero) => {
-    let resultado=0;
-    let aux=1;
+    let resultado=1;
     for(let i=0; i<numero; i++){
-        
-        resultado = numero*i+1;
-        console.log(resultado);
+        resultado *= (i+1)
     }
     alert(resultado);
 }
