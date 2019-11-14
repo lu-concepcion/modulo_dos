@@ -8,4 +8,5 @@
 // fecha.getMonth() // retorna el número del mes
 // fecha.getFullYear() // retorna el año
 
-let personas = [{nombre:"mathias", fechaNacimiento:"1997/"}]
+let personas = [{nombre:"mathias", fechaNacimiento:"1997/06/27"},{nombre:"jorge", fechaNacimiento:"1998/09/15"},{nombre:"jeremy", fechaNacimiento:"1996/04/05"}]
+

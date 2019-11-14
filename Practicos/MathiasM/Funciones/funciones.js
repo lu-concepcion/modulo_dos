@@ -226,10 +226,11 @@ const extraerTextoParentesis=(texto)=>{
             }while(texto.charAt(i+1)!=")")
         }
     }
-    return textoGuardado;
-
-    
+    return textoGuardado;   
 }
+
+//ejercicio12
+
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
     sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje, formatoPunto, inversa
