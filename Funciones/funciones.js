@@ -214,23 +214,35 @@ return listado;
   }
 
   const ordenarArray=(numeros=[])=>{
-    let creciente=[] = numeros;
-    let decreciente=[] = numeros;
-    let aux1;
-    let aux2;
-    let decremento;
+
+
+    let creciente=[];
+    let decreciente=[];
+    let aux;
+    for (let i = 0; i < numeros.length; i++) {
+      creciente[i] = numeros[i];
+      decreciente[i] = numeros[i]; 
+    }
+
   for (let i = 0; i < numeros.length; i++) {
      for (let j = 0; j < numeros.length; j++) {
-       aux1 = creciente[i];
+       if (parseInt(creciente[i])< parseInt(creciente[j])) {
+        aux = creciente[i];
        creciente[i] = creciente[j];
-       creciente[j] = aux;
-
-       decreciente[numeros.length-1]
+       creciente[j] = aux;   
+       } 
      }
-     menos--;
   }
 
- 
+  for (let i = 0; i < numeros.length; i++) {
+    for (let j = 0; j < numeros.length; j++) {
+      if (parseInt(decreciente[i])> parseInt(decreciente[j])) {
+       aux = decreciente[i];
+       decreciente[i] = decreciente[j];
+       decreciente[j] = aux;   
+      } 
+    }
+ }
     
 
     return `${creciente} \n${decreciente}`;
