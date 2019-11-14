@@ -294,3 +294,21 @@ export const factorial = numero => {
     }
     return notificacion
 }
+
+export const revisarParentesis = texto =>{
+    let nuevoString ="";
+    for(let i=0; i<texto.length;i++){
+        console.log(texto.charAt(i))
+        if(texto.charAt(i)=="("){
+            do{
+                if(nuevoString==""){
+                    nuevoString=texto.charAt(i);
+                }else{
+                    nuevoString=nuevoString+texto.charAt(i)
+                }
+
+            }while(texto.charAt(i)!==")")
+        }
+    }
+    return nuevoString
+}
