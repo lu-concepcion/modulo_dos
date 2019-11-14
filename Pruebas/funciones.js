@@ -174,14 +174,15 @@ const ordenArray = (arreglo,orden) => {
 
 const factorial = (numero) => {
     let resultado = 1;
-    for (let i = 0; i < numero; i++) {
-        resultado = resultado + numero;    
+    for (let i = 1; i < parseInt(numero) + 1; i++) {
+        resultado = resultado * i;    
     }
     return resultado;
 }
 
 
 export {
+    factorial,
     ordenArray,
     arrayFiltrado,
     buscarEnArray,
