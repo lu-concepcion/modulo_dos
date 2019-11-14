@@ -22,22 +22,28 @@ console.log(texto.split(";"))
 
 const invertir=(runSplitPunto)=>{
    let runInvertido="";
-   for(let i =runSplitPunto.length;i>0;i--){
+   for(let i =3;i>0;i--){
       runInvertido+=runSplitPunto[i-1];
    }
    return(runInvertido);
 }
-const multiplicar=(numeroInvertido)=>{
-   let serie=[];
-   let multiplicar=2;
-     for(let i =0;i<=numeroInvertido.length-1;i++)
-     for(let c=2;c>=7;c++){
-       multiplicar=parseInt(numeroInvertido.charAt(i))*parseInt(serie.charAt(c));
-       console.log("f ", multiplicar);
-      
+ const multiplicar1=(numeroInvertido)=>{
+   let serie=2;
+   let multiplicar=" ";
+   let suma=0;
+     for(let i =0;i<=numeroInvertido.length-1;i++){
+       multiplicar=numeroInvertido.charAt(i)*serie;
+       suma+=multiplicar;
+       console.log("f ", numeroInvertido[i]*multiplicar,suma);
+       serie++;
+      if(serie>=7){
+      serie=2;
    }
-    return(parseInt(multiplicar));
    }
+   
+    return(suma);
+}
+   
 
 /*const numeroverificador=(numeroInvertido)=>{
    let serie=[];
@@ -64,6 +70,6 @@ const multiplicar=(numeroInvertido)=>{
 
 export{
 invertir,
-multiplicar,
+multiplicar1
       
 }
