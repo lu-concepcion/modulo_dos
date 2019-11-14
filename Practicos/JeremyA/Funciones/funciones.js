@@ -199,9 +199,18 @@ const factorial = (numero) => {
 
 //captura texto entre parentesis
 const capturaTexto = (texto) => {
-    let abre = run.split("(");
-    let cierra = run.split(")");
-    
+    let guardaTexto = [];
+    let contador=0;
+    for(let i=0; i<texto.length; i++){
+        if(texto.charAt(i)=="("){
+            do{
+                i++;
+                guardaTexto += texto.charAt(i)+"";
+                console.log(guardaTexto)
+            }while(texto.charAt(i+1)!=")")
+        }
+    }
+    return (guardaTexto)       
 }
 
 //exporto funciones a los demás archivos
@@ -226,5 +235,6 @@ export {
     mostrarArray,
     ordenMasAMenos,
     ordenMenosAMas,
-    factorial
+    factorial,
+    capturaTexto
 }
