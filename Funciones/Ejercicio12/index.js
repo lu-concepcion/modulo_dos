@@ -10,7 +10,7 @@
 // fecha.getMonth() // retorna el número del mes
 // fecha.getFullYear() // retorna el año
 
-import{ edadPersonas  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
+//import{ edadPersonas  } from '../funciones.js';  // importar sin nombre {} para que despues sugiera
 
 let personas=[
     {
@@ -28,14 +28,6 @@ let personas=[
 ]
 
 const edad=23;//prompt("Edad a comparar");
-
-const d=new Date();
-console.log(d.getFullYear())
-
-
-
-
-
 
 
 
