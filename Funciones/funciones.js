@@ -295,39 +295,54 @@ export const factorial = numero => {
     return notificacion
 }
 
-export const revisarParentesis = texto =>{
-    let nuevoString ="";
-    let String1 ="";
-    for(let i=0; i<texto.length;i++){
+export const revisarParentesis = texto => {
+    let nuevoString = "";
+    let String1 = "";
+    for (let i = 0; i < texto.length; i++) {
         console.log(texto.charAt(i))
-        if(texto.charAt(i)=="("){
+        if (texto.charAt(i) == "(") {
             i++
-            do{
-                if(nuevoString==""){
-                    nuevoString=texto.charAt(i);
-                }else{
-                    nuevoString=nuevoString+texto.charAt(i)
+            do {
+                if (nuevoString == "") {
+                    nuevoString = texto.charAt(i);
+                } else {
+                    nuevoString = nuevoString + texto.charAt(i)
                 }
-            }while(texto.charAt(i++)!==")")
+            } while (texto.charAt(i++) !== ")")
         }
-       
+
     }
-    for(let i=0;i<nuevoString.length;i++){
-        if(nuevoString.charAt(i)!==")"){
-            if(String1==""){
-                String1=nuevoString.charAt(i);
-            }else{
-                String1=String1+nuevoString.charAt(i);
+    for (let i = 0; i < nuevoString.length; i++) {
+        if (nuevoString.charAt(i) !== ")") {
+            if (String1 == "") {
+                String1 = nuevoString.charAt(i);
+            } else {
+                String1 = String1 + nuevoString.charAt(i);
             }
-        }else{
-            String1=String1+" ";
+        } else {
+            String1 = String1 + " ";
         }
     }
     return String1
 }
 
-export const verficarLimiteEdad = (edadMaxima, arreglo, valorQueSeBusca) =>{
-    for(let i in arreglo){
-        console.log(arreglo[i][valorQueSeBusca])
-    }
+export const verficarLimiteEdad = (edadLimite, arreglo) => {
+    let personas = [];
+    let fecha = '';
+    let edad = 0;
+    const hoy = new Date();
+
+    arreglo.forEach(element => {
+        fecha = element['fechaNacimiento'];
+        console.log(fecha)
+        if ((hoy.getMonth() + 1) >= fecha.getMonth() && hoy.getDate() >= fecha.getDate()) {
+            edad = hoy.getFullYear() - fecha.getFullYear();
+        } else {
+            edad = (hoy.getFullYear() - 1) - fecha.getFullYear();
+        }
+        if (edad > edadLimite) {
+            personas.push(element);
+        }
+    });
+    return personas;
 }
