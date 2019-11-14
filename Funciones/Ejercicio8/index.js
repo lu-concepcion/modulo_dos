@@ -1,7 +1,7 @@
 import { buscarNumeroTexto,buscarEnArray } from '../funciones.js';
 
 
-let array = ["1", 2, 3, 4, "Maximiliano", "Pedro"]
+let array = ["1", "2", "3", "4", "Maximiliano", "Pedro"]
 let elemento = prompt ("FUNCION 1: ingrese el numero o texto a a buscar");
 
 console.log("funcion 1")
@@ -17,7 +17,7 @@ let arrayPersonas = [
     {
         id: 2,
         nombre: "Camila",
-        edad: 25
+        edad: "25"
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ let arrayPersonas = [
     {
         id: 5,
         nombre: "Pedro",
-        edad: 25
+        edad: "25"
     }
 ]
 
