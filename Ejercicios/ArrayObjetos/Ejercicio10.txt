@@ -1,0 +1,6 @@
+Escribir un algoritmo que indique, dado un número romano, este mismo en palabras, solo del 1 al 10, ej;
+
+input: X
+output: Diez
+
+Utilizar OBJETOS
