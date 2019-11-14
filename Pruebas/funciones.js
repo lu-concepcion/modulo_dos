@@ -177,6 +177,7 @@ const factorial = (numero) => {
     for (let i = 1; i < parseInt(numero) + 1; i++) {
         resultado = resultado * i;    
     }
+    if (numero == 0)return 1;
     return resultado;
 }
 
