@@ -388,6 +388,42 @@ const factorial=(numero)=>{
 
 }
 
+const extraeEntreParentesis =(texto)=>{
+
+    let letra, resultado="", control=false;
+
+    for(let i=0;i<texto.length;i++)
+    {
+        letra=texto.charAt(i);
+
+        if(letra==")")
+        {
+            
+            resultado=resultado+" ";
+            control=false;
+        }
+
+        if(control==true)
+        {
+            resultado=resultado+letra;
+        }
+
+        if(letra=="(")
+        {
+            control=true;
+        }
+
+        
+        
+        
+
+      
+
+    }
+
+    return resultado;
+}
+
 export{
     validaNumero,
     cuentaVovales,
@@ -404,6 +440,7 @@ export{
     buscaObjeto,
     filtrarArray,
     ordenaArray,
-    factorial
+    factorial,
+    extraeEntreParentesis
 }
 
