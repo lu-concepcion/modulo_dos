@@ -12,6 +12,10 @@ let fechas = [
     {
         nombre: 'Mario',
         fechaNacimiento : new Date(1985, 5, 22)
+    },
+    {
+        nombre: 'Alfredo',
+        fechaNacimiento : new Date(1995, 2, 17)
     }
 ];
 
@@ -22,5 +26,5 @@ do{
     else alert("Ingresa una edad correcta!");
 }while(!paso);
 console.log(edad);
-alert("Las personas mayores son: \n"+cualesSonMayores(fechas, edad));
+alert("Las personas mayores a "+edad+" son: \n"+cualesSonMayores(fechas, edad));
 
