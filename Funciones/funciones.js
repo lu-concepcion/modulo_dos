@@ -200,6 +200,26 @@ const textoEnParentisis = cadena => {
     }
     return textos;
 }
+
+const obtenerEdadPersona = (arreglo, edadLimite) => {
+    let personas = [];
+    let fecha = '';
+    let edad = 0;
+    const hoy = new Date();
+
+    arreglo.forEach(element => {
+        fecha = element['fechaNacimiento'];
+        if ((hoy.getMonth()+1) >= fecha.getMonth() && hoy.getDate() >= fecha.getDate()) {
+            edad = hoy.getFullYear() - fecha.getFullYear();
+        } else {
+            edad = (hoy.getFullYear()-1) - fecha.getFullYear();
+        }
+        if (edad > edadLimite) {
+            personas.push(element);
+        }
+    });
+    return personas;
+}
 export {
     esNumero,
     esTexto,
@@ -220,5 +240,6 @@ export {
     ordenaMenorMayor,
     ordenaMayorMenor,
     generaFactorial,
-    textoEnParentisis
+    textoEnParentisis,
+    obtenerEdadPersona
 }

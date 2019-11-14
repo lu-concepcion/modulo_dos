@@ -1,22 +1,24 @@
+import {obtenerEdadPersona} from '../funciones.js';
 let arrayPersonas = [
     {
         nombre: 'Felipe',
-        fechaNacimiento: '18/09/1992'
+        fechaNacimiento: new Date("1992","9","18")
+    },
+    {
+        nombre: 'Valentina',
+        fechaNacimiento: new Date("1991","11","4")
+    },
+    {
+        nombre: 'Homero',
+        fechaNacimiento: new Date("2000","1","15")
     }
 ];
 
-const fecha = new Date("1992","11","15");
-const hoy = new Date();
+let edadLimite = 27;
 
-let edadLimite = 18;
-let edad = 0;
+let personasMayores = obtenerEdadPersona(arrayPersonas, edadLimite);
 
-if ((hoy.getMonth()+1) >= fecha.getMonth() && hoy.getDate() >= fecha.getDate()) {
-    edad = hoy.getFullYear() - fecha.getFullYear();
-} else {
-    edad = (hoy.getFullYear()-1) - fecha.getFullYear();
-}
+personasMayores.forEach(element => {
+    console.log(element);
+});
 
-console.log('Fecha: ' + fecha);
-console.log('Hoy: ' + hoy);
-console.log('Edad: ' + edad);
