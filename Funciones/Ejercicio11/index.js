@@ -1,4 +1,8 @@
-import { buscarNumeroTexto,buscarEnArray } from '../funciones.js';
+import { buscarNumeroTexto,buscarEnArray, extraerTexto } from '../funciones.js';
+
+let text = prompt("ingrese el texto que desea")
+
+ console.log(extraerTexto(text))
 
 
 

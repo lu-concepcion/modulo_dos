@@ -92,7 +92,14 @@ const factorial =(num) => {
 	return total; 
 }
 
-
+//funcion para extraer texto entre parentesis
+const extraerTexto = texto =>{
+    
+    var nuevoTexto = texto.split('(');
+    for  (var i = 1; i < nuevoTexto.length; i++) {
+        console.log(nuevoTexto[i].split(')')[0]);
+    }
+}
 
 const validarTexto = text => {
     if (isNaN(text)) {
@@ -131,7 +138,7 @@ const encontrarVocales = text => {
 export {
     sumar, validarTexto, convertirMinuscula, convertirMayuscula, restar, encontrarVocales,
     validarNumeros, operacionesMatematicas, calcularPorcentaje, aleatorios, buscarNumeroTexto,buscarEnArray,
-    filtrarEnArray, factorial, ordenarMenorAmayor, ordenarMayorAmenor
+    filtrarEnArray, factorial, ordenarMenorAmayor, ordenarMayorAmenor, extraerTexto
 }
 
 
