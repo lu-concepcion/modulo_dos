@@ -278,4 +278,11 @@ const factorial = num =>
     }
     return factor
 }
-export { factorial, buscarObjArray,buscarObj,busqueda,RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
+
+const extraer = (input) =>
+{
+   
+    let aux = input.split("(",")")
+    return aux
+}
+export {extraer, factorial, buscarObjArray,buscarObj,busqueda,RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
