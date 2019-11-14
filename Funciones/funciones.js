@@ -119,6 +119,10 @@ const revertir = string => {
     return string;
 }
 
+const factorialDeUnNumero = numero => {
+    if (numero == 0) return 1;
+    return numero * factorialDeUnNumero(numero-1)
+}
 const empezarLoto = (numeros) => {
     
 }
@@ -142,5 +146,6 @@ export {
     buscarEnArray,
     filtrarEnArray,
     ordenarArray,
-    revertir
+    revertir,
+    factorialDeUnNumero
 }
