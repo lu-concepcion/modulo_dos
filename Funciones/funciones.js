@@ -287,8 +287,8 @@ const edadPersonas = (personas, edad) => {
         }
        // console.log(years)
         //console.log(edades)
-    return listadoPersonas
     }
+    return listadoPersonas
 }
 
 
