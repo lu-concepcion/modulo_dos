@@ -225,8 +225,6 @@ const buscarEnArray = (array, propiedad, valor) => {
         }
     });
     return objeto;
-
-    
 }
 
 */
@@ -255,9 +253,20 @@ const filtrarEnArray = (array, propiedad, valor) => {
     return objeto;
 }
 
+//funcion para ordenar de menor a mayor un arreglo
+const ordenarMenorAMayor = (array, objeto) => {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (array[j] > array[j+1]) {
+            let aux = array[i]
+            }
+        }
+    }
+}
+
 
 export{
     sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales,
     palindromo, aritmetica, porcentajes, digitoVerificador,
-    buscarNumeroTexto, buscarEnArray, filtrarEnArray
+    buscarNumeroTexto, buscarEnArray, filtrarEnArray, ordenarMenorAMayor
 }
