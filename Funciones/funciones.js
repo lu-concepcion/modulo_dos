@@ -405,6 +405,36 @@ const factorial = (numero) =>{
     return resultado;
 }
 
+const extraerPalabrasEntreParentesis = (texto)=>{
+    let palabra = "";
+    let frase = "";
+    let arraySplit = texto.split("("); // Hola, mundo) que, tal) estas
+    let array = [];
+
+    for(let i=0; i<arraySplit.length; i++){ //Elimina palabras sin ")"
+        for(let j=0; j<arraySplit[i].length; j++){
+            if(arraySplit[i].charAt(j) == ")"){
+                array.push(arraySplit[i]);
+                break;
+            }
+        }
+    }
+
+    for(let i=0; i<array.length; i++){ //Agrega caracter por caracter a una palabra
+        for(let j=0; j<array[i].length; j++){
+            if(array[i].charAt(j) != ")"){
+                palabra += array[i].charAt(j);
+            }else{
+                break;
+            }
+        }
+        frase += palabra + " "; //La suma a frase (que retornará luego)
+        palabra = ""; //Se resetea la palabra para que continue el ciclo
+    }
+
+    return frase;
+}
+
 export{
-    
+    extraerPalabrasEntreParentesis
 }
