@@ -259,7 +259,6 @@ const ordenarMenorAMayor = (array, objeto) => {
         for (let j = 0; j < array.length; j++) {
             if (array[j] > array[j+1]) {
             let aux = array[i]
-            console.log(aux)
             }
         }
     }
