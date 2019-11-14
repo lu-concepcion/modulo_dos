@@ -19,10 +19,10 @@ let fechas = [
     }
 ];
 
-var paso = false;
+let paso = false, edad;
 do{
-    var edad = prompt("Cual es la edad que deseas filtrar:");
-    if (edad !== "" && esUnNumero(edad)) var paso = true;
+    edad = prompt("Cual es la edad que deseas filtrar:");
+    if (edad !== "" && esUnNumero(edad)) paso = true;
     else alert("Ingresa una edad correcta!");
 }while(!paso);
 console.log(edad);
