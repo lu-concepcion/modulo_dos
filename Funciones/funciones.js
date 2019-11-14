@@ -247,12 +247,35 @@ const buscarObjArray= (array, propiedad, valor) =>
         {
             if(propiedades[i][j] == propiedad && valores[i][j] == valor)
             {
-                guardar.push(array[i])
-                
+                guardar.push(array[i])   
             }
-         
         }
     }
   return guardar
 }
-export { buscarObjArray,buscarObj,busqueda,RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
+
+// const ordenar = (num, opcion) =>
+// {
+//     switch(opcion)
+//     {
+//         case "0":
+//             num = num.sort()
+//             break;
+
+//         case "1":
+
+//         break;
+//     }
+//}
+
+const factorial = num =>
+{
+    let factor = 1;
+
+    for (let i = 1; i<=num;i++)
+    {
+        factor = factor*i;
+    }
+    return factor
+}
+export { factorial, buscarObjArray,buscarObj,busqueda,RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
