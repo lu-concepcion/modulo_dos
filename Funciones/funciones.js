@@ -180,21 +180,28 @@ const generaFactorial = numero => {
 
 const textoEnParentisis = cadena => {
     let textos = '';
+    let aux = '';
     for (let i = 0; i < cadena.length; i++) {
         if (cadena.charAt(i) == '(') {
             while(true) {
                 if (cadena.charAt(i+1) == ')' || (i+1) == cadena.length) {
+                    if ((i+1) == cadena.length) {
+                        aux = '';
+                    }
                     break;
                 }
-                textos += cadena.charAt(i+1);
+                aux += cadena.charAt(i+1);
+                if (cadena.charAt(i+1) == '(') {
+                    aux = '';
+                    break;
+                }
                 i++;
             }
-            textos += ' ';
+            textos += aux + ' ';
+            aux = '';
         }
         
     }
-    console.log(textos.trim());
-    console.log(textos.trim().length);
     if (textos.trim().length == 0) {
         return 'No se encontro texto';
     }
