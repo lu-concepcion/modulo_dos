@@ -406,5 +406,5 @@ const factorial = (numero) =>{
 }
 
 export{
-    factorial
+    
 }
