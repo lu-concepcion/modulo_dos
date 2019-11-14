@@ -54,7 +54,7 @@ const numeroverificador=(run)=>{
    let resta=0;
    let resultado=0;
    resta=11-(run%11);
-   resultado=11-(resta);
+   resultado=(resta);
    if(resultado==10){
       alert("corresponde a k")
    }else if(resultado==11){
