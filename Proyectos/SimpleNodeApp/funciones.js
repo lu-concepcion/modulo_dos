@@ -450,7 +450,7 @@ const mayoresEdad=(personas,edad)=>{
 
 }
 
-export{
+  module.exports={
     validaNumero,
     cuentaVovales,
     convierteMayuscula,
