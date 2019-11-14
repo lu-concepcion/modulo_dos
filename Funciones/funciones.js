@@ -177,6 +177,21 @@ const generaFactorial = numero => {
     }
     return numeroFactorial;
 }
+
+const textoEnParentisis = cadena => {
+    let textosEnParentisis = '';
+    for (let i = 0; i < cadena.length; i++) {
+        if (cadena.charAt(i) == '(') {
+            while(true) {
+                if (cadena.charAt(i+1) == ')' || (i+1) == cadena.length) {
+                    break;
+                }
+                textoEnParentisis += cadena.charAt(i+1) + ' ';
+                i++;
+            }
+        }
+    }
+}
 export {
     esNumero,
     esTexto,
@@ -196,5 +211,6 @@ export {
     filtrarEnArray,
     ordenaMenorMayor,
     ordenaMayorMenor,
-    generaFactorial
+    generaFactorial,
+    textoEnParentisis
 }

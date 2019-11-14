@@ -1,4 +1,4 @@
-import {cadenaPrueba} from '../funciones.js';
+import {textoEnParentisis} from '../funciones.js';
 
 let cadenaPrueba = 'Hola (mundo) qué (tal) estás';
 
