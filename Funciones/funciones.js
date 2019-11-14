@@ -173,7 +173,6 @@ const ordenaMayorMenor = arreglo => {
 const generaFactorial = numero => {
     let numeroFactorial = 1;
     for (let i = 0; i < numero; i++) {
-        console.log('numeroFactorial: ' + numeroFactorial + ' (i+1): ' + (i+1));
         numeroFactorial = numeroFactorial * (i+1); 
     }
     return numeroFactorial;
