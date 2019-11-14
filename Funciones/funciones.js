@@ -435,6 +435,26 @@ const extraerPalabrasEntreParentesis = (texto)=>{
     return frase;
 }
 
+const mayoresDeEdad = (array, edad) =>{
+    let arrayMayores = [];
+    const today = new Date();
+    const diaMayor = String(today.getDate()).padStart(2, '0');
+    const mesMayor = String(today.getMonth()).padStart(2, '0'); //Meses parten en 0
+    const anioMayor = (today.getFullYear() - edad) - 1;
+
+    for(let i=0; i<array.length; i++){
+        if(array[i].fechaNacimiento.getFullYear() <= anioMayor){
+            if(array[i].fechaNacimiento.getMonth() <= mesMayor){
+                if(array[i].fechaNacimiento.getDay() <= diaMayor){
+                    arrayMayores.push(array[i]);
+                }
+            }
+        }
+    }
+
+    return arrayMayores;
+}
+
 export{
-    
+    mayoresDeEdad
 }
