@@ -174,6 +174,20 @@ const ordenMasAMenos = (numeros) => {
     return numeros;
 }
 
+//ordenar de menor a mayor
+const ordenMenosAMas = (numeros) => {
+    for(let i=0; i<numeros.length; i++){
+        for(let j=0; j<numeros.length; j++){
+            if(numeros[j] > numeros[j+1]){
+                let aux = numeros[j];
+                numeros[j] = numeros[j+1];
+                numeros[j+1] = aux;
+            }
+        }
+    }
+    return numeros;
+}
+
 //factorial de un numero
 const factorial = (numero) => {
     let resultado=1;
@@ -205,5 +219,6 @@ export {
     filtroEnArray,
     mostrarArray,
     ordenMasAMenos,
+    ordenMenosAMas,
     factorial
 }
