@@ -213,20 +213,29 @@ const filtrarArray= (arrayDondeBuscara, propiedadAFiltrar, valorPropiedad)=>{
     } 
 }
 
-const ordenarArray = (elementosOrdenar, ordenar) =>{
+const ordenarArray = (elementos) =>{
     let elementosOrdenados=[];
 
     for (let i in elementos){
         let numeroAOrdenar= elementos[i];
         let contador =0;
+        let cont =0;
         for (let j in elementos){
+            if (elementos[i]==elementos[j]){
+                cont ++;
+            }
             if ((i!=j) && (elementos[j]<=elementos[i])){
                 contador++;
-            } else if ((elementos[i]==elementos[j]) &&(elementosOrdenados.includes(elementos[i]))){
-                contador--;
-            }
+            } 
         }
         elementosOrdenados[contador]=elementos[i];
+        if (cont>0){
+            for (let k=1; k<cont; k++){
+                elementosOrdenados[contador-k]=elementos[i];
+
+            }
+
+        }
         console.log(elementosOrdenados)
     }
     return elementosOrdenados
@@ -259,10 +268,33 @@ const extraerTexto=texto =>{
     return textoExtraido
 }
 
+const edadPersonas = (personas, edad) => {
+    let edades=[];
+    let fecha=[];
+    let years=[];
+    let fechaActual = new Date();
+    let listadoPersonas="La/s persona/s mayor/es a "+ edad + " es/son : "
+    for (let i in personas){
+        fecha[i]= new Date(personas[i].fechaNacimiento);
+        years[i]= fechaActual.getFullYear() - fecha[i].getFullYear();
+        if ((fechaActual.getMonth() >= fecha[i].getMonth()) && (fechaActual.getDay() >= fecha[i].getDay())){
+            edades[i]=years[i]
+        } else {
+            edades[i]=years[i]-1
+        }
+        if (edades[i]>edad){
+            listadoPersonas=listadoPersonas + personas[i].nombre + " "
+        }
+       // console.log(years)
+        //console.log(edades)
+    return listadoPersonas
+    }
+}
+
 
 export{  //siempre debe ir al final
     verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, 
     verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento, 
-    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArray, factorial, extraerTexto}
+    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArray, factorial, extraerTexto, edadPersonas}
 
 
