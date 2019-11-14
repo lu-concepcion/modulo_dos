@@ -183,7 +183,7 @@ const textoEnParentisis = cadena => {
     for (let i = 0; i < cadena.length; i++) {
         if (cadena.charAt(i) == '(') {
             while(true) {
-                if (cadena.charAt(i+1) == ')' || (i+1) == cadena.length) {
+                if (cadena.charAt(i+1) == ')' || (i+1) == cadena.length || cadena.charAt(i+1) == '(') {
                     break;
                 }
                 textos += cadena.charAt(i+1);
@@ -192,6 +192,11 @@ const textoEnParentisis = cadena => {
             textos += ' ';
         }
         
+    }
+    console.log(textos.trim());
+    console.log(textos.trim().length);
+    if (textos.trim().length == 0) {
+        return 'No se encontro texto';
     }
     return textos;
 }
