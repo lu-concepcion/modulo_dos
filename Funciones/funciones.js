@@ -127,6 +127,14 @@ const empezarLoto = (numeros) => {
     
 }
 
+const extraerTextoParentesis = texto => {
+    const expresiones = /\(([^)]*)\)/g;
+    let buscar = texto.match(expresiones), textoEncontrado = "";
+    if (buscar.length > 0)
+    for (let item in buscar) textoEncontrado += buscar[item].replace(/[{()}]/g, "") + " ";
+    return textoEncontrado;
+}
+
 export {
     sumar, 
     restar, 
@@ -147,5 +155,6 @@ export {
     filtrarEnArray,
     ordenarArray,
     revertir,
-    factorialDeUnNumero
+    factorialDeUnNumero,
+    extraerTextoParentesis
 }
