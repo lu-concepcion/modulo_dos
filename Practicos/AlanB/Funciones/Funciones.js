@@ -220,7 +220,10 @@ const soloParentesis = (texto)=>
 }
 const mayoresQue = (array,edad)=>
 {
-
+    const fecha = new Date()
+    const fechaLimite = [fecha.getFullYear()-edad,(fecha.getMonth()+1),fecha.getDate()]
+    alert (fechaLimite)
+    alert (array[1].fechaDeNacimiento)
 }
 export
 {
