@@ -202,23 +202,21 @@ const factorial=(numero)=>
     }
     return aux
 }
-const sinParentesis = (texto)=>
+const soloParentesis = (texto)=>
 {   
     texto=texto.split("(")
-    alert(texto)
     let aux=[]
     for (let i=1;i<=texto.length-1;i++)
     {
         aux=texto[i].split(")")
-        alert (aux[0])
-        texto[i]=aux[1]
+        texto[i]=aux[0]
     }
-    let salida
+    let salida=""
     for (let i=0;i<texto.length;i++)
     {
-        
+        salida=salida+texto[i]
     }
-    
+    return salida
 }
 export
 {
@@ -240,5 +238,5 @@ export
     objectFinder,
     objectFilter,
     factorial,
-    sinParentesis
+    soloParentesis
 }

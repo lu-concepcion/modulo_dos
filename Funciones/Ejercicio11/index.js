@@ -1,5 +1,5 @@
 import{
-    sinParentesis
+    soloParentesis
 }from'../Funciones.js'
 let texto = prompt("introduzca texto")
-sinParentesis(texto)
+alert(soloParentesis(texto))
