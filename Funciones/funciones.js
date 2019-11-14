@@ -297,18 +297,31 @@ export const factorial = numero => {
 
 export const revisarParentesis = texto =>{
     let nuevoString ="";
+    let String1 ="";
     for(let i=0; i<texto.length;i++){
         console.log(texto.charAt(i))
         if(texto.charAt(i)=="("){
+            i++
             do{
                 if(nuevoString==""){
                     nuevoString=texto.charAt(i);
                 }else{
                     nuevoString=nuevoString+texto.charAt(i)
                 }
-
-            }while(texto.charAt(i)!==")")
+            }while(texto.charAt(i++)!==")")
+        }
+       
+    }
+    for(let i=0;i<nuevoString.length;i++){
+        if(nuevoString.charAt(i)!==")"){
+            if(String1==""){
+                String1=nuevoString.charAt(i);
+            }else{
+                String1=String1+nuevoString.charAt(i);
+            }
+        }else{
+            String1=String1+" ";
         }
     }
-    return nuevoString
+    return String1
 }
