@@ -413,15 +413,31 @@ const extraeEntreParentesis =(texto)=>{
             control=true;
         }
 
-        
-        
-        
-
-      
+           
 
     }
 
     return resultado;
+}
+
+
+const mayoresEdad=(personas)=>{
+
+    let mayores=[]; let index=0;
+
+    for(let i=0;i<personas.length;i++)
+    {
+        if(personas[i].fechaNacimiento.getFullYear()<2001 && personas[i].fechaNacimiento.getMonth()<=11&&personas[i].fechaNacimiento.getDay()<=14)
+        {
+            mayores[index]=personas[i];
+            index++;
+        }
+
+    }
+
+    return mayores;
+
+
 }
 
 export{
@@ -441,6 +457,7 @@ export{
     filtrarArray,
     ordenaArray,
     factorial,
-    extraeEntreParentesis
+    extraeEntreParentesis,
+    mayoresEdad
 }
 
