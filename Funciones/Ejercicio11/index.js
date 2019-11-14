@@ -1,5 +1,10 @@
-import {textoEnParentisis} from '../funciones.js';
+import {textoEnParentisis, esTexto} from '../funciones.js';
 
-let cadenaPrueba = 'Hola (mundo) qué (tal) estás';
 
-console.log('Resultado: ' + textoEnParentisis(cadenaPrueba));
+while(true) {
+    let cadena = prompt('Ingrese texto por favor')
+    if (esTexto(cadena)) {
+        alert('Resultado: ' + textoEnParentisis(cadena))
+    }
+    alert('Error: solo ingresa texto');
+}

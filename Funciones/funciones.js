@@ -179,18 +179,21 @@ const generaFactorial = numero => {
 }
 
 const textoEnParentisis = cadena => {
-    let textosEnParentisis = '';
+    let textos = '';
     for (let i = 0; i < cadena.length; i++) {
         if (cadena.charAt(i) == '(') {
             while(true) {
                 if (cadena.charAt(i+1) == ')' || (i+1) == cadena.length) {
                     break;
                 }
-                textoEnParentisis += cadena.charAt(i+1) + ' ';
+                textos += cadena.charAt(i+1);
                 i++;
             }
+            textos += ' ';
         }
+        
     }
+    return textos;
 }
 export {
     esNumero,
