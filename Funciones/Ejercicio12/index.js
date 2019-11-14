@@ -1,4 +1,4 @@
-import {obtenerEdadPersona} from '../funciones.js';
+import {obtenerEdadPersona, esNumero} from '../funciones.js';
 let arrayPersonas = [
     {
         nombre: 'Felipe',
@@ -13,12 +13,23 @@ let arrayPersonas = [
         fechaNacimiento: new Date("2000","1","15")
     }
 ];
+let edadLimite = 0;
+let nombres = '';
 
-let edadLimite = 27;
+while(true) {
+    edadLimite = prompt('Ingrese límite de edad');
+    if (esNumero) {
+        break;
+    }
+    alert('Error: ingrese solo números por favor');
+}
 
 let personasMayores = obtenerEdadPersona(arrayPersonas, edadLimite);
 
 personasMayores.forEach(element => {
-    console.log(element);
+    nombres += element['nombre'] + '\n';
 });
+
+alert('Personas con edad mayor a la edad ingresada:\n' + nombres);
+
 
