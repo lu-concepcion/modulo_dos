@@ -155,6 +155,45 @@ const numFactorial = (numero)=> {
     return alert(num)
 
 }
+const menorMayor = (cadenaNumeros) =>{
+    valorA = cadenaNumeros;
+
+    for(i=0; i<cadenaNumeros.length; i++){
+        for(e=1; e<cadenaNumeros.legth; e++){
+
+            if(valorA[i]<valorB[e]){
+
+
+
+            }
+
+
+        }
+
+
+    }
+
+return alert(valorA)
+
+}
+const mayorMenor = () =>{
+
+    valorB = cadenaNumeros;
+    for(i=0; i<cadenaNumeros.length; i++){
+        for(e=1; e<cadenaNumeros.legth; e++){
+
+            if(valorA[i]>valorB[e]){
+
+
+
+            }
+
+
+        }
+
+    
+}
+}
 
 export {
 
@@ -172,6 +211,8 @@ export {
     sorteo,
     busquedaElemento,
     busquedaElemento2,
-    numFactorial
+    numFactorial,
+    menorMayor,
+    mayorMenor
 }
 
