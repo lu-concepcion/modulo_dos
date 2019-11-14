@@ -6,7 +6,6 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json())
 
 app.post('/persona', function(request, response){
-  const body = request.body.id;
   response.send({ "mensaje": "hola mundo"})
 });
 
