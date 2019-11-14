@@ -199,10 +199,8 @@ const textoEnParentisis = cadena => {
             }
             textos += aux + ' ';
             aux = '';
-        }
-        
+        }  
     }
-
     if (textos.trim().length == 0) {
         return 'No se encontro texto';
     }
