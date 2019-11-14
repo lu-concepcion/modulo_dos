@@ -1,7 +1,14 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 
-app.get('/', function(request, response){
+app.use(bodyParser.json())
+
+app.get('/persona/:id', function(request, response){
+  response.send("hola mundo")
+});
+
+app.post('/persona', function(request, response){
   response.send("hola mundo")
 });
 
