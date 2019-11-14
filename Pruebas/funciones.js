@@ -172,6 +172,14 @@ const ordenArray = (arreglo,orden) => {
     return arreglo;
 }
 
+const factorial = (numero) => {
+    let resultado = 1;
+    for (let i = 0; i < numero; i++) {
+        resultado = resultado + numero;    
+    }
+    return resultado;
+}
+
 
 export {
     ordenArray,
