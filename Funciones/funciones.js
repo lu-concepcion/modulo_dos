@@ -436,5 +436,5 @@ const extraerPalabrasEntreParentesis = (texto)=>{
 }
 
 export{
-    extraerPalabrasEntreParentesis
+    
 }
