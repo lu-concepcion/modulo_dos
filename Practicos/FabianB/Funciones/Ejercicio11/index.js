@@ -2,7 +2,9 @@ import { buscarNumeroTexto,buscarEnArray, extraerTexto } from '../funciones.js';
 
 let text = prompt("ingrese el texto que desea")
 
- console.log(extraerTexto(text))
+ console.log(extraerTexto(text))   
+
+ //probando
 
 
 
