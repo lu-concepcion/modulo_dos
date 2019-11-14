@@ -202,9 +202,11 @@ const textoEnParentisis = cadena => {
         }
         
     }
+
     if (textos.trim().length == 0) {
         return 'No se encontro texto';
     }
+    textos = textos.replace(/^\s*|\s*$/g,"");
     return textos;
 }
 
