@@ -183,7 +183,7 @@ const textoEnParentisis = cadena => {
     for (let i = 0; i < cadena.length; i++) {
         if (cadena.charAt(i) == '(') {
             while(true) {
-                if (cadena.charAt(i+1) == ')' || (i+1) == cadena.length || cadena.charAt(i+1) == '(') {
+                if (cadena.charAt(i+1) == ')' || (i+1) == cadena.length) {
                     break;
                 }
                 textos += cadena.charAt(i+1);
