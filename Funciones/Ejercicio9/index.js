@@ -1,4 +1,4 @@
-import { esNumero } from "../funciones.js"
+import { esNumero, mostrarArray, ordenMasAMenos } from "../funciones.js"
 
 let numeros = [];
 let contador = 0;
@@ -9,5 +9,4 @@ for(let i=0; i<contador; i++){
     numeros.push(esNumero(prompt("ingresa el número")));
 }
 
-
-//alert(numeros);
+alert(mostrarArray(ordenMasAMenos(esNumero(numeros))));

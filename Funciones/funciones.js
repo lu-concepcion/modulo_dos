@@ -151,12 +151,27 @@ const filtroEnArray = (arrayABuscar, propiedadAFiltrar, valorPropiedad) => {
     return console.log(arrayAMostrar);
 }
 
+//Mostrar un array
+const mostrarArray = (array) =>{
+    let mensaje = "";
+    for(let i=0; i<array.length; i++){
+        mensaje += array[i] + " ";
+    }
+    return mensaje;
+}
+
 //ordenar numeros de mayor a menor
 const ordenMasAMenos = (numeros) => {
-
     for(let i=0; i<numeros.length; i++){
-
+       for(let j=0; j<numeros.length; j++){
+           if(numeros[j] < numeros[j+1]){
+               let aux = numeros[j];
+               numeros[j] = numeros[j+1];
+               numeros[j+1] = aux;
+           }
+       }
     }
+    return numeros;
 }
 
 //factorial de un numero
@@ -191,6 +206,7 @@ export {
     buscaElemento,
     buscarEnArray,
     filtroEnArray,
+    mostrarArray,
     ordenMasAMenos,
     factorial
 }
