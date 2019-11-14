@@ -4,11 +4,11 @@ import {busquedaElemento2} from '../funciones.js';
 
 
 
-    let elemento = prompt ("ingrese un numero a buscar")
-    elemento = parseInt (elemento);
+    let objeto = prompt ("ingrese un numero a buscar")
+    objeto = parseInt (objeto);
     
     
-    busquedaElemento2(elemento)
+    busquedaElemento2(objeto)
 
 
 

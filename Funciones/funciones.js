@@ -105,7 +105,7 @@ const busquedaElemento = (elemento) =>{
     return (true);
 
 }
-const busquedaElemento2 = (elemento) =>{
+const busquedaElemento2 = (objeto) =>{
 
     const valoresObjeto = [
     {
@@ -126,20 +126,33 @@ const busquedaElemento2 = (elemento) =>{
         categoria: 'Terror'
     }
 ];
-for(let i=0; i<=elemento; i++){
+//for(let i=0; i<=elemento; i++){
 
-    if(valoresObjeto [i] == elemento){
+    //if(valoresObjeto [i] == elemento){
 
-        return valoresObjeto[elemento]
+        alert (valoresObjeto[objeto])
         
-    }else{
+    //}else{
 
-        alert ("Objeto no a sido encontrado")
+    //    alert ("Objeto no a sido encontrado")
 
-    }
+   // }
+
+//}
 
 }
-    return
+const numFactorial = (numero)=> {
+
+    let num = 1;
+    let i = 0;
+
+    for(i=1; i<=numero; i++){
+
+    
+    num = num * i;
+
+    }
+    return alert(num)
 
 }
 
@@ -158,6 +171,7 @@ export {
     palindromo,
     sorteo,
     busquedaElemento,
-    busquedaElemento2
+    busquedaElemento2,
+    numFactorial
 }
 
