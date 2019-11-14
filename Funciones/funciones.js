@@ -215,7 +215,6 @@ return listado;
 
   const ordenarArray=(numeros=[])=>{
 
-
     let creciente=[];
     let decreciente=[];
     let aux;
@@ -242,10 +241,15 @@ return listado;
        decreciente[j] = aux;   
       } 
     }
- }
-    
-
+ }  
     return `${creciente} \n${decreciente}`;
+  }
+
+  const factorial=(numero)=>{
+    let sumatoria=1;
+   for (let i = 0; i < numero; i++) {
+      sumatoria = sumatoria *i
+   }
 
   }
 
@@ -254,5 +258,5 @@ export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinusc
   contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, 
   limpiarRut, invertirCadena,calcularDigitoVerificador,lotto,
   buscarEnArray, objetoEnArray, listarPropiedades, filtrarEnArray,
-  ordenarArray
+  ordenarArray, factorial
 }
