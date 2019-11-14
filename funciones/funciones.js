@@ -15,7 +15,7 @@ const dividir = (num1, num2) => {
 }
 
 const verNum = (numero) => {
-    return isNaN(parseInt(numero));
+    return isNaN(numero);
 }
 
 const verNumero = (numero) => {
@@ -128,6 +128,16 @@ const buscarEnArray = (array, propiedad, valor ) => {
     return objeto;
 }
 
+const buscarEnArray_2 = (array, valor ) => {
+    let encuentro = false;
+    array.forEach(element => {
+        if(element == valor){
+            encuentro = true;
+        }
+    });
+    return encuentro;
+}
+
 const filtrarEnArray = (array, propiedad, valor) => {
     let objetos = [];
     array.forEach(element => {
@@ -144,5 +154,5 @@ export {
     converTextoMayus, contarVocales, esPalindromo,
     generaNumAleatorios, multiplicar, dividir, verNum,
     sacarPorcentaje, codigoVerificador, buscarElemento,
-    buscarEnArray, filtrarEnArray
+    buscarEnArray, filtrarEnArray, buscarEnArray_2
 }
