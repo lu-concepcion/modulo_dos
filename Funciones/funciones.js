@@ -246,11 +246,12 @@ return listado;
   }
 
   const factorial=(numero)=>{
-    let sumatoria=1;
+    let factorial=1;
    for (let i = 0; i < numero; i++) {
-      sumatoria = sumatoria *i
+     
+    factorial = factorial *(i+1)
    }
-
+return factorial;
   }
 
 
