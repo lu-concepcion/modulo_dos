@@ -49,32 +49,21 @@ export const invertir = (run) => {
     return(suma);
 }
    
+const numeroverificador=(run)=>{
+   let dividir =0;
 
-/*const numeroverificador=(numeroInvertido)=>{
-   let serie=[];
-   let suma=0;
-   let multiplicar=0;
-     for(let i=0;i<=numeroInvertido.length-1;i++){
-        for(let c=2;c<=7;c++){   
-         multiplicar=parseInt(numeroInvertido[i])*parseInt(serie[c]);
+   dividir=(run/11);
+   
+
+return(dividir);
+   
+}
          
-        suma+= multiplicar;
-        console.log("f ", multiplicar, suma);
-       if((serie[i]>=7)){
-             c=2; 
-      }
-       if(serie[c]==3&& numeroInvertido[i]==numeroInvertido-1){
-          alert("la suma es ");
-        }
-        }
-       
-     }
-     return(suma);
-}*/
 
 
 export{
 
-multiplicar1
+multiplicar1,
+numeroverificador
       
 }

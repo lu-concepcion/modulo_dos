@@ -1,4 +1,4 @@
-import{invertir,multiplicar1} from './funciones.js'
+import{invertir,multiplicar1,numeroverificador} from './funciones.js'
 
 let run = prompt("Ingresa rut: ");
 
@@ -19,6 +19,7 @@ let runf=[];
   alert(invertir(runf))
 
   alert(multiplicar1(invertir(runf)))   
+  alert(numeroverificador(multiplicar1(invertir(runf))))
 
 
 
