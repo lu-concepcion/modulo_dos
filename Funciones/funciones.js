@@ -137,11 +137,19 @@ const numeroAzar =(min, max)  =>{
 
   const lotto =(numeros=[]) =>{
      const ganadores=[] ;
-    
- let contador=0;
+     let agregado;
+     let contador=0;
+     let aux;
 for (let i = 0; i <6; i++) {
+do {
+  agregado = false;
+  aux = numeroAzar(1,41);
+  if (!buscarEnArray(ganadores,aux) || ganadores.length<1) {
+    ganadores[i] = aux;
+    agregado =true;
+  }
+} while (!agregado);
 
-ganadores[i] = numeroAzar(1,41);
  for (let j = 0; j <6; j++) {
    if (numeros[j] == ganadores[i]) {
     contador++;
