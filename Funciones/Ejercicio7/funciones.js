@@ -27,8 +27,19 @@ const invertir=(runSplitPunto)=>{
    }
    return(runInvertido);
 }
+const multiplicar=(numeroInvertido)=>{
+   let serie=[];
+   let multiplicar=2;
+     for(let i =0;i<=numeroInvertido.length-1;i++)
+     for(let c=2;c>=7;c++){
+       multiplicar=parseInt(numeroInvertido.charAt(i))*parseInt(serie.charAt(c));
+       console.log("f ", multiplicar);
+      
+   }
+    return(parseInt(multiplicar));
+   }
 
-const numeroverificador=(numeroInvertido)=>{
+/*const numeroverificador=(numeroInvertido)=>{
    let serie=[];
    let suma=0;
    let multiplicar=0;
@@ -48,11 +59,11 @@ const numeroverificador=(numeroInvertido)=>{
        
      }
      return(suma);
-}
+}*/
 
 
 export{
 invertir,
-numeroverificador,
+multiplicar,
       
 }
