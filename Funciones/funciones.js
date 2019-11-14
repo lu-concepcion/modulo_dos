@@ -103,8 +103,7 @@ for (let i = 0; i < cadena.length; i++) {
   
   if(!isNaN(parseInt(cadena.charAt(i)))){
     rut = rut+cadena.charAt(i);
-  }
-  
+  } 
 }
 return rut;
 }
@@ -214,10 +213,15 @@ return filtrados;
 return listado;
   }
 
+  const ordenarArray=(numeros=[])=>{
+
+
+  }
 
 
 export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinuscula, convertirEnMayuscula, 
   contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, 
   limpiarRut, invertirCadena,calcularDigitoVerificador,lotto,
-  buscarEnArray, objetoEnArray, listarPropiedades, filtrarEnArray
+  buscarEnArray, objetoEnArray, listarPropiedades, filtrarEnArray,
+  ordenarArray
 }
