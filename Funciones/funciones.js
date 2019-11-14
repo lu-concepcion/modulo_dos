@@ -202,8 +202,18 @@ const ordenarMayor=(array)=>{
     }
     return console.log(array)
 }
+
+//ejercicio10
+
+const calculoFactorial=(numero)=>{
+    let factorial=1;
+    for(let i=1;i<=numero;i++){
+        factorial*=i;
+    }
+    return factorial
+}
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
     sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje, formatoPunto, inversa
-    ,encontrarElemento,encontrarEnArray,filtrarEnArray,ordenarMenor, ordenarMayor
+    ,encontrarElemento,encontrarEnArray,filtrarEnArray,ordenarMenor, ordenarMayor, calculoFactorial
 }
