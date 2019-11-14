@@ -9,3 +9,6 @@
 // fecha.getDay() // retorna el número del día
 // fecha.getMonth() // retorna el número del mes
 // fecha.getFullYear() // retorna el año
+
+import { calculaEdad } from '../funciones.js'
+alert(calculaEdad("1990"))

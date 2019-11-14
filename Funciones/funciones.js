@@ -207,9 +207,16 @@ const extraerDeParentesis = (string) =>{
     return stringResultado
 }
 
+//Ejercicio 12
+
+const calculaEdad = (fecha) =>{
+    let hoy = new Date()
+    return hoy
+}
+
 export{
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
     ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce,buscarElemento,filtrarArray,filtrarTodosArray,
-    ordenarMenorAMayorArray,ordenarMayorAMenorArray,factorial,extraerDeParentesis
+    ordenarMenorAMayorArray,ordenarMayorAMenorArray,factorial,extraerDeParentesis,calculaEdad
 }
 
