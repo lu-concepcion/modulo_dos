@@ -421,16 +421,26 @@ const extraeEntreParentesis =(texto)=>{
 }
 
 
-const mayoresEdad=(personas)=>{
+const mayoresEdad=(personas,edad)=>{
 
     let mayores=[]; let index=0;
 
+    let edadMayor=2019-edad;
+
     for(let i=0;i<personas.length;i++)
     {
-        if(personas[i].fechaNacimiento.getFullYear()<2001 && personas[i].fechaNacimiento.getMonth()<=11&&personas[i].fechaNacimiento.getDay()<=14)
+        if(personas[i].fechaNacimiento.getFullYear()<=edadMayor)
         {
-            mayores[index]=personas[i];
-            index++;
+            if(personas[i].fechaNacimiento.getMonth()<=11)
+            {
+                if(personas[i].fechaNacimiento.getDay()<=14)
+                {
+                    mayores[index]=personas[i];
+                    index++;
+                }
+
+            }
+           
         }
 
     }

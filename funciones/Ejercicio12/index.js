@@ -23,7 +23,7 @@ let listadoPersonas=[
 
 let mayores=[];
 
-mayores =mayoresEdad(listadoPersonas);
+mayores =mayoresEdad(listadoPersonas,parseInt(prompt("ingresa una edad")));
 
 alert((JSON.stringify(mayores)));
 
