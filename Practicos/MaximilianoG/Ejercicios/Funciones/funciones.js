@@ -264,10 +264,15 @@ const ordenarMenorAMayor = array => {
     }
     return array;
 }
-//
+
+//funcion loto
+const loto = (arrayLoto, arraySorteo) => {
+
+}
 
 export{
     sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales,
     palindromo, aritmetica, porcentajes, digitoVerificador,
-    buscarNumeroTexto, buscarEnArray, filtrarEnArray, ordenarMenorAMayor
+    buscarNumeroTexto, buscarEnArray, filtrarEnArray, ordenarMenorAMayor,
+    loto
 }
