@@ -1,7 +1,10 @@
-const testing = () => {
-    return "test";
+const validarRut = (body) => {
+    return
 }
 
+
+
+
 module.exports = {
-    testing
+    validarRut
 }

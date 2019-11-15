@@ -1,10 +1,7 @@
 
-import {validarRut} from '../funciones.js';
+import {numeroVerificador} from '../../funciones.js';
 
-const n1 = prompt ("ingrese texto o numero a analizar")
-
-
-    alert (validarRut(n1))
+alert("Digito verificador: " + numeroVerificador());
 
 
 
