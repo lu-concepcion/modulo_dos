@@ -234,7 +234,7 @@ const obtenerEdad = (fecha) => {
 }
 
 //exporto funciones a los demás archivos
-export {
+module.exports ={
     sumar,
     restar,
     convertirMayuscula,
