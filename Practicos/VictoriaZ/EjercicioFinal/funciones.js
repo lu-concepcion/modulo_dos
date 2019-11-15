@@ -139,8 +139,13 @@ const porcentaje=(num1,num2) =>{
 
 }
 
-const verificarRun = run =>{
-    const runInvertido= run.reverse();
+const verificarRun = runString =>{
+    let numerosRun=[];
+    let index=0
+    for (let i=0; i<=runString.length-1; i++){
+        numerosRun[i]=runString.charAt(i);
+    } 
+    const runInvertido= numerosRun.reverse();
     const multiplicadores=[2, 3, 4, 5, 6, 7,2, 3, 4, 5, 6, 7];
     let suma=0;
     for (let i in runInvertido){
@@ -291,10 +296,23 @@ const edadPersonas = (personas, edad) => {
     return listadoPersonas
 }
 
+const calcularEdad = (fechaNac) => {
+    let edades="";
+    let fechaActual = new Date();
+    let fecha=new Date(fechaNac)
+    let years=fechaActual.getFullYear() - fecha.getFullYear();
+    if ((fechaActual.getMonth() >= fecha.getMonth()) && (fechaActual.getDay() >= fecha.getDay())){
+        edades=years
+    } else {
+        edades=years-1
+    }
+    return edades  
+    
+}
 
 module.exports={  //siempre debe ir al final
     verificarNumero, verificarTexto, textoMinuscula, textoMayuscula, numeroVocales, 
     verificarPalindromo, sumar, restar, dividir, multiplicar, porcentaje, verificarRun, encontrarElemento, 
-    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArray, factorial, extraerTexto, edadPersonas}
+    buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArray, factorial, extraerTexto, edadPersonas, calcularEdad}
 
 

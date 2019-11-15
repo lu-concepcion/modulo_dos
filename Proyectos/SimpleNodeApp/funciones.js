@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const verificarTexto =palabra => {
     if (isNaN(palabra)==true){
@@ -298,3 +299,12 @@ module.exports={  //siempre debe ir al final
     buscarEnArrayObjeto, filtrarArray, aciertosLoto, ordenarArray, factorial, extraerTexto, edadPersonas}
 
 
+=======
+const testing = () => {
+    return "test";
+}
+
+module.exports = {
+    testing
+}
+>>>>>>> master
