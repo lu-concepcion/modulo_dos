@@ -1,0 +1,4 @@
+Escribir un algoritmo que solicite la edad de una persona, si esta es mayor 65* se le indica que ya puede jubilar**.
+
+*Considera edad de jubilación de hombres.
+**Use la creatividad para el mensaje de jubilación
