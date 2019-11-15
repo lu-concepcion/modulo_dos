@@ -1,6 +1,3 @@
-const testing = () => {
-    return "test";
-}
 const sumar=(num1,num2)=>{
     return num1+num2
 }
@@ -84,7 +81,7 @@ const calculaPorcentaje = (num1,num2) =>{
 const eliminaFormato = (rut) =>{
     let rutSinFormato=[];
     //console.log("antes  "+rutSinFormato)
-    for(let i=0;i<rut.length-1;i++){
+    for(let i=0;i<rut.length;i++){
         if(validaNumero(rut.charAt(i))){
             let contador = rutSinFormato.push(rut.charAt(i))
          }//else{
@@ -110,7 +107,7 @@ const moduloOnce = (array) =>{
     console.log("dsps de invertir "+array)
     const serieVerificacion = [2,3,4,5,6,7]
     let suma=0,j=0;
-    for(let i=0;i<array.length-1;i++){
+    for(let i=0;i<array.length;i++){
         if(j==6){
             j=0;
         }
@@ -231,11 +228,8 @@ const filtrarPorEdad = (edad,array) =>{
     }
 }
 
-export{
+module.exports={
     sumar,restar,validaNumero,validaTexto,transformaMinusculas,transformaMayusculas,cuentaVocal,esPalindromo
     ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce,buscarElemento,filtrarArray,filtrarTodosArray,
     ordenarMenorAMayorArray,ordenarMayorAMenorArray,factorial,extraerDeParentesis,calculaEdad
-}
-module.exports = {
-    testing
 }

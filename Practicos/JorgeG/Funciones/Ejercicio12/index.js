@@ -10,8 +10,8 @@
 // fecha.getMonth() // retorna el número del mes
 // fecha.getFullYear() // retorna el año
 
-import { calculaEdad } from '../funciones.js'
+import { calculaEdad , filtrarPorEdad } from '../funciones.js'
 const persona =[{nombre:"jorge",fechaNacimiento:("1996","12","16")},{nombre:"mathias",fechaNacimiento:("1992","12","16")},
 {nombre:"jeremy",fechaNacimiento:("1998","12","14")},{nombre:"maximiliano",fechaNacimiento:("1995","12","16")}]
 const fecha = new Date("1993","12","16")
-alert(calculaEdad(25,persona))
+alert(filtrarPorEdad(25,persona))
