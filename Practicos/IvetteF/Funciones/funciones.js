@@ -282,7 +282,23 @@ const factorial = num =>
 const extraer = (input) =>
 {
    
-    let aux = input.split("(",")")
-    return aux
+    let aux1 = "";
+    let aux2 = "";
+    let aux3 = "";
+    
+    for(let i = 0; i<input.length;i++)
+    {
+        if(input.charAt(i) == "(")
+        {
+            aux1 [i]= aux1+i;
+        }
+        if (input.charAt(i) == ")")
+        {
+            aux2 [i] = aux2+i;
+        }
+        aux3 [i] = aux3+ input.substr(aux1[i],aux2[i])
+    }
+    console.log(aux1)
+    return aux3
 }
 export {extraer, factorial, buscarObjArray,buscarObj,busqueda,RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
