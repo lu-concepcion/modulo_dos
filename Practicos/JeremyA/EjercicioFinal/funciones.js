@@ -233,11 +233,6 @@ const obtenerEdad = (fecha) => {
     return console.log(arrayFiltrado);
 }
 
-
-// module.exports = {
-//     testing
-// }
-
 //exporto funciones a los demás archivos
 export {
     sumar,
@@ -264,3 +259,7 @@ export {
     capturaTexto,
     obtenerEdad
 }
+
+// module.exports = {
+//     testing
+// }
