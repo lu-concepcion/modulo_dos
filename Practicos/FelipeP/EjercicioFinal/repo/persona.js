@@ -2,15 +2,15 @@
 
 let arregloPersonas = [];
 
-const setPersona = (rut,digito, fechaNacimiento, edad_persona, marca_vehiculo, modelo_vehiculo, id_profesion, nombre_profesion) => {
+const setPersona = (rut,digito,fechaNacimiento,edad_persona,tieneVehiculo,tieneProfesion,marca_vehiculo,modelo_vehiculo,id_profesion,nombre_profesion) => {
 
     let persona = {
         run: rut,
         dv: digito,
         fechaNac: fechaNacimiento,
         edad: edad_persona,
-        tieneProfesion: true,
-        tieneVehiculo: true,
+        tieneProfesion: tieneVehiculo,
+        tieneVehiculo: tieneProfesion,
         vehiculo: {
           marca: marca_vehiculo,
           modelo: modelo_vehiculo
@@ -26,4 +26,9 @@ const setPersona = (rut,digito, fechaNacimiento, edad_persona, marca_vehiculo, m
 
 const getPersona = () => {
     return arregloPersonas;
+}
+
+module.exports = {
+    setPersona,
+    getPersona
 }

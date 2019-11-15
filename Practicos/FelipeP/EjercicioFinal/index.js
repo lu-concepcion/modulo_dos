@@ -7,22 +7,20 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.post('/persona', function(request, response){
-  // body mapea a un objeto los parámetros enviados en el body del request
-  // ej: localhost:3000/persona
-  // body: {id: 1, nombre: hernan }
-  // body = { id: 1, nombre: hernan }
   const { body }  = request;
-  const {vehiculo} = request.body;
-  console.log('vehiculo: ' + vehiculo);
+  const {run,fechaNac,tieneProfesion,tieneVehiculo,vehiculoId,profesionId} = request.body;
+
+  let dv = funciones.generaDigitoVerificador(run);
+
+  // rut,digito,fechaNacimiento,edad_persona,tieneVehiculo,tieneProfesion,marca_vehiculo,modelo_vehiculo,id_profesion,nombre_profesion
+  persona.setPersona(run,dv,fechaNac,100,tieneVehiculo,tieneProfesion,'Mazda','Mazda 3',profesionId,'Ing Informática')
   response.send(body);
 });
 
 app.get('/persona', function(request, response){
-  // query mapea a un objeto los parámetros enviados en la ruta
-  // ej: localhost:3000/persona?id=1&nombre=Hernan
-  // query = { id: 1, nombre: hernan }
+  let personas = persona.getPersona();
   const { query }  = request;
-  response.send("hola mundo");
+  response.send(personas);
 });
 
 app.listen(3000, function () {
