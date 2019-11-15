@@ -1,8 +1,12 @@
-var funciones = require('../funciones.js')
+const funciones = require('../funciones.js')
+const vehiculos = require("./vehiculos.js")
 //generar datos de personas
 let personas = [];
 
-
+let vehiculo = {
+    marca: "",
+    modelo: ""
+}
 
 let persona = {
     rut: "",
@@ -11,18 +15,11 @@ let persona = {
     edad: 0,
     tieneProfesion: false,
     tieneVehiculo: false,
-    // vehiculo = {
-    //     marca: "",
-    //     modelo: ""
-    // },
-    // profesion = {
-    //     id: "",
-    //     nombre: ""
-    // }
+    vehiculo
 }
 
 const guardar = (per) => {
-    let {rut, fechaNac, edad, tieneProfesion, tieneVehiculo} = per;
+    let {rut, fechaNac, edad, tieneProfesion, tieneVehiculo, idVehiculo} = per;
     if(!isNaN(rut)){
         persona.rut = rut;
         persona.dv = funciones.codigoVerificador(persona.rut);
@@ -31,6 +28,7 @@ const guardar = (per) => {
     persona.edad = edad;
     persona.tieneProfesion = tieneProfesion;
     persona.tieneVehiculo = tieneVehiculo;
+    persona.vehiculo = funciones.buscarEnArray(vehiculos.vehiculos, "id", idVehiculo)
     
 
     personas.push(persona);

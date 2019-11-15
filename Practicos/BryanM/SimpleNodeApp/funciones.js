@@ -37,6 +37,16 @@ const codigoVerificador = (rut) => {
     }
 }
 
+const buscarEnArray = (array, propiedad, valor ) => {
+    let objeto = {};
+    array.forEach(element => {
+        if(element[propiedad] == valor){
+            objeto = element;
+        }
+    });
+    return objeto;
+}
+
 module.exports = {
-    testing, codigoVerificador
+    testing, codigoVerificador, buscarEnArray
 }
