@@ -1,0 +1,12 @@
+{
+  "name":"node-app-lu-modulo-II",
+  "version": "0.1.0",
+  "dependencies": {
+    "express": "4.17.1",
+    "nodemon": "1.19.4",
+    "body-parser": "^1.19.0"
+  },
+  "scripts": {
+    "start": "nodemon --watch index.js"
+  }
+}
