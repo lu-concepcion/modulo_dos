@@ -8,7 +8,10 @@
 // fecha.getMonth() // retorna el número del mes
 // fecha.getFullYear() // retorna el año
 
-import{} from '../funciones.js';
+import{ calculaEdad } from '../funciones.js';
 
 let personas = [{nombre:"mathias", fechaNacimiento:"1997/06/27"},{nombre:"jorge", fechaNacimiento:"1998/09/15"},{nombre:"jeremy", fechaNacimiento:"1996/04/05"}]
 
+const fecha = new Date("1997","2","5");
+console.log(fecha)
+calculaEdad(fecha)

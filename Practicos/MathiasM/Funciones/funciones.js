@@ -230,9 +230,15 @@ const extraerTextoParentesis=(texto)=>{
 }
 
 //ejercicio12
+const calculaEdad=(fecha)=>{
+    console.log(fecha.getDay());
+    console.log(fecha.getMonth());
+    console.log(fecha.getFullYear());
+}
 
 export{
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
     sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje, formatoPunto, inversa
-    ,encontrarElemento,encontrarEnArray,filtrarEnArray,ordenarMenor, ordenarMayor, calculoFactorial,extraerTextoParentesis
+    ,encontrarElemento,encontrarEnArray,filtrarEnArray,ordenarMenor, ordenarMayor, calculoFactorial,extraerTextoParentesis,
+    calculaEdad
 }
