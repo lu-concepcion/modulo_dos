@@ -12,16 +12,17 @@ app.post('/persona', function(request, response){
   // body: {id: 1, nombre: hernan }
   // body = { id: 1, nombre: hernan }
   const { body }  = request;
-
-  response.send(body)
+  persona.reciboPersona(body);
+  response.send(body);
 });
 
-app.get('/persona', function(request, response){
+app.get('/persona/:run', function(request, response){
   // query mapea a un objeto los parámetros enviados en la ruta
   // ej: localhost:3000/persona?id=1&nombre=Hernan
   // query = { id: 1, nombre: hernan }
-  const { query }  = request;
-  response.send("hola mundo")
+  const { run }  = request.params;
+  response.send(persona.buscarPersona(run));
+  //response.send(persona.listarPersonas())
 });
 
 app.listen(3000, function () {
