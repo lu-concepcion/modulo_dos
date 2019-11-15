@@ -14,3 +14,7 @@ app.get('/persona/:id', function(request, response){
   response.send({ "mensaje": `${id} hola`})
 });
 
+app.listen(3000, function () {
+  console.log('Simple node app for LU-CCP listening on port 3000!');
+});
+

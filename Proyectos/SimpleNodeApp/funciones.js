@@ -1,7 +1,7 @@
-const testing = () => {
-    return "test";
+const test = () => {
+ return "test"
 }
 
 module.exports = {
-    testing
+    test
 }
