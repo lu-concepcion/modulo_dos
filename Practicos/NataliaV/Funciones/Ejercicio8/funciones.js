@@ -1,6 +1,7 @@
 /*Escribir los siguientes algoritmos en forma de funciones.
 - Función que permite encontrar determinado elemento 
 (solo: número/texto) dentro un array
+
 - Función que permita encontrar en un array un 
 determinado objeto, dada una condicion, ej:
    buscarEnArray(arrayDondeBuscara, propiedadAFiltrar, 

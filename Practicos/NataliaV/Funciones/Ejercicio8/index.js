@@ -2,23 +2,23 @@ import{numeroaBuscar} from './funciones.js'
 let numero =[1,2,3,4,5,6,7,8,9,10];
 let n =parseInt(prompt("Ingrese un numero: "))
 let p;
-let arregloPersona={
+let arregloPersona=[{
     nombre:'Natalia',
     apellido:'Varela',
     edad: 23,
-    sexo: 'femenino',
+    sexo: 'femenino'},
  
-    nombre:'Antonia',
+    {nombre:'Antonia',
     apellido:'Yañez',
     edad: 2,
-    sexo: 'femenino',
+    sexo: 'femenino'},
 
-    nombre:'Marco',
+    {nombre:'Marco',
     apellido:'Yañez',
     edad: 23,
-    sexo: 'Maculino'
+    sexo: 'Maculino'}
 
-};
+];
 
 if(!numeroaBuscar(numero,n)){
     alert("no se encuentra "+n)
