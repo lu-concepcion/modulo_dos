@@ -1,10 +1,13 @@
 //generar datos de vehículos
 let vehiculos =[
-    {marca:"Audi",modelo:"A4"},
-    {marca:"Alfa Romeo",modelo:"Giulia"},
-    {marca:"Kia",modelo:"Morning"},
-    {marca:"Ford",modelo:"mustang"},
-    {marca:"Volkswagen",modelo:"golf"},
-    {marca:"Volvo",modelo:"V40"},
+    {id:1,marca:"Audi",modelo:"A4"},
+    {id:2,marca:"Alfa Romeo",modelo:"Giulia"},
+    {id:3,marca:"Kia",modelo:"Morning"},
+    {id:4,marca:"Ford",modelo:"Mustang"},
+    {id:4,marca:"Volkswagen",modelo:"Golf"},
+    {id:5,marca:"Volvo",modelo:"V40"},
 
 ]
+module.exports={
+    vehiculos
+}

@@ -7,3 +7,6 @@ let profesiones = [
     {id:5,nombre:"psicologo"},
     {id:6,nombre:"dentista"}
 ]
+module.exports={
+    profesiones
+}
