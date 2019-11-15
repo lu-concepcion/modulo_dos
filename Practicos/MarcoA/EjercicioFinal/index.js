@@ -7,35 +7,33 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json())
 
 app.post('/persona', function(request, response){
-  // body mapea a un objeto los parámetros enviados en el body del request
-  // ej: localhost:3000/persona
-  // body: {id: 1, nombre: hernan }
-  // body = { id: 1, nombre: hernan }
+  let persona ={
+    run: 0,
+    dv: 0,
+    fechaNacimiento: new Date(0, 0 , 0),
+    edad: 0,
+    tieneProfesion: false,
+    tieneVehiculo: false,
+    vehiculo: {
+      marca: "",
+      modelo: ""
+    },
+    profesion: {
+      id: 0,
+      profesion: "",
+    }
+  }
+  //EN POSTMAN ENVIA UN OBJETO 
   const { body }  = request;
 
   response.send(body)
 });
 
-<<<<<<< HEAD:Practicos/MarcoA/EjercicioFinal/index.js
 app.get('/persona/:id', function(request, response){
   const { id } = request.params;
   response.send({ "mensaje": `${id} hola`})
 
-  
-=======
-app.get('/persona', function(request, response){
-  // query mapea a un objeto los parámetros enviados en la ruta
-  // ej: localhost:3000/persona?id=1&nombre=Hernan
-  // query = { id: 1, nombre: hernan }
-  const { query }  = request;
-  response.send("hola mundo")
->>>>>>> master:Proyectos/SimpleNodeApp/index.js
-});
-
 app.listen(3000, function () {
   console.log('Simple node app for LU-CCP listening on port 3000!');
-<<<<<<< HEAD:Practicos/MarcoA/EjercicioFinal/index.js
 });
-=======
 });
->>>>>>> master:Proyectos/SimpleNodeApp/index.js
