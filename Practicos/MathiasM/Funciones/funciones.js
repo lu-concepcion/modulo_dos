@@ -236,6 +236,11 @@ const calculaEdad=(fecha)=>{
     {nombre:"jeremy", fechaNacimiento:{dia:15,mes:9,agnio:1990}}]
     let fechaAhora = new Date();
     let edad = fechaAhora.getFullYear()-fecha.getFullYear();
+    if(fechaAhora.getMonth()>fecha.getMonth()){
+        if(fechaAhora.getDay()>fecha.getDay()){
+            edad-1
+        }
+    }
     let arrayFiltrado=[];
     for(let i=0;i<personas.length;i++){
         if((fechaAhora.getFullYear()-personas[i].fechaNacimiento.agnio)>edad){
