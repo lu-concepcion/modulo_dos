@@ -4,6 +4,12 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
+// CÓDIGO FELIPE
+
+
+
+// FIN CÓDIGO FELIPE
+
 app.use(bodyParser.json());
 
 app.post('/persona', function(request, response){
@@ -12,9 +18,9 @@ app.post('/persona', function(request, response){
   // body: {id: 1, nombre: hernan }
   // body = { id: 1, nombre: hernan }
   const { body }  = request;
-  body = {vehiculo};
-
-  response.send(body)
+  const {vehiculo} = request.body;
+  console.log('vehiculo: ' + vehiculo);
+  response.send(body);
 });
 
 app.get('/persona', function(request, response){
@@ -22,7 +28,7 @@ app.get('/persona', function(request, response){
   // ej: localhost:3000/persona?id=1&nombre=Hernan
   // query = { id: 1, nombre: hernan }
   const { query }  = request;
-  response.send("hola mundo")
+  response.send("hola mundo");
 });
 
 app.listen(3000, function () {
