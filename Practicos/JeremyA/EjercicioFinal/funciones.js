@@ -1,6 +1,6 @@
-const testing = () => {
-    return "test";
-}
+// const testing = () => {
+//     return "test";
+// }
 
 //sumar dos numeros
 const sumar = (num1, num2) => {
@@ -223,9 +223,9 @@ const obtenerEdad = (edad) => {
 }
 
 
-module.exports = {
-    testing
-}
+// module.exports = {
+//     testing
+// }
 
 //exporto funciones a los demás archivos
 export {
