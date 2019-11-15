@@ -301,4 +301,91 @@ const extraer = (input) =>
     console.log(aux1)
     return aux3
 }
-export {extraer, factorial, buscarObjArray,buscarObj,busqueda,RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
+
+const TodoRun = num =>
+{
+    let cadena ="";
+    let todo = "";
+    let acum =0;
+    let aux = 0;
+    let digito = 0;
+    let i = num.length;
+    let serie = [2,3,4,5,6,7];
+    num = num.split("-");
+    num = num[0];
+    while(i>=0)
+    {
+        if(num.charAt(i)!= ".")
+       {
+          cadena = cadena+num.charAt(i)
+       
+       }  
+         i--; 
+    }
+    let diferencia = parseInt(cadena.length)-parseInt(serie.length);
+
+    if(diferencia>0)
+    { 
+        for(let k = 0; k<diferencia;k++)
+        {
+            serie.push(serie[k]);
+        }  
+    }
+  
+    for(let j = 0;j<cadena.length;j++)
+    {
+        acum = acum + cadena[j]*serie[j]; 
+    }
+
+    aux = acum%11;
+    digito = 11-aux;
+
+    if (digito == 11)
+    {
+        digito = "0";
+    }
+    else if (digito == 10)
+    {
+        digito = "k";
+   }
+   let j = cadena.length;
+   while(j>=0)
+   {
+        todo = todo+cadena.charAt(j)  
+        j--;  
+        
+   }
+   let aux2 = "";
+   aux2 = todo + digito;
+  
+   console.log(aux2)
+    return aux2
+}
+
+const calEdad = (fechaNac) =>
+{
+    
+    let num = [];
+    fechaNac = fechaNac.split("/");
+
+          num[0] =fechaNac[2]
+          num[1] =fechaNac[1]
+          num[2] =fechaNac[0]
+    
+
+    let edades = "";
+    let fechaActual = new Date();
+    let fecha = new Date(num);
+    let years = fechaActual.getFullYear()- fecha.getFullYear();
+    
+    if ((fechaActual.getMonth() >= fecha.getMonth()) && (fechaActual.getDay() >= fecha.getDay()))
+    {
+        edades = years;
+    }
+    else
+    {
+        edades = years -1;
+    }
+    return edades
+}
+export {calEdad,TodoRun,extraer, factorial, buscarObjArray,buscarObj,busqueda,RUN,esNumero, esTexto, minuscula, mayuscula, numVocal, palindromo, random, validMinMax, iqualNumber, sumar, restar, multiplicar, dividir, porcentaje}
