@@ -231,7 +231,10 @@ const extraerTextoParentesis=(texto)=>{
 
 //ejercicio12
 const calculaEdad=(fecha)=>{
-    console.log(fecha.getDay());
+    let fechaAhora = new Date();
+    let edad = fechaAhora.getFullYear()-fecha.getFullYear();
+    console.log(fechaAhora);
+    console.log(edad);
     console.log(fecha.getMonth());
     console.log(fecha.getFullYear());
 }
