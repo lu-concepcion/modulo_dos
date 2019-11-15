@@ -264,6 +264,7 @@ const ordenarMenorAMayor = array => {
     }
     return array;
 }
+//
 
 export{
     sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales,
