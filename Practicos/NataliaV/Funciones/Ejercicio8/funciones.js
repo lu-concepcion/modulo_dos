@@ -20,19 +20,17 @@ dada una condición
 	Debe retornar un array vacío en caso de no encontrar nada*/
 
    const numeroaBuscar =(numero,n)=>{
-     
-   for(let i=0;i<=n;i++){
-   console.log("f",numero);
+     let num;
+   for(let i=0;i<numero.length;i++){
        if(numero[i]==n){
+          alert("se encontro numero: "+n)
+          num = numero[i];
           
-          alert("Esta el numero")
-       }else{
-          alert("no esta el numero")
-       }
       }
+      
       }
-   
-
+      return(num);
+   }
    export{
       numeroaBuscar
    }
