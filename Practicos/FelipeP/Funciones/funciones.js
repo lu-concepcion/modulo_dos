@@ -119,24 +119,114 @@ const generaDigitoVerificador = rut => {
 }
 
 const encontrarElemento = (elemento, arreglo) => {
-    console.log(arreglo.includes(elemento));
     return arreglo.includes(elemento);
 }
 
 const buscarEnArray = (arreglo, propiedad, valor) => {
-    console.log('Propiedad: ' + propiedad + ', Valor: ' + valor);
     let objeto = {};
-    let encontrado = false;
     arreglo.forEach(element => {
-        console.log(element[propiedad]);
         if (element[propiedad] == valor) {
-            encontrado = true;
             objeto = element;
         }
     });
     return objeto;
 }
 
+const filtrarEnArray = (arreglo, propiedad, valor) => {
+    let objetos = [];
+    arreglo.forEach(element => {
+        if (element[propiedad] == valor) {
+            objetos.push(element);
+        }
+    });
+    return objetos;
+}
+
+// Funciones día 3
+const ordenaMenorMayor = arreglo => {
+    let aux;
+    for (let i = 0; i < arreglo.length; i++) {
+        for (let j = 1; j < (arreglo.length - i); j++) {
+            if (arreglo[j - 1] > arreglo[j]) {
+                aux = arreglo[j - 1];
+                arreglo[j - 1] = arreglo[j];
+                arreglo[j] = aux;
+            }
+        }
+    }
+    return arreglo;
+}
+const ordenaMayorMenor = arreglo => {
+    let aux;
+    for (let i = 0; i < arreglo.length; i++) {
+        for (let j = 1; j < (arreglo.length - i); j++) {
+            if (arreglo[j - 1] < arreglo[j]) {
+                aux = arreglo[j - 1];
+                arreglo[j - 1] = arreglo[j];
+                arreglo[j] = aux;
+            }
+        }
+    }
+    return arreglo;
+}
+
+const generaFactorial = numero => {
+    let numeroFactorial = 1;
+    for (let i = 0; i < numero; i++) {
+        numeroFactorial = numeroFactorial * (i+1); 
+    }
+    return numeroFactorial;
+}
+
+const textoEnParentisis = cadena => {
+    let textos = '';
+    let aux = '';
+    for (let i = 0; i < cadena.length; i++) {
+        if (cadena.charAt(i) == '(') {
+            while(true) {
+                if (cadena.charAt(i+1) == ')' || (i+1) == cadena.length) {
+                    if ((i+1) == cadena.length) {
+                        aux = '';
+                    }
+                    break;
+                }
+                aux += cadena.charAt(i+1);
+                if (cadena.charAt(i+1) == '(') {
+                    aux = '';
+                    break;
+                }
+                i++;
+            }
+            textos += aux + ' ';
+            aux = '';
+        }  
+    }
+    if (textos.trim().length == 0) {
+        return 'No se encontro texto';
+    }
+    textos = textos.replace(/^\s*|\s*$/g,"");
+    return textos;
+}
+
+const obtenerEdadPersona = (arreglo, edadLimite) => {
+    let personas = [];
+    let fecha = '';
+    let edad = 0;
+    const hoy = new Date();
+
+    arreglo.forEach(element => {
+        fecha = element['fechaNacimiento'];
+        if ((hoy.getMonth()+1) >= fecha.getMonth() && hoy.getDate() >= fecha.getDate()) {
+            edad = hoy.getFullYear() - fecha.getFullYear();
+        } else {
+            edad = (hoy.getFullYear()-1) - fecha.getFullYear();
+        }
+        if (edad > edadLimite) {
+            personas.push(element);
+        }
+    });
+    return personas;
+}
 export {
     esNumero,
     esTexto,
@@ -152,5 +242,11 @@ export {
     calcularPorcentaje,
     generaDigitoVerificador,
     encontrarElemento,
-    buscarEnArray
+    buscarEnArray,
+    filtrarEnArray,
+    ordenaMenorMayor,
+    ordenaMayorMenor,
+    generaFactorial,
+    textoEnParentisis,
+    obtenerEdadPersona
 }
