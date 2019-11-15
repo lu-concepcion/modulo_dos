@@ -231,12 +231,20 @@ const extraerTextoParentesis=(texto)=>{
 
 //ejercicio12
 const calculaEdad=(fecha)=>{
+    let personas = [{nombre:"mathias", fechaNacimiento:{dia:27,mes:6,agnio:1997}},
+    {nombre:"jorge", fechaNacimiento:{dia:4,mes:4,agnio:1996}},
+    {nombre:"jeremy", fechaNacimiento:{dia:15,mes:9,agnio:1990}}]
     let fechaAhora = new Date();
     let edad = fechaAhora.getFullYear()-fecha.getFullYear();
-    console.log(fechaAhora);
-    console.log(edad);
-    console.log(fecha.getMonth());
-    console.log(fecha.getFullYear());
+    let arrayFiltrado=[];
+    for(let i=0;i<personas.length;i++){
+        if((fechaAhora.getFullYear()-personas[i].fechaNacimiento.agnio)>edad){
+            console.log(fechaAhora.getFullYear()-personas[i].fechaNacimiento.agnio)
+            console.log(edad)
+            arrayFiltrado.push(personas[i]);
+        }
+    }
+    return console.log(arrayFiltrado) 
 }
 
 export{

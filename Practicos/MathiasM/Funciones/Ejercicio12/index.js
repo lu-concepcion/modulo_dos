@@ -10,8 +10,16 @@
 
 import{ calculaEdad } from '../funciones.js';
 
-let personas = [{nombre:"mathias", fechaNacimiento:"1997/06/27"},{nombre:"jorge", fechaNacimiento:"1998/09/15"},{nombre:"jeremy", fechaNacimiento:"1996/04/05"}]
+let dia=0,mes=0,agnio=0;
+do{
+    dia = prompt("Ingrese dia de nacimiento");
+}while(dia<=0 || dia>31)
 
-const fecha = new Date("1997","2","5");
-console.log(fecha)
+do{
+    mes = prompt("Ingrese mes de nacimiento");
+}while(mes<=0 || mes>12)
+do{
+    agnio = prompt("Ingrese año de nacimiento");
+}while(agnio<=0)
+const fecha = new Date(agnio,mes,dia);
 calculaEdad(fecha)
