@@ -4,12 +4,6 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
-// CÓDIGO FELIPE
-
-
-
-// FIN CÓDIGO FELIPE
-
 app.use(bodyParser.json());
 
 app.post('/persona', function(request, response){
