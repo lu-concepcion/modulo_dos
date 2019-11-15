@@ -218,12 +218,19 @@ const soloParentesis = (texto)=>
     }
     return salida
 }
-const mayoresQue = (array,edad)=>
+const calculoEdad = (birth)=>
 {
     const fecha = new Date()
-    const fechaLimite = [fecha.getFullYear(),(fecha.getMonth()+1),fecha.getDate()]
-    alert (fechaLimite)
-    alert (array[1].fechaDeNacimiento)
+    const fechaHoy = [fecha.getFullYear(),(fecha.getMonth()+1),fecha.getDate()]
+    const fechaDeNacimiento = [birth.getFullYear(),(birth.getMonth()+1),birth.getDate()]
+    if(fechaHoy[1]<fechaDeNacimiento[1])
+    {
+        if(fechaDeNacimiento[2]>fechaHoy[2])
+        {
+            fechaHoy[0]=fechaHoy[0]-1
+        }
+    }
+    return fechaHoy[0]-fechaDeNacimiento[0]
 }
 export
 {
@@ -246,5 +253,5 @@ export
     objectFilter,
     factorial,
     soloParentesis,
-    mayoresQue
+    calculoEdad
 }

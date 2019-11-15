@@ -1,5 +1,5 @@
 import{
-    mayoresQue
+    calculoEdad
 }from'../Funciones.js'
 let personas=[
     {
@@ -15,5 +15,16 @@ let personas=[
         fechaDeNacimiento: new Date(1987,5,21)
     }
 ]
-mayoresQue(personas,21)
+const edadLimite = prompt("ingrese limite de edad")
+let personasMayores = []
+for (let i=0;i<personas.length;i++)
+{
+    alert(calculoEdad(personas[i].fechaDeNacimiento))
+    if(calculoEdad(personas[i].fechaDeNacimiento)>=edadLimite)
+    {
+        personasMayores.push(personas[i].nombre)
+    }
+}
+alert(personasMayores)
+
 
