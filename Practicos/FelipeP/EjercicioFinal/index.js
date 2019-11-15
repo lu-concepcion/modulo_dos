@@ -8,18 +8,13 @@ app.use(bodyParser.json());
 
 app.post('/persona', function(request, response){
   const { body }  = request;
-  const {run,fechaNac,tieneProfesion,tieneVehiculo,vehiculoId,profesionId} = request.body;
-
-  let dv = funciones.generaDigitoVerificador(run);
-
-  // rut,digito,fechaNacimiento,edad_persona,tieneVehiculo,tieneProfesion,marca_vehiculo,modelo_vehiculo,id_profesion,nombre_profesion
-  persona.setPersona(run,dv,fechaNac,100,tieneVehiculo,tieneProfesion,'Mazda','Mazda 3',profesionId,'Ing Informática')
+  persona.setPersona(body)
   response.send(body);
 });
 
 app.get('/persona', function(request, response){
-  let personas = persona.getPersona();
   const { query }  = request;
+  let personas = persona.getPersona();
   response.send(personas);
 });
 

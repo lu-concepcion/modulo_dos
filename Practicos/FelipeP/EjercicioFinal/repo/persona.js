@@ -1,23 +1,28 @@
 //generar datos de personas
+var funciones = require('../funciones')
 
 let arregloPersonas = [];
 
-const setPersona = (rut,digito,fechaNacimiento,edad_persona,tieneVehiculo,tieneProfesion,marca_vehiculo,modelo_vehiculo,id_profesion,nombre_profesion) => {
+const setPersona = (body) => {
+
+    const {run,fechaNac,tieneProfesion,tieneVehiculo,vehiculoId,profesionId} = body;
+
+    let digitoVerificador = funciones.generaDigitoVerificador(run);
 
     let persona = {
-        run: rut,
-        dv: digito,
-        fechaNac: fechaNacimiento,
-        edad: edad_persona,
-        tieneProfesion: tieneVehiculo,
-        tieneVehiculo: tieneProfesion,
+        run: run,
+        dv: digitoVerificador,
+        fechaNac: fechaNac,
+        edad: 22,
+        tieneProfesion: tieneProfesion,
+        tieneVehiculo: tieneVehiculo,
         vehiculo: {
-          marca: marca_vehiculo,
-          modelo: modelo_vehiculo
+          marca: 'citroen',
+          modelo: 'xx-1'
         },
         profesion: {
-          id: id_profesion,
-          nombre: nombre_profesion
+          id: 1,
+          nombre: 'ingenierous'
         }
     }
 
