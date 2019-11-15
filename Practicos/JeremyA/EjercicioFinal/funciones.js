@@ -1,3 +1,7 @@
+const testing = () => {
+    return "test";
+}
+
 //sumar dos numeros
 const sumar = (num1, num2) => {
     return (num1 + num2);
@@ -216,6 +220,11 @@ const capturaTexto = (texto) => {
 //obtener edad en base a una fecha de nacimiento
 const obtenerEdad = (edad) => {
     
+}
+
+
+module.exports = {
+    testing
 }
 
 //exporto funciones a los demás archivos
