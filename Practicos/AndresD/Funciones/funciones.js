@@ -254,14 +254,15 @@ return listado;
 return factorial;
   }
 
-  const calcularEdad=(fechaNac, fechaHoy)=> {
-   const dia = fechaNac.getDay();
-   const mes = fechaNac.getMonth();
-   const año = fechaNac.getFullYear();
-    
+  const calcularEdad=(fecha)=> {
+    var presente = new Date();
+    var fechaNac = new Date(fecha);
+    var edad = presente.getFullYear() - fechaNac.getFullYear();
+    var m = presente.getMonth() - fechaNac.getMonth();
 
-
-
+    if (m < 0 || (m === 0 && presente.getDate() < fechaNac.getDate())) {
+        edad--;
+    }
 
   }
 
@@ -273,5 +274,5 @@ export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinusc
   contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, 
   limpiarRut, invertirCadena,calcularDigitoVerificador,lotto,
   buscarEnArray, objetoEnArray, listarPropiedades, filtrarEnArray,
-  ordenarArray, factorial
+  ordenarArray, factorial, calcularEdad
 }

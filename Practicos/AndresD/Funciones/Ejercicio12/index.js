@@ -1,18 +1,8 @@
-var Persona1 = {
-nombre: "juan",
-}
-var Persona2 = {
-nombre: "alan",
-}
-var Persona3 = {
-nombre: "meli",
-}
-var Persona4 = {
-nombre: "brayan",
+import {calcularEdad} from '../funciones.js';
+
+var persona1 ={
+nombre:"juan"
 }
 
-
-
-Persona1.fecha = new Date(1995, 8, 20);
-
-alert(`${Persona1.fecha.getFullYear()},${Persona1.fecha.getMonth()} ,${Persona1.fecha.getDay()}`); 
+persona1.fechaNac = new Date(1995, 8, 21);
+alert(calcularEdad(persona1.fechaNac))
