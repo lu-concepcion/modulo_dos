@@ -214,8 +214,19 @@ const capturaTexto = (texto) => {
 }
 
 //obtener edad en base a una fecha de nacimiento
-const obtenerEdad = (edad) => {
-    
+const obtenerEdad = (fecha) => {
+    const personas = [{nombre: "jeremy", fechNac:{dia:5, mes:4, agno:1996}},{nombre:"mathias", fechNac:{dia:27, mes:6, agno:1997}}];
+    let fechaAhora = new Date ();
+    let edad = fechaAhora.getFullYear() - fecha.getFullYear();
+    let arrayFiltrado=[];
+    for(let i=0; i<personas.length; i++){
+        if((fechaAhora.getFullYear()-personas[i].fechNac.agno)>edad){
+            console.log(fechaAhora.getFullYear()-personas[i].fechNac.agno)
+            console.log(edad)
+            arrayFiltrado.push(personas[i]);
+        }
+    }
+    return console.log(arrayFiltrado);
 }
 
 //exporto funciones a los demás archivos
@@ -241,5 +252,6 @@ export {
     ordenMasAMenos,
     ordenMenosAMas,
     factorial,
-    capturaTexto
+    capturaTexto,
+    obtenerEdad
 }
