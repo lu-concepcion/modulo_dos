@@ -1,6 +1,4 @@
-const testing = () => {
-    return "test";
-}
+
 
 
 const validaNumero=(numero)=>{
@@ -252,13 +250,11 @@ const calculaEdad=(fecha)=>{
     return console.log(arrayFiltrado) 
 }
 
-export{
+module.exports={
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
     sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje, formatoPunto, inversa
     ,encontrarElemento,encontrarEnArray,filtrarEnArray,ordenarMenor, ordenarMayor, calculoFactorial,extraerTextoParentesis,
     calculaEdad
 }
-module.exports = {
-    testing
-}
+
 
