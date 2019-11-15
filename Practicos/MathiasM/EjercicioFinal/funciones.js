@@ -131,7 +131,7 @@ const inversa=(run)=>{
     if(numVerificador==10)(numVerificador="k")
     console.log(multiplicacion)
     console.log(resultadoSuma)
-    return alert("Su rut con digito es: "+run+"-"+numVerificador)
+    return numVerificador;
     
 }
 
@@ -250,11 +250,17 @@ const calculaEdad=(fecha)=>{
     return console.log(arrayFiltrado) 
 }
 
+const calculoEdad2=(fecha)=>{
+    let fechaAhora = new Date();
+    let edad = fechaAhora.getFullYear()-fecha.getFullYear();
+    return edad
+}
+
 module.exports={
     validaNumero,validaLetra,convertirMinuscula, convertirMayuscula,cuentaVocales,palabraInversa,
     sorteoLoteria, guardarNumero, sumar, multiplicar, restar, dividir, porcentaje, formatoPunto, inversa
     ,encontrarElemento,encontrarEnArray,filtrarEnArray,ordenarMenor, ordenarMayor, calculoFactorial,extraerTextoParentesis,
-    calculaEdad
+    calculaEdad, calculoEdad2
 }
 
 
