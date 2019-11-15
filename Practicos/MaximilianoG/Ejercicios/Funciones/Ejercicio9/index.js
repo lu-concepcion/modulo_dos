@@ -1,6 +1,6 @@
 import { ordenarMenorAMayor } from '../funciones.js';
 
-const array = [2,4,5,2,9,3,7];
-let objeto = [];
+const array = [4,8,2,7,9,3,2];
+console.log(array)
 
-console.log(ordenarMenorAMayor(array, objeto));
+console.log(ordenarMenorAMayor(array));

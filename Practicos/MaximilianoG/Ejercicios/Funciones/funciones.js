@@ -254,16 +254,15 @@ const filtrarEnArray = (array, propiedad, valor) => {
 }
 
 //funcion para ordenar de menor a mayor un arreglo
-const ordenarMenorAMayor = (array, objeto) => {
+const ordenarMenorAMayor = array => {
     for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array.length; j++) {
-            if (array[j] < array[j+1]) {
-            objeto[j] = array[j];
+        for (let j = 0; j < array.length - 1 - i; j++) {
+            if (array[j] > array[j+1]) {
+            [array[j], array[j+1]] = [array[j+1], array[j]]
             }
         }
     }
     return array;
-    return objeto;
 }
 
 export{
