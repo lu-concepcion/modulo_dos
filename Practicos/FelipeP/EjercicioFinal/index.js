@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 app.post('/persona', function(request, response){
   // body mapea a un objeto los parámetros enviados en el body del request
@@ -12,6 +12,7 @@ app.post('/persona', function(request, response){
   // body: {id: 1, nombre: hernan }
   // body = { id: 1, nombre: hernan }
   const { body }  = request;
+  body = {vehiculo};
 
   response.send(body)
 });
