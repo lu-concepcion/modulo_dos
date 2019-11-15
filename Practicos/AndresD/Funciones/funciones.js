@@ -254,6 +254,18 @@ return listado;
 return factorial;
   }
 
+  const calcularEdad=(fechaNac, fechaHoy)=> {
+   const dia = fechaNac.getDay();
+   const mes = fechaNac.getMonth();
+   const año = fechaNac.getFullYear();
+    
+
+
+
+
+  }
+
+
   
 
 
