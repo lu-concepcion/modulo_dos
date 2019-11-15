@@ -257,13 +257,14 @@ const filtrarEnArray = (array, propiedad, valor) => {
 const ordenarMenorAMayor = (array, objeto) => {
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array.length; j++) {
-            if (array[j] > array[j+1]) {
-            let aux = array[i]
+            if (array[j] < array[j+1]) {
+            objeto[j] = array[j];
             }
         }
     }
+    return array;
+    return objeto;
 }
-
 
 export{
     sumar, validarTexto, textoAMinuscula, textoAMayuscula, identificarVocales,
