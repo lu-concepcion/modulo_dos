@@ -210,6 +210,7 @@ const extraerDeParentesis = (string) =>{
 //Ejercicio 12
 
 const calculaEdad = (fecha) =>{
+    console.log(fecha)
     let hoy = new Date()
     let edad = (hoy.getFullYear()-fecha.getFullYear())
     if(fecha.getMonth()<hoy.getMonth()){
