@@ -31,15 +31,19 @@
         nombre:""
 
     }
-    
-
-
 
 
     const guardarDatos = (body) =>{
-
+        let{rut, fechaNac, tieneProfesion, tieneVehiculo, vehiculo, profesion} = body
         personas.push(body);
-        return "ingresado";
+        
+
+        personas.rut
+        personas.fechaNac
+        personas.tieneVehiculo
+        personas.tieneProfesion
+        personas.vehiculo
+        personas.profesion
 
     }
     const obtenerDatos = (body) =>{
