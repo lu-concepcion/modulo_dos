@@ -19,19 +19,19 @@ dada una condición
       valorPropiedad)
 	Debe retornar un array vacío en caso de no encontrar nada*/
 
-   console.log("Funcion 1");
-   const numeroaBuscar =(numero)=>{
-      let n=parseInt(prompt("Ingrese numero a buscar : "));
-      for(i=0;i<numero.length;i++){
-         if(numero[i]==n){
-            alert("se encontro el numero en array: ",n);
-            
-         }else{
-            alert("no se encontro el numero en el array: ")
-         }
+   const numeroaBuscar =(numero,n)=>{
+     
+   for(let i=0;i<=n;i++){
+   console.log("f",numero);
+       if(numero[i]==n){
+          
+          alert("Esta el numero")
+       }else{
+          alert("no esta el numero")
+       }
       }
-      
-   }
+      }
+   
 
    export{
       numeroaBuscar
