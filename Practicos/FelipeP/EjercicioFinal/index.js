@@ -12,9 +12,9 @@ app.post('/persona', function(request, response){
   response.send(body);
 });
 
-app.get('/persona', function(request, response){
-  const { query }  = request;
-  let personas = persona.getPersona();
+app.get('/persona/:run', function(request, response){
+  const { run }  = request.params;
+  let personas = persona.getPersona(run);
   response.send(personas);
 });
 

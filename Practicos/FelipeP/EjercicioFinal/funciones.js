@@ -36,8 +36,36 @@ const generaDigitoVerificador = rut => {
     return final;
 }
 
+const obtenerEdadPersona = (fechaNacimiento) => {
+    // 18/09/1992
+    let dia, mes, anio;
+    let edad = 0;
+    const hoy = new Date();
+
+    if (fechaNacimiento.charAt(0) == '0') {
+        dia = fechaNacimiento.charAt(1);
+    } else {
+        dia = fechaNacimiento.substr(0,1);
+    }
+
+    if (fechaNacimiento.charAt(3) == '0') {
+        mes = fechaNacimiento.charAt(4);
+    } else {
+        mes = fechaNacimiento.substr(3,4);
+    }
+    anio = fechaNacimiento.substr(6,9);
+
+    const fecha = new Date(anio,mes,dia);
+
+        if ((hoy.getMonth()+1) >= fecha.getMonth() && hoy.getDate() >= fecha.getDate()) {
+            edad = hoy.getFullYear() - fecha.getFullYear();
+        } else {
+            edad = (hoy.getFullYear()-1) - fecha.getFullYear();
+        }
+    return edad;
+}
 
 module.exports = {
-    testing,
-    generaDigitoVerificador
+    generaDigitoVerificador,
+    obtenerEdadPersona
 }
