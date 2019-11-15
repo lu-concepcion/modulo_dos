@@ -1,15 +1,26 @@
-var funciones = require('./funciones');
+var funciones = require('./funciones')
+var persona = require('./repo/persona')
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.json())
 
-app.get('/persona/:id', function(request, response){
-  response.send("hola mundo")
+app.post('/persona', function(request, response){
+  // body mapea a un objeto los parámetros enviados en el body del request
+  // ej: localhost:3000/persona
+  // body: {id: 1, nombre: hernan }
+  // body = { id: 1, nombre: hernan }
+  const { body }  = request;
+
+  response.send(body)
 });
 
-app.post('/persona', function(request, response){
+app.get('/persona', function(request, response){
+  // query mapea a un objeto los parámetros enviados en la ruta
+  // ej: localhost:3000/persona?id=1&nombre=Hernan
+  // query = { id: 1, nombre: hernan }
+  const { query }  = request;
   response.send("hola mundo")
 });
 
