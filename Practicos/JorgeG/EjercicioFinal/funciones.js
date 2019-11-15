@@ -1,3 +1,6 @@
+const testing = () => {
+    return "test";
+}
 const sumar=(num1,num2)=>{
     return num1+num2
 }
@@ -233,4 +236,6 @@ export{
     ,generaLoteria,multiplicar,dividir,calculaPorcentaje,moduloOnce,buscarElemento,filtrarArray,filtrarTodosArray,
     ordenarMenorAMayorArray,ordenarMayorAMenorArray,factorial,extraerDeParentesis,calculaEdad
 }
-
+module.exports = {
+    testing
+}
