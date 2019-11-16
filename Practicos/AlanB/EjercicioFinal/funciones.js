@@ -239,5 +239,6 @@ const calculoEdad = (birth)=>
 module.exports = {
     testing,
     calculoEdad,
-    objectFinder
+    objectFinder,
+    digitoVerificador
 }

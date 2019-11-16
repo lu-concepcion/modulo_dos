@@ -14,8 +14,8 @@ app.post('/persona', function(request, response){
   // body: {id: 1, nombre: hernan }
   // body = { id: 1, nombre: hernan }
   const { body }  = request;
-  console.log(body.vehiculoId)
   console.log(funciones.objectFinder(vehiculos.listaVehiculos,"id",body.vehiculoId))
+  body.dv=funciones.digitoVerificador(body.run) 
  body.vehiculo=funciones.objectFinder(vehiculos.listaVehiculos,"id",body.vehiculoId)
   body.profesion=funciones.objectFinder(profesiones.listaProfesiones,"id",body.profesionId)
   persona.guardarPersonas(body)
