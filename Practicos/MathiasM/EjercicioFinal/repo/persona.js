@@ -14,7 +14,7 @@ const guardarPersona=(body)=>{
     persona.tieneVehiculo = body.tieneVehiculo;
     persona.idVehiculo = body.idVehiculo;
     personas.push(persona);
-
+    // funciones.encontrarEnArray(personas,"id",6);
     if(body.tieneProfesion==true){
         do{
             i++

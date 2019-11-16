@@ -1,7 +1,7 @@
 //generar datos de profesiones
 const listaProfesiones=()=>{
 
-    let profesiones={};
+    // let profesiones={};
     let arrayProfesiones=[];
     arrayProfesiones[0]={id:"1",nombre:"ford"};
     arrayProfesiones[1]={id:"2",nombre:"nissan"};
