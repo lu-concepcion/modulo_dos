@@ -4,14 +4,11 @@ var profesiones= require('./profesiones')
 let personas= [];
 
 const guardarPersona=(body)=>{
-    let fechaNac={};
-    let persona={fechaNac};
+    let persona={};
     persona.run= body.run;
     persona.dv= funciones.inversa(body.run)
-    persona.fechaNac.dia = body.fechaNac.dia;
-    persona.fechaNac.mes = body.fechaNac.mes;
-    persona.fechaNac.agnio = body.fechaNac.agnio;
-    persona.edad = funciones.calculoEdad2(new Date(body.fechaNac.agnio,body.fechaNac.mes,body.fechaNac.dia));
+    persona.fechaNac = body.fechaNac;
+    persona.edad = funciones.calculoEdad2(new Date(body.fechaNac));
     persona.tieneProfesion = body.tieneProfesion;
     persona.idProfesion = body.idProfesion;
     persona.tieneVehiculo = body.tieneVehiculo;
@@ -24,6 +21,8 @@ const guardarPersona=(body)=>{
         }while(body.idProfesion!=profesiones.listaProfesiones()[i].idProfesion)
     }
 }
+
+
 
 module.exports={
     guardarPersona
