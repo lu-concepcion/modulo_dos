@@ -1,5 +1,5 @@
 //generar datos de vehículos
-let vehiculos =[
+let listaVehiculos =[
     {id:1,marca:"Audi",modelo:"A4"},
     {id:2,marca:"Alfa Romeo",modelo:"Giulia"},
     {id:3,marca:"Kia",modelo:"Morning"},
@@ -9,5 +9,5 @@ let vehiculos =[
 
 ]
 module.exports={
-    vehiculos
+    listaVehiculos
 }
