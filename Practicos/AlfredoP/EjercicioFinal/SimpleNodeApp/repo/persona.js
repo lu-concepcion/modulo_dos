@@ -46,15 +46,24 @@ const buscarPersona = run => {
     let persona = [];
     if (run) {
         for (let item in personasLista) {
-            if (personasLista[item]['run'] == run) {
+            if (personasLista[item]['run'] == run)
                 persona = personasLista[item];
-            }
         }
     }
     return persona;
 }
+
+const borrarPersona = run => {
+    let eliminado;
+    for (let item in personasLista)
+    if (personasLista[item]['run'] == run)
+    eliminado = personasLista.splice(personasLista[item], 1);
+    return eliminado;
+}
+
 module.exports = {
     reciboPersona,
     listarPersonas,
-    buscarPersona
+    buscarPersona,
+    borrarPersona
 }
