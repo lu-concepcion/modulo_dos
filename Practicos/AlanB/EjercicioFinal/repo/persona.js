@@ -8,7 +8,12 @@ for (let i=0;i<personas.length;i++)
     personas[i].vehuculoId=vehiculos[personas[i].vehuculoId]
 }
 const obtenerPersonas = run =>{
-    return personas
+    for(let i=0;i<personas.length;i++){
+    if(personas[i].run==run)
+    {
+        return personas[i]
+
+    }}
 }
 module.exports =
 {
