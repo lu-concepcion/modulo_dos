@@ -1,5 +1,5 @@
 //generar datos de 
-let profesiones = [
+let listaProfesiones = [
     {id:1,nombre:"ingeniero"},
     {id:2,nombre:"profesor"},
     {id:3,nombre:"medico"},
@@ -8,5 +8,5 @@ let profesiones = [
     {id:6,nombre:"dentista"}
 ]
 module.exports={
-    profesiones
+    listaProfesiones
 }

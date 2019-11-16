@@ -1,6 +1,7 @@
 var funciones = require('./funciones')
 var persona = require('./repo/persona')
 var vehiculos = require('./repo/vehiculos')
+var profesiones = require('./repo/profesiones')
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -16,6 +17,7 @@ app.post('/persona', function(request, response){
   console.log(body.vehiculoId)
   console.log(funciones.objectFinder(vehiculos.listaVehiculos,"id",body.vehiculoId))
  body.vehiculo=funciones.objectFinder(vehiculos.listaVehiculos,"id",body.vehiculoId)
+  body.profesion=funciones.objectFinder(profesiones.listaProfesiones,"id",body.profesionId)
   persona.guardarPersonas(body)
   response.send(body)
 });
