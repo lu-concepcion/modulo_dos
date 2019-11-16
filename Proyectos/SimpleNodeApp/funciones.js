@@ -445,10 +445,37 @@ const mayoresEdad=(personas,edad)=>{
 
     }
 
+    
+
     return mayores;
 
 
 }
+
+const edadG=(fecha)=>{
+    let anio="",mes,dia,letra,ed=0;
+
+    for(let i=0;i<fecha.length;i++)
+    {
+        letra=fecha.charAt(i);
+        if(letra!="/"&& i>5 && i<10)
+        {
+            anio=anio+letra;
+        }
+
+
+    }
+
+    let año=parseInt(anio);
+    ed=2019-año;
+
+    return ed;
+
+
+}
+
+
+
 
   module.exports={
     validaNumero,
@@ -468,6 +495,7 @@ const mayoresEdad=(personas,edad)=>{
     ordenaArray,
     factorial,
     extraeEntreParentesis,
-    mayoresEdad
+    mayoresEdad,
+    edadG
 }
 
