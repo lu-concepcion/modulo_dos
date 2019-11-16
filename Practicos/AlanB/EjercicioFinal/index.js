@@ -19,6 +19,12 @@ app.post('/persona', function(request, response){
   body.edad=funciones.calculoEdad(funciones.getBirthday(body.fechaNac)) 
  body.vehiculo=funciones.objectFinder(vehiculos.listaVehiculos,"id",body.vehiculoId)
   body.profesion=funciones.objectFinder(profesiones.listaProfesiones,"id",body.profesionId)
+  delete body.tieneProfesion
+  delete body.tieneVehiculo
+  delete body.vehiculoId
+  delete body.profesionId
+  delete body.vehiculo.id
+  delete body.profesion.id
   persona.guardarPersonas(body)
   response.send(body)
 });
