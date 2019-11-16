@@ -1,16 +1,27 @@
 //generar datos de personas
 var funciones = require('../funciones')
-var vehiculos = require('./repo/vehiculos')
+var vehiculos = require('./vehiculos')
+var profesiones = require('./profesiones')
 let listaPersonas=[];
-let i = 0;
+let vehiculo = {};
+let profesion = {};
 
+const guardarPersona= body =>
+{   let {run, fechaNac, tieneVehiculo,tieneProfesion,vehiculoId, profesionId} = body;
 
-const guardarPersona= body=>
-{   let {run, fechaNac, vehiculoId} = body;
-        listaPersonas.push({ id: i,run: run, dv:digitoV(run), fechaNac: fechaNac, edad: calEdad(fechaNac) ,vehiculo:buscarObj(vehiculos(),"id",vehiculoId))
-        i++;
+    if (tieneVehiculo == true )
+       {   
+           vehiculo = buscarObj(vehiculos.vehiculos(),"id",vehiculoId)
+       
+       } 
+    if (tieneProfesion == true )
+       {   
+           profesion = buscarObj(profesiones.profesiones(),"id",profesionId)
+       
+       } 
+        listaPersonas.push({ run: run, dv:digitoV(run), fechaNac: fechaNac, edad: calEdad(fechaNac) ,vehiculo:vehiculo,profesion:profesion})
+    
 }
-
 
 const obtenerPersonas = (run) => 
 {
@@ -93,28 +104,7 @@ const calEdad = (fechaNac) =>
     return edades
 }
 
-// const edadPersonas = (personas, edad) => {
-//     let edades=[];
-//     let fecha=[];
-//     let years=[];
-//     let fechaActual = new Date();
-//     let listadoPersonas="La/s persona/s mayor/es a "+ edad + " es/son : "
-//     for (let i in personas){
-//         fecha[i]= new Date(personas[i].fechaNacimiento);
-//         years[i]= fechaActual.getFullYear() - fecha[i].getFullYear();
-//         if ((fechaActual.getMonth() >= fecha[i].getMonth()) && (fechaActual.getDay() >= fecha[i].getDay())){
-//             edades[i]=years[i]
-//         } else {
-//             edades[i]=years[i]-1
-//         }
-//         if (edades[i]>edad){
-//             listadoPersonas=listadoPersonas + personas[i].nombre + " "
-//         }
-//        // console.log(years)
-//         //console.log(edades)
-//     }
-//     return listadoPersonas
-// }
+
 const buscarObj = (array, propiedad, valor) =>
 {
     let propiedades = [];
@@ -130,16 +120,12 @@ const buscarObj = (array, propiedad, valor) =>
             {
             if(valores[i][j] == valor)
                 {
+                    delete array[i]['id']
                 return array[i]
-                }
-            else
-                {
-                return false
-                }
+                }            
             }
         }
     }
-  
 }
 
 module.exports=

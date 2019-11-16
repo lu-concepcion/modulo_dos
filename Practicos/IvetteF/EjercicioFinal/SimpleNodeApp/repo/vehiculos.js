@@ -1,5 +1,8 @@
 //generar datos de vehículos
-const vehiculos =() =>
+
+var funciones = require('../funciones')
+
+const vehiculos = () =>
 {
     const listaVehiculos = 
     [
