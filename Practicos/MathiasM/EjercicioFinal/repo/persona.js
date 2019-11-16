@@ -7,20 +7,26 @@ let personas= [];
 const guardarPersona=(body)=>{
     let persona={run,fechaNac,tieneProfesion,tieneVehiculo,idProfesion,idVehiculo}=body;
     persona={
-        run:body.run,
-        dv: funciones.inversa(body.run),
-        fechaNac : body.fechaNac,
-        edad : funciones.calculoEdad2(new Date(body.fechaNac)),
-        tieneProfesion : body.tieneProfesion,
-        tieneVehiculo : body.tieneVehiculo,
-        profesion:funciones.encontrarEnArray(profesiones.listaProfesiones(),"id",body.idProfesion),
-        vehiculo:funciones.encontrarEnArray(vehiculos.listaVehiculos(),"idVehiculo",body.idVehiculo)
+        run:run,
+        dv: funciones.inversa(run),
+        fechaNac : fechaNac,
+        edad : funciones.calculoEdad2(new Date(fechaNac)),
+        tieneProfesion : tieneProfesion,
+        tieneVehiculo : tieneVehiculo,
+        profesion:funciones.encontrarEnArray(profesiones.listaProfesiones(),"id",idProfesion),
+        vehiculo:funciones.encontrarEnArray(vehiculos.listaVehiculos(),"idVehiculo",idVehiculo)
     };
     personas.push(persona);
+}
+
+const filtarPorRun=(query)=>{
+    const {run}=query
+     return funciones.encontrarEnArray(personas,"run",run)
+    
 }
 
 
 
 module.exports={
-    guardarPersona
+    guardarPersona, filtarPorRun
 }
