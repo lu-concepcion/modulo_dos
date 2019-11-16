@@ -1,6 +1,7 @@
 //generar datos de personas
 var funciones = require('../funciones.js')
 var profesiones= require('./profesiones')
+var vehiculos = require('./vehiculos')
 let personas= [];
 
 const guardarPersona=(body)=>{
