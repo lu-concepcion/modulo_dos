@@ -22,8 +22,11 @@ app.get('/persona/:run', function(request, response){
   // query = { id: 1, nombre: hernan }
   const { run }  = request.params;
   response.send(persona.buscarPersona(run));
-  //response.send(persona.listarPersonas())
 });
+
+app.get('/personalistar/', function(request, response){
+  response.send(persona.listarPersonas())
+})
 
 app.listen(3000, function () {
   console.log('Simple node app for LU-CCP listening on port 3000!');

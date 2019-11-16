@@ -1,30 +1,8 @@
 var funciones = require('../funciones')
+var vehiculos = require('./vehiculos')
+var profesiones = require('./profesiones')
 var index = require('../index')
 let personasLista = [];
-const carrosLista = [
-    {},
-    {
-        "marca" : "Ford",
-        "modelo" : "Mustang"
-    },
-    {
-        "marca" : "Ranger",
-        "modelo" : "4X4"
-    },
-];
-
-const profesionesLista = [
-    {},
-    {
-        "nombre" : "Ingeniero"
-    },
-    {
-        "nombre" : "Developer"
-    },
-    {
-        "nombre" : "Tecnico en Informaticá"
-    }
-];
 
 //generar datos de personas
 const reciboPersona = (body) => {
@@ -49,18 +27,14 @@ const reciboPersona = (body) => {
         datosGuardar.fechaNac = "Error";
         datosGuardar.edad = 0;
     }
-    if (tieneVehiculo == true) { 
-            datosGuardar.vehiculo = {"marca":carrosLista[vehiculoId]['marca'], "modelo":carrosLista[vehiculoId]['modelo']};
-    }
-    else {
+    if (tieneVehiculo == true)
+            datosGuardar.vehiculo = {"marca":vehiculos.carrosLista[vehiculoId]['marca'], "modelo":vehiculos.carrosLista[vehiculoId]['modelo']};
+    else
         datosGuardar.vehiculo = {};
-    }
-    if (tieneProfesion == true ) {
-        datosGuardar.profesion = {"id" : profesionId, "nombre" : profesionesLista[profesionId]['nombre']};
-    }
-    else {
+    if (tieneProfesion == true )
+        datosGuardar.profesion = {"id" : profesionId, "nombre" : profesiones.profesionesLista[profesionId]['nombre']};
+    else
         datosGuardar.profesion = {};
-    }
     personasLista.push(datosGuardar);
 }
 
