@@ -238,9 +238,6 @@ const calculoEdad = (birth)=>
 const getBirthday = (entrada)=>
 {
     let aux=entrada.split("/")
-    console.log(aux[2])
-    console.log(aux[1])
-    console.log(aux[0])
     return new Date (aux[0],aux[1],aux[2])
 }
 

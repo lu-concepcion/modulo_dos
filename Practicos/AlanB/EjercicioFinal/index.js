@@ -14,9 +14,12 @@ app.post('/persona', function(request, response){
   // body: {id: 1, nombre: hernan }
   // body = { id: 1, nombre: hernan }
   const { body }  = request;
-  console.log(funciones.getBirthday(body.fechaNac))
   body.dv=funciones.digitoVerificador(body.run)
-  body.edad=funciones.calculoEdad(funciones.getBirthday(body.fechaNac)) 
+  body.edad=funciones.calculoEdad(funciones.getBirthday(body.fechaNac))
+  if (body.tieneVehiculo=="false")
+  {
+    body.vehiculoId=0
+  } 
  body.vehiculo=funciones.objectFinder(vehiculos.listaVehiculos,"id",body.vehiculoId)
   body.profesion=funciones.objectFinder(profesiones.listaProfesiones,"id",body.profesionId)
   delete body.tieneProfesion
