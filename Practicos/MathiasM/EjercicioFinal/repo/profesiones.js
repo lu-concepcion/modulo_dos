@@ -3,11 +3,11 @@ const listaProfesiones=()=>{
 
     // let profesiones={};
     let arrayProfesiones=[
-        {id:"1",nombre:"ford"},
-        {id:"2",nombre:"nissan"},
-        {id:"3",nombre:"chevrolet"},
-        {id:"4",nombre:"ford"},
-        {id:"5",nombre:"ford"}
+        {id:"1",nombre:"Ingeniero"},
+        {id:"2",nombre:"Astronauta"},
+        {id:"3",nombre:"Mecanico"},
+        {id:"4",nombre:"Cientifico"},
+        {id:"5",nombre:"Fisico"}
     ];
     return arrayProfesiones;
 

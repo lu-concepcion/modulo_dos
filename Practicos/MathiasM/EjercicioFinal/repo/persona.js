@@ -5,22 +5,18 @@ var vehiculos = require('./vehiculos')
 let personas= [];
 
 const guardarPersona=(body)=>{
-    let persona={};
-    persona.run= body.run;
-    persona.dv= funciones.inversa(body.run)
-    persona.fechaNac = body.fechaNac;
-    persona.edad = funciones.calculoEdad2(new Date(body.fechaNac));
-    persona.tieneProfesion = body.tieneProfesion;
-    persona.idProfesion = body.idProfesion;
-    persona.tieneVehiculo = body.tieneVehiculo;
-    persona.idVehiculo = body.idVehiculo;
+    let persona={run,fechaNac,tieneProfesion,tieneVehiculo,idProfesion,idVehiculo}=body;
+    persona={
+        run:body.run,
+        dv: funciones.inversa(body.run),
+        fechaNac : body.fechaNac,
+        edad : funciones.calculoEdad2(new Date(body.fechaNac)),
+        tieneProfesion : body.tieneProfesion,
+        tieneVehiculo : body.tieneVehiculo,
+        profesion:funciones.encontrarEnArray(profesiones.listaProfesiones(),"id",body.idProfesion),
+        vehiculo:funciones.encontrarEnArray(vehiculos.listaVehiculos(),"idVehiculo",body.idVehiculo)
+    };
     personas.push(persona);
-    // funciones.encontrarEnArray(personas,"id",6);
-    if(body.tieneProfesion==true){
-        do{
-            i++
-        }while(body.idProfesion!=profesiones.listaProfesiones()[i].idProfesion)
-    }
 }
 
 
