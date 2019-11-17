@@ -148,15 +148,15 @@ const encontrarElemento=(array,elemento)=>{
 }
 
 const encontrarEnArray=(array,propiedad,elemento)=>{
-    let arrayVacio={};
+    let objeto={};
     for(let i=0;i<array.length;i++){
         //console.log(Object.keys(array))
         if(array[i][propiedad]==elemento){
             //console.log(Object.keys(array[i]))
-            return arrayVacio=array[i];
+            return objeto=array[i];
         }
     }
-    return console.log(arrayVacio)
+    return objeto
 }
 
 
