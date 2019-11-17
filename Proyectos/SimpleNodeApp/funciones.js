@@ -62,7 +62,19 @@ const limpiarRut=(cadena) =>{
       return {};
         }
 
+        const calcularEdad=(fecha)=> {
+            var presente = new Date();
+            var fechaNac = new Date(fecha);
+            var edad = presente.getFullYear() - fechaNac.getFullYear();
+            var diferenciaMeses = presente.getMonth() - fechaNac.getMonth();
+        
+            if (diferenciaMeses < 0 || (diferenciaMeses == 0 && presente.getDate() < fechaNac.getDate())) {
+                edad--;
+            }
+        return edad;
+          }
+
 module.exports = {
-    calcularDigitoVerificador,objetoEnArray
+    calcularDigitoVerificador,objetoEnArray, calcularEdad
 }
 
