@@ -75,6 +75,13 @@ const obtenerEdadPersona = (fechaNacimiento) => {
     return edad;
 }
 
+
+
+
+const verNum = (numero) => {
+    return isNaN(parseInt(numero));
+}
+
 module.exports = {
-    testing, codigoVerificador, buscarEnArray, obtenerEdadPersona
+    testing, codigoVerificador, buscarEnArray, obtenerEdadPersona, verNum
 }

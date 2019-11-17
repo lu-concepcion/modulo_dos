@@ -27,7 +27,7 @@ let persona = {
 
 const guardar = (per) => {
     let {rut, fechaNac, tieneProfesion, tieneVehiculo, idVehiculo, idProfesion} = per;
-    if(!isNaN(rut)){
+    if(!funciones.verNum(rut)){
         persona.rut = rut;
         persona.dv = funciones.codigoVerificador(persona.rut);
     }
@@ -43,6 +43,12 @@ const guardar = (per) => {
 }
 
 const verPersonas = (per) => {
+    let { rut } = per;
+    if(per.rut == ){
+
+    }else {
+        return "No se a podido encontrar a la persona";
+    }
 
 }
 
