@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.json())
 
-app.post('/persona', function(request, response){
+app.post('/persona/add/', function(request, response){
   // body mapea a un objeto los parámetros enviados en el body del request
   // ej: localhost:3000/persona
   // body: {id: 1, nombre: hernan }
@@ -16,7 +16,7 @@ app.post('/persona', function(request, response){
   response.send(body)
 });
 
-app.get('/persona/:rut', function(request, response){
+app.get('/persona/get/:rut', function(request, response){
   // query mapea a un objeto los parámetros enviados en la ruta
   // ej: localhost:3000/persona?id=1&nombre=Hernan
   // query = { id: 1, nombre: hernan }
@@ -29,6 +29,7 @@ app.delete('/persona/delete/:rut', function(request, response){
   const { rut } = request.params;
   response.send(persona.eliminar(rut));
 });
+
 
 app.listen(3000, function () {
   console.log('Simple node app for LU-CCP listening on port 3000!');
