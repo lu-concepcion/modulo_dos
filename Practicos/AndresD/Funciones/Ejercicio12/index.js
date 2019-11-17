@@ -1,9 +1,29 @@
-import {calcularEdad} from '../funciones.js';
+import {mayoresDeEdad} from '../funciones.js';
 
-var persona1 ={
-nombre:"juan"
+const persona1 ={
+nombre:"juan",
+fechaNac : new Date("1959, 10, 15")
+}
+const persona2 ={
+nombre:"benito",
+fechaNac : new Date("1980, 04, 10")
+}
+const persona3 ={
+nombre:"menor",
+fechaNac : new Date("2005, 12, 17")
+}
+const persona4 ={
+nombre:"andy",
+fechaNac : new Date("1995, 08, 21")
 }
 
-persona1.fechaNac = new Date("1959, 10, 15");
-alert(persona1.fechaNac)
-alert(calcularEdad(persona1.fechaNac))
+let personas =[persona1, persona2, persona3, persona4];
+
+let mayores = (mayoresDeEdad(personas));
+let lista ="Lista Mayores: \n";
+for (let i = 0; i < mayores.length; i++) {
+    for (let j = 0; j < Object.keys(mayores[i]).length; j++) {
+       lista = `${lista} ${Object.keys(mayores[i])[j]}: ${Object.values(mayores[i])[j]}\n`
+    }
+}
+alert(lista);

@@ -266,6 +266,27 @@ return factorial;
 return edad;
   }
 
+  const mayoresDeEdad=(personas=[])=>{
+    let fechaNac;
+    let mayores=[];
+    let cantidadPropiedades;
+    for (let i = 0; i < personas.length; i++) {
+      fechaNac= "";
+      cantidadPropiedades = Object.keys(personas[i]).length
+
+      for (let j = 0; j <cantidadPropiedades; j++) {
+        if (Object.keys(personas[i])[j]== "fechaNac") {
+        fechaNac = Object.values(personas[i])[j];
+        }       
+      }
+      if (calcularEdad(fechaNac)>=18) {
+        mayores.push(personas[i])
+      } 
+    }
+
+       return mayores;
+  }
+
 
   
 
@@ -274,5 +295,5 @@ export {sumar, restar, multiplicar, dividir,esNumero, esLetra, convertirEnMinusc
   contarVocales, eliminarEspacios, esPalindromo,numeroAzar, calcularPorcentaje, 
   limpiarRut, invertirCadena,calcularDigitoVerificador,lotto,
   buscarEnArray, objetoEnArray, listarPropiedades, filtrarEnArray,
-  ordenarArray, factorial, calcularEdad
+  ordenarArray, factorial, calcularEdad, mayoresDeEdad
 }
