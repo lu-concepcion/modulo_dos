@@ -1,6 +1,5 @@
 //generar datos de profesiones
 const devuelveProfesion =()=>{   
-    let profesion = {}
     let profesiones=[];
     profesiones[0]=  {idProfesion:1,nombre:"Ingeniero"};
     profesiones[1]=  {idProfesion:2,nombre:"Medico"};
