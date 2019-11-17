@@ -76,6 +76,15 @@ const obtenerEdadPersona = (fechaNacimiento) => {
 }
 
 
+const buscarEnArray_2 = (array, valor ) => {
+    let encuentro = false;
+    array.forEach(element => {
+        if(element == valor){
+            encuentro = true;
+        }
+    });
+    return encuentro;
+}
 
 
 const verNum = (numero) => {
@@ -83,5 +92,6 @@ const verNum = (numero) => {
 }
 
 module.exports = {
-    testing, codigoVerificador, buscarEnArray, obtenerEdadPersona, verNum
+    testing, codigoVerificador, buscarEnArray, obtenerEdadPersona, verNum,
+    buscarEnArray_2
 }

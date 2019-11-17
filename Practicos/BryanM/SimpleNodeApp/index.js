@@ -16,13 +16,13 @@ app.post('/persona', function(request, response){
   response.send(body)
 });
 
-app.get('/persona/:run', function(request, response){
+app.get('/persona/:rut', function(request, response){
   // query mapea a un objeto los parámetros enviados en la ruta
   // ej: localhost:3000/persona?id=1&nombre=Hernan
   // query = { id: 1, nombre: hernan }
-  const { run }  = request.params;
-
-  response.send("hola mundo")
+  const { rut }  = request.params;
+  let personas = persona.verPersonas(rut);
+  response.send(personas);
 });
 
 app.listen(3000, function () {

@@ -1,7 +1,7 @@
 const funciones = require('../funciones.js')
 const vehiculos = require("./vehiculos.js")
 const profesiones = require("./profesiones.js")
-//generar datos de personas
+//generar datos de ,personas
 let personas = [];
 
 let vehiculo = {
@@ -42,14 +42,13 @@ const guardar = (per) => {
     personas.push(persona);
 }
 
-const verPersonas = (per) => {
-    let { rut } = per;
-    if(per.rut == ){
+const verPersonas = (rut) => {
 
-    }else {
-        return "No se a podido encontrar a la persona";
+    let array = [];
+    if (rut){
+        array = funciones.buscarEnArray(personas, "rut", rut);
+        return array;
     }
-
 }
 
 module.exports = {
