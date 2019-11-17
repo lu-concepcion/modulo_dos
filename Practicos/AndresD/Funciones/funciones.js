@@ -258,12 +258,12 @@ return factorial;
     var presente = new Date();
     var fechaNac = new Date(fecha);
     var edad = presente.getFullYear() - fechaNac.getFullYear();
-    var m = presente.getMonth() - fechaNac.getMonth();
+    var diferenciaMeses = presente.getMonth() - fechaNac.getMonth();
 
-    if (m < 0 || (m === 0 && presente.getDate() < fechaNac.getDate())) {
+    if (diferenciaMeses < 0 || (diferenciaMeses == 0 && presente.getDate() < fechaNac.getDate())) {
         edad--;
     }
-
+return edad;
   }
 
 
