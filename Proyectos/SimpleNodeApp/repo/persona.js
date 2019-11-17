@@ -4,9 +4,15 @@ var profesiones = require('./profesiones.js')
 let personas = [];
 
 const obtenerPersonas = (run) => {
-  
+    let filtrado={};
+    for (let i = 0; i < personas.length; i++) {
+        if (Object.values(personas[i])[0]==run) {
+            filtrado = personas[i];
+        }
+        
+    }
 
-    return personas;
+    return filtrado;
 }
 
 const guardarPersona = (body) =>{
