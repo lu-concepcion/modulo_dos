@@ -1,7 +1,7 @@
 var funciones = require('../funciones.js')
 var vehiculos = require('./vehiculos.js')
 var profesiones = require('./profesiones.js')
-let personas = []
+let personas = [];
 
 const obtenerPersonas = (run) => {
     return personas;
@@ -12,9 +12,9 @@ const guardarPersona = (body) =>{
     personaNueva = body;
     let objetoProfesion = {};
     let objetoVehiculo = {};
-
+    let fechaNac = Object.values(personaNueva)[1];
     personaNueva.dv = funciones.calcularDigitoVerificador(Object.values(personaNueva)[0]);
-    personaNueva.edad = funciones.calcularEdad(Object.values(personaNueva)[1]);
+    personaNueva.edad = funciones.calcularEdad(fechaNac);
     
 
     if (Object.values(personaNueva)[2]) {
@@ -24,9 +24,9 @@ const guardarPersona = (body) =>{
         objetoVehiculo = funciones.objetoEnArray(vehiculos.vehiculos, "id", Object.values(personaNueva)[4])    
     }
       
+
     personaNueva.profesion = objetoProfesion;
     personaNueva.vehiculo = objetoVehiculo;
-
 
     personas.push(personaNueva);
 
