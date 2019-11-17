@@ -43,7 +43,6 @@ const guardar = (per) => {
 }
 
 const verPersonas = (rut) => {
-
     let array = [];
     if (rut){
         array = funciones.buscarEnArray(personas, "rut", rut);
@@ -51,6 +50,13 @@ const verPersonas = (rut) => {
     }
 }
 
+const eliminar = (rut) => {
+    if (rut){
+        funciones.deleteElementoArray(personas, "rut", rut);
+        return "Eliminado correctamente";
+    }
+}
+
 module.exports = {
-    guardar, verPersonas
+    guardar, verPersonas, eliminar
 }

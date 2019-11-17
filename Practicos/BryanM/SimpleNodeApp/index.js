@@ -25,6 +25,11 @@ app.get('/persona/:rut', function(request, response){
   response.send(personas);
 });
 
+app.delete('/persona/delete/:rut', function(request, response){
+  const { rut } = request.params;
+  response.send(persona.eliminar(rut));
+});
+
 app.listen(3000, function () {
   console.log('Simple node app for LU-CCP listening on port 3000!');
 });
