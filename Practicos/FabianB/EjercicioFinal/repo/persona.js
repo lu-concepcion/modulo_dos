@@ -53,11 +53,15 @@ const setPersona = (body) => {
 }
 
 const setCurso = (body) => {
-    const{codigoCurso:curso, nombre:ramo} = body;
-    let curso = {
-        
+    const { codigoCurso: curso, nombre: ramo } = body;
+    let cursos = {
+        codigoCurso: curso,
+        nombre: ramo,
+        alumnos: []
     }
+    arregloCursos.push(cursos);
 }
+
 
 const getPersona = (rutPersona) => {
     let array = [];
@@ -84,5 +88,6 @@ const delPersona = (rutPersona) => {
 module.exports = {
     setPersona,
     getPersona,
-    delPersona
+    delPersona,
+    setCurso
 }
