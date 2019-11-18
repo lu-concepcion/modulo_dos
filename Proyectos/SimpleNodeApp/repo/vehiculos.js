@@ -1,5 +1,5 @@
 //generar datos de vehículos
-let vehiculo = [
+let vehiculos = [
    { marca: "audi",
      modelo: " A4"
     },
@@ -17,3 +17,4 @@ let vehiculo = [
     },
 
 ]
+module.exports = {vehiculos}

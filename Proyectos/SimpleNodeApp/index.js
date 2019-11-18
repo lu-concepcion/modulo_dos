@@ -12,7 +12,7 @@ app.post('/persona', function(request, response){
   // body: {id: 1, nombre: hernan }
   // body = { id: 1, nombre: hernan }
   const { body }  = request;
-
+  persona.guardarPersonas(body)
   response.send(body)
 });
 

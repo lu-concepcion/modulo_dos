@@ -27,3 +27,4 @@ let profesiones = [
     nombre:"arquitecto"
     },
 ]
+module.exports = {profesiones}
