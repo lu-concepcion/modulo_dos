@@ -10,7 +10,7 @@ let personaCurso = [];
 
 const setPersona = (body) => {
 
-    const { run, nombre:tag, fechaNac, tieneProfesion, tieneVehiculo, vehiculoId, profesionId } = body;
+    const { run, nombre: tag, fechaNac, tieneProfesion, tieneVehiculo, vehiculoId, profesionId } = body;
 
     let digitoVerificador = funciones.generaDigitoVerificador(run);
     let edad = funciones.obtenerEdadPersona(fechaNac);
@@ -38,7 +38,7 @@ const setPersona = (body) => {
     }
     persona = {
         run: run,
-        nombre : tag,
+        nombre: tag,
         dv: digitoVerificador,
         fechaNac: fechaNac,
         edad: edad,
@@ -95,9 +95,9 @@ const añadirAlumnoACurso = (run, body) => {
     let array = [];
     arregloPersonas.forEach(element => {
         if (element['run'] == run) {
-            ayuda ++;
-            if(ayuda==1){
-            array.push(element);
+            ayuda++;
+            if (ayuda == 1) {
+                array.push(element);
             }
         }
     });
@@ -129,11 +129,11 @@ const encontrarAlumnoCurso = (run) => {
     let array = [];
     for (let i in arregloCursos) {
         let aux1 = arregloCursos[i]['alumnos'];
-        for (let j in aux1){
-        let aux2 = aux1[j];
-        if ((aux1[j][i]['run'] == run)) {
-            array.push(arregloCursos[i])
-        }}
+        for (let j in aux1) {
+            if ((aux1[j][i]['run'] == run)) {
+                array.push(arregloCursos[i])
+            }
+        }
     }
     return array;
 }
