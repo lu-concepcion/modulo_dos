@@ -138,7 +138,7 @@ const matriculaPersona = (body, rutPersona) => {
         }
     });
 
-    addAlumno(persona, codigoCurso);
+    return addAlumno(persona, codigoCurso);
 
 }
 

@@ -54,8 +54,7 @@ app.get('/curso/:codigo', function(request, response){
 app.post('/persona/:run/curso', function(request, response){
   const { body }  = request;
   const { run }  = request.params;
-  matriculaPersona(body, run);
-  response.send('curse successfully added');
+  response.send(matriculaPersona(body, run));
 });
 
 

@@ -32,11 +32,29 @@ const getCurso = (codigoCurso) => {
 }
 
 const addAlumno = (alumno, codigoCurso) => {
-    arregloCursos.forEach(element => {
-        if (element['codigoCurso'] == codigoCurso) {
-            element['alumnos'].push(alumno);
-        }
+
+    let existe = false;
+
+    arregloCursos.forEach(curso => {
+        curso['alumnos'].forEach(alumno => {
+            if (alumno.run == alumno.run) {
+                existe = true;
+            }
+        });
     });
+
+    if (!existe) {
+        arregloCursos.forEach((element,i) => {
+            if (element['codigoCurso'] == codigoCurso) {
+                    element['alumnos'].push(alumno);
+            }
+        });
+        return 'Agregado';
+    } else {
+        return 'Ya existe alumno en curso';
+    }
+
+    
 }
 module.exports = {
     setCurso,

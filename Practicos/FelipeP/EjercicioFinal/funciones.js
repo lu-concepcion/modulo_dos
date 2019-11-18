@@ -73,13 +73,11 @@ const personaExiste = (run, arregloPersonas) => {
     return existe;
 }
 
-const cursoExiste = (codigo, arreglocursos) => {
+const cursoExiste = (runPersona, runEnCurso) => {
     let existe = false;
-    arreglocursos.forEach(curso => {
-        if (curso['codigoCurso'] == codigo) {
-            existe = true;
-        }
-    });
+    if (runPersona == runEnCurso) {
+        existe = true;
+    }
     return existe;
 }
 
