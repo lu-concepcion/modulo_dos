@@ -1,4 +1,5 @@
 var funciones = require('../funciones.js')
+var personas = require('./persona')
 
 let cursos= [];
 let alumnos=[];
@@ -19,6 +20,20 @@ const filtarPorCodigo=(codigo)=>{
      return funciones.encontrarEnArray(cursos,"codigoCurso",codigo)
     
 }
+
+const matriculaCurso=(run,body)=>{
+    
+    let objetoPersona= funciones.encontrarEnArray(personas.listaPersonas(),"run",run)
+    console.log(objetoPersona)
+    let objetoCurso = cursos.filtarPorCodigo(body.codigoCurso)
+    // alumnos.push(objetoPersona)
+    objetoCurso.alumnos=alumnos.push(objetoPersona)
+
+    return objetoCurso
+
+}
+
+
 module.exports={
-    guardarCurso,filtarPorCodigo
+    guardarCurso,filtarPorCodigo,matriculaCurso
 }

@@ -1,7 +1,8 @@
 //generar datos de personas
-var funciones = require('../funciones.js')
+var funciones = require('../funciones')
 var profesiones= require('./profesiones')
 var vehiculos = require('./vehiculos')
+var cursos = require('./cursos')
 let personas= [];
 
 const guardarPersona=(body)=>{
@@ -20,13 +21,15 @@ const guardarPersona=(body)=>{
 }
 
 const filtarPorRun=(query)=>{
-    const {run}=query
-     return funciones.encontrarEnArray(personas,"run",run)
+    // const {run}=query
+     return funciones.encontrarEnArray(personas,"run",query.run)
     
 }
 
-
+const listaPersonas =()=>{
+    return personas
+}
 
 module.exports={
-    guardarPersona, filtarPorRun
+    guardarPersona, filtarPorRun,listaPersonas
 }

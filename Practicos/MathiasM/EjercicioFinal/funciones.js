@@ -253,9 +253,9 @@ const calculaEdad=(fecha)=>{
 const calculoEdad2=(fecha)=>{
     let fechaAhora = new Date();
     let edad = fechaAhora.getFullYear()-fecha.getFullYear();
-    if(fecha.getMonth()<fechaAhora.getMonth() && fecha.getDay()<getDay()){
-        edad-1
-    }
+    // if(fecha.getMonth()<fechaAhora.getMonth() && fecha.getDay()<getDay()){
+    //     edad-1
+    // }
     return edad
 }
 

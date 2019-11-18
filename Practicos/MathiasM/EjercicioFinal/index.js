@@ -22,6 +22,11 @@ app.post('/cursos', function(request, response){
   cursos.guardarCurso(body);
   response.send(body)
 });
+app.post('/persona/:run/cursos', function(request, response){
+  const { run }  = request.params;
+  const {body} = request;
+  response.send(cursos.matriculaCurso(run,body))
+});
 
 app.get('/cursos/:codigo', function(request, response){
   const { codigo } = request.params;
