@@ -2,6 +2,8 @@ var funciones = require('./funciones')
 
 var persona = require('./repo/persona')
 
+var curso = require('./repo/curso')
+
 var express = require('express');
 
 var app = express();
@@ -27,11 +29,11 @@ app.post('/persona/', function(request, response){
   response.send(body)
 
 });
-app.post('/cursos/', function(request, response){
+app.post('/curso/', function(request, response){
 
   const { body }  = request;
 
-  cursos.guardarCurso(body);
+  curso.guardarCurso(body);
 
   response.send(body)
 

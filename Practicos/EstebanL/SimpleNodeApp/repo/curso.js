@@ -4,16 +4,16 @@ cursos = [];
 curso = {
 
     codigoCurso: "",
-    nombre: ""
+    nombreCurso: ""
 
 }
 
 const guardarCurso = (cur) => {
 
-    let {codigoCurso, nombreCurso} = cur
+    let {codCurso, nomCurso} = cur
 
-    curso.codigoCurso = codigoCurso
-    curso.nombreCurso = nombreCurso
+    curso.codigoCurso = codCurso;
+    curso.nombreCurso = nomCurso;
 
     cursos.push(curso);
 }
