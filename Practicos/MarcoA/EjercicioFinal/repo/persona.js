@@ -84,6 +84,7 @@ const añadirAlumnoACurso = (run, body) => {
             alumnos.push(run);
     }
 });
+}
 
 
 const getCursos = (codigoCurso) => {
