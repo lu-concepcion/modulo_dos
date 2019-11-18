@@ -477,6 +477,7 @@ const edadG=(fecha)=>{
 
 
 
+
   module.exports={
     validaNumero,
     cuentaVovales,

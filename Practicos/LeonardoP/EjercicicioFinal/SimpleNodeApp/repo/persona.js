@@ -2,6 +2,9 @@
 var profesiones = require('./profesiones');
 var vehiculos = require('./vehiculos');
 var funciones = require('../funciones');
+var cursos=require('./cursos');
+
+
 
 
 
@@ -83,7 +86,41 @@ retornaPersonas=(run)=>{
     return arrayPersonas;
 }
 
+const matriculaPersona=(body,run)=>{
+
+
+    const{codigoCurso}=body;
+
+    
+    console.log(body);
+
+    console.log(codigoCurso);
+    console.log(run);
+
+    listadoPersonas.forEach(objeto=>{
+
+        if(objeto['run']==run)
+        {
+
+            cursos.listaCurso.forEach(c=>{
+
+                if(c['codigoCurso']==codigoCurso)
+                {
+                    c['alumnos'].push(objeto);
+
+                }
+            });
+
+
+        }
+    });
+
+
+}
+
+
 module.exports={
     guardaPersonas,
-    retornaPersonas
+    retornaPersonas,
+    matriculaPersona
 }
