@@ -42,7 +42,7 @@ const guardar = (per) => {
     personas.push(persona);
 }
 
-const verPersona = (rut) => {
+const buscarPersona = (rut) => {
     let array = [];
     if (funciones.searchInArray(personas,"rut", rut)){
         array = funciones.searchArray(personas, "rut", rut);
@@ -55,12 +55,16 @@ const verPersona = (rut) => {
 const eliminar = (rut) => {
     if (funciones.searchInArray(personas,"rut", rut)){
         let array = funciones.deleteElementoArray(personas,"rut",rut);
-        return "Se a eliminado correctamente" + array;
+        return "Se a eliminado correctamente" ;
     }else {
         return "No se ha eliminado correctamente";
     }
 }
 
+const verPersonas = (body)=> {
+    return personas;
+}
+
 module.exports = {
-    guardar, verPersona, eliminar,personas
+    guardar, buscarPersona, eliminar , verPersonas
 }
