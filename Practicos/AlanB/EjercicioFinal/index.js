@@ -39,10 +39,13 @@ app.post('/persona', function(request, response){
 });
 app.post('/curso', function(request, response){
   const { body }  = request;
-  if (curso.objectPositionFinder(curso.cursos,"codigoCurso",body.codigoCurso)!="no encontrado"){
-  curso.guardarCurso(body);
-  console.log (body)
-  response.send(body)
+  if (curso.objectPositionFinder(curso.cursos,"codigoCurso",body.codigoCurso)=="no encontrado"){
+  if (curso.objectPositionFinder(curso.cursos,"nombre",body.nombre)=="no encontrado") 
+  {curso.guardarCurso(body);
+  response.send(body)}
+  else {
+    response.send("el curso ingresado ya posee otro codigo")
+  }
   }
   else{
     response.send("codigo del curso ya existe")
@@ -51,9 +54,14 @@ app.post('/curso', function(request, response){
 app.post('/persona/:run/curso', function(request, response){
   const { body }  = request;
   const { run }  = request.params;
+  const aux = funciones.objectFinder(curso.cursos,"codigoCurso",body.codigoCurso)
+  if (curso.objectPositionFinder(aux.alumnos,"run",run)=="no encontrado"){
   curso.matricularPersonas(body,run);
   console.log (body)
-  response.send(body)
+  response.send(body)}
+  else{
+    response.send("persona ya matriculada")
+  }
 });
 
 app.get('/persona/:run', function(request, response){
