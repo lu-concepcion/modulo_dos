@@ -1,6 +1,7 @@
 var funciones = require('../funciones.js')
 var vehiculos = require('./vehiculos.js')
 var profesiones = require('./profesiones.js')
+var cursos = require('./cursos.js')
 let personas = [];
 
 const obtenerPersonas = (run) => {
@@ -8,10 +9,8 @@ const obtenerPersonas = (run) => {
     for (let i = 0; i < personas.length; i++) {
         if (Object.values(personas[i])[0]==run) {
             filtrado = personas[i];
-        }
-        
+        }   
     }
-
     return filtrado;
 }
 
