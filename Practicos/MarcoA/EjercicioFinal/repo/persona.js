@@ -79,13 +79,12 @@ const setCurso = (body) => {
 
 const añadirAlumnoACurso = (run, body) => {
     const { codigoCurso } = body;
-    arregloCursos.forEach(element => {
-        if(element['codigoCurso'] == codigoCurso){
-            alumnos.push(run);
+    for (let i in arregloCursos) {
+        if (arregloCursos[i]["codigoCurso"] == codigoCurso) {
+            arregloCursos[i]["alumnos"].push(run);
+        }
     }
-});
 }
-
 
 const getCursos = (codigoCurso) => {
     let array = [];
@@ -115,5 +114,6 @@ module.exports = {
     getPersona,
     delPersona,
     setCurso,
-    getCursos
+    getCursos,
+    añadirAlumnoACurso
 }

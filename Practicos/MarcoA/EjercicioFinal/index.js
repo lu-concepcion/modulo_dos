@@ -18,6 +18,13 @@ app.get('/curso/:codigo', function(request, response){
   response.send(curso);
 });
 
+app.post('/persona/:run/curso', function(request, response){
+  const { run } = request.params;
+  const { body } = request;
+  let alumno = persona.añadirAlumnoACurso(run, body);
+  response.send(run);
+});
+
 app.post('/persona', function(request, response){
   const { body }  = request;
   persona.setPersona(body);
