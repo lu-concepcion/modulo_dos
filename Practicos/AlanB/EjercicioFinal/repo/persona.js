@@ -11,8 +11,10 @@ const obtenerPersonas = run =>{
         return personas[i]
     }}
 }
+
 module.exports =
 {
     obtenerPersonas,
     guardarPersonas,
+    personas
 }
