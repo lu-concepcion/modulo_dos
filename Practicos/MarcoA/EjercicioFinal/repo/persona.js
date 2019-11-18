@@ -91,10 +91,14 @@ const setCurso = (body) => {
 }
 
 const añadirAlumnoACurso = (run, body) => {
+    let ayuda = 0;
     let array = [];
     arregloPersonas.forEach(element => {
         if (element['run'] == run) {
+            ayuda ++;
+            if(ayuda==1){
             array.push(element);
+            }
         }
     });
     let flag = 0;
@@ -124,9 +128,12 @@ const añadirAlumnoACurso = (run, body) => {
 const encontrarAlumnoCurso = (run) => {
     let array = [];
     for (let i in arregloCursos) {
-        if ((arregloCursos[i]['alumnos'] == run)) {
-            array.push(i)
-        }
+        let aux1 = arregloCursos[i]['alumnos'];
+        for (let j in aux1){
+        let aux2 = aux1[j];
+        if ((aux1[j][i]['run'] == run)) {
+            array.push(arregloCursos[i])
+        }}
     }
     return array;
 }
