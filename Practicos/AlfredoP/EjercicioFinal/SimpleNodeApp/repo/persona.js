@@ -61,9 +61,14 @@ const borrarPersona = run => {
     return eliminado;
 }
 
+const editarPersona = body => {
+
+}
+
 module.exports = {
     reciboPersona,
     listarPersonas,
     buscarPersona,
-    borrarPersona
+    borrarPersona,
+    editarPersona
 }

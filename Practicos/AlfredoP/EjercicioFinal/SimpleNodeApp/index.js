@@ -31,8 +31,17 @@ app.delete('/persona/:run', function(request, response) {
   response.send(persona.borrarPersona(run));
 });
 
+app.put('/persona', function(request, response) {
+  const { body } = request;
+  response.send(persona.editarPersona(body))
+});
+
 app.get('/personalistar/', function(request, response){
   response.send(persona.listarPersonas())
+})
+
+//Routes para el modulo curso
+app.post('curso/', (request, response) => {
 })
 
 app.listen(3000, function () {
