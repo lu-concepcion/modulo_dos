@@ -95,7 +95,12 @@ const eliminaFormato = (rut) =>{
 }
 
 const invertirArray = (array) =>{
-    let invertido = array.reverse();
+    let invertido =[]
+    let j=array.length-1
+    for(let i=0;i<array.length;i++){
+        invertido[j]=array[i]
+        j--
+    }
     return invertido
 }
 
@@ -212,9 +217,18 @@ const extraerDeParentesis = (string) =>{
 const calculaEdad = (fecha) =>{
     let hoy = new Date()
     let edad = (hoy.getFullYear()-fecha.getFullYear())
-    if(fecha.getMonth()<hoy.getMonth()){
-        if(fecha.getDay()<hoy.getDay()){
-            edad-1
+    console.log("año fecha = "+fecha.getFullYear())
+    console.log("año hoy = "+hoy.getFullYear())
+    console.log("fecha real = "+fecha.getMonth())
+    console.log("fecha hoy = "+hoy.getMonth())
+    console.log("edad = "+edad)
+    if(fecha.getMonth()>hoy.getMonth()){
+        console.log("edad = "+edad)
+        edad=edad-1
+        console.log("edad = "+edad)
+    }else{
+        if(fecha.getDay()>hoy.getDay()){
+            edad=edad-1
         }
     }
     return edad
