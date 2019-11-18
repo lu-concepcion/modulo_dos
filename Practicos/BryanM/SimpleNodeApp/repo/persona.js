@@ -42,21 +42,24 @@ const guardar = (per) => {
     personas.push(persona);
 }
 
-const verPersonas = (rut) => {
+const verPersona = (rut) => {
     let array = [];
     if (rut){
-        array = funciones.buscarEnArray(personas, "rut", rut);
+        array = funciones.searchArray(personas, "rut", rut);
         return array;
+    }else {
+        return personas;
     }
 }
 
 const eliminar = (rut) => {
-    if (rut){
-        funciones.deleteElementoArray(personas, "rut", rut);
-        return "Eliminado correctamente";
+    if (funciones.buscarEnArray_2(personas, rut)){
+        
+    }else {
+        return "No se ha eliminado correctamente";
     }
 }
 
 module.exports = {
-    guardar, verPersonas, eliminar
+    guardar, verPersona, eliminar
 }

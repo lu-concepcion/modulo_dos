@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
+
 app.use(bodyParser.json())
 
 app.post('/persona/', function(request, response){
@@ -21,7 +22,7 @@ app.get('/persona/:rut', function(request, response){
   // ej: localhost:3000/persona?id=1&nombre=Hernan
   // query = { id: 1, nombre: hernan }
   const { rut }  = request.params;
-  let personas = persona.verPersonas(rut);
+  let personas = persona.verPersona(rut);
   response.send(personas);
 });
 
