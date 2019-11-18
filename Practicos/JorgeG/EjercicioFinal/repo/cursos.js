@@ -19,8 +19,10 @@ const filtrarCursos = (codigo) =>{
     return funciones.filtrarArray(cursos,"codigoCurso",codigo)
 }
 
-const matriculaCurso = () =>{
-
+const matriculaCurso = (run,body) =>{
+    let objetoPersona = funciones.filtrarArray(,"run",run)
+    let objetoCurso = cursos.filtrarCursos(body.codigoCurso)
+    objetoCurso.alumnos=alumnos.push(objetoPersona)
 }
 
 module.exports={

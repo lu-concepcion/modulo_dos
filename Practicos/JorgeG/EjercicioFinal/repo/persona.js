@@ -2,8 +2,9 @@
 var funciones = require('../funciones.js')
 var vehiculos = require('./vehiculos')
 var profesiones = require('./profesiones.js')
+var cursos = require('./cursos')
 let personas=[]
-const recibe = (body) =>{
+const recibePersona = (body) =>{
     let persona={autos,carreras}
     persona.run = body.run
     persona.dv = funciones.moduloOnce(persona.run)
@@ -19,8 +20,13 @@ const filtrarPersona=(consulta) =>{
     return funciones.filtrarArray(personas,"run",consulta)
 }
 
+const matricularPersona = (run, body) =>{
+    let objetoPersona = filtrarPersona(run);
+    let objetoCurso = cursos.filtrarCursos(body)
 
+    return objetoCurso
+}
 
 module.exports={
-    recibe, filtrarPersona
+    recibePersona, filtrarPersona, matricularPersona
 }

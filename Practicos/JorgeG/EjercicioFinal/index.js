@@ -1,4 +1,5 @@
 var persona = require('./repo/persona')
+var cursos = require('./repo/cursos')
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -11,8 +12,21 @@ app.post('/persona', function(request, response){
   // body: {id: 1, nombre: hernan }
   // body = { id: 1, nombre: hernan }
   const { body }  = request;
-  persona.recibe(body)
+  persona.recibePersona(body)
   response.send(body)
+});
+
+app.post('/cursos', function(request, response){
+  const { body }  = request;
+  cursos.guardarCurso(body)
+  response.send(body)
+});
+
+app.post('/persona/:run/cursos', function(request, response){
+  const { run } = request.params;
+  const { body } = request;
+
+  response.send(persona.matricularPersona(run,body))
 });
 
 app.get('/persona', function(request, response){
