@@ -4,31 +4,29 @@ const {getProfesiones} = require('./profesiones');
 const {getVehiculos} = require('./vehiculos');
 
 let arregloPersonas = [];
-let arregloPersonas = [];
 
 const setPersona = (body) => {
-
     const {run,fechaNac,tieneProfesion,tieneVehiculo,vehiculoId,profesionId} = body;
 
-    let digitoVerificador = funciones.generaDigitoVerificador(run);
-    let edad = funciones.obtenerEdadPersona(fechaNac);
+    const digitoVerificador = generaDigitoVerificador(run);
+    const edad = obtenerEdadPersona(fechaNac);
 
-    let vehiculos_lista = vehiculos.getVehiculos();
-    let profesiones_lista = profesiones.getProfesiones();
+    const vehiculos_lista = getVehiculos();
+    const profesiones_lista = getProfesiones();
 
     let marca, modelo, id, nombre;
 
-    vehiculos_lista.forEach(element => {
-        if (element['id'] == vehiculoId) {
-            marca = element['marca'];
-            modelo = element['modelo'];
+    vehiculos_lista.forEach(vehiculo => {
+        if (vehiculo['id'] == vehiculoId) {
+            marca = vehiculo['marca'];
+            modelo = vehiculo['modelo'];
         }
     });
 
-    profesiones_lista.forEach(element => {
-        if (element['id'] == profesionId) {
-            id = element['id'];
-            nombre = element['nombre'];
+    profesiones_lista.forEach(profesion => {
+        if (profesion['id'] == profesionId) {
+            id = profesion['id'];
+            nombre = profesion['nombre'];
         }
     });
 
@@ -55,9 +53,9 @@ const setPersona = (body) => {
 const getPersona = (rutPersona) => {
     let array = [];
     if (rutPersona) {
-        arregloPersonas.forEach(element => {
-            if (element['run'] == rutPersona) {
-                array.push(element);
+        arregloPersonas.forEach(persona => {
+            if (persona['run'] == rutPersona) {
+                array.push(persona);
             }
         });
         return array;
@@ -65,7 +63,62 @@ const getPersona = (rutPersona) => {
     return arregloPersonas;
 }
 
+const getAllPersona = () => {
+    return arregloPersonas;
+}
+
+const updatePersona = (run,body) => {
+    
+    const {fechaNac,tieneProfesion,tieneVehiculo,vehiculoId,profesionId} = body;
+    const digitoVerificador = generaDigitoVerificador(run);
+    const edad = obtenerEdadPersona(fechaNac);
+
+    const vehiculos_lista = getVehiculos();
+    const profesiones_lista = getProfesiones();
+
+    let marca, modelo, id, nombre;
+
+    vehiculos_lista.forEach(vehiculo => {
+        if (vehiculo['id'] == vehiculoId) {
+            marca = vehiculo['marca'];
+            modelo = vehiculo['modelo'];
+        }
+    });
+
+    profesiones_lista.forEach(profesion => {
+        if (profesion['id'] == profesionId) {
+            id = profesion['id'];
+            nombre = profesion['nombre'];
+        }
+    });
+
+    arregloPersonas.forEach(persona => {
+        if (persona['run'] == run) {
+            persona['dv'] = digitoVerificador;
+            persona['fechaNac'] = fechaNac;
+            persona['edad'] = edad;
+            persona['tieneProfesion'] = tieneProfesion;
+            persona['tieneVehiculo'] = tieneVehiculo;
+            persona['vehiculo'].marca = marca;
+            persona['vehiculo'].modelo = modelo;
+            persona['profesion'].id = id;
+            persona['profesion'].nombre = nombre;
+        }
+    });
+}
+
+const deletePersona = run => {
+    arregloPersonas.forEach((persona,i) => {
+        if (persona['run'] == run) {
+            arregloPersonas.splice(i,1);
+        }
+    });
+}
+
 module.exports = {
     setPersona,
-    getPersona
+    getPersona,
+    getAllPersona,
+    updatePersona,
+    deletePersona
 }
