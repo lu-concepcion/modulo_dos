@@ -137,22 +137,23 @@ const moduloOnce = (array) =>{
 // Ejercicio 8
 
 const filtrarArray = (array,propiedad,valor) =>{
+    let arrayReturn={}
     for(let i=0;i<array.length;i++){
         if(array[i][propiedad]==valor){
-            return Object.entries(array[i])
+            return arrayReturn=array[i]
         }
     }
-    return Object.keys(array[0])
+    return arrayReturn
 }
 
 const filtrarTodosArray = (array,propiedad,valor) =>{
-    let arrayReturn=[]
+    let arrayReturn={}
     for(let i=0;i<array.length;i++){
         if(array[i][propiedad]==valor){
-            arrayReturn.push(array[i])
+            return arrayReturn=array[i]
         }
     }
-    return arrayReturn[Object.entries(arrayReturn)]
+    return arrayReturn
 }
 
 // Ejercicio 9
