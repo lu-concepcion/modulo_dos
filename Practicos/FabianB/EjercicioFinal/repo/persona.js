@@ -5,6 +5,8 @@ var vehiculos = require('./vehiculos');
 
 let persona = [];
 let arregloPersonas = [];
+let arregloCursos = [];
+let personaCurso = [];
 
 const setPersona = (body) => {
 
@@ -52,17 +54,6 @@ const setPersona = (body) => {
     arregloPersonas.push(persona);
 }
 
-const setCurso = (body) => {
-    const { codigoCurso: curso, nombre: ramo } = body;
-    let cursos = {
-        codigoCurso: curso,
-        nombre: ramo,
-        alumnos: []
-    }
-    arregloCursos.push(cursos);
-}
-
-
 const getPersona = (rutPersona) => {
     let array = [];
     if (rutPersona) {
@@ -73,8 +64,41 @@ const getPersona = (rutPersona) => {
         });
         return array;
     }
-    return arregloPersonas;
+    return ("No se encuentra");
 }
+
+const setCurso = (body) => {
+    const { codigoCurso: curso, nombre: ramo } = body;
+    let cursos = {
+        codigoCurso: curso,
+        nombre: ramo,
+        alumnos: []
+    }
+    arregloCursos.push(cursos);
+}
+
+const añadirAlumnoACurso = (run, body) => {
+    const { codigoCurso } = body;
+    for (let i in arregloCursos) {
+        if (arregloCursos[i]["codigoCurso"] == codigoCurso) {
+            arregloCursos[i]["alumnos"].push(run);
+        }
+    }
+}
+
+const getCursos = (codigoCurso) => {
+    let array = [];
+    if (codigoCurso) {
+        arregloCursos.forEach(element => {
+            if (element['codigoCurso'] == codigoCurso) {
+                array.push(element);
+            }
+        });
+        return array;
+    }
+    return ("No deberia salir este mensaje");
+}
+
 
 const delPersona = (rutPersona) => {
     let flag = 1;
@@ -89,5 +113,7 @@ module.exports = {
     setPersona,
     getPersona,
     delPersona,
-    setCurso
+    setCurso,
+    getCursos,
+    añadirAlumnoACurso
 }
