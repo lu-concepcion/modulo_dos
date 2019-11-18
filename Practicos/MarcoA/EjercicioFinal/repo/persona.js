@@ -65,12 +65,12 @@ const getPersona = (rutPersona) => {
 }
 
 const delPersona = (rutPersona) => {
-    let array = [];
-    arregloPersonas.forEach(element => {
-        if(element['run']== rutPersona){
-            array.splice(rutPersona);
-        }
-    });
+    let flag = 1;
+    do{
+        funciones.eliminarArrayPorValor(persona, "rut", "rut")
+        flag = 0;
+        return "Rut eliminado"
+    }while(flag==1);
 }
 
 module.exports = {

@@ -61,7 +61,17 @@ const obtenerEdadPersona = (fechaNacimiento) => {
     return edad;
 }
 
+const eliminarArrayPorValor = (arreglo, propiedad, valor) => {
+    let object = {}
+    arreglo.forEach(element =>{
+        if(element[propiedad] == valor){
+            arreglo.splice(valor);
+        }
+    });
+}
+
 module.exports = {
     generaDigitoVerificador,
-    obtenerEdadPersona
+    obtenerEdadPersona,
+    eliminarArrayPorValor
 }
