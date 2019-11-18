@@ -9,19 +9,25 @@ let curso = {
     alumnos: []
 }
 
-const guardarCurso = (curso) => {
-    let { codigo, nombre } = curso;
+const guardarCurso = (cur) => {
+    let { codigo, nombre } = cur;
 
     curso.codigo = codigo;
     curso.nombre = nombre;
+    curso.alumnos = [];
 
     cursos.push(curso);
 }
 
-const matricularPersona = (rut, curso) => {
-    let { codigo } = curso;
+const matricularPersona = (rut, cur) => {
+    let { codigo, alumnos } = cur;
 
-    
+    const persona = funciones.buscarEnArray(personas.personas, "rut", rut);
+    cursos.forEach(element => {
+        if(element["codigo"] == codigo){
+            alumnos.push(persona);
+        }
+    })
 }
 
 module.exports = {

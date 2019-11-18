@@ -21,15 +21,16 @@ app.post('/persona/', function(request, response){
 //Agrega un cruso
 app.post('/curso/', function(request, response){
   const { body } = request;
-  response.send(cursos.guardarCurso(body))
+  cursos.guardarCurso(body)
+  response.send(body)
 });
 
 //Agrega una persona a un curso
 app.post('/persona/:rut/curso/', function(request, response){
   const { rut } = request.params;
   const { body } = request;
-  
-  
+  cursos.matricularPersona(rut, body)
+  response.send(body);
 });
 
 //Devuelve los cursos de una alumno

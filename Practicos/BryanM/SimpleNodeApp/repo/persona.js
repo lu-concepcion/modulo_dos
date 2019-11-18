@@ -1,7 +1,8 @@
 const funciones = require('../funciones.js')
 const vehiculos = require("./vehiculos.js")
 const profesiones = require("./profesiones.js")
-//generar datos de ,personas
+
+//generar datos de personas
 let personas = [];
 
 let vehiculo = {
@@ -66,5 +67,5 @@ const verPersonas = (body)=> {
 }
 
 module.exports = {
-    guardar, buscarPersona, eliminar , verPersonas
+    guardar, buscarPersona, eliminar , verPersonas, personas
 }
