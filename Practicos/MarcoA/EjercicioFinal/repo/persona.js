@@ -68,22 +68,54 @@ const getPersona = (rutPersona) => {
 }
 
 const setCurso = (body) => {
+    flag = 0;
     const { codigoCurso: curso, nombre: ramo } = body;
     let cursos = {
         codigoCurso: curso,
         nombre: ramo,
         alumnos: []
     }
-    arregloCursos.push(cursos);
+    if (arregloCursos.length == 0) {
+        arregloCursos.push(cursos)
+    } else {
+        for (let i in arregloCursos) {
+            if (arregloCursos[i]['codigoCurso'] != curso) {
+                flag = 1;
+            }
+        }
+    }
+
+    if (flag == 1) {
+        arregloCursos.push(cursos);
+    }
 }
 
 const añadirAlumnoACurso = (run, body) => {
     const { codigoCurso } = body;
     for (let i in arregloCursos) {
         if (arregloCursos[i]["codigoCurso"] == codigoCurso) {
-            arregloCursos[i]["alumnos"].push(run);
+            if (arregloCursos[i]["alumnos"].length == 0) {
+                arregloCursos[i]["alumnos"].push(run);
+            } else {
+                let ciclo = arregloCursos[i]["alumnos"];
+                for (let j = 0;j<ciclo.length; j++) {
+                    if (ciclo[j] !== run) {
+                        arregloCursos[i]["alumnos"].push(run);
+                    }
+                }
+            }
         }
     }
+}
+
+const encontrarAlumnoCurso = (run) => {
+    let array = [];
+    for (let i in arregloCursos) {
+        if ((arregloCursos[i]['alumnos'] == run)) {
+            array.push(i)
+        }
+    }
+    return array;
 }
 
 const getCursos = (codigoCurso) => {
@@ -115,5 +147,6 @@ module.exports = {
     delPersona,
     setCurso,
     getCursos,
-    añadirAlumnoACurso
+    añadirAlumnoACurso,
+    encontrarAlumnoCurso
 }
