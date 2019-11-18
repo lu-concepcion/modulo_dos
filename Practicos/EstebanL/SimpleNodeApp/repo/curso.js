@@ -14,7 +14,7 @@ const guardarCurso = (cur) => {
 
     curso.codigoCurso = codCurso;
     curso.nombreCurso = nomCurso;
-
+    curso.alumnos = [];
     cursos.push(curso);
 }
 
