@@ -90,21 +90,30 @@ const setCurso = (body) => {
 }
 
 const añadirAlumnoACurso = (run, body) => {
+    let array = [];
+    arregloPersonas.forEach(element => {
+        if (element['run'] == run) {
+            array.push(element);
+        }
+    });
     let flag = 0;
     const { codigoCurso } = body;
     for (let i in arregloCursos) {
         if (arregloCursos[i]["codigoCurso"] == codigoCurso) {
             if (arregloCursos[i]["alumnos"].length == 0) {
-                arregloCursos[i]["alumnos"].push(run);
+                arregloCursos[i]["alumnos"].push(array);
             } else {
                 let ciclo = arregloCursos[i]["alumnos"];
-                for (let j = 0;j<ciclo.length; j++) {
-                    if (ciclo[j] !== run) {
-                        flag++;
-                        if(flag==1){
-                        arregloCursos[i]["alumnos"].push(run);
+                for (let j = 0; j < ciclo.length; j++) {
+                    arregloPersonas.forEach(element => {
+                        if (ciclo[j] !== element["run"]) {
+                            flag++;
+                            if (flag == 1) {
+                                arregloCursos[i]["alumnos"].push(array);
+                            }
                         }
-                    }
+                    })
+
                 }
             }
         }
