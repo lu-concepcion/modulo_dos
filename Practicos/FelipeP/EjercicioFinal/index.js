@@ -3,9 +3,12 @@ const app = express();
 const bodyParser = require('body-parser');
 
 const {setPersona,getPersona,getAllPersona,updatePersona,deletePersona} = require('./repo/persona.js');
+const {setCurso, getCurso} = require('./repo/curso.js');
 
 app.use(bodyParser.json());
 
+
+// Métodos para personas
 app.post('/persona', function(request, response){
   const { body }  = request;
   setPersona(body);
@@ -36,6 +39,20 @@ app.delete('/persona/:run', (request, response) => {
   deletePersona(run);
   response.send('successfully deleted')
 });
+
+// Métodos para cursos
+app.post('/curso', function(request, response){
+  const { body }  = request;
+  setCurso(body);
+  response.send('successfully added');
+});
+
+app.get('/curso/:codigo', function(request, response){
+  const { codigo }  = request.params;
+  let curso = getCurso(codigo);
+  response.send(curso);
+});
+
 
 app.listen(3000, function () {
   console.log('Simple node app for LU-CCP listening on port 3000!');
