@@ -1,5 +1,6 @@
 var funciones = require('./funciones')
 var persona = require('./repo/persona')
+const cursos = require('./repo/curso.js')
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -15,6 +16,30 @@ app.post('/persona/', function(request, response){
   const { body }  = request;
   persona.guardar(body);
   response.send(body)
+});
+
+//Agrega un cruso
+app.post('/curso/', function(request, response){
+  const { body } = request;
+  response.send(cursos.guardarCurso(body))
+});
+
+//Agrega una persona a un curso
+app.post('/persona/:rut/curso/', function(request, response){
+  const { rut } = request.params;
+  const { body } = request;
+  
+  
+});
+
+//Devuelve los cursos de una alumno
+app.get('/persona/:rut/cursos/', function(request, response){
+
+});
+
+//Devuelve un curso con sus respectivos alumnos
+app.get('/curso/:codigo', function(resquest, response){
+
 });
 
 //Devuelve una persona
