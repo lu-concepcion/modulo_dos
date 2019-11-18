@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const {setPersona,getPersona,getAllPersona,updatePersona,deletePersona, matriculaPersona} = require('./repo/persona.js');
+const {setPersona,getPersona,getAllPersona,updatePersona,deletePersona, matriculaPersona,getCursosPersona} = require('./repo/persona.js');
 const {setCurso, getCurso} = require('./repo/curso.js');
 
 app.use(bodyParser.json());
@@ -37,6 +37,12 @@ app.delete('/persona/:run', (request, response) => {
   const { run }  = request.params;
   deletePersona(run);
   response.send('successfully deleted')
+});
+
+app.get('/persona/:run/cursos', function(request, response){
+  const { run }  = request.params;
+  let cursos = getCursosPersona(run);
+  response.send(cursos);
 });
 
 // Métodos para cursos

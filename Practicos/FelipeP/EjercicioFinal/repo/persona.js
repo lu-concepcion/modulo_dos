@@ -1,6 +1,6 @@
 //generar datos de personas
 const {generaDigitoVerificador,obtenerEdadPersona, personaExiste} = require('../funciones.js');
-const {addAlumno} = require('./curso.js');
+const {addAlumno,getCursoRut} = require('./curso.js');
 const {getProfesiones} = require('./profesiones');
 const {getVehiculos} = require('./vehiculos');
 
@@ -141,6 +141,10 @@ const matriculaPersona = (body, rutPersona) => {
     return addAlumno(persona, codigoCurso);
 
 }
+const getCursosPersona = run => {
+    let cursosFiltrados = getCursoRut(run);
+    return cursosFiltrados;
+}
 
 
 module.exports = {
@@ -149,5 +153,6 @@ module.exports = {
     getAllPersona,
     updatePersona,
     deletePersona,
-    matriculaPersona
+    matriculaPersona,
+    getCursosPersona
 }
