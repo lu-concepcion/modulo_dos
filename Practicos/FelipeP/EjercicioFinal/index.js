@@ -1,8 +1,8 @@
-var funciones = require('./funciones')
-var persona = require('./repo/persona')
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+
+const {setPersona,getPersona,getAllPersona,updatePersona,deletePersona} = require('./repo/persona.js');
 
 app.use(bodyParser.json());
 
