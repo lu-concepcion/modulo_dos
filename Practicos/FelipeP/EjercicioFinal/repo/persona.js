@@ -10,51 +10,52 @@ const setPersona = (body) => {
     const {run,nombre,fechaNac,tieneProfesion,tieneVehiculo,vehiculoId,profesionId} = body;
 
     if (personaExiste(run, arregloPersonas)) {
-        console.log('Existe la persona');
+        return 'Persona ya existe. No agregada';
     } else {
-        console.log('No existe');
+        const digitoVerificador = generaDigitoVerificador(run);
+        const edad = obtenerEdadPersona(fechaNac);
+
+        const vehiculos_lista = getVehiculos();
+        const profesiones_lista = getProfesiones();
+
+        let marca, modelo, id, nombreProfesion;
+
+        vehiculos_lista.forEach(vehiculo => {
+            if (vehiculo['id'] == vehiculoId) {
+                marca = vehiculo['marca'];
+                modelo = vehiculo['modelo'];
+            }
+        });
+
+        profesiones_lista.forEach(profesion => {
+            if (profesion['id'] == profesionId) {
+                id = profesion['id'];
+                nombreProfesion = profesion['nombre'];
+            }
+        });
+
+        let persona = {
+            run: run,
+            nombre: nombre,
+            dv: digitoVerificador,
+            fechaNac: fechaNac,
+            edad: edad,
+            tieneProfesion: tieneProfesion,
+            tieneVehiculo: tieneVehiculo,
+            vehiculo: {
+            marca: marca,
+            modelo: modelo
+            },
+            profesion: {
+            id: id,
+            nombre: nombreProfesion
+            }
+        }
+
+        arregloPersonas.push(persona);
+        return 'Persona agregada';
     }
-    const digitoVerificador = generaDigitoVerificador(run);
-    const edad = obtenerEdadPersona(fechaNac);
-
-    const vehiculos_lista = getVehiculos();
-    const profesiones_lista = getProfesiones();
-
-    let marca, modelo, id, nombreProfesion;
-
-    vehiculos_lista.forEach(vehiculo => {
-        if (vehiculo['id'] == vehiculoId) {
-            marca = vehiculo['marca'];
-            modelo = vehiculo['modelo'];
-        }
-    });
-
-    profesiones_lista.forEach(profesion => {
-        if (profesion['id'] == profesionId) {
-            id = profesion['id'];
-            nombreProfesion = profesion['nombre'];
-        }
-    });
-
-    let persona = {
-        run: run,
-        nombre: nombre,
-        dv: digitoVerificador,
-        fechaNac: fechaNac,
-        edad: edad,
-        tieneProfesion: tieneProfesion,
-        tieneVehiculo: tieneVehiculo,
-        vehiculo: {
-          marca: marca,
-          modelo: modelo
-        },
-        profesion: {
-          id: id,
-          nombre: nombreProfesion
-        }
-    }
-
-    arregloPersonas.push(persona);
+    
 }
 
 const getPersona = (rutPersona) => {

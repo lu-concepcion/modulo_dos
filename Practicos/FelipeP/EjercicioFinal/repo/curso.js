@@ -1,14 +1,22 @@
+const {cursoExiste} = require('../funciones.js');
 let arregloCursos = [];
 
 const setCurso = (body) => {
     const {codigoCurso, nombre} = body;
 
-    let curso = {
-        codigoCurso: codigoCurso,
-        nombre: nombre,
-        alumnos: []
+    if (cursoExiste(codigoCurso, arregloCursos)) {
+        return 'Curso ya existe. No agregado';
+    } else {
+
+        let curso = {
+            codigoCurso: codigoCurso,
+            nombre: nombre,
+            alumnos: []
+        }
+        arregloCursos.push(curso);
+        return 'Curso agregado';
     }
-    arregloCursos.push(curso);
+    
 }
 
 const getCurso = (codigoCurso) => {

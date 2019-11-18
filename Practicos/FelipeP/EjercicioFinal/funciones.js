@@ -64,16 +64,28 @@ const obtenerEdadPersona = (fechaNacimiento) => {
 }
 
 const personaExiste = (run, arregloPersonas) => {
+    let existe = false;
     arregloPersonas.forEach(persona => {
         if (persona['run'] == run) {
-            return true;
+            existe = true;
         }
     });
-    return false;
+    return existe;
+}
+
+const cursoExiste = (codigo, arreglocursos) => {
+    let existe = false;
+    arreglocursos.forEach(curso => {
+        if (curso['codigoCurso'] == codigo) {
+            existe = true;
+        }
+    });
+    return existe;
 }
 
 module.exports = {
     generaDigitoVerificador,
     obtenerEdadPersona,
-    personaExiste
+    personaExiste,
+    cursoExiste
 }

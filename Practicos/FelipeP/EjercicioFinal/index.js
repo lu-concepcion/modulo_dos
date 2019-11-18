@@ -11,8 +11,7 @@ app.use(bodyParser.json());
 // Métodos para personas
 app.post('/persona', function(request, response){
   const { body }  = request;
-  setPersona(body);
-  response.send('successfully added');
+  response.send(setPersona(body));
 });
 
 app.get('/persona/:run', function(request, response){
@@ -43,8 +42,7 @@ app.delete('/persona/:run', (request, response) => {
 // Métodos para cursos
 app.post('/curso', function(request, response){
   const { body }  = request;
-  setCurso(body);
-  response.send('successfully added');
+  response.send(setCurso(body));
 });
 
 app.get('/curso/:codigo', function(request, response){
