@@ -1,20 +1,26 @@
 //generar datos de personas
-const {generaDigitoVerificador,obtenerEdadPersona} = require('../funciones.js');
+const {generaDigitoVerificador,obtenerEdadPersona, personaExiste} = require('../funciones.js');
+const {addAlumno} = require('./curso.js');
 const {getProfesiones} = require('./profesiones');
 const {getVehiculos} = require('./vehiculos');
 
 let arregloPersonas = [];
 
 const setPersona = (body) => {
-    const {run,fechaNac,tieneProfesion,tieneVehiculo,vehiculoId,profesionId} = body;
+    const {run,nombre,fechaNac,tieneProfesion,tieneVehiculo,vehiculoId,profesionId} = body;
 
+    if (personaExiste(run, arregloPersonas)) {
+        console.log('Existe la persona');
+    } else {
+        console.log('No existe');
+    }
     const digitoVerificador = generaDigitoVerificador(run);
     const edad = obtenerEdadPersona(fechaNac);
 
     const vehiculos_lista = getVehiculos();
     const profesiones_lista = getProfesiones();
 
-    let marca, modelo, id, nombre;
+    let marca, modelo, id, nombreProfesion;
 
     vehiculos_lista.forEach(vehiculo => {
         if (vehiculo['id'] == vehiculoId) {
@@ -26,12 +32,13 @@ const setPersona = (body) => {
     profesiones_lista.forEach(profesion => {
         if (profesion['id'] == profesionId) {
             id = profesion['id'];
-            nombre = profesion['nombre'];
+            nombreProfesion = profesion['nombre'];
         }
     });
 
     let persona = {
         run: run,
+        nombre: nombre,
         dv: digitoVerificador,
         fechaNac: fechaNac,
         edad: edad,
@@ -43,7 +50,7 @@ const setPersona = (body) => {
         },
         profesion: {
           id: id,
-          nombre: nombre
+          nombre: nombreProfesion
         }
     }
 
@@ -115,10 +122,31 @@ const deletePersona = run => {
     });
 }
 
+const matriculaPersona = (body, rutPersona) => {
+    let persona;
+    const { codigoCurso } = body;
+    let prueba = '';
+
+    arregloPersonas.forEach(element => {
+        let prueba = element['run'];
+        if (element['run'] == rutPersona) {
+            persona = {
+                run: element['run'],
+                nombre: element['nombre']
+            }
+        }
+    });
+
+    addAlumno(persona, codigoCurso);
+
+}
+
+
 module.exports = {
     setPersona,
     getPersona,
     getAllPersona,
     updatePersona,
-    deletePersona
+    deletePersona,
+    matriculaPersona
 }

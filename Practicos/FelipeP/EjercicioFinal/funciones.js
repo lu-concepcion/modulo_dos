@@ -63,7 +63,17 @@ const obtenerEdadPersona = (fechaNacimiento) => {
     return edad;
 }
 
+const personaExiste = (run, arregloPersonas) => {
+    arregloPersonas.forEach(persona => {
+        if (persona['run'] == run) {
+            return true;
+        }
+    });
+    return false;
+}
+
 module.exports = {
     generaDigitoVerificador,
-    obtenerEdadPersona
+    obtenerEdadPersona,
+    personaExiste
 }

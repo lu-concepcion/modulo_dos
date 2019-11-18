@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const {setPersona,getPersona,getAllPersona,updatePersona,deletePersona} = require('./repo/persona.js');
+const {setPersona,getPersona,getAllPersona,updatePersona,deletePersona, matriculaPersona} = require('./repo/persona.js');
 const {setCurso, getCurso} = require('./repo/curso.js');
 
 app.use(bodyParser.json());
@@ -51,6 +51,13 @@ app.get('/curso/:codigo', function(request, response){
   const { codigo }  = request.params;
   let curso = getCurso(codigo);
   response.send(curso);
+});
+
+app.post('/persona/:run/curso', function(request, response){
+  const { body }  = request;
+  const { run }  = request.params;
+  matriculaPersona(body, run);
+  response.send('curse successfully added');
 });
 
 

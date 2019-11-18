@@ -23,7 +23,15 @@ const getCurso = (codigoCurso) => {
     }
 }
 
+const addAlumno = (alumno, codigoCurso) => {
+    arregloCursos.forEach(element => {
+        if (element['codigoCurso'] == codigoCurso) {
+            element['alumnos'].push(alumno);
+        }
+    });
+}
 module.exports = {
     setCurso,
-    getCurso
+    getCurso,
+    addAlumno
 }
