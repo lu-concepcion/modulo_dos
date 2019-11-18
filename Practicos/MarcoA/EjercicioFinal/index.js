@@ -6,9 +6,21 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
+app.post('/curso', function(request, response){
+  const { body } = request;
+  persona.setCurso(body);
+  response.send(body);
+});
+
+app.get('/curso/:codigo', function(request, response){
+  const { codigo } = request.params;
+  let curso = persona.getCursos(codigo);
+  response.send(curso)
+} )
+
 app.post('/persona', function(request, response){
   const { body }  = request;
-  persona.setPersona(body)
+  persona.setPersona(body);
   response.send(body);
 });
 

@@ -5,6 +5,7 @@ var vehiculos = require('./vehiculos');
 
 let persona = [];
 let arregloPersonas = [];
+let arregloCursos = [];
 
 const setPersona = (body) => {
 
@@ -62,8 +63,32 @@ const getPersona = (rutPersona) => {
         });
         return array;
     }
-    return arregloPersonas;
+    return ("No se encuentra");
 }
+
+const setCurso = (body) => {
+    const { codigoCurso:curso, nombre:ramo } = body;
+    let cursos = {
+        codigoCurso: curso,
+        nombre: ramo,
+        alumnos: []
+    }
+    arregloCursos.push(cursos);
+}
+
+const getCursos = (codigoCurso) => {
+    let array = [];
+    if (codigoCurso) {
+        arregloCursos.forEach(element => {
+            if (element['codigoCurso'] == codigoCurso) {
+                array.push(element);
+            }
+        });
+        return array;
+    }
+    return ("No deberia salir este mensaje");
+}
+
 
 const delPersona = (rutPersona) => {
     let flag = 1;
@@ -77,5 +102,7 @@ const delPersona = (rutPersona) => {
 module.exports = {
     setPersona,
     getPersona,
-    delPersona
+    delPersona,
+    setCurso,
+    getCursos
 }
