@@ -1,14 +1,28 @@
-//generar datos de cursos
-const devuelveCursos =()=>{   
-    let cursos=[];
-    cursos[0]=  {codigoCurso:1,nombre:"Ingeniero"};
-    cursos[1]=  {codigoCurso:2,nombre:"Medico"};
-    cursos[2]=  {codigoCurso:3,nombre:"Arquitecto"};
-    cursos[3]=  {codigoCurso:4,nombre:"Kinesiologo"};
-    cursos[4]=  {codigoCurso:5,nombre:"Contador Auditor"};
+// datos de curso
+var funciones = require('../funciones')
+var personas = require('./persona')
+let cursos= [];
+let alumnos=[];
+
+const guardarCurso=(body)=>{
+    let curso ={codigoCurso,nombre}=body;
+    curso={
+        codigoCurso:codigoCurso,
+        nombre:nombre,
+        alumnos
+    }
+    cursos.push(curso);
     return cursos
 }
 
-module.exports ={
-    devuelveCursos
+const filtrarCursos = (codigo) =>{
+    return funciones.filtrarArray(cursos,"codigoCurso",codigo)
+}
+
+const matriculaCurso = () =>{
+
+}
+
+module.exports={
+    guardarCurso, filtrarCursos, matriculaCurso
 }

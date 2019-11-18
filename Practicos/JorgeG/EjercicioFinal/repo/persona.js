@@ -15,7 +15,12 @@ const recibe = (body) =>{
 }
 personas.push(persona)
 
+const filtrarPersona=(consulta) =>{
+    return funciones.filtrarArray(personas,"run",consulta)
+}
+
+
 
 module.exports={
-    recibe
+    recibe, filtrarPersona
 }
