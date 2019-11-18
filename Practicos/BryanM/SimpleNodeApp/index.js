@@ -17,6 +17,7 @@ app.post('/persona/', function(request, response){
   response.send(body)
 });
 
+//Devuelve una persona
 app.get('/persona/:rut', function(request, response){
   // query mapea a un objeto los parámetros enviados en la ruta
   // ej: localhost:3000/persona?id=1&nombre=Hernan
@@ -24,6 +25,15 @@ app.get('/persona/:rut', function(request, response){
   const { rut }  = request.params;
   let personas = persona.verPersona(rut);
   response.send(personas);
+});
+
+//Devuelve todas las personas
+app.get('/persona/getAll/', function(request, response){
+  // query mapea a un objeto los parámetros enviados en la ruta
+  // ej: localhost:3000/persona?id=1&nombre=Hernan
+  // query = { id: 1, nombre: hernan }
+  const { body }  = request;
+  response.send(persona.personas);
 });
 
 app.delete('/persona/:rut', function(request, response){

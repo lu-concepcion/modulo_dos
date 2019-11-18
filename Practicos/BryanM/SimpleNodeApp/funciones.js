@@ -75,11 +75,11 @@ const obtenerEdadPersona = (fechaNacimiento) => {
     return edad;
 }
 
-
-const buscarEnArray_2 = (array, valor ) => {
+//Busca si existe una persona (devuelve true o false)
+const searchInArray = (array, propiedad, valor) => {
     let encuentro = false;
     array.forEach(element => {
-        if(element == valor){
+        if(element[propiedad] == valor){
             encuentro = true;
         }
     });
@@ -91,7 +91,7 @@ const deleteElementoArray = (array, propiedad, valor) => {
     array.forEach(element => {
         if(element[propiedad] == valor){
             objeto = array.lastIndexOf(valor);
-            array.splice(objeto);
+            array.splice(objeto,1);
         }
     })
 }
@@ -100,9 +100,10 @@ const verNum = (numero) => {
     return isNaN(parseInt(numero));
 }
 
-const searchArray = (obj, propiedad, valor) => {
+const searchArray = (array, propiedad, valor) => {
+    //Devuelve un array
     let obj = [];
-    obj.forEach(element => {
+    array.forEach(element => {
         if(element[propiedad] == valor){
             obj.push(element);
         }
@@ -112,5 +113,5 @@ const searchArray = (obj, propiedad, valor) => {
 
 module.exports = {
     testing, codigoVerificador, buscarEnArray, obtenerEdadPersona, verNum,
-    buscarEnArray_2, deleteElementoArray, searchArray
+    searchInArray, deleteElementoArray, searchArray
 }

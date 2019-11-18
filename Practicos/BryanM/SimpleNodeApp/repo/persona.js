@@ -44,22 +44,23 @@ const guardar = (per) => {
 
 const verPersona = (rut) => {
     let array = [];
-    if (rut){
+    if (funciones.searchInArray(personas,"rut", rut)){
         array = funciones.searchArray(personas, "rut", rut);
         return array;
     }else {
-        return personas;
+        return "No se a podido encontrar el rut";
     }
 }
 
 const eliminar = (rut) => {
-    if (funciones.buscarEnArray_2(personas, rut)){
-        
+    if (funciones.searchInArray(personas,"rut", rut)){
+        let array = funciones.deleteElementoArray(personas,"rut",rut);
+        return "Se a eliminado correctamente" + array;
     }else {
         return "No se ha eliminado correctamente";
     }
 }
 
 module.exports = {
-    guardar, verPersona, eliminar
+    guardar, verPersona, eliminar,personas
 }
