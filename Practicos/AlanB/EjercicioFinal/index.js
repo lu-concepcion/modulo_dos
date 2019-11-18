@@ -2,6 +2,7 @@ var funciones = require('./funciones')
 var persona = require('./repo/persona')
 var vehiculos = require('./repo/vehiculos')
 var profesiones = require('./repo/profesiones')
+var curso = require('./repo/curso')
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -20,7 +21,7 @@ app.post('/persona', function(request, response){
   {
     body.vehiculoId=0
   } 
- body.vehiculo=funciones.objectFinder(vehiculos.listaVehiculos,"id",body.vehiculoId)
+  body.vehiculo=funciones.objectFinder(vehiculos.listaVehiculos,"id",body.vehiculoId)
   body.profesion=funciones.objectFinder(profesiones.listaProfesiones,"id",body.profesionId)
   delete body.tieneProfesion
   delete body.tieneVehiculo
@@ -29,6 +30,11 @@ app.post('/persona', function(request, response){
   delete body.vehiculo.id
   delete body.profesion.id
   persona.guardarPersonas(body)
+  response.send(body)
+});
+app.post('/curso', function(request, response){
+  const { body }  = request;
+  curso.guardarCurso(body);
   response.send(body)
 });
 
