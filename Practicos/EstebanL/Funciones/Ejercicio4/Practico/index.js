@@ -1,10 +1,10 @@
 let intentos=0
 
-import {contarVocales} from '../funciones.js';
+import {contarVocales} from '../../funciones.js';
 
 
 
-const textoingresado = prompt ("ingrese texto o numero a analizar")
+const textoingresado = prompt ("ingrese texto a analizar")
 
 
 

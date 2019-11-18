@@ -2,23 +2,28 @@
 
 const profesiones = [{
 
-    'id':'1',
+    'idPro':'1',
     'nombre':'Ingeniero'
 
 },{
 
-    'id':'2',
+    'idPro':'2',
     'nombre':'Mecanico'
 
 },{
 
-    'id':'3',
+    'idPro':'3',
     'nombre':'Docente'
 
 },{
 
-    'id':'4',
+    'iidProd':'4',
     'nombre':'Arquitecto'
 
 }
 ]
+module.exports = {
+
+    profesiones
+
+}

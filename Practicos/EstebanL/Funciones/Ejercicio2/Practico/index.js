@@ -1,5 +1,5 @@
 
-import {sumar, restar, dividir, multiplicar} from '../funciones.js';
+import {suma, resta, division, multiplicacion} from '../../funciones.js';
 
 const n1 = prompt ("ingrese un numero")
 const n2 = prompt ("ingrese otro numero")
@@ -14,19 +14,27 @@ Sumar (1) \
 switch (eleccion) {
     case "1":
       //Caso de suma
-      alert (sumar(n1, n2))
+      alert (suma(n1, n2))
       break;
     case "2":
       //Caso de restar
-      alert (restar(n1, n2))
+      alert (resta(n1, n2))
       break;
     case "3":
       //Caso de division
-      alert (dividir(n1, n2))
+      if(n1 == 0 && n2 == 0){
+
+        alert ("No puede dividirse entre 0")
+        break;
+      }else{
+      
+      alert (division(n1, n2))
       break;
+      }
+
     case "4":
       //Caso de multiplicacion
-      alert (multiplicar(n1, n2))
+      alert (multiplicacion(n1, n2))
       break;
     default:
       //Caso fuera de rango

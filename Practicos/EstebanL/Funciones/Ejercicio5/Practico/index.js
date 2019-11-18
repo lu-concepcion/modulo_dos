@@ -1,4 +1,4 @@
-import {palindromo} from '../funciones.js';
+import {palindromo} from '../../funciones.js';
 
 
 

@@ -2,27 +2,32 @@
 
 const vehiculos = [{
 
-    'id':'1',
+    'idVehi':'1',
     'marca':'Mitsubishi',
     'modelo':'Challenger'
 
 },{
 
-    'id':'2',
+    'idVehi':'2',
     'marca':'Kia',
     'modelo':'Sorento'
 
 },{
 
-    'id':'3',
+    'idVehi':'3',
     'marca':'Mahindra',
     'modelo':'Pick Up'
 
 },{
 
-    'id':'4',
+    'idVehi':'4',
     'marca':'Ford',
     'modelo':'Mustang'
 
 }
 ]
+module.exports = {
+
+    vehiculos
+
+}
