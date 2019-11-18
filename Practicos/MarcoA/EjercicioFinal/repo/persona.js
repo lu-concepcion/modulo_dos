@@ -68,7 +68,7 @@ const getPersona = (rutPersona) => {
 }
 
 const setCurso = (body) => {
-    flag = 0;
+    let flag = 0;
     const { codigoCurso: curso, nombre: ramo } = body;
     let cursos = {
         codigoCurso: curso,
@@ -80,17 +80,17 @@ const setCurso = (body) => {
     } else {
         for (let i in arregloCursos) {
             if (arregloCursos[i]['codigoCurso'] != curso) {
-                flag = 1;
+                flag++;
+                if (flag == 1) {
+                    arregloCursos.push(cursos);
+                }
             }
         }
-    }
-
-    if (flag == 1) {
-        arregloCursos.push(cursos);
     }
 }
 
 const añadirAlumnoACurso = (run, body) => {
+    let flag = 0;
     const { codigoCurso } = body;
     for (let i in arregloCursos) {
         if (arregloCursos[i]["codigoCurso"] == codigoCurso) {
@@ -100,7 +100,10 @@ const añadirAlumnoACurso = (run, body) => {
                 let ciclo = arregloCursos[i]["alumnos"];
                 for (let j = 0;j<ciclo.length; j++) {
                     if (ciclo[j] !== run) {
+                        flag++;
+                        if(flag==1){
                         arregloCursos[i]["alumnos"].push(run);
+                        }
                     }
                 }
             }
