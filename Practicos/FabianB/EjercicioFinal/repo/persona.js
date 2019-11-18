@@ -52,6 +52,13 @@ const setPersona = (body) => {
     arregloPersonas.push(persona);
 }
 
+const setCurso = (body) => {
+    const{codigoCurso:curso, nombre:ramo} = body;
+    let curso = {
+        
+    }
+}
+
 const getPersona = (rutPersona) => {
     let array = [];
     if (rutPersona) {
