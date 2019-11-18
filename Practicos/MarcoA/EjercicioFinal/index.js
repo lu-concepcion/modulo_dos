@@ -18,10 +18,12 @@ app.get('/persona/:run', function(request, response){
   response.send(personas);
 });
 
-app.post('/persona/eliminar/:run'), function(request, response){
+//NO FUNCIONA ACTUALMENTE (ARROJA UN ERROR QUE forEach no es una funcion)
+/*
+app.get('/persona/eliminar/:run', function(request, response){
   const { run } = request.params;
-  persona.delPersona(run);
-}
+  response.send(persona.delPersona(run));
+});*/
 
 app.listen(3000, function () {
   console.log('Simple node app for LU-CCP listening on port 3000!');

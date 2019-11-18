@@ -62,7 +62,6 @@ const obtenerEdadPersona = (fechaNacimiento) => {
 }
 
 const eliminarArrayPorValor = (arreglo, propiedad, valor) => {
-    let object = {}
     arreglo.forEach(element =>{
         if(element[propiedad] == valor){
             arreglo.splice(valor);

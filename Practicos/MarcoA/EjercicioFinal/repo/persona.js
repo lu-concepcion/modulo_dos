@@ -3,6 +3,7 @@ var funciones = require('../funciones');
 var profesiones = require('./profesiones');
 var vehiculos = require('./vehiculos');
 
+let persona = [];
 let arregloPersonas = [];
 
 const setPersona = (body) => {
@@ -33,21 +34,21 @@ const setPersona = (body) => {
             }
         });
     }
-        let persona = {
-            run: run,
-            dv: digitoVerificador,
-            fechaNac: fechaNac,
-            edad: edad,
-            tieneProfesion: tieneProfesion,
-            tieneVehiculo: tieneVehiculo,
-            vehiculo: {
-                marca: marca,
-                modelo: modelo
-            },
-            profesion: {
-                nombre: nombre
-            }
+    persona = {
+        run: run,
+        dv: digitoVerificador,
+        fechaNac: fechaNac,
+        edad: edad,
+        tieneProfesion: tieneProfesion,
+        tieneVehiculo: tieneVehiculo,
+        vehiculo: {
+            marca: marca,
+            modelo: modelo
+        },
+        profesion: {
+            nombre: nombre
         }
+    }
     arregloPersonas.push(persona);
 }
 
@@ -66,11 +67,11 @@ const getPersona = (rutPersona) => {
 
 const delPersona = (rutPersona) => {
     let flag = 1;
-    do{
+    do {
         funciones.eliminarArrayPorValor(persona, "rut", "rut")
         flag = 0;
         return "Rut eliminado"
-    }while(flag==1);
+    } while (flag == 1);
 }
 
 module.exports = {
