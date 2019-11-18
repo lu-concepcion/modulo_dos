@@ -37,31 +37,32 @@ const generaDigitoVerificador = rut => {
 }
 
 const obtenerEdadPersona = (fechaNacimiento) => {
-    // 18/09/1992
-    let dia, mes, anio;
-    let edad = 0;
+    // Desglose fecha de nacimiento
+    let nacimiento = fechaNacimiento.split('/');
+    let dia = Number(nacimiento[0]);
+    let mes = Number(nacimiento[1]);
+    let anio = Number(nacimiento[2]);
+    
+    // Desglose fecha actual
     const hoy = new Date();
+    let hoyDia = hoy.getDate();
+    let hoyMes = hoy.getMonth()+1;
+    let hoyAnio = hoy.getFullYear();
 
-    if (fechaNacimiento.charAt(0) == '0') {
-        dia = fechaNacimiento.charAt(1);
+    let edad = 0;
+
+    if (hoyMes > mes) {
+        edad = hoyAnio - anio;
     } else {
-        dia = fechaNacimiento.substr(0,1);
+        edad = (hoyAnio-1) - anio;
     }
-
-    if (fechaNacimiento.charAt(3) == '0') {
-        mes = fechaNacimiento.charAt(4);
-    } else {
-        mes = fechaNacimiento.substr(3,4);
-    }
-    anio = fechaNacimiento.substr(6,9);
-
-    const fecha = new Date(anio,mes,dia);
-
-        if ((hoy.getMonth()+1) >= fecha.getMonth() && hoy.getDate() >= fecha.getDate()) {
-            edad = hoy.getFullYear() - fecha.getFullYear();
+    if (hoyMes == mes) {
+        if (hoyDia >= dia) {
+            edad = hoyAnio - anio;
         } else {
-            edad = (hoy.getFullYear()-1) - fecha.getFullYear();
+            edad = (hoyAnio-1) - anio;
         }
+    }
     return edad;
 }
 
