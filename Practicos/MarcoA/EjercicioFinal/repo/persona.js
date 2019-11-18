@@ -64,7 +64,12 @@ const getPersona = (rutPersona) => {
     return arregloPersonas;
 }
 
+const delPersona = (rutPersona) => {
+    let array = [];
+}
+
 module.exports = {
     setPersona,
-    getPersona
+    getPersona,
+    delPersona
 }
