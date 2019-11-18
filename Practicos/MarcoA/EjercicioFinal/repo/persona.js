@@ -6,6 +6,7 @@ var vehiculos = require('./vehiculos');
 let persona = [];
 let arregloPersonas = [];
 let arregloCursos = [];
+let personaCurso = [];
 
 const setPersona = (body) => {
 
@@ -67,7 +68,7 @@ const getPersona = (rutPersona) => {
 }
 
 const setCurso = (body) => {
-    const { codigoCurso:curso, nombre:ramo } = body;
+    const { codigoCurso: curso, nombre: ramo } = body;
     let cursos = {
         codigoCurso: curso,
         nombre: ramo,
@@ -75,6 +76,15 @@ const setCurso = (body) => {
     }
     arregloCursos.push(cursos);
 }
+
+const añadirAlumnoACurso = (run, body) => {
+    const { codigoCurso } = body;
+    arregloCursos.forEach(element => {
+        if(element['codigoCurso'] == codigoCurso){
+            alumnos.push(run);
+    }
+});
+
 
 const getCursos = (codigoCurso) => {
     let array = [];

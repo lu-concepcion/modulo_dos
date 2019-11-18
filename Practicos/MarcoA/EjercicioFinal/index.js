@@ -15,8 +15,8 @@ app.post('/curso', function(request, response){
 app.get('/curso/:codigo', function(request, response){
   const { codigo } = request.params;
   let curso = persona.getCursos(codigo);
-  response.send(curso)
-} )
+  response.send(curso);
+});
 
 app.post('/persona', function(request, response){
   const { body }  = request;
