@@ -21,8 +21,14 @@ app.get('/curso/:codigo', function(request, response){
 app.post('/persona/:run/curso', function(request, response){
   const { run } = request.params;
   const { body } = request;
-  let alumno = persona.añadirAlumnoACurso(run, body);
-  response.send(run);
+  persona.añadirAlumnoACurso(run, body);
+  response.send("Alumno agregado exitosamente");
+});
+
+app.get('/persona/:run/cursos', function(request, response){
+  const { run } = request.params;
+  let alumno = persona.encontrarAlumnoCurso(run)
+  response.send(alumno);
 });
 
 app.post('/persona', function(request, response){

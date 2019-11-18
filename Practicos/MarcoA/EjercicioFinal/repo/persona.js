@@ -10,7 +10,7 @@ let personaCurso = [];
 
 const setPersona = (body) => {
 
-    const { run, fechaNac, tieneProfesion, tieneVehiculo, vehiculoId, profesionId } = body;
+    const { run, nombre:tag, fechaNac, tieneProfesion, tieneVehiculo, vehiculoId, profesionId } = body;
 
     let digitoVerificador = funciones.generaDigitoVerificador(run);
     let edad = funciones.obtenerEdadPersona(fechaNac);
@@ -38,6 +38,7 @@ const setPersona = (body) => {
     }
     persona = {
         run: run,
+        nombre : tag,
         dv: digitoVerificador,
         fechaNac: fechaNac,
         edad: edad,
