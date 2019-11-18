@@ -1,5 +1,6 @@
 var funciones = require('./funciones')
 var persona = require('./repo/persona')
+var cursos = require('./repo/cursos')
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -13,6 +14,12 @@ app.post('/persona', function(request, response){
   // body = { id: 1, nombre: hernan }
   const { body }  = request;
   persona.guardarPersona(body);
+  response.send(body)
+});
+
+app.post('/cursos', function(request, response){
+  const { body }  = request;
+  cursos.guardarCurso(body);
   response.send(body)
 });
 
