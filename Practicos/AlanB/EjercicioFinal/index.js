@@ -15,6 +15,7 @@ app.post('/persona', function(request, response){
   // body: {id: 1, nombre: hernan }
   // body = { id: 1, nombre: hernan }
   const { body }  = request;
+  if(curso.objectPositionFinder(persona.personas,"run",body.run)=="no encontrado"){
   body.dv=funciones.digitoVerificador(body.run)
   body.edad=funciones.calculoEdad(funciones.getBirthday(body.fechaNac))
   if (body.tieneVehiculo=="false")
@@ -30,11 +31,28 @@ app.post('/persona', function(request, response){
   delete body.vehiculo.id
   delete body.profesion.id
   persona.guardarPersonas(body)
-  response.send(body)
+  response.send(body)}
+  else 
+  {
+    response.send("persona ya existe")
+  }
 });
 app.post('/curso', function(request, response){
   const { body }  = request;
+  if (curso.objectPositionFinder(curso.cursos,"codigoCurso",body.codigoCurso)!="no encontrado"){
   curso.guardarCurso(body);
+  console.log (body)
+  response.send(body)
+  }
+  else{
+    response.send("codigo del curso ya existe")
+  }
+});
+app.post('/persona/:run/curso', function(request, response){
+  const { body }  = request;
+  const { run }  = request.params;
+  curso.matricularPersonas(body,run);
+  console.log (body)
   response.send(body)
 });
 
@@ -44,6 +62,14 @@ app.get('/persona/:run', function(request, response){
   // query = { id: 1, nombre: hernan }
   const { run }  = request.params;
   response.send(persona.obtenerPersonas(run))
+});
+app.get('/curso/:codigoCurso', function(request, response){
+  const { codigoCurso }  = request.params;
+  response.send(curso.obtenerCurso(codigoCurso))
+});
+app.get('/persona/:run/curso', function(request, response){
+  const { codigoCurso }  = request.params;
+  response.send(curso.obtenerCurso(codigoCurso))
 });
 
 app.listen(3000, function () {
