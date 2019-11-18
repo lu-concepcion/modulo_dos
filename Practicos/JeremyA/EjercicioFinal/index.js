@@ -12,10 +12,8 @@ app.post('/persona', function(request, response){
   // body: {id: 1, nombre: hernan }
   // body = { id: 1, nombre: hernan }
   const { body }  = request;
-  // persona.prueba
-  // const {run, fechNac, tieneProfesion, tieneVehiculo, vehiculoId, profesionId}=body
   persona.guardarPersona(body);
-  response.send("se guardó el contenido")
+  response.send(body)
 });
 
 
@@ -24,8 +22,9 @@ app.get('/persona', function(request, response){
   // query mapea a un objeto los parámetros enviados en la ruta
   // ej: localhost:3000/persona?id=1&nombre=Hernan
   // query = { id: 1, nombre: hernan }
-  const { run }  = request.params;
-  response.send(persona.obtenerPersonas(run))
+  const { query }  = request;
+  persona.obtenerPersonas(query);
+  response.send("hola mundo")
 });
 
 app.listen(3000, function () {

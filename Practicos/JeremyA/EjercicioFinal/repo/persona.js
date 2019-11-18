@@ -10,27 +10,23 @@ var profesiones = require('./vehiculos')
 let listaPersona = [];
 
 const guardarPersona = (body) => {
-    let personas={
-        run:"",
-        dv:"",
-        fechaNac:"",
-        edad:"",
-        tieneProfesion:"",
-        tieneVehiculo:"",
-        vehiculo:"",
-        profesion:""};
-    personas.run=body.run;
-    personas.dv=body.dv;
-    personas.fechaNac=body.fechaNac;
-    personas.edad=body.edad;
-    personas.tieneProfesion=body.tieneProfesion;
-    personas.tieneVehiculo=body.tieneVehiculo;
-    personas.vehiculo=body.vehiculo;
-    profesiones.profesiones=body.profesion;
+    let personas={run, fechaNac, tieneProfesion, tieneVehiculo, idProfesion, idVehiculo}=body;
+    personas = {
+    run:run,
+    dv:funciones.validaRun(run),
+    fechaNac:fechaNac,
+    edad: funciones.obtenerEdad(new Date(fechaNac)),
+    tieneProfesion:tieneProfesion,
+    tieneVehiculo:tieneVehiculo,
+    profesiones:funciones.buscarEnArray(profesiones.listaProfesiones(),"id",idProfesion),
+    vehiculo:funciones.buscarEnArray()
+    }
+    listaPersona.push(personas);
 }
 
-const obtenerPersonas = (run) => {
-    return listaPersona;
+const obtenerPersonas = (query) => {
+    const {run}=query;
+    return funciones.buscarEnArray(listaPersona,"run",run);
 }
 
 module.exports={
