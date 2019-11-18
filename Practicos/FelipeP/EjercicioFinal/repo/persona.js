@@ -1,8 +1,9 @@
 //generar datos de personas
-var funciones = require('../funciones');
-var profesiones = require('./profesiones');
-var vehiculos = require('./vehiculos');
+const {generaDigitoVerificador,obtenerEdadPersona} = require('../funciones.js');
+const {getProfesiones} = require('./profesiones');
+const {getVehiculos} = require('./vehiculos');
 
+let arregloPersonas = [];
 let arregloPersonas = [];
 
 const setPersona = (body) => {
