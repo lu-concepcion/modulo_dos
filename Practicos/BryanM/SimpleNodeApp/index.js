@@ -1,6 +1,6 @@
 var funciones = require('./funciones')
 var persona = require('./repo/persona')
-const cursos = require('./repo/curso.js')
+const curso = require('./repo/curso.js')
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -9,10 +9,6 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json())
 
 app.post('/persona/', function(request, response){
-  // body mapea a un objeto los parámetros enviados en el body del request
-  // ej: localhost:3000/persona
-  // body: {id: 1, nombre: hernan }
-  // body = { id: 1, nombre: hernan }
   const { body }  = request;
   persona.guardar(body);
   response.send(body)
@@ -21,7 +17,7 @@ app.post('/persona/', function(request, response){
 //Agrega un cruso
 app.post('/curso/', function(request, response){
   const { body } = request;
-  cursos.guardarCurso(body)
+  curso.guardarCurso(body)
   response.send(body)
 });
 
@@ -29,25 +25,24 @@ app.post('/curso/', function(request, response){
 app.post('/persona/:rut/curso/', function(request, response){
   const { rut } = request.params;
   const { body } = request;
-  cursos.matricularPersona(rut, body)
+  curso.matricularPersona(rut, body)
   response.send(body);
 });
 
 //Devuelve los cursos de una alumno
 app.get('/persona/:rut/cursos/', function(request, response){
-
+  
 });
 
 //Devuelve un curso con sus respectivos alumnos
-app.get('/curso/:codigo', function(resquest, response){
-
+app.get('/curso/:codigo', function(request, response){
+  const { codigo } = request.params;
+  let cursos = curso.buscarCurso(codigo);
+  response.send(cursos)
 });
 
 //Devuelve una persona
 app.get('/persona/:rut', function(request, response){
-  // query mapea a un objeto los parámetros enviados en la ruta
-  // ej: localhost:3000/persona?id=1&nombre=Hernan
-  // query = { id: 1, nombre: hernan }
   const { rut }  = request.params;
   let personas = persona.buscarPersona(rut);
   response.send(personas);

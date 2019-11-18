@@ -20,16 +20,40 @@ const guardarCurso = (cur) => {
 }
 
 const matricularPersona = (rut, cur) => {
-    let { codigo, alumnos } = cur;
-
+    const { codigo } = cur;
     const persona = funciones.buscarEnArray(personas.personas, "rut", rut);
     cursos.forEach(element => {
         if(element["codigo"] == codigo){
-            alumnos.push(persona);
+            element.alumnos.push(persona)
         }
     })
+    return cursos;
+}
+
+const buscarCurso = (codigo) => {
+    let array = [];
+    if(funciones.searchInArray(cursos,"codigo",codigo)){
+        array = funciones.searchArray(cursos, "codigo", codigo);
+        return array;
+    }else {
+        return "No se a podido encontrar el curso";
+    }
+}
+
+const obtenerCursos = () => {
+    return cursos;
+}
+
+const buscarPerEnCurso = (rut) => {
+    let res = [];
+    const curs = obtenerCursos();
+    curs.forEach(element => {
+        if(funciones.searchArray(element.alumnos, "rut", rut).length){
+            res.push(curso);
+        }
+    })  
 }
 
 module.exports = {
-    guardarCurso, matricularPersona
+    guardarCurso, matricularPersona, obtenerCursos, buscarCurso 
 }
