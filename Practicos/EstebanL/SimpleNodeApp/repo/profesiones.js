@@ -2,22 +2,22 @@
 
 const profesiones = [{
 
-    'idPro':'1',
+    'id':'1',
     'nombre':'Ingeniero'
 
 },{
 
-    'idPro':'2',
+    'id':'2',
     'nombre':'Mecanico'
 
 },{
 
-    'idPro':'3',
+    'id':'3',
     'nombre':'Docente'
 
 },{
 
-    'iidProd':'4',
+    'id':'4',
     'nombre':'Arquitecto'
 
 }

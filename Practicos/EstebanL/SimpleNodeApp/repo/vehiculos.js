@@ -2,25 +2,25 @@
 
 const vehiculos = [{
 
-    'idVehi':'1',
+    'id':'1',
     'marca':'Mitsubishi',
     'modelo':'Challenger'
 
 },{
 
-    'idVehi':'2',
+    'id':'2',
     'marca':'Kia',
     'modelo':'Sorento'
 
 },{
 
-    'idVehi':'3',
+    'id':'3',
     'marca':'Mahindra',
     'modelo':'Pick Up'
 
 },{
 
-    'idVehi':'4',
+    'id':'4',
     'marca':'Ford',
     'modelo':'Mustang'
 

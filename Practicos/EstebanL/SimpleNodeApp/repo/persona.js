@@ -6,6 +6,8 @@ const vehiculos = require("./vehiculos.js")
 
 const profesiones = require("./profesiones.js")
 
+//generar datos de ,personas
+
 let personas = [];
 
 let vehiculo = {
@@ -15,6 +17,8 @@ let vehiculo = {
     modelo: ""
 
 }
+
+
 
 let profesion = {
 
@@ -32,6 +36,8 @@ let persona = {
 
     dv: "",
 
+    nombre: "",
+
     fechaNac: "",
 
     edad: 0,
@@ -46,9 +52,11 @@ let persona = {
 
 }
 
+
+
 const guardar = (per) => {
 
-    let {rut, fechaNac, tieneProfesion, tieneVehiculo, idVehiculo, idProfesion} = per;
+    let {rut, nombre, fechaNac, tieneProfesion, tieneVehiculo, idVehiculo, idProfesion} = per;
 
     if(!funciones.verNum(rut)){
 
@@ -57,6 +65,7 @@ const guardar = (per) => {
         persona.dv = funciones.codigoVerificador(persona.rut);
 
     }
+    persona.nombre = nombre;
 
     persona.fechaNac = fechaNac;
 
@@ -69,6 +78,7 @@ const guardar = (per) => {
     persona.vehiculo = tieneVehiculo ? funciones.buscarEnArray(vehiculos.vehiculos, "id", idVehiculo) : {};
 
     persona.profesion = tieneProfesion ? funciones.buscarEnArray(profesiones.profesiones, "id", idProfesion) : {};
+
 
     personas.push(persona);
 
@@ -94,9 +104,36 @@ const buscarPersona = (rut) => {
 
 }
 
+
+
+const eliminar = (rut) => {
+
+    if (funciones.searchInArray(personas,"rut", rut)){
+
+        let array = funciones.deleteElementoArray(personas,"rut",rut);
+
+        return "Se a eliminado correctamente" ;
+
+    }else {
+
+        return "No se ha eliminado correctamente";
+
+    }
+
+}
+
+
+
+const verPersonas = (body)=> {
+
+    return personas;
+
+}
+
+
+
 module.exports = {
 
-    guardar,
-    buscarPersona
+    guardar, buscarPersona, eliminar , verPersonas, persona
 
 }

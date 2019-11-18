@@ -1,5 +1,13 @@
 //Funciones rescatadas por compañeros Bryan Montes, Vicente Herrera y Felipe Pulgar
 
+const testing = () => {
+
+    return "test";
+
+}
+
+
+
 const codigoVerificador = (rut) => {
 
     let aux = rut.split("-");
@@ -112,7 +120,7 @@ const obtenerEdadPersona = (fechaNacimiento) => {
 
 
 
-    if (fechaNacimiento.charAt(3) == '0') {
+    if (fechaNacimiento.charAt(4) == '0') {
 
         mes = fechaNacimiento.charAt(4);
 
@@ -166,6 +174,28 @@ const searchInArray = (array, propiedad, valor) => {
 
 }
 
+
+
+const deleteElementoArray = (array, propiedad, valor) => {
+
+    let objeto = 0;
+
+    array.forEach(element => {
+
+        if(element[propiedad] == valor){
+
+            objeto = array.lastIndexOf(valor);
+
+            array.splice(objeto,1);
+
+        }
+
+    })
+
+}
+
+
+
 const verNum = (numero) => {
 
     return isNaN(parseInt(numero));
@@ -174,6 +204,32 @@ const verNum = (numero) => {
 
 
 
+const searchArray = (array, propiedad, valor) => {
+
+    //Devuelve un array
+
+    let obj = [];
+
+    array.forEach(element => {
+
+        if(element[propiedad] == valor){
+
+            obj.push(element);
+
+        }
+
+    });
+
+    return obj;
+
+}
+
+
+
 module.exports = {
-    codigoVerificador, buscarEnArray, obtenerEdadPersona, verNum, searchInArray, verNum
+
+    testing, codigoVerificador, buscarEnArray, obtenerEdadPersona, verNum,
+
+    searchInArray, deleteElementoArray, searchArray
+
 }
