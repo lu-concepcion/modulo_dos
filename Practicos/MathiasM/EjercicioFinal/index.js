@@ -23,6 +23,12 @@ app.post('/cursos', function(request, response){
   response.send(body)
 });
 
+app.get('/cursos/:codigo', function(request, response){
+  const { codigo } = request.params;
+  
+  response.send(cursos.filtarPorCodigo(codigo))
+});
+
 app.get('/persona', function(request, response){
   // query mapea a un objeto los parámetros enviados en la ruta
   // ej: localhost:3000/persona?id=1&nombre=Hernan

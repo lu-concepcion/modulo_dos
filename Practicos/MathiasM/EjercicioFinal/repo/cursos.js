@@ -14,6 +14,11 @@ const guardarCurso=(body)=>{
     return cursos
 }
 
+
+const filtarPorCodigo=(codigo)=>{
+     return funciones.encontrarEnArray(cursos,"codigoCurso",codigo)
+    
+}
 module.exports={
-    guardarCurso
+    guardarCurso,filtarPorCodigo
 }
