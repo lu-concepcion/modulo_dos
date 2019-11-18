@@ -5,7 +5,7 @@
 
 var funciones = require('../funciones')
 var profesiones = require('./profesiones')
-var profesiones = require('./vehiculos')
+var vehiculos = require('./vehiculos')
 
 let listaPersona = [];
 
@@ -19,7 +19,7 @@ const guardarPersona = (body) => {
     tieneProfesion:tieneProfesion,
     tieneVehiculo:tieneVehiculo,
     profesiones:funciones.buscarEnArray(profesiones.listaProfesiones(),"id",idProfesion),
-    vehiculo:funciones.buscarEnArray()
+    vehiculo:funciones.buscarEnArray(vehiculos.listaVehiculos(),"idV",idVehiculo)
     }
     listaPersona.push(personas);
 }
