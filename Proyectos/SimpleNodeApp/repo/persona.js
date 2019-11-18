@@ -16,7 +16,7 @@ const obtenerPersonas = (run) => {
 
 const guardarPersona = (body) =>{
     let personaNueva = {};
-    let run, fechaNac, tieneProfesion, 
+    let run, nombre, fechaNac, tieneProfesion, 
         tieneVehiculo, vehiculoId, profesionId;
 
     let cantidadPropiedades = Object.keys(body).length;
@@ -27,6 +27,10 @@ const guardarPersona = (body) =>{
         if (Object.keys(body)[i]== "run") {
             run = Object.values(body)[i];
         }
+        if (Object.keys(body)[i]== "nombre") {
+            nombre = Object.values(body)[i];
+        }
+
         if (Object.keys(body)[i]== "fechaNac") {
             fechaNac = Object.values(body)[i];
         }
@@ -52,6 +56,7 @@ const guardarPersona = (body) =>{
         objetoProfesion = funciones.objetoEnArray(profesiones.profesiones, "id", profesionId)    
     }   
             personaNueva.run = run;
+            personaNueva.nombre = nombre;
             personaNueva.dv = funciones.calcularDigitoVerificador(run);
             personaNueva.fechaNac = fechaNac;
             personaNueva.edad = funciones.calcularEdad(fechaNac);
@@ -62,7 +67,9 @@ const guardarPersona = (body) =>{
             
     }
 
-      
+
+
+
     
 
 

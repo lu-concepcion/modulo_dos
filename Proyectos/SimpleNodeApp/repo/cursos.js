@@ -1,4 +1,5 @@
 var funciones = require('../funciones')
+const p = require('./persona')
 
 let cursos =[ 
     { codigoCurso: "CU-000",
@@ -43,8 +44,21 @@ const guardarCurso=(body)=>{
 
 cursos.push(cursoNuevo)
 }
-  
+
+const matricularPersona=(matriculado={}, body) =>{
+let nuevo = matriculado;
+let codigo = Object.values(body)[0];
+for (let i = 0; i < cursos.length; i++) {
+   if (Object.values(cursos[i])[0]== codigo) {
+       (cursos[i]).alumnos.push(matriculado);
+   }
+    
+   
+}
+
+
+}
 
  module.exports ={
- cursos, guardarCurso, obtenerCurso
+ cursos, guardarCurso, obtenerCurso, matricularPersona
   }
