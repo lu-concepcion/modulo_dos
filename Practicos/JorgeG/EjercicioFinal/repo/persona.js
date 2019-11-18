@@ -4,18 +4,16 @@ var vehiculos = require('./vehiculos')
 var profesiones = require('./profesiones.js')
 let personas=[]
 const recibe = (body) =>{
-    let autos={}
-    let carreras={}
     let persona={autos,carreras}
     persona.run = body.run
     persona.dv = funciones.moduloOnce(persona.run)
     persona.fechaNac = body.fechaNac
     persona.edad = funciones.calculaEdad(new Date(persona.fechaNac))
     persona.carreras = funciones.filtrarArray(profesiones.devuelveProfesion(),"idProfesion",body.idProfesion)
-    persona.autos = funciones.filtrarArray(vehiculos.autos(),"idVehiculo",body.idVehiculo)
-
+    persona.autos = funciones.filtrarArray(vehiculos.devuelveAutos(),"idVehiculo",body.idVehiculo)
     return personas
 }
+personas.push(persona)
 
 
 module.exports={

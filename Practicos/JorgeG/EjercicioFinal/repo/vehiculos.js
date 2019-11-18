@@ -1,5 +1,5 @@
 //generar datos de vehículos
-const autos=()=>{
+const devuelveAutos=()=>{
     let autos=[];
     autos[0]= {idVehiculo:1,marca:"Ford",modelo:"Mustang"};
     autos[1]= {idVehiculo:2,marca:"Chevrolet",modelo:"Camaro"};
@@ -10,5 +10,5 @@ const autos=()=>{
 }
 
 module.exports ={
-    autos
+    devuelveAutos
 }
