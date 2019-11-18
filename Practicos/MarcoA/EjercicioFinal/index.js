@@ -21,6 +21,7 @@ app.get('/persona/:run', function(request, response){
 app.get('/persona/delete/:run'), function(request, response){
   const { run } = request.params;
   let personas = persona.delPersona(run);
+  response.send("Rut eliminado")
 }
 
 app.listen(3000, function () {

@@ -66,6 +66,11 @@ const getPersona = (rutPersona) => {
 
 const delPersona = (rutPersona) => {
     let array = [];
+    arregloPersonas.forEach(element => {
+        if(element['run']== rutPersona){
+            array.splice(rutPersona);
+        }
+    });
 }
 
 module.exports = {
