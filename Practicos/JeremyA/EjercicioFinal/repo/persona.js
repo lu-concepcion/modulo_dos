@@ -10,12 +10,12 @@ var vehiculos = require('./vehiculos')
 let listaPersona = [];
 
 const guardarPersona = (body) => {
-    let personas={run, fechaNac, tieneProfesion, tieneVehiculo, idProfesion, idVehiculo}=body;
+    let personas={run, fechaNac, tieneProfesion, tieneVehiculo, idProfesion, idVehiculo, codigoCurso}=body;
     personas = {
     run:run,
     dv:funciones.validaRun(run),
     fechaNac:fechaNac,
-    edad: funciones.obtenerEdad(new Date(fechaNac)),
+    //edad: funciones.obtenerEdad(new Date(fechaNac)),
     tieneProfesion:tieneProfesion,
     tieneVehiculo:tieneVehiculo,
     profesiones:funciones.buscarEnArray(profesiones.listaProfesiones(),"id",idProfesion),
@@ -30,5 +30,5 @@ const obtenerPersonas = (query) => {
 }
 
 module.exports={
-    guardarPersona, obtenerPersonas
+    guardarPersona, obtenerPersonas, listaPersona
 }
