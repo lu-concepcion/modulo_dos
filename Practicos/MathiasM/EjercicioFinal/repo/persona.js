@@ -30,6 +30,17 @@ const listaPersonas =()=>{
     return personas
 }
 
+const matriculaCurso=(run,body)=>{
+    let arrayAlumno=[];
+    let objetoPersona= funciones.encontrarEnArray(listaPersonas(),"run",run)
+    arrayAlumno.push(objetoPersona)
+    let objetoCurso = cursos.filtarPorCodigo(body.codigoCurso)
+    // alumnos.push(objetoPersona)
+    objetoCurso.alumnos=arrayAlumno
+
+    return objetoCurso
+
+}
 module.exports={
-    guardarPersona, filtarPorRun,listaPersonas
+    guardarPersona, filtarPorRun,listaPersonas,matriculaCurso
 }

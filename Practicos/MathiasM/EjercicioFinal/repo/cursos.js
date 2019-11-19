@@ -21,19 +21,9 @@ const filtarPorCodigo=(codigo)=>{
     
 }
 
-const matriculaCurso=(run,body)=>{
-    
-    let objetoPersona= funciones.encontrarEnArray(personas.listaPersonas(),"run",run)
-    console.log(objetoPersona)
-    let objetoCurso = cursos.filtarPorCodigo(body.codigoCurso)
-    // alumnos.push(objetoPersona)
-    objetoCurso.alumnos=alumnos.push(objetoPersona)
 
-    return objetoCurso
-
-}
 
 
 module.exports={
-    guardarCurso,filtarPorCodigo,matriculaCurso
+    guardarCurso,filtarPorCodigo
 }

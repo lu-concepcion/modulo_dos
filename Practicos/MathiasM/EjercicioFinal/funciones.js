@@ -168,10 +168,10 @@ const filtrarEnArray=(array,propiedad,elemento)=>{
             //console.log(array[i])
             arrayFiltrado.push(array[i]);
             //console.log(arrayFiltrado)
-            //return Object.entries(array[i]);
+            return arrayFiltrado;
         }
     }
-    return console.log(arrayFiltrado) 
+    return arrayFiltrado
 }
 
 //ejercicio9
