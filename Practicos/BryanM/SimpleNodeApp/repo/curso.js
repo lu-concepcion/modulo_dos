@@ -24,10 +24,14 @@ const matricularPersona = (rut, cur) => {
     const persona = funciones.buscarEnArray(personas.personas, "rut", rut);
     cursos.forEach(element => {
         if(element["codigo"] == codigo){
-            element.alumnos.push(persona)
+            if(funciones.searchInArray(element.alumnos, "rut",rut) == false){
+                element.alumnos.push(persona)
+            }
+            else{
+                return "Ya se a registrado el alumno";
+            }
         }
-    })
-    return cursos;
+    })  
 }
 
 const buscarCurso = (codigo) => {

@@ -62,7 +62,7 @@ const eliminar = (rut) => {
     }
 }
 
-const verPersonas = (body)=> {
+const verPersonas = ()=> {
     return personas;
 }
 

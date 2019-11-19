@@ -24,9 +24,14 @@ app.post('/curso/', function(request, response){
 //Agrega una persona a un curso
 app.post('/persona/:rut/curso/', function(request, response){
   const { rut } = request.params;
+  const { body } = request
+  response.send(curso.matricularPersona(rut, body));
+});
+
+//Devuelve a todos los cursos
+app.get('/curso/',function(request, response){
   const { body } = request;
-  curso.matricularPersona(rut, body)
-  response.send(body);
+  response.send(curso.obtenerCursos()) 
 });
 
 //Devuelve los cursos de una alumno
@@ -49,11 +54,12 @@ app.get('/persona/:rut', function(request, response){
 });
 
 //Devuelve todas las personas
-app.get('/persona/getAll/', function(request, response){
+app.get('/persona/', function(request, response){
   const { body }  = request;
-  response.send(persona.verPersonas(body));
+  response.send(persona.verPersonas());
 });
 
+//Elimina a una persona 
 app.delete('/persona/:rut', function(request, response){
   const { rut } = request.params;
   response.send(persona.eliminar(rut));
