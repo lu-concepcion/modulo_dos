@@ -21,24 +21,25 @@ app.post('/persona', function(request, response){
 });
 
 app.post('/cursos', function(request, response){
-  // body mapea a un objeto los parámetros enviados en el body del request
-  // ej: localhost:3000/persona
-  // body: {id: 1, nombre: hernan }
-  // body = { id: 1, nombre: hernan }
   const { body }  = request;
-  //persona.prueba
-  //const {run, fechaNac, tieneProfesion, tieneVehiculo, vehiculoId, profesionId}=body
   cursos.guardarCurso(body);
   response.send(body)
 
 });
 
-app.get('/persona/:run', function(request, response){
+app.post('/persona/:run/cursos', function(request, response){
+  const { body, params: { run } }  = request;
+  cursos.matricular(body, run);
+  response.send(body)
+
+});
+
+app.get('/cursos/:codigo', function(request, response){
   // query mapea a un objeto los parámetros enviados en la ruta
   // ej: localhost:3000/persona?id=1&nombre=Hernan
   // query = { id: 1, nombre: hernan }
-  const { run }  = request.params;
-  response.send(persona.obtenerPersonas(run))
+  const { codigo }  = request.params;
+  response.send(cursos.obtenerCursos(codigo))
 });
 
 app.listen(3000, function () {

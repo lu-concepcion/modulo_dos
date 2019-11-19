@@ -7,7 +7,7 @@ let vehiculo = {};
 let profesion = {};
 
 const guardarPersona= body =>
-{   let {run, fechaNac, tieneVehiculo,tieneProfesion,vehiculoId, profesionId} = body;
+{   let {nombre, run, fechaNac, tieneVehiculo,tieneProfesion,vehiculoId, profesionId} = body;
 
     if (tieneVehiculo == true )
        {   
@@ -19,7 +19,7 @@ const guardarPersona= body =>
            profesion = buscarObj(profesiones.profesiones(),"id",profesionId)
        
        } 
-        listaPersonas.push({ run: run, dv:digitoV(run), fechaNac: fechaNac, edad: calEdad(fechaNac) ,vehiculo:vehiculo,profesion:profesion})
+        listaPersonas.push({ nombre:nombre,run: run, dv:digitoV(run), fechaNac: fechaNac, edad: calEdad(fechaNac) ,vehiculo:vehiculo,profesion:profesion})
     
 }
 
@@ -122,6 +122,7 @@ const buscarObj = (array, propiedad, valor) =>
                 {
                     delete array[i]['id']
                 return array[i]
+
                 }            
             }
         }
@@ -130,5 +131,5 @@ const buscarObj = (array, propiedad, valor) =>
 
 module.exports=
 {
-    guardarPersona, obtenerPersonas, digitoV, calEdad, buscarObj
+    guardarPersona, obtenerPersonas, digitoV, calEdad, buscarObj, listaPersonas
 }
