@@ -19,6 +19,15 @@ const guardarCurso = (cur) => {
     cursos.push(curso);
 }
 
+const borrarElementos = (per) => {
+    delete per['fechaNac'];
+    delete per['edad'];
+    delete per['tieneProfesion']
+    delete per['tieneVehiculo']
+    delete per['vehiculo']
+    delete per['profesion']
+}
+
 const matricularPersona = (rut, cur) => {
     const { codigo } = cur;
     const persona = funciones.buscarEnArray(personas.personas, "rut", rut);

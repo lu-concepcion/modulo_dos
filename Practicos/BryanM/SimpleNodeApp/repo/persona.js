@@ -18,6 +18,7 @@ let profesion = {
 let persona = {
     rut: "",
     dv: "",
+    nombre: "",
     fechaNac: "",
     edad: 0,
     tieneProfesion: false,
@@ -27,18 +28,18 @@ let persona = {
 }
 
 const guardar = (per) => {
-    let {rut, fechaNac, tieneProfesion, tieneVehiculo, idVehiculo, idProfesion} = per;
+    let {rut, nombre, fechaNac, tieneProfesion, tieneVehiculo, idVehiculo, idProfesion} = per;
     if(!funciones.verNum(rut)){
         persona.rut = rut;
         persona.dv = funciones.codigoVerificador(persona.rut);
     }
+    persona.nombre = nombre;
     persona.fechaNac = fechaNac;
     persona.edad = funciones.obtenerEdadPersona(fechaNac);
     persona.tieneProfesion = tieneProfesion;
     persona.tieneVehiculo = tieneVehiculo;
     persona.vehiculo = tieneVehiculo ? funciones.buscarEnArray(vehiculos.vehiculos, "id", idVehiculo) : {};
     persona.profesion = tieneProfesion ? funciones.buscarEnArray(profesiones.profesiones, "id", idProfesion) : {};
-    
 
     personas.push(persona);
 }
@@ -58,7 +59,7 @@ const eliminar = (rut) => {
         let array = funciones.deleteElementoArray(personas,"rut",rut);
         return "Se a eliminado correctamente" ;
     }else {
-        return "No se ha eliminado correctamente";
+        return "No se ha podido eliminar";
     }
 }
 

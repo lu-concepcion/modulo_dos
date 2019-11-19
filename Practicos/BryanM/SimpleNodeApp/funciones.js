@@ -1,7 +1,3 @@
-const testing = () => {
-    return "test";
-}
-
 const codigoVerificador = (rut) => {
     let aux = rut.split("-");
     rut = aux[0];
@@ -37,16 +33,6 @@ const codigoVerificador = (rut) => {
     }
 }
 
-const buscarEnArray = (array, propiedad, valor ) => {
-    let objeto = {};
-    array.forEach(element => {
-        if(element[propiedad] == valor){
-            objeto = element;
-        }
-    });
-    return objeto;
-}
-
 const obtenerEdadPersona = (fechaNacimiento) => {
     let dia, mes, anio;
     let edad = 0;
@@ -75,7 +61,18 @@ const obtenerEdadPersona = (fechaNacimiento) => {
     return edad;
 }
 
-//Busca si existe una persona (devuelve true o false)
+//Busca un objeto, devuelve el objeto buscado
+const buscarEnArray = (array, propiedad, valor ) => {
+    let objeto = {};
+    array.forEach(element => {
+        if(element[propiedad] == valor){
+            objeto = element;
+        }
+    });
+    return objeto;
+}
+
+//Busca si existe un objeto (devuelve true o false)
 const searchInArray = (array, propiedad, valor) => {
     let encuentro = false;
     array.forEach(element => {
