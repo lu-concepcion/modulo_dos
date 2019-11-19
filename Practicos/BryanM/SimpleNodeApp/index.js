@@ -25,7 +25,8 @@ app.post('/curso/', function(request, response){
 app.post('/persona/:rut/curso/', function(request, response){
   const { rut } = request.params;
   const { body } = request
-  response.send(curso.matricularPersona(rut, body));
+  curso.matricularPersona(rut, body)
+  response.send(body);
 });
 
 //Devuelve a todos los cursos
