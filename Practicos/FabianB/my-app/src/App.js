@@ -2,6 +2,12 @@ import React from 'react';
 import logo from './piñera.jpg';
 import './App.css';
 
+
+import Instructions from './components/Instructions'
+import Link from './components/Link';
+import AdressLabel from './components/AdressLabel';
+import Envelope from './components/Envelope';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -13,13 +19,15 @@ class App extends React.Component {
     console.log('constructor')
   }
 
-shouldComponentUpdate(nextProps, nextState) {
-  const {value, compare} = this.state;
-  const should = nextState.value !== value ||
-  nextState.compare !== compare;
-  console.log('shouldComponentUpdate', should)
-  return should
-}
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('nextProps')
+    const { value, compare } = this.state;
+    const should = nextState.value !== value ||
+      nextState.compare !== compare;
+    console.log('shouldComponentUpdate', should)
+    return should
+  }
 
   componentDidMount() {
     console.log('componentDidMount')
@@ -33,8 +41,8 @@ shouldComponentUpdate(nextProps, nextState) {
     }, 4000);
     setTimeout(() => {
       console.log('setState compare')
-      this.setState({compare: ''});
-      
+      this.setState({ compare: '' });
+
     }, 5000);
   }
 
@@ -47,17 +55,23 @@ shouldComponentUpdate(nextProps, nextState) {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Fuera Piñera
-        </p>
-          <a
-            className="App-link"
-            href="https://karol.dance/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {`${this.state.value} ${this._varGlobal}`}
-          </a>
+      
+          <AdressLabel
+          fullName= 'Fabián Beltrán'
+          direccion1= 'Calle nueva uno #45'
+          direccion2= 'San Pedro de La Paz, Chile'
+
+          />
+          <Envelope
+          toPerson = {{ nombre: "Fabián Beltrán", 
+                      direccion1: "Calle nueva uno #45",  
+                      direccion2: "San Pedro de La Paz, Chile"}}
+           fromPerson = {{ nombre: "Fabián Beltrán", 
+                          direccion1: "Calle nueva uno #45",  
+                          direccion2: "San Pedro de La Paz, Chile"}}
+          />
+
+
         </header>
       </div>
     );
