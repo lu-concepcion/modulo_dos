@@ -1,20 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { timeout } from 'q';
-
+import Instruction from './components/instruction';
+import HyperLink from './components/hyperlink';
+import AddressLabel from './components/AddressLabel';
+import Envelope from './components/envelope'
 
   class App extends React.Component{
-    constructor(promps){
-      super(promps);
+    constructor(props){
+      super(props);
       this.state = {
-        value: 'Learn React'
+        value: 'Learn React',
+        compare: ''
       };
       this._varGlobal ='';
       console.log('constructor')
     }
 
 shouldComponentUpdate(nextProps, nextState){
+  console.log(nextProps);
   const {value, compare} =this.state;
 
   const should = nextState.value !== value ||
@@ -40,22 +44,37 @@ shouldComponentUpdate(nextProps, nextState){
     }
 
     render() {
+      const toPerson = {
+        nombre:'Hernán Candia',
+        direccion1:'Nogueira 1252',
+        direccion2:'Tomé, Chile'
+      }
+      const fromPerson = {
+        nombre:'Javier Calderón',
+        direccion1:'Perales 1252',
+        direccion2:'Concepción, Chile'
+      }
+
       console.log('render')
     return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {`${this.state.value} ${this._varGlobal}`}
-        </a>
+        <Instruction
+          nombre='Jeremy'
+          edad='23'
+          hacerClick={nombre => alert(nombre)}
+        />
+        <HyperLink/>
+        <AddressLabel
+        FullName='Jeremy'
+        Direccion1='Pasaje José Joaquin Prieto #65'
+        Direccion2='Chiguayante, Chile'        
+        />
+        <Envelope
+        toPerson={toPerson}
+        fromPerson={fromPerson}
+        />
       </header>
     </div>
     );
