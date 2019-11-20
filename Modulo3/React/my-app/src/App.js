@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Instructions from './components/Instructions';
+import Hyperlink from './components/Hyperlink';
+import AddressLabel from './components/AddressLabel';
+import Envelope from './components/Envelope';
 
 class App extends React.Component {
   constructor(props){
@@ -72,16 +76,44 @@ componentDidUpdate (){
             <p>
               <code>Bienvenido a React</code>
             </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            {/* <Instructions
             
-             {`${this.state.value} ${this._varGlobal}`}
+            nombre = 'Esteban'
+            edad = {21}
+            hacerClick = {(nombre, edad) => alert(nombre + edad)}
             
-            </a>
+            /> */}
+            
+            {/* <Hyperlink/> */
+          
+            <AddressLabel
+            
+            nombrePersona = 'Esteban Larenas Fuentes'
+            direccion1 = 'Burgos 14'
+            direccion2 = 'Valle Noble, Concepción'
+            hacerClick2 = {(nombrePersona, direccion1, direccion2) => alert(nombrePersona +" "+ direccion1 +" "+ direccion2)}
+            
+            /> }
+
+            <Envelope
+            
+            toPerson = {
+
+            nombrePersona = 'Esteban Larenas Fuentes',
+            direccion1 = 'Burgos 14',
+            direccion2 = 'Valle Noble, Concepción'
+
+            }
+            fromPerson = {
+
+            nombrePersona = 'Vicente ',
+            direccion1 = 'Burgos 14',
+            direccion2 = 'Valle Noble, Concepción'
+
+            }
+            
+            />
+           
         </header>
       </div>
     );
