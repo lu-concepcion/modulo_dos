@@ -2,6 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Instruction from './components/Instruction.js';
+import HyperLink from './components/HyperLink.js';
+import AddressLabel from './components/AddressLabel.js';
+import Envelope from './components/Envelope.js';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +19,7 @@ class App extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
+    console.log('nextProps: ', nextProps);
     const {value, compare} = this.state;
     const should = nextState.value !== value || nextState.compare !== compare;
     console.log('shouldComponentUpdate', should);
@@ -44,17 +50,18 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            { `${this.state.value} ${this._varGoblobal}` }
-          </a>
+          <Instruction
+            nombre = 'Felipe'
+            edad = {27}
+            hacerClick = {(nombre, edad) => alert(nombre + ' ' + edad)}
+          />
+          <AddressLabel
+            fullName = 'Felipe Pulgar'
+            direccion1 = 'La Marina de Chile 1155'
+            direccion2 = 'Chiguayante, Chile'
+          />
+          
+          <HyperLink/>          
         </header>
       </div>
     );
