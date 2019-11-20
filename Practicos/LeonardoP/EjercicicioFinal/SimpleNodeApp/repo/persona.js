@@ -91,7 +91,7 @@ const matriculaPersona=(body,run)=>{
 
     const{codigoCurso}=body;
 
-    
+
     console.log(body);
 
     console.log(codigoCurso);
@@ -101,19 +101,27 @@ const matriculaPersona=(body,run)=>{
 
         if(objeto['run']==run)
         {
+           
 
-            cursos.listaCurso.forEach(c=>{
+                cursos.listaCurso.forEach(c=>{
 
-                if(c['codigoCurso']==codigoCurso)
-                {
-                    c['alumnos'].push(objeto);
+                    if(c['codigoCurso']==codigoCurso)
+                    {
+                        c['alumnos'].push(objeto);
+    
+                    }
+                });
 
-                }
-            });
+
+            
+
+           
 
 
         }
     });
+
+
 
 
 }

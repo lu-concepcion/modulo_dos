@@ -26,6 +26,8 @@ const{codigoCurso,nombre}=body;
 
 }
 
+
+
 const infoCurso=(codigoCurso)=>{
 
     let array=[];
@@ -43,9 +45,28 @@ const infoCurso=(codigoCurso)=>{
 }
 
 
+const validaAlumnos=(r)=>{
+
+    listaCurso.forEach(alumno=>{
+
+        if(alumno.alumnos['run']==r)
+        {
+            return true;
+        }else{
+            return false;
+        }
+
+
+
+
+    });
+}
+
+
 module.exports={
 
     crearCurso,
     infoCurso,
-    listaCurso
+    listaCurso,
+    validaAlumnos
 }
