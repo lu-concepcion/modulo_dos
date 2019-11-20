@@ -37,7 +37,6 @@ app.post('/persona/:run/curso', function(request, response){
   const {run}= request.params;
   cursos.matricularPersona(body, run);
   response.send("Se guardo exitosamente")
-
 });
 
 app.get('/persona/:run/curso', function(request, response){
