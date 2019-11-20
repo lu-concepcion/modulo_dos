@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Intructions from './components/intructions';
+
 
 class  App extends React.Component {
 
@@ -17,7 +19,8 @@ class  App extends React.Component {
     console.log('constructor')
   }
 
-  shouldComponentUpdate(nextProps,nextState){
+  shouldComponentUpdate(nextProps,nextState){  //si no se implementa el componente siempre actualizara, aunque no hallan cambios
+  console.log(nextProps);
 
     const {value, compare} = this.state;
 
@@ -69,6 +72,7 @@ class  App extends React.Component {
           <p>
             hola, esta es mi app en react
           </p>
+          <Intructions/>
           <a
             className="App-link"
             href="https://reactjs.org"
