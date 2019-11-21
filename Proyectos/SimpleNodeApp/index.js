@@ -25,7 +25,20 @@ app.post('/curso', function(request, response){
   curso.guardarCurso(body)
   response.send(body)
 });
-
+app.post('persona/:run/curso', function(request, response){
+  const {  run }  = request.params;
+  const { body }  = request;
+  curso.matriculaPersona(run, body)
+  response.send(body)
+}); 
+app.get('/persona/:run/curso', function(request, response){
+  // query mapea a un objeto los parámetros enviados en la ruta
+  // ej: localhost:3000/persona?id=1&nombre=Hernan
+  // query = { id: 1, nombre: hernan }
+  const {body} = request
+  const { run }  = request.params;
+  response.send(curso.matriculaPersona(run,body))
+});
 app.get('/persona/:run', function(request, response){
   // query mapea a un objeto los parámetros enviados en la ruta
   // ej: localhost:3000/persona?id=1&nombre=Hernan
@@ -40,6 +53,7 @@ app.get('/curso/:codigoCurso', function(request, response){
   const { codigoCurso }  = request.params;
   response.send(curso.obtenerCurso(codigoCurso))
 });
+
 app.listen(3000, function () {
   console.log('Simple node app for LU-CCP listening on port 3000!');
 });

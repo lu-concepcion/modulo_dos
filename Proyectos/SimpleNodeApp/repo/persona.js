@@ -62,4 +62,5 @@ const guardarPersonas = (body) =>{
             
     }
 
+
 module.exports = {obtenerPersonas, guardarPersonas}

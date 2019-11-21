@@ -1,4 +1,4 @@
-var persona = require('./persona.js')
+var {obtenerPersonas} = require('./persona.js')
 let cursos = [
      {codigoCurso: "codigo",
       nombreCurso: "prueba",
@@ -32,4 +32,15 @@ const obtenerCurso = (codigoCurso) =>{
     }
     return filtrado;
 }
-module.exports = {obtenerCurso,guardarCurso}
+const matriculaPersona = (run,body) =>{
+   const codigoCurso = Object.values(body)[0]
+
+  for(let i = 0; i < cursos.length; i++){
+   if (Object.values(cursos[i])[0] == codigoCurso){
+       
+ cursos[i].alumnos.push(obtenerPersonas(run)); 
+}
+}
+}
+module.exports = {obtenerCurso,guardarCurso,matriculaPersona}
+
