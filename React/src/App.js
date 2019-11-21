@@ -1,6 +1,10 @@
-import React from 'react';
+import React from 'react'; //Librería
 import logo from './logo.svg';
 import './App.css';
+// import Instructions from './components/Instructions.js';
+// import Hyperlink from './components/Hyperlink.js';
+// import AddressLabel from './components/AddressLabel.js';
+import Envelope from './components/Envelope';
 
 class App extends React.Component {
   constructor(props){
@@ -14,14 +18,15 @@ class App extends React.Component {
     console.log('constructor');
   }
 
-  shouldComponentUpdate(nextProps, nextState){
+  shouldComponentUpdate(nextProps, nextState){ //Comprueba si se actualizó el component
+    //console.log(nextProps, "next props")
     const { value, compare } = this.state;
     const should = nextState.value !== value || nextState.compare !== compare;
     console.log('shouldComponentUpdate', should);
     return should;
   }
 
-  componentDidMount(){
+  componentDidMount(){ //
     console.log('componentDidMount');
 
     setTimeout(()=>{
@@ -51,18 +56,34 @@ class App extends React.Component {
     return(
       <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {` ${this.state.value} ${this._varGlobal} `}
-        </a>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+
+        {/* <Instructions
+          nombre = 'Nicolás' //props
+          hacerClick = { (nombre) => alert(nombre) }
+        />
+
+        <Hyperlink
+
+        /> */}
+
+        <Envelope
+          toPerson = {
+            {
+              nombre: 'Felipe Pulgar',
+              direccion1: 'Calle Falsa 123',
+              direccion2: 'Concepción, Chile'
+            }
+          }
+          fromPerson = {
+            {
+              nombre: 'Nicolás Arias',
+              direccion1: 'Calle 4 414',
+              direccion2: 'Talcahuano, Chile'
+            }
+          }
+        />
+
       </header>
     </div>
     );
