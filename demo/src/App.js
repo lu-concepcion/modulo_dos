@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Instructions from './components/instructions';
+import HiperLink from './components/HiperLink'
+import AdressLabel from './components/AdressLabel'
+import Envelope from './components/Envelope'
 
 class App extends React.Component {
   constructor(props){
@@ -13,6 +17,7 @@ class App extends React.Component {
   }
   shouldComponentUpdate(nextProps, nextState)
   {
+    console.log (nextProps)
     const {value, compare} = this.state;
     const should = nextState.value !== value || nextState.compare !== compare;
     return should;
@@ -37,22 +42,43 @@ class App extends React.Component {
     console.log('componentDidUpdate')
   }
   render (){
+    const fromPerson = {
+      nombre:'Fulanto Gonzales',
+      direccion1:'Los Carrera 241',
+      direccion2:'Temuco, Chile'
+    }
+    const toPerson = {
+      nombre:'Juana Perez',
+      direccion1:'Los Alamos 722',
+      direccion2: 'La Serena, Chile'
+    }
     console.log('render')
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        
+         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {`${this.state.value} ${this._varGlobal}`}
-        </a>
+        <div><Instructions
+        nombre='Alan'
+        edad= {21}
+        hacerClick={ (nombre,edad)=> alert (nombre)}
+        />
+        </div>
+        <div><HiperLink/>
+        </div>
+          <div><AdressLabel
+          nombrePersona='Alan Benavente'
+          direccion1='Moises Aracena 891'
+          direccion2='Coronel, Chile'
+          />
+        </div>
+          <Envelope
+          toPerson={toPerson}
+          fromPerson={fromPerson}
+          />
       </header>
     </div>
   );

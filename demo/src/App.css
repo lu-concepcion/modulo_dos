@@ -20,3 +20,27 @@
 .App-link {
   color: #09d3ac;
 }
+.ContainerEnvelope{
+  border: 1px solid gray;
+}
+.ContainerSuperior{
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+}
+.Direccion{
+  width: 200px;
+}
+.Estampilla{
+  width: 200px;
+  display: flex;
+  flex-direction: flex end;
+}
+.ContainerInferior{
+  display: flex;
+  justify-content: center;
+}
+.Estampa{
+  height: 80px;
+  width: 80px;
+}
