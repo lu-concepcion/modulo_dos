@@ -1,7 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Intructions from './components/intructions';
+import Instruction from './components/intructions';
+import Hyperlink from './components/link';
+import AddresLabel from './components/addresLabel'
+import Envelope from './components/envelope'
 
 
 class  App extends React.Component {
@@ -68,19 +71,45 @@ class  App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>Hola mundo xD</h1>
-          <p>
-            hola, esta es mi app en react
-          </p>
-          <Intructions/>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            { `${this.state.value} ${this._varGblobal}`}
-          </a>
+          
+          <Instruction 
+            nombre= 'leonardo'
+            hacerClick={(nombre)=>alert(nombre)}
+            edad= {23}
+            
+            />  
+          <Hyperlink/>
+          <AddresLabel
+
+          nombre='leonardo pereira'
+          direccion1= 'av araucana #371'
+          direccion2= 'av siempre viva #742'
+          />
+
+          <Envelope
+
+              toPerson={{
+
+                nombre:'leonardo pereira',
+                direccion1:'av araucana #371',
+                direccion2: 'av siempre viva #742'
+
+                }
+              }
+
+              fromPerson={{
+
+                nombre:'leonardo pereira',
+                direccion1:'av araucana #371',
+                direccion2: 'av siempre viva #742'
+
+                }
+              }
+          
+          />
+
+          
+          
         </header>
       </div>
     );

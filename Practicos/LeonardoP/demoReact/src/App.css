@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -20,3 +20,45 @@
 .App-link {
   color: #09d3ac;
 }
+
+
+.Container{
+
+  border: 1px solid gray;
+
+}
+
+.Container-superior{
+
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.Direccion{
+
+  width: 200px;
+}
+
+.Estampilla{
+
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.Container-inferior{
+
+  display: flex;
+  justify-content: center;
+
+}
+
+.estampa{
+
+  height: 80px;
+  width: 80px;
+}
+
+
