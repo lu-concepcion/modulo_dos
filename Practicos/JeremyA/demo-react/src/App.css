@@ -27,5 +27,26 @@
 
 .Container-Superior {
   width: 400px;
-  
+  display: flex;
+  flex-direction: row;
+}
+
+.Direccion {
+  width: 200px;
+}
+
+.Estampilla {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Container-Inferior {
+  display: flex;
+  justify-content: center;
+}
+
+.Estampa {
+  height: 80px;
+  width: 80px;
 }
