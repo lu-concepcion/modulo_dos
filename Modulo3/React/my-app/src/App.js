@@ -73,9 +73,9 @@ componentDidUpdate (){
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-            <p>
+            {/* <p>
               <code>Bienvenido a React</code>
-            </p>
+            </p> */}
             {/* <Instructions
             
             nombre = 'Esteban'
@@ -84,36 +84,37 @@ componentDidUpdate (){
             
             /> */}
             
-            {/* <Hyperlink/> */
+            {/* {/* <Hyperlink/> */
           
-            <AddressLabel
+            // <AddressLabel
             
-            nombrePersona = 'Esteban Larenas Fuentes'
-            direccion1 = 'Burgos 14'
-            direccion2 = 'Valle Noble, Concepción'
-            hacerClick2 = {(nombrePersona, direccion1, direccion2) => alert(nombrePersona +" "+ direccion1 +" "+ direccion2)}
+            // nombrePersona = 'Esteban Larenas Fuentes'
+            // direccion1 = 'Burgos 14'
+            // direccion2 = 'Valle Noble, Concepción'
+            // hacerClick2 = {(nombrePersona, direccion1, direccion2) => alert(nombrePersona +" "+ direccion1 +" "+ direccion2)}
             
-            /> }
+            // /> } */}
 
             <Envelope
+      
+            toPerson = {{
+                     
+            nombrePersona1: 'Esteban Larenas Fuentes',
+            adireccion1: 'Burgos',
+            adireccion2: 'Valle Noble, Concepción'
             
-            toPerson = {
+            }}
 
-            nombrePersona = 'Esteban Larenas Fuentes',
-            direccion1 = 'Burgos 14',
-            direccion2 = 'Valle Noble, Concepción'
+            fromPerson = {{
 
-            }
-            fromPerson = {
+            nombrePersona2: 'Vicente Herrera',
+            bdireccion1: 'Villasalceo',
+            bdireccion2: 'Valle Nonguen, Concepción'
 
-            nombrePersona = 'Vicente ',
-            direccion1 = 'Burgos 14',
-            direccion2 = 'Valle Noble, Concepción'
-
-            }
-            
+            }}
+          
             />
-           
+          
         </header>
       </div>
     );

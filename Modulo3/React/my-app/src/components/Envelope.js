@@ -14,6 +14,8 @@ class Envelope extends React.Component {
 
    render(){
        const { toPerson, fromPerson } = this.props;
+       let { nombrePersona1, adireccion1, adireccion2 } = this.toPerson;
+       let { nombrePersona2, bdireccion1, bdireccion2 } = this.fromPerson;
        return(
            
             <did>

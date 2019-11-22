@@ -21,3 +21,25 @@
   color: #09d3ac;
 }
 
+.Container-Envelope {
+
+border: 1px solid gray;
+
+}
+.Container-Superior {
+
+width: 400px;
+display: flex;
+flex-direction: row;
+
+}
+.Direccion{
+
+width: 200px;
+
+}
+.Estampilla{
+
+width: ;
+
+}
