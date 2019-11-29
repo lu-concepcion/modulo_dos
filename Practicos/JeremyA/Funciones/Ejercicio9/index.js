@@ -1,12 +1,17 @@
-import { esNumero, mostrarArray, ordenMasAMenos, ordenMenosAMas } from "../funciones.js"
+import {
+  esNumero,
+  mostrarArray,
+  ordenMasAMenos,
+  ordenMenosAMas
+} from "../funciones.js";
 
 let numeros = [];
 let contador = 0;
 
-contador = esNumero(prompt("ingrese cuantos numeros desea ingresar"))
+contador = esNumero(prompt("ingrese cuantos numeros desea ingresar"));
 
-for(let i=0; i<contador; i++){
-    numeros.push(esNumero(prompt("ingresa el número")));
+for (let i = 0; i < contador; i++) {
+  numeros.push(esNumero(prompt("ingresa el número")));
 }
 
 alert(mostrarArray(ordenMasAMenos(esNumero(numeros))));
