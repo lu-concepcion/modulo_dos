@@ -2,9 +2,9 @@
   "name": "node-app-lu-modulo-II",
   "version": "0.1.0",
   "dependencies": {
-    "express": "4.17.1",
+    "express": "4.18.2",
     "nodemon": "1.19.4",
-    "body-parser": "^1.19.0"
+    "body-parser": "^1.20.1"
   },
   "scripts": {
       "start": "nodemon --watch index.js"
